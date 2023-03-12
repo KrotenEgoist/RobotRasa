@@ -1,0 +1,34 @@
+version: "3.1"
+
+intents:
+  - command:
+      use_entities: []
+  - wrong_command:
+      use_entities: []
+  - story_command:
+      use_entities: command_number
+
+entities:
+  - command_number
+
+actions:
+  - send_command
+  - send_wrong_command
+  - send_story_command
+
+responses:
+  utter_command:
+  - text: "Ок, передал команду"
+
+  utter_wrong_command:
+  - text: "Ок, последняя команда передана с ошибкой"
+
+  utter_please_rephrase:
+  - text: "Я не понял, повторите"
+
+  utter_story_command:
+  - text: "Исполняю команду в истории"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
