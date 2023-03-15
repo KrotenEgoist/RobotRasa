@@ -1,0 +1,8 @@
+name: rasa_dev
+channels:
+  - defaults
+dependencies:
+  - pip=23.0.1
+  - python=3.10.9
+  - pip:
+    - rasa[full]==3.4.5
