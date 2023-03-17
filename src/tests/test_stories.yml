@@ -1,15 +1,18 @@
-### This file contains tests to evaluate that your bot behaves as expected.
-#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
-
 stories:
-- story: test command 1
+- story: test 1
   steps:
   - user: |
-      иди к этому прекрасному дому
+      иди вперед
     intent: command
   - action: utter_send_command
+  - user: |
+      стой
+  - action: utter_send_command
+  - user: |
+      ошибка
+  - action: utter_wrong_command
 
-- story: test wrong command 1
+- story: test 2
   steps:
     - user: |
         продвигайся на северный юг
