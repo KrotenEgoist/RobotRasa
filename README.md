@@ -16,6 +16,11 @@ make -f Makefile
 ```shell
 make -f Makefile clean
 ```
+# Запуск
+Инициализация необходимых переменных окружения, запуск модели в терминале
+```shell
+./start.sh
+```
 # Структура проекта
 ### conda_env
 YAML файлы для окружений Anaconda
@@ -62,5 +67,6 @@ RobotRasa
     └── endpoints.yml
 ├── Makefile
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── start.sh
 ```
