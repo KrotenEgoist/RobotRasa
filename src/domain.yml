@@ -3,12 +3,15 @@ version: "3.1"
 intents:
   - command
   - wrong_command
+  - nlu_fallback
 
 responses:
   utter_send_command:
     - text: "Команда отправлена"
   utter_wrong_command:
     - text: "Исправляем команду"
+  utter_rephrase:
+    - text: "Перефразируйте"
 
 session_config:
   session_expiration_time: 60

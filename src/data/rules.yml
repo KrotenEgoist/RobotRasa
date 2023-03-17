@@ -1,1 +1,8 @@
 version: "3.1"
+
+rules:
+
+  - rule: low NLU confidence
+    steps:
+      - intent: nlu_fallback
+      - action: utter_rephrase
