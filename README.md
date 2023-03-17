@@ -46,23 +46,20 @@ RobotRasa
 │   └── model_base_nlu_cross
 └── src
     ├── actions
-    │   └── base
-    │       └── actions.py
+    │   └── actions.py
     ├── configs
     │   └── config_base.yml
     ├── data
-    │   └── base
-    │       ├── credentials.yml
-    │       ├── domain.yml
-    │       ├── endpoints.yml
-    │       ├── nlu.yml
-    │       ├── rules.yml
-    │       └── stories.yml
+    │   ├── nlu.yml
+    │   ├── rules.yml
+    │   └── stories.yml
     ├── tests
-    │   └── base
-    │       └── test_stories.yml
-    └── train_test_split
-        └── base
+    │   └── test_stories.yml
+    ├── train_test_split
+    │   └── base
+    ├── credentials.yml
+    ├── domain.yml
+    └── endpoints.yml
 ├── Makefile
 ├── README.md
 └── requirements.txt
