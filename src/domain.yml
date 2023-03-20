@@ -1,7 +1,10 @@
 version: "3.1"
 
 intents:
-  - command
+  - patrol
+  - stop
+  - move_dir
+  - move_on
   - wrong_command
   - nlu_fallback
 

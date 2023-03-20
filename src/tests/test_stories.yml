@@ -2,23 +2,40 @@ stories:
 - story: test 1
   steps:
   - user: |
-      иди вперед
-    intent: command
+      направляйся прямо на 7 метров
+    intent: move_dir
   - action: utter_send_command
   - user: |
       стой
+    intent: stop
   - action: utter_send_command
   - user: |
       ошибка
+    intent: wrong_command
   - action: utter_wrong_command
 
 - story: test 2
   steps:
     - user: |
         продвигайся на северный юг
-      intent: command
+      intent: move_dir
     - action: utter_send_command
     - user: |
         произошла ошибка
       intent: wrong_command
     - action: utter_wrong_command
+    - user: |
+        иди в разведку
+      intent: patrol
+    - action: utter_send_command
+
+- story: test 3
+  steps:
+    - user: |
+        осуществи перемещение на север на 100 м
+      intent: move_on
+    - action: utter_send_command
+    - user: |
+        притормози здесь
+      intent: stop
+    - action: utter_send_command

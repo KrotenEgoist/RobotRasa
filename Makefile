@@ -31,7 +31,7 @@ results/model_base_nlu_cross: src/domain.yml src/configs/config_base.yml
 		--domain src/domain.yml \
 		--config src/configs/config_base.yml \
 		--cross-validation \
-		--folds 2 \
+		--folds 4 \
 		--out results/model_base_nlu_cross
 
 # Стандартный тест с разделением выборки на train/test base

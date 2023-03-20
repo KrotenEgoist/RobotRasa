@@ -6,3 +6,8 @@ rules:
     steps:
       - intent: nlu_fallback
       - action: utter_rephrase
+
+  - rule: wrong command
+    steps:
+      - intent: wrong_command
+      - action: utter_wrong_command

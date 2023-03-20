@@ -2,14 +2,49 @@ version: "3.1"
 
 stories:
 
-  - story: send command
+  - story: send patrol
     steps:
-      - intent: command
+      - intent: patrol
       - action: utter_send_command
 
-  - story: send wrong command
+  - story: send stop
     steps:
-      - intent: command
+      - intent: stop
+      - action: utter_send_command
+
+  - story: send move_dir
+    steps:
+      - intent: move_dir
+      - action: utter_send_command
+
+  - story: send move_on
+    steps:
+      - intent: move_on
+      - action: utter_send_command
+
+  - story: send wrong patrol command
+    steps:
+      - intent: patrol
+      - action: utter_send_command
+      - intent: wrong_command
+      - action: utter_wrong_command
+
+  - story: send different command
+    steps:
+      - intent: move_dir
+      - action: utter_send_command
+      - intent: stop
+      - action: utter_send_command
+      - intent: patrol
+      - action: utter_send_command
+      - intent: move_on
+      - action: utter_send_command
+
+  - story: send rephrase
+    steps:
+      - intent: nlu_fallback
+      - action: utter_rephrase
+      - intent: move_dir
       - action: utter_send_command
       - intent: wrong_command
       - action: utter_wrong_command
