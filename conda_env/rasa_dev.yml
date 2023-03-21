@@ -5,4 +5,5 @@ dependencies:
   - pip=23.0.1
   - python=3.10.9
   - pip:
-    - rasa[full]==3.4.5
+    - rasa==3.4.5
+    - pymorphy2==0.9.1
