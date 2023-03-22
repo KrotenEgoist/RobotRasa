@@ -14,7 +14,7 @@ pipeline:
     random_seed: 42
     epochs: 100
   - name: FallbackClassifier
-    threshold: 0.8
+    threshold: 0.7
 
 policies:
   - name: TEDPolicy
