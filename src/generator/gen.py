@@ -48,10 +48,12 @@ class Generator:
         """
         morphed = []
         for word in words:
-            print(word)
-            morph = self.morph.parse(word)[0]
-            inflected = morph.inflect(grammes)
-            new_word = inflected.word
+            try:
+                morph = self.morph.parse(word)[0]
+                inflected = morph.inflect(grammes)
+                new_word = inflected.word
+            except AttributeError:
+                new_word = word
 
             morphed.append(new_word)
 
@@ -80,6 +82,7 @@ class Generator:
         keys = list(map(lambda x: x.split('-'), sample.split(" ")))
 
         case = None
+        cmd = []
         for subkey in keys:
             words = None
             inflected = []
@@ -96,7 +99,7 @@ class Generator:
             if len(inflected) > 1:
                 idx = list(map(lambda x: self.morph.parse(x)[0].tag.POS, inflected)).index('NOUN')
                 gender = self.morph.parse(inflected[idx])[0].tag.gender
-                # animacy = self.morph.parse(inflected[idx])[0].tag.animacy
+                animacy = self.morph.parse(inflected[idx])[0].tag.animacy
 
                 inflected = self.inflect(inflected, {gender})
             else:
@@ -107,34 +110,12 @@ class Generator:
             else:
                 case = None
 
-            print(inflected)
+            if inflected:
+                cmd.append(inflected)
 
-        # case = None
-        # words_dict = {}
-        # for key in keys:
-        #     words = random.choice(self.dictionary[key]).split('|')
-        #
-        #     if case:
-        #         try:
-        #             word = self.inflect(words[0], case)
-        #         except AttributeError:
-        #             word = words[0]
-        #     else:
-        #         word = words[0]
-        #
-        #     if len(words) > 1:
-        #         case = set(words[1:])
-        #     else:
-        #         case = None
-        #
-        #     words_dict[key] = word
-        #
-        # for key, value in words_dict.items():
-        #     sample = sample.replace(key, value)
-        #
-        # return sample.strip()
+        return ' '.join(cmd)
 
-    def run(self, samples, amount=100, start=None, end=None):
+    def run(self, samples, amount=10, start=None, end=None):
 
         cmd_list = []
         for sample in samples:
@@ -156,8 +137,21 @@ if __name__ == '__main__':
     generator = Generator(dict_path)
 
     exmp = [
-        "prep:robot action:move aux:to feature:nearest-object:tree"
+        # "prep:robot action:patrol",
+        # "prep:robot action:stop",
+        # "prep:robot action:move direction:forward",
+        # "prep:robot action:rotate direction:right",
+        # "prep:robot action:move aux:to object:tree",
+        # "prep:robot action:move aux:to feature:nearest-object:tree",
+        # "prep:robot action:rotate aux:to object:house",
+        # "prep:robot action:find object:tree",
+        # "prep:robot action:around object:rock",
+        # "prep:robot action:monitor object:car",
+        # "prep:robot action:analyze object:tree",
+        "prep:robot action:follow aux:into object:car"
     ]
 
-    a = generator.run(samples=exmp)
+    actions = generator.run(samples=exmp)
+    for act in actions:
+        print(act)
 
