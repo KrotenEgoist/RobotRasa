@@ -11,11 +11,13 @@ class Generator:
         self.dictionary = self.create_dictionary()
         self.morph = pymorphy2.MorphAnalyzer()
         self.key_pattern = re.compile(r'\w+:\w+')
+        self.word_pattern = re.compile(r'\|([\w\s,]+)')
 
     def create_dictionary(self) -> dict:
         """
         Создает словарь из директории dictionary
-        Ключ - путь до файла со словами, пример action/move, object/house
+
+        Ключ - путь до файла со словами, пример action:move, object:house
         Значение - содержимое файла со словами в виде списка
 
         :return
@@ -37,16 +39,24 @@ class Generator:
 
         return dictionary
 
-    def inflect(self, words: list, grammes: set):
+    def inflect(self, words: str, grammes: set) -> str:
         """
         Преобразует слово в соответствии с граммемами (http://opencorpora.org/dict.php?act=gram)
 
-        :param word: слово в нормальной форме, пример: "идти"
+        :param words: слово/слова в нормальной форме, пример: "идти"
         :param grammes: множество граммем, пример: {'excl'}
         :return:
             Измененное слово: "идти", {'excl'} -> "иди"
         """
         morphed = []
+        words = words.split(" ")
+
+        # Если слов несколько, то все слова склоняются в род существительного
+        if len(words) > 1:
+            idx = list(map(lambda x: self.morph.parse(x)[0].tag.POS, words)).index('NOUN')
+            gender = self.morph.parse(words[idx])[0].tag.gender
+            words = list(map(lambda x: self.morph.parse(x)[0].inflect({gender}).word, words))
+
         for word in words:
             try:
                 morph = self.morph.parse(word)[0]
@@ -62,66 +72,62 @@ class Generator:
     def create(self, sample: str):
         """
         Подставляет случайные слова из словаря в шаблон, применяет преобразование слов
+
         Ключи для словаря извлекаются регулярным выражением
 
         :param sample: Шаблон, пример "prep:robot action:patrol"
             Словарь: {
-                "prep:robot": ["|excl", "|plur"],
+                "prep:robot": [",excl", ",excl,plur"],
                 "action:patrol" ["патрулировать", "разведывать", "охранять"],
                 ...
             }
 
             P.S.: для работы преобразования слов, необходимо указывать в файлах словаря требуемые граммемы,
-            пример для файла prep/robot: "|excl" означает, что преобразование применится к следующему слову в шаблоне
+            пример для файла prep:robot: ",excl" означает, что преобразование применится к следующему слову в шаблоне
         :return:
             измененная строка в соответствии с выбранными значениями словаря
 
         """
-        # keys = self.key_pattern.findall(sample)
+        edited_sample = sample
+        keys = self.key_pattern.findall(sample)
 
-        keys = list(map(lambda x: x.split('-'), sample.split(" ")))
+        # Извлечение ключей для словаря по шаблону
+        for key in keys:
+            random_word = random.choice(self.dictionary[key])
+            edited_sample = edited_sample.replace(key, random_word)
+
+        # Извлечение слов для склонения по шаблону
+        words = self.word_pattern.findall(edited_sample)
 
         case = None
-        cmd = []
-        for subkey in keys:
-            words = None
-            inflected = []
-            for key in subkey:
-                words = random.choice(self.dictionary[key]).split('|')
+        for stuff in words:
+            word_and_case = stuff.split(',')
 
-                if case:
-                    word = self.inflect([words[0]], case)
-                else:
-                    word = words[0]
+            word = word_and_case[0]
 
-                inflected.append(word)
-
-            if len(inflected) > 1:
-                idx = list(map(lambda x: self.morph.parse(x)[0].tag.POS, inflected)).index('NOUN')
-                gender = self.morph.parse(inflected[idx])[0].tag.gender
-                animacy = self.morph.parse(inflected[idx])[0].tag.animacy
-
-                inflected = self.inflect(inflected, {gender})
+            if case:
+                new_word = self.inflect(word, set(case))
             else:
-                inflected = inflected[0]
+                new_word = word
 
-            if len(words) > 1:
-                case = set(words[1:])
-            else:
-                case = None
+            case = word_and_case[1:]
+            edited_sample = edited_sample.replace(','.join(case), '')
 
-            if inflected:
-                cmd.append(inflected)
+            if new_word:
+                edited_sample = edited_sample.replace(word, new_word)
 
-        return ' '.join(cmd)
+        edited_sample = edited_sample.replace(',', '')
+        edited_sample = edited_sample.replace('|', ' ')
+        edited_sample = edited_sample.strip()
 
-    def run(self, samples, amount=10, start=None, end=None):
+        return edited_sample
+
+    def run(self, samples, amount=1, start=None, end=None):
 
         cmd_list = []
         for sample in samples:
             for i in range(amount):
                 example = self.create(sample)
-
                 if start and end:
                     n = random.randint(start, end)
                     example = example.format(n)
@@ -135,23 +141,4 @@ if __name__ == '__main__':
     project_path = Path(__file__).parents[2]
     dict_path = project_path.joinpath("src/generator/dictionary")
     generator = Generator(dict_path)
-
-    exmp = [
-        # "prep:robot action:patrol",
-        # "prep:robot action:stop",
-        # "prep:robot action:move direction:forward",
-        # "prep:robot action:rotate direction:right",
-        # "prep:robot action:move aux:to object:tree",
-        # "prep:robot action:move aux:to feature:nearest-object:tree",
-        # "prep:robot action:rotate aux:to object:house",
-        # "prep:robot action:find object:tree",
-        # "prep:robot action:around object:rock",
-        # "prep:robot action:monitor object:car",
-        # "prep:robot action:analyze object:tree",
-        "prep:robot action:follow aux:into object:car"
-    ]
-
-    actions = generator.run(samples=exmp)
-    for act in actions:
-        print(act)
 
