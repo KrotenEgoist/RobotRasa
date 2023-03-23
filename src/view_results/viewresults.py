@@ -34,7 +34,7 @@ def read_pandas():
     paths = list(pathlib.Path(file+results).glob("*/*_report.json"))
     configurations = set([p.parts[-2] for p in paths])
     intent_df = pd.concat([read_intent_report(p) for p in paths if 'intent_report' in str(p)])
-    entity_df = pd.concat([read_intent_report(p) for p in paths if 'intent_report' not in str(p)]).pipe(add_zeros, all_configs=configurations)
+    entity_df = pd.concat([read_entity_report(p) for p in paths if 'intent_report' not in str(p)]).pipe(add_zeros, all_configs=configurations)
     return intent_df, entity_df
 
 intent_df, entity_df = read_pandas()
