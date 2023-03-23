@@ -51,12 +51,12 @@ rasa run
 ```
 отправлять на http://[ip_addr]:[port]/webhooks/rest/webhook/
 # Структура проекта
-- [data](data) и [data_rule_based](data_rule_based) - данные для обучения
-- [configs](configs) - конфигурации обучения
-- [tests](tests) - тестовые историями
-- [actions](actions) - кастомные actions
-- [credentials.yml](credentials.yml) - конфигурация серверов для обмена сообщениями (rasa run запускает rest api сервер)
-- [endpoints.yml](endpoints.yml) - конфигурация эндпоинтов (сюда пишется сервер кастомных actions)
+- [data](src/data) и [data_rule_based](src/data_rule_based) - данные для обучения
+- [configs](src/configs) - конфигурации обучения
+- [tests](src/tests) - тестовые историями
+- [actions](src/actions) - кастомные actions
+- [credentials.yml](src/credentials.yml) - конфигурация серверов для обмена сообщениями (rasa run запускает rest api сервер)
+- [endpoints.yml](src/endpoints.yml) - конфигурация эндпоинтов (сюда пишется сервер кастомных actions)
 
 Подробнее в каждой директории
 

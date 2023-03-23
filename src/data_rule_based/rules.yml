@@ -4,14 +4,14 @@ rules:
 - rule: Команда
   steps:
   - intent: command
-  - action: send_command
+  - action: utter_command
 
 - rule: Ошибка в команде
   steps:
     - intent: wrong_command
-    - action: send_wrong_command
+    - action: utter_wrong_command
 
 - rule: Команда по истории
   steps:
     - intent: story_command
-    - action: send_story_command
+    - action: utter_story_command

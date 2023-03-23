@@ -1,0 +1,12 @@
+name: rasa_test
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - pip=22.3.1
+  - python=3.7.16
+  - cudatoolkit=11.2.2
+  - cudnn=8.1.0
+  - pip:
+      - rasa[transformers]==3.4.6
+      - https://github.com/explosion/spacy-models/releases/download/ru_core_news_sm-3.5.0/ru_core_news_sm-3.5.0-py3-none-any.whl

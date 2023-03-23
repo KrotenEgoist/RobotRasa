@@ -10,7 +10,7 @@ pipeline:
 # See https://rasa.com/docs/rasa/tuning-your-model for more information.
 
   - name: SpacyNLP
-    model: ru_core_news_md
+    model: ru_core_news_sm
     case_sensitive: False
   - name: SpacyTokenizer
   - name: SpacyFeaturizer
