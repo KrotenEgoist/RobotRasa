@@ -3,6 +3,7 @@ language: ru
 
 pipeline:
   - name: WhitespaceTokenizer
+  - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
     analyzer: char_wb
     min_ngram: 1
@@ -10,7 +11,6 @@ pipeline:
   - name: DIETClassifier
     use_masked_language_model: True
     constrain_similarities: True
-    entity_recognition: False
     random_seed: 42
     epochs: 100
   - name: FallbackClassifier

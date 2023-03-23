@@ -1,12 +1,39 @@
 version: "3.1"
 
 intents:
-  - patrol
-  - stop
-  - move_dir
-  - move_on
-  - wrong_command
-  - nlu_fallback
+  - analyze:
+      use_entities: [object, relation, nearest, gaze]
+  - around:
+      use_entities: [object, relation, nearest, gaze]
+  - find:
+      use_entities: [object, relation, nearest, gaze]
+  - follow:
+      use_entities: [object]
+  - monitor:
+      use_entities: [object, relation, nearest, gaze]
+  - move:
+      use_entities: [object, relation, nearest, gaze]
+  - move_dir:
+      use_entities: [direction, ]
+  - patrol:
+      use_entities: [object, ]
+  - rotate:
+      use_entities: [object, relation, nearest, gaze]
+  - rotate_dir:
+      use_entities: [direction, ]
+  - stop:
+      use_entities: []
+  - nlu_fallback:
+      use_entities: []
+  - wrong_command:
+      use_entities: []
+
+entities:
+  - object
+  - direction
+  - relation
+  - nearest
+  - gaze
 
 responses:
   utter_send_command:
