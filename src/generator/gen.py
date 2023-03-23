@@ -435,10 +435,20 @@ class Generator:
         """
         Сохраняет сгенерированные данные в формат для rasa nlu
 
+        Шапка данных rasa nlu:
+        --------------
+        version: "3.1"
+
+        nlu:
+        - intent: название_намерения
+          examples: |
+        --------------
+
         :param data: словарь сгенерированных данных ключ - тип действия, значение - список команд
         :param path: путь до данных rasa nlu
         """
         for key, values in data.items():
+            # составление списка уникальных команд и случайное перемешивание
             uniq = list(set(values))
             random.shuffle(uniq)
 
