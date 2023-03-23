@@ -6,3 +6,57 @@ rules:
   - intent: nlu_fallback
   - action: utter_please_rephrase
 
+- rule: analyze
+  steps:
+    - intent: analyze
+    - action: utter_analyze
+
+- rule: find
+  steps:
+    - intent: find
+    - action: utter_find
+
+- rule: follow
+  steps:
+    - intent: follow
+    - action: utter_follow
+
+- rule: monitor
+  steps:
+    - intent: monitor
+    - action: utter_monitor
+
+- rule: move
+  steps:
+    - intent: move
+    - action: utter_move
+
+- rule: rotate
+  steps:
+    - intent: rotate
+    - action: utter_rotate
+
+- rule: route
+  steps:
+    - intent: route
+    - action: utter_route
+
+- rule: go_around
+  steps:
+    - intent: go_around
+    - action: utter_go_around
+
+- rule: circle
+  steps:
+    - intent: circle
+    - action: utter_circle
+
+- rule: story_command
+  steps:
+    - intent: story_command
+    - action: utter_story_command
+
+- rule: wrong_command
+  steps:
+    - intent: wrong_command
+    - action: utter_wrong_command
