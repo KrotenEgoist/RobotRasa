@@ -1,15 +1,26 @@
 version: "3.1"
 
 intents:
-  - command:
-      use_entities: []
-  - wrong_command:
-      use_entities: []
-  - story_command:
-      use_entities: command_number
+  - analyze
+  - find
+  - follow
+  - monitor
+  - move
+  - rotate
+  - route
+  - go_around
+  - circle
+  - story_command
+  - wrong_command
 
 entities:
   - command_number
+  - object
+  - direction
+  - distance
+  - relation
+  - gaze
+  - time
 
 actions:
   - send_command
@@ -17,17 +28,42 @@ actions:
   - send_story_command
 
 responses:
-  utter_command:
-  - text: "Ок, передал команду"
-
-  utter_wrong_command:
-  - text: "Ок, последняя команда передана с ошибкой"
 
   utter_please_rephrase:
   - text: "Я не понял, повторите"
 
+  utter_analyze:
+  - text: "utter_analyze"
+
+  utter_find:
+  - text: "utter_find"
+
+  utter_follow:
+  - text: "utter_follow"
+
+  utter_monitor:
+  - text: "utter_monitor"
+
+  utter_move:
+  - text: "utter_move"
+
+  utter_rotate:
+  - text: "utter_rotate"
+
+  utter_route:
+  - text: "utter_route"
+
+  utter_go_around:
+    - text: "utter_go_around"
+    
+  utter_circle:
+    - text: "utter_circle"
+
   utter_story_command:
-  - text: "Исполняю команду в истории"
+  - text: "utter_story_command"
+
+  utter_wrong_command:
+  - text: "utter_wrong_command"
 
 session_config:
   session_expiration_time: 60

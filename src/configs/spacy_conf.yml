@@ -10,7 +10,7 @@ pipeline:
 # See https://rasa.com/docs/rasa/tuning-your-model for more information.
 
   - name: SpacyNLP
-    model: ru_core_news_md
+    model: ru_core_news_sm
     case_sensitive: False
   - name: SpacyTokenizer
   - name: SpacyFeaturizer
@@ -24,14 +24,16 @@ pipeline:
     random_seed: 1
     constrain_similarities: True
     epochs: 200
-    entity_recognition: False
+    entity_recognition: True
     use_masked_language_model: False
   - name: ResponseSelector
     random_seed: 1
     epochs: 200
     constrain_similarities: True
-  - name: RegexEntityExtractor
-  - name: EntitySynonymMapper
+  - name: DucklingEntityExtractor
+    url: "http://localhost:8000"
+    dimensions: ["duration", "distance"]
+    locale: "ru_RU"
   - name: FallbackClassifier
     threshold: 0.999
     ambiguity_threshold: 0.1
@@ -40,10 +42,4 @@ pipeline:
 # https://rasa.com/docs/rasa/core/policies/
 policies:
 
-   - name: MemoizationPolicy
-   - name: TEDPolicy
-     random_seed: 1
-     constrain_similarities: True
-     max_history: 5
-     epochs: 150
    - name: RulePolicy

@@ -35,14 +35,16 @@ pipeline:
     weight_sparsity: 0.5
     hidden_layer_sizes:
       text: [ 512, 128 ]
-    entity_recognition: False
+    entity_recognition: True
     use_masked_language_model: False
   - name: ResponseSelector
     random_seed: 1
     epochs: 150
     constrain_similarities: True
-  - name: RegexEntityExtractor
-  - name: EntitySynonymMapper
+  - name: DucklingEntityExtractor
+    url: "http://localhost:8000"
+    dimensions: ["duration", "distance"]
+    locale: "ru_RU"
   - name: FallbackClassifier
     threshold: 0.999
     ambiguity_threshold: 0.1
@@ -51,10 +53,4 @@ pipeline:
 # https://rasa.com/docs/rasa/core/policies/
 policies:
 
-   - name: MemoizationPolicy
-   - name: TEDPolicy
-     random_seed: 1
-     constrain_similarities: True
-     max_history: 5
-     epochs: 150
    - name: RulePolicy
