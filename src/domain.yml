@@ -20,7 +20,7 @@ entities:
   - distance
   - relation
   - gaze
-  - time
+  - duration
 
 actions:
   - send_command
