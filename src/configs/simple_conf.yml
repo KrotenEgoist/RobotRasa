@@ -9,7 +9,11 @@ language: ru
 pipeline:
 # See https://rasa.com/docs/rasa/tuning-your-model for more information.
 
-  - name: WhitespaceTokenizer
+  - name: SpacyNLP
+    model: ru_core_news_md
+    case_sensitive: False
+  - name: SpacyTokenizer
+  - name: SpacyFeaturizer
   - name: RegexFeaturizer
   - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
@@ -26,10 +30,6 @@ pipeline:
     random_seed: 1
     epochs: 50
     constrain_similarities: True
-  - name: DucklingEntityExtractor
-    url: "http://localhost:8000"
-    dimensions: ["duration", "distance"]
-    locale: "ru_RU"
   - name: FallbackClassifier
     threshold: 0.999
     ambiguity_threshold: 0.1

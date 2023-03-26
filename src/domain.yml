@@ -20,12 +20,73 @@ entities:
   - distance
   - relation
   - gaze
-  - duration
 
 actions:
   - send_command
   - send_wrong_command
   - send_story_command
+  - action_slot_reset
+  - move_category
+  - validate_move_category_form
+  - action_ask_param
+
+slots:
+  direction:
+    type: any
+    initial_value: null
+    mappings:
+      - type: from_entity
+        entity: direction
+  object:
+    type: any
+    initial_value: null
+    mappings:
+      - type: from_entity
+        entity: object
+  move_category:
+    type: categorical
+    influence_conversation: true
+    values:
+      - object
+      - direction
+      - empty
+    mappings:
+      - type: custom
+  param:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+        - active_loop: which_form
+          requested_slot: param
+        - active_loop: how_many_form
+          requested_slot: param
+  move_category_2:
+    type: categorical
+    influence_conversation: true
+    values:
+      - object
+      - direction
+      - empty
+    mappings:
+      - type: from_text
+        conditions:
+        - active_loop: move_category_form
+          requested_slot: move_category_2
+
+
+forms:
+  move_category_form:
+    required_slots:
+      - move_category_2
+
+  which_form:
+    required_slots:
+      - param
+
+  how_many_form:
+    required_slots:
+      - param
 
 responses:
 
@@ -65,6 +126,23 @@ responses:
   utter_wrong_command:
   - text: "utter_wrong_command"
 
+  utter_where:
+  - text: "Куда?"
+
+  utter_which:
+  - text: "К какому?"
+
+  utter_how_many:
+    - text: "На сколько?"
+
+  utter_move_direction:
+    - text: "dir"
+
+  utter_move_object:
+    - text: "obj"
+
+  utter_ask_move_category_2:
+    - text: "Куда?"
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

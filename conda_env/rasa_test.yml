@@ -9,5 +9,5 @@ dependencies:
   - cudnn=8.1.0
   - pip:
       - rasa[transformers]==3.4.6
-      - https://github.com/explosion/spacy-models/releases/download/ru_core_news_sm-3.5.0/ru_core_news_sm-3.5.0-py3-none-any.whl
+      - https://github.com/explosion/spacy-models/releases/download/ru_core_news_md-3.5.0/ru_core_news_md-3.5.0-py3-none-any.whl
       - streamlit==1.20.0

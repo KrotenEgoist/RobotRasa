@@ -11,11 +11,6 @@ rules:
     - intent: analyze
     - action: utter_analyze
 
-- rule: find
-  steps:
-    - intent: find
-    - action: utter_find
-
 - rule: follow
   steps:
     - intent: follow
@@ -25,16 +20,6 @@ rules:
   steps:
     - intent: monitor
     - action: utter_monitor
-
-- rule: move
-  steps:
-    - intent: move
-    - action: utter_move
-
-- rule: rotate
-  steps:
-    - intent: rotate
-    - action: utter_rotate
 
 - rule: route
   steps:
