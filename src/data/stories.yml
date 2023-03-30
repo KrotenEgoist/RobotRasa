@@ -2,69 +2,57 @@ version: "3.1"
 
 stories:
 
-  - story: send patrol
-    steps:
-      - intent: patrol
-      - action: utter_send_command
-
-  - story: send stop
-    steps:
-      - intent: stop
-      - action: utter_send_command
-
-  - story: send move_dir
-    steps:
-      - intent: move_dir
-      - action: utter_send_command
-
-  - story: send move_dir
-    steps:
-      - intent: move
-      - action: utter_send_command
-
-  - story: send wrong patrol command
-    steps:
-      - intent: patrol
-      - action: utter_send_command
-      - intent: wrong_command
-      - action: utter_wrong_command
-
-  - story: send different command
-    steps:
-      - intent: move_dir
-      - action: utter_send_command
-      - intent: stop
-      - action: utter_send_command
-      - intent: patrol
-      - action: utter_send_command
-      - intent: move
-      - action: utter_send_command
-
-  - story: send actions
+  - story: Send analyze command
     steps:
       - intent: analyze
-      - action: utter_send_command
-      - intent: around
-      - action: utter_send_command
-      - intent: find
-      - action: utter_send_command
-      - intent: follow
-      - action: utter_send_command
-      - intent: monitor
-      - action: utter_send_command
+      - action: action_send_command
 
-  - story: rotate
+  - story: Send around command
+    steps:
+      - intent: around
+      - action: action_send_command
+
+  - story: Send find command
+    steps:
+      - intent: find
+      - action: action_send_command
+
+  - story: Send follow command
+    steps:
+      - intent: follow
+      - action: action_send_command
+
+  - story: Send monitor command
+    steps:
+      - intent: monitor
+      - action: action_send_command
+
+  - story: Send move command
+    steps:
+      - intent: move
+      - action: action_send_command
+
+  - story: Send move_dir command
+    steps:
+      - intent: move_dir
+      - action: action_send_command
+
+  - story: Send patrol command
+    steps:
+      - intent: patrol
+      - action: action_send_command
+
+  - story: Send rotate command
     steps:
       - intent: rotate
-      - action: utter_send_command
-      - intent: rotate_dir
-      - action: utter_send_command
+      - action: action_send_command
 
-  - story: send rephrase
+  - story: Send rotate_dir command
     steps:
-      - intent: nlu_fallback
-      - action: utter_rephrase
-      - intent: move_dir
-      - action: utter_send_command
-      - intent: wrong_command
-      - action: utter_wrong_command
+      - intent: rotate_dir
+      - action: action_send_command
+
+  - story: Send stop command
+    steps:
+      - intent: stop
+      - action: action_send_command
