@@ -3,7 +3,7 @@ channels:
   - defaults
 dependencies:
   - pip=23.0.1
-  - python=3.10.9
+  - python=3.10
   - pip:
-    - rasa==3.4.5
+    - rasa==3.5.2
     - pymorphy2==0.9.1
