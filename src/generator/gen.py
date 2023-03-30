@@ -1,6 +1,7 @@
 import random
 import re
 import pymorphy2
+import string
 
 from pathlib import Path
 
@@ -13,6 +14,82 @@ class Generator:
         self.morph = pymorphy2.MorphAnalyzer()
         self.key_pattern = re.compile(r'\w+:\w+')
         self.word_pattern = re.compile(r'([\w\s,]+)')
+
+    @staticmethod
+    def generate_fallback(amount: int = 100,
+                          range_eng: list | tuple = (0, 10),
+                          range_rus: list | tuple = (0, 10),
+                          range_dig: list | tuple = (0, 10),
+                          range_spc: list | tuple = (0, 10)):
+        """
+        Создает некорректный ввод
+
+        :param amount: количество примеров
+        :param range_eng: количество английских букв
+        :param range_rus: количество русских букв
+        :param range_dig: количество цифр
+        :param range_spc: количество пробелов
+        :return:
+
+        """
+        en_letters = string.ascii_letters
+        ru_letters = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+        digits = string.digits
+
+        commands = []
+        for _ in range(amount):
+            eng = [random.choice(en_letters) for _ in range(random.randint(*range_eng))]
+            rus = [random.choice(ru_letters) for _ in range(random.randint(*range_rus))]
+            dig = [random.choice(digits) for _ in range(random.randint(*range_dig))]
+            spaces = [random.choice(["", " "]) for _ in range(random.randint(*range_spc))]
+
+            inp = eng + rus + dig + spaces
+            random.shuffle(inp)
+
+            inp_string = ''.join(inp)
+            commands.append(inp_string)
+
+        return {"nlu_fallback": commands}
+
+    def generate_action(self, amount: int = 10):
+        """
+        Создает команды без атрибутов для уточнения
+
+        :param amount: количество примеров на шаблон
+        :return:
+        """
+        actions_blacklist = ["action:stop", "action:patrol", "action:follow"]
+        actions_path = list(self.dictionary_path.glob('**/action/*'))
+        actions = list(map(lambda x: ':'.join(x.parts[-2:]), actions_path))
+        for ignore in actions_blacklist:
+            actions.remove(ignore)
+
+        samples = []
+        for act in actions:
+            # иди, двигайся, поворачивай и т.д.
+            sample = f"|prep:robot|{act}|"
+            samples.append(sample)
+
+        commands = self.run(samples, amount=amount)
+
+        return {"action": commands}
+
+    def generate_wrong(self, amount: int = 10):
+        """
+        Создает запросы на исправление команды
+
+        :param amount: количество примеров на один шаблон
+        :return:
+            Список запросов
+        """
+        samples = [
+            # исправь команду
+            "|prep:robot|wrong:fix|wrong:mistake|"
+        ]
+
+        commands = self.run(samples, amount=amount)
+
+        return {"wrong_command": commands}
 
     def generate_patrol(self, amount: int = 10, start: int = 1, end: int = 10) -> dict:
         """
