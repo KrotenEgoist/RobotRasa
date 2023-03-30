@@ -33,7 +33,7 @@ stories:
   steps:
     - user: |
         осуществи перемещение на север на 100 м
-      intent: move_on
+      intent: move_dir
     - action: utter_send_command
     - user: |
         притормози здесь

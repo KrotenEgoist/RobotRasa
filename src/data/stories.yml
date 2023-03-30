@@ -17,9 +17,9 @@ stories:
       - intent: move_dir
       - action: utter_send_command
 
-  - story: send move_on
+  - story: send move_dir
     steps:
-      - intent: move_on
+      - intent: move
       - action: utter_send_command
 
   - story: send wrong patrol command
@@ -37,7 +37,27 @@ stories:
       - action: utter_send_command
       - intent: patrol
       - action: utter_send_command
-      - intent: move_on
+      - intent: move
+      - action: utter_send_command
+
+  - story: send actions
+    steps:
+      - intent: analyze
+      - action: utter_send_command
+      - intent: around
+      - action: utter_send_command
+      - intent: find
+      - action: utter_send_command
+      - intent: follow
+      - action: utter_send_command
+      - intent: monitor
+      - action: utter_send_command
+
+  - story: rotate
+    steps:
+      - intent: rotate
+      - action: utter_send_command
+      - intent: rotate_dir
       - action: utter_send_command
 
   - story: send rephrase
