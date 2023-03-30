@@ -81,7 +81,7 @@ responses:
     - text: "Перефразируйте"
 
 actions:
-  - action_hello_world
+  - action_send_command
 
 
 session_config:
