@@ -1,33 +1,35 @@
 recipe: default.v1
 language: ru
-
 pipeline:
-  - name: WhitespaceTokenizer
-  - name: LexicalSyntacticFeaturizer
-  - name: CountVectorsFeaturizer
-    analyzer: char_wb
-    min_ngram: 1
-    max_ngram: 4
-  - name: DucklingEntityExtractor
-    url: http://localhost:8000
-    locale: "ru_RU"
-    dimensions: ["distance", "duration"]
-  - name: DucklingEntityExtractor
-    url: http://localhost:8000
-    locale: "en_EN"
-    dimensions: ["temperature"]
-  - name: DIETClassifier
-    use_masked_language_model: True
-    constrain_similarities: True
-    random_seed: 42
-    epochs: 100
-  - name: FallbackClassifier
-    threshold: 0.5
-
+- name: WhitespaceTokenizer
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: 1
+  max_ngram: 4
+- name: DucklingEntityExtractor
+  url: http://localhost:8000
+  locale: ru_RU
+  dimensions:
+  - distance
+  - duration
+- name: DucklingEntityExtractor
+  url: http://localhost:8000
+  locale: en_EN
+  dimensions:
+  - temperature
+- name: DIETClassifier
+  use_masked_language_model: true
+  constrain_similarities: true
+  random_seed: 42
+  epochs: 100
+- name: FallbackClassifier
+  threshold: 0.5
 policies:
-  - name: TEDPolicy
-    constrain_similarities: True
-    random_seed: 42
-    max_history: 10
-    epochs: 100
-  - name: RulePolicy
+- name: TEDPolicy
+  constrain_similarities: true
+  random_seed: 42
+  max_history: 10
+  epochs: 100
+- name: RulePolicy
+assistant_id: 20230330-174038-quiet-conflict

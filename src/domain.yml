@@ -1,68 +1,14 @@
 version: "3.1"
 
 intents:
-  - action:
-      use_entities: []
-  - analyze:
-      use_entities:
-        - object
-        - relation
-        - nearest
-        - gaze
-  - around:
-      use_entities:
-        - object
-        - relation
-        - nearest
-        - gaze
-  - find:
-      use_entities:
-        - object
-        - relation
-        - nearest
-        - gaze
-  - follow:
-      use_entities:
-        - object
-  - monitor:
-      use_entities:
-        - object
-        - relation
-        - nearest
-        - gaze
-  - move:
-      use_entities:
-        - object
-        - relation
-        - nearest
-        - gaze
-  - move_dir:
-      use_entities:
-        - direction
-        - distance
-  - patrol:
-      use_entities:
-        - object
-        - distance
-  - rotate:
-      use_entities:
-        - object
-        - relation
-        - nearest
-        - gaze
-  - rotate_dir:
-      use_entities:
-        - direction
-        - duration
-        - temperature
-  - stop:
-      use_entities: []
+  - command
   - nlu_fallback:
       use_entities: []
   - wrong_command:
       use_entities: []
 
 entities:
+  - action
   - object
   - direction
   - relation
@@ -82,7 +28,54 @@ responses:
 
 actions:
   - action_send_command
+  - action_reset_slots
 
+slots:
+  act:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: action
+  obj:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: object
+  dir:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: direction
+  rel:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: relation
+  near:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: nearest
+  gz:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: gaze
+  dist:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: distance
+  dur:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: duration
+  deg:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: temperature
 
 session_config:
   session_expiration_time: 60

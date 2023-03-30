@@ -1,0 +1,734 @@
+version: "3.1"
+
+nlu:
+- intent: command
+  examples: |
+    - [найди](action) [отлуп](object) [по правую сторону](relation) [ореха](object)
+    - [разлагайте](action) [овраг](object)
+    - [шлёпайте](action) к [свету](object) [на востоке относительно](relation) [дамы](object)
+    - [поспевай](action) к [болиду](object)
+    - [проезжайте](action) 9 м [напрямик](direction)
+    - [просматривай](action) [человека](object) [поперед](relation) тебя
+    - [крутись](action) до [оного](nearest) [ребёнка](object)
+    - [выглядывайте](action) [надлом](object) [севернее](relation) себя
+    - [придерживайтесь](action) к [ласточке](object)
+    - [направляйтесь](action) [прямо](direction)
+    - [защищай](action) по [окружности](object) 4 м
+    - [защищайте](action) по [кольцу](object) 8 м
+    - [прокручивайся](action) до [барьера](object) [на юге от](relation) [корыта](object) [на востоке относительно](relation) [воронки](object)
+    - [иди](action) [налево](direction) 33 м
+    - [охраняйте](action) по [схеме](object) 7
+    - [отыщите](action) [ограждение](object) [на западе относительно](relation) [человека](object) [за](relation) [перелесками](object)
+    - [бочи](action) к [роще](object)
+    - [собирайтесь](action) до [света](object) [в восточной стороне от](relation) [заслона](object) [справа от](relation) [парня](object)
+    - [обследуйте](action) [близкую](nearest) [лесополосу](object)
+    - [сдвинься](action) [на южный край](direction)
+    - [заворачивай](action) 293 ° [в северную сторону](direction)
+    - [отправляйтесь](action) до [канавы](object) [по левую сторону](relation) [брички](object)
+    - [проезжайте](action) к [неотдалённому](nearest) [препятствию](object)
+    - [постигните](action)
+    - [обгоняй](action) [ближайшее](nearest) [человека](object)
+    - [поворачивай](action) [в левую сторону](direction)
+    - [найди](action) [дворец](object) [в восточной стороне от](relation) [камня](object) [в восточной стороне от](relation) [лесополосы](object)
+    - [вращайтесь](action) к [пальме](object) [на севере относительно](relation) [воронки](object) [с левой стороны от](relation) [электросветильника](object)
+    - [поворачивайте](action) к [надлому](object)
+    - [рассматривай](action) [баррикаду](object) [южнее](relation) [ласточки](object) [у](relation) [пропасти](object)
+    - [бочите](action) [в сторону севера](direction) 192 °
+    - [обходи](action) [недалёкую](nearest) [личность](object)
+    - [просматривай](action) [данный](nearest) [надлом](object)
+    - [облапошивайте](action) [избу](object) [в западной стороне от](relation) [ласточки](object) [по правую руку](relation) [ежа](object)
+    - [патрулируйте](action) по [пути](object) 1
+    - [обкатывай](action) [таковую](nearest) [торшер](object)
+    - [разлагай](action) [впадину](object)
+    - [тормози](action)
+    - [разглядывай](action) [недалёкую](nearest) [баррикаду](object)
+    - [обкатывайте](action) [авто](object) [правее](relation) [лампады](object)
+    - [вертись](action) 318 ° [в западную сторону](direction)
+    - [выищите](action) [светоч](object) [на юге относительно](relation) [камушка](object) [позади](relation) [чащи](object)
+    - [дуй](action) 21 м [на восточный край](direction)
+    - [прощупай](action) [ласточку](object) [по правую сторону](relation) тебя
+    - [двигайся](action) 17 М [в сторону севера](direction)
+    - [вращайся](action) [влево](direction) 195 °
+    - [изучай](action) [дом](object) [на востоке относительно](relation) [преграды](object) [южнее](relation) [горки](object)
+    - [заворачивай](action) 289 ° [прямо](direction)
+    - [изучайте](action) [валун](object) [левее](relation) [товарища](object) [в южной стороне от](relation) [горы](object)
+    - [обскачи](action) [оную](nearest) [тачку](object)
+    - [исследуйте](action) [лесополосу](object) [в западной стороне от](relation) тебя
+    - [пробирайтесь](action) [в левую сторону](direction)
+    - [поворачивайте](action) [по правую руку](direction) 318 °
+    - [вертись](action) к [липе](object) [с правой стороны от](relation) тебя
+    - [прокручивайтесь](action) 223 ° [по правую руку](direction)
+    - [летите](action) [в восточную сторону](direction) 25 м
+    - [обозревай](action) [оный](nearest) [дворец](object)
+    - [патрулируйте](action) по 9 [методу](object)
+    - [вращайся](action)
+    - [изыщите](action)
+    - [отправляйтесь](action) [куда смотрю](object)
+    - [приищите](action) [оную](nearest) [лампу](object)
+    - [крутитесь](action) [на южный край](direction)
+    - [обставь](action) [данную](nearest) [ласточку](object)
+    - [проезжай](action) до [берёзы](object)
+    - [прокручивайтесь](action) к [таковому](nearest) [строению](object)
+    - [поворачивай](action) [в западную сторону](direction)
+    - [гоните](action)
+    - [вращайтесь](action) до [булыжника](object) [спереди от](relation) [мужчины](object)
+    - [зондируйте](action) [женщину](object) [южнее](relation) [перегородки](object)
+    - [оглядывай](action)
+    - [вынюхивай](action) по [касательной](object) размером 8 м
+    - [просматривай](action) [препятствие](object) [южнее](relation) [автомобиля](object) [рядом с](relation) [канавой](object)
+    - [вертитесь](action) до [ореха](object) [по правую сторону](relation) себя
+    - [летите](action) [в сторону севера](direction)
+    - [охраняй](action) по [кольцу](object) 2 м
+    - [рассматривай](action) [эту](nearest) [расселину](object)
+    - [переступайте](action) к [массиву](object) [с левой стороны от](relation) [дома](object)
+    - [патрулируйте](action)
+    - [зондируй](action) [рощу](object) [правее](relation) [парня](object)
+    - [заворачивайте](action) до [близлежащей](nearest) [пальмы](object)
+    - [обходи](action) [следующего](nearest) [электросветильник](object)
+    - [пойдите](action) до [строения](object) [на севере относительно](relation) [тачки](object)
+    - [обскачи](action) [ребёнка](object) [назади](relation) [столба](object)
+    - [захаживайте](action) [на юг](direction)
+    - [разглядывайте](action) [булыжник](object) [в южной стороне от](relation) тебя
+    - [езжайте](action) к [душе](object) [южнее](relation) [отлупа](object) [с правой стороны от](relation) [чащи](object)
+    - [обнаружьте](action) [машину](object) [восточнее](relation) [чащобы](object) [восточнее](relation) [хребта](object)
+    - [обезьяньте](action) к [автомобилю](object)
+    - [следуйте](action) к [тачке](object)
+    - [надыбай](action) [оный](nearest) [прожектор](object)
+    - [вертитесь](action) до [отложения](object) [по правую руку](relation) [бугра](object)
+    - [зондируйте](action) [лес](object) [правее](relation) [души](object)
+    - [обходите](action) [авто](object) [неподалеку от](relation) [отлупа](object)
+    - [съезди](action) [по правую руку](direction)
+    - [объезжайте](action) [пробоину](object)
+    - [бочи](action) до [данного](nearest) [преграждения](object)
+    - [заворачивайте](action) [напролом](direction)
+    - [заворачивай](action)
+    - [зондируй](action) [перелески](object) [на западе относительно](relation) себя
+    - [рассматривай](action) [авто](object) [назади](relation) [провала](object)
+    - [приищите](action) [заслон](object) [на западе от](relation) [души](object) [за](relation) [чащобой](object)
+    - [крутитесь](action) 134 ° [прямо по курсу](direction)
+    - [замрите](action)
+    - [облапошивай](action) [ласточку](object) [с правой стороны от](relation) [столба](object)
+    - [прощупайте](action) [тополь](object) [слева от](relation) [булыжника](object)
+    - [сходи](action) до [пропасти](object) [по левую сторону](relation) [автомобиля](object)
+    - [шлёпай](action) [в том направлении](object)
+    - [пробирайтесь](action) до [близлежащего](nearest) [валуна](object)
+    - [нащупайте](action) [соседнего](nearest) [ежа](object)
+    - [прокручивайся](action) [обертасом](direction)
+    - [вращайтесь](action) к [ореху](object) [в северной стороне от](relation) [рытвины](object) [по левую руку](relation) [света](object)
+    - [вертитесь](action) до [дуба](object) [на севере относительно](relation) [личности](object)
+    - [дуйте](action) [направо](direction) 50 м
+    - [заворачивай](action) [по правую руку](direction) 18 °
+    - [выступайте](action) до [фонаря](object) [восточнее](relation) [автомобиля](object) [на юге относительно](relation) [впадины](object)
+    - [охраняй](action)
+    - [полагайся](action) к [точилу](object)
+    - [отправляйся](action) [напрямик](direction)
+    - [дерзай](action) к [рытвине](object) [левее](relation) себя
+    - [найди](action) [ближайшего](nearest) [орех](object)
+    - [пойдите](action) до [лампады](object) [в восточной стороне от](relation) [ласточки](object) [на юге относительно](relation) [провала](object)
+    - [осматривай](action) [растение](object) [по левую сторону](relation) [мужчины](object) [на севере от](relation) [пропасти](object)
+    - [обставь](action) [особняк](object)
+    - [равняйтесь](action) к [болиду](object)
+    - [анализируй](action) [здание](object) [на востоке от](relation) [перегородки](object) [на юге от](relation) [горки](object)
+    - [вращайся](action) [на западный край](direction) 277 °
+    - [съезди](action) к [недалёкой](nearest) [загородке](object)
+    - [сторожи](action) по [плану](object) номер 7
+    - [отправляйтесь](action) до [берёзы](object)
+    - [находите](action) [ребёнка](object) [позади](relation) тебя
+    - [разлагайте](action) [строение](object) [на востоке от](relation) [преграждения](object) [в южной стороне от](relation) [горы](object)
+    - [вращайтесь](action) до [заслона](object) [в южной стороне от](relation) [точила](object) [на востоке от](relation) [ямы](object)
+    - [облапошивайте](action) [пробоину](object) [впереди](relation) тебя
+    - [обозревайте](action) [парня](object)
+    - [оглядывайте](action) [пропасть](object)
+    - [обозревай](action) [ежа](object)
+    - [зондируйте](action) [липу](object) [по левую сторону](relation) [валуна](object)
+    - [нашарь](action) [домик](object) [по правую руку](relation) себя
+    - [бочи](action) к [булыжнику](object) [правее](relation) [возвышенности](object)
+    - [исследуй](action) [болид](object) [правее](relation) себя
+    - [обходите](action) [товарища](object) [позадь](relation) [фонаря](object)
+    - [минуйте](action) [лампу](object) [западнее](relation) [воронки](object)
+    - [обезьяньте](action) за [авто](object)
+    - [заворачивайте](action) 86 ° [возвратно](direction)
+    - [прокручивайтесь](action) [сюда](object)
+    - [разыщите](action) [ольху](object)
+    - [пойдите](action) к [данному](nearest) [особняку](object)
+    - [нашарьте](action) [избу](object)
+    - [бочи](action) [в южную сторону](direction)
+    - [защищайте](action)
+    - [поворачивай](action) [налево](direction)
+    - [заворачивай](action) [в эту сторону](object)
+    - [сдвигайся](action) [в обратном направлении](direction)
+    - [идите](action) до [оной](nearest) [скалы](object)
+    - [бочи](action) 115 ° [в южную сторону](direction)
+    - [сторожи](action) по 9 [программе](object)
+    - [дерзай](action) [обертасом](direction)
+    - [маршируйте](action) до [углубления](object) [севернее](relation) тебя
+    - [двигайся](action) до [канавы](object) [левее](relation) [автомобиля](object)
+    - [полагайся](action) к [авто](object)
+    - [объезжай](action) [здание](object)
+    - [поворачивайте](action) 104 ° [в сторону востока](direction)
+    - [выглядывай](action) [камешек](object) [левее](relation) [препятствия](object)
+    - [обставьте](action) [данный](nearest) [овраг](object)
+    - [облапошивай](action) [столб](object) [в южной стороне от](relation) [тачки](object) [по правую руку](relation) [разлома](object)
+    - [обставь](action)
+    - [прокручивайтесь](action) [в ту сторону](object)
+    - [собирайтесь](action) до [пригорка](object) [восточнее](relation) [тайги](object) [по правую сторону](relation) [липы](object)
+    - [дуй](action) 44 м [в сторону запада](direction)
+    - [переступайте](action) [на южный край](direction) 18 м
+    - [разлагайте](action) [коня](object)
+    - [замри](action)
+    - [прекрати](action)
+    - [найдите](action) [близкую](nearest) [личность](object)
+    - [заворачивайте](action) к [перелескам](object) [за спиной](relation) [коттеджа](object) [левее](relation) [светильника](object)
+    - [пробирайтесь](action) к [близрасположенной](nearest) [фигуре](object)
+    - [бочите](action) [в северную сторону](direction) 76 °
+    - [полагайтесь](action) до [точила](object)
+    - [вертитесь](action) [в южную сторону](direction)
+    - [вышагивайте](action) к [недалёкому](nearest) [холму](object)
+    - [обозревайте](action) [этот](nearest) [дом](object)
+    - [иди](action) [назад](direction)
+    - [выступайте](action) [на южный край](direction)
+    - [обгоняйте](action) [лесополосу](object)
+    - [прокручивайтесь](action) [напрямик](direction)
+    - [крутитесь](action) к [голышу](object) [пред](relation) собой
+    - [сторожи](action) по [трассе](object) 7
+    - [собирайтесь](action) 5 м [на восток](direction)
+    - [облапошивайте](action) [пропасть](object) [на востоке от](relation) себя
+    - [поспевай](action) за [бричкой](object)
+    - [просматривайте](action) [близкую](nearest) [избу](object)
+    - [патрулируй](action) по [кругу](object) 1 м
+    - [выищи](action) [близкую](nearest) [берёзу](object)
+    - [охраняйте](action) по 3 [маршруту](object)
+    - [припаркуйтесь](action)
+    - [поворачивай](action) 262 ° [в сторону севера](direction)
+    - [прерви](action)
+    - [равняйся](action) до [брички](object)
+    - [постигните](action) [заслон](object)
+    - [обходите](action) по [методу](object) номер 9
+    - [подходи](action) [напролом](direction) 29 М
+    - [просматривайте](action) [массив](object) [с левой стороны от](relation) [кругляша](object) [восточнее](relation) [пригорка](object)
+    - [поспевай](action) к [бричке](object)
+    - [увязывайся](action) за [конём](object)
+    - [увязывайся](action) за [автомобилем](object)
+    - [загибайся](action) 42 ° [налево](direction)
+    - [проходи](action) к [рытвине](object)
+    - [обходи](action) [свет](object)
+    - [поворачивайте](action) 74 ° [в восточную сторону](direction)
+    - [сдвигайтесь](action) 46 М [влево](direction)
+    - [разглядывай](action) [автомобиль](object) [на фоне](relation) [впадины](object)
+    - [прощупайте](action) [ребёнка](object) [на юге от](relation) [преграды](object)
+    - [вертитесь](action) 156 ° [на попятную](direction)
+    - [съезди](action) к [личности](object) [на юге от](relation) [надлома](object) [с правой стороны от](relation) [массива](object)
+    - [поворачивай](action) [прямо по курсу](direction)
+    - [обследуй](action) [оное](nearest) [жильё](object)
+    - [вращайся](action) [в сторону юга](direction) 183 °
+    - [шныряйте](action)
+    - [равняйтесь](action) к [машине](object)
+    - [разыщите](action) [бричку](object) [по левую сторону](relation) [лампады](object)
+    - [просматривай](action) [близкую](nearest) [расселину](object)
+    - [загибайся](action) [задом](direction)
+    - [объезжай](action)
+    - [полагайтесь](action) до [ласточки](object)
+    - [следуй](action) к [точилу](object)
+    - [приезжай](action) до [пальмы](object) [за](relation) собой
+    - [найдите](action) [соседственного](nearest) [ребёнка](object)
+    - [приезжай](action)
+    - [прокручивайся](action) к [бугру](object)
+    - [обставь](action) [сей](nearest) [светоч](object)
+    - [обезьянь](action) до [болида](object)
+    - [прощупай](action) [воронку](object)
+    - [вращайся](action) [прямо](direction) 302 °
+    - [проходите](action) 1 М [взапядки](direction)
+    - [обходите](action) [свет](object) [на западе от](relation) [воронки](object)
+    - [сдвинься](action) [направо](direction) 30 М
+    - [сторожи](action) по [кольцу](object) 5 м
+    - [разведывай](action) по [кольцу](object) размером 1 м
+    - [бочите](action) [на восточный край](direction)
+    - [вышагивайте](action) 29 м [налево](direction)
+    - [полагайся](action) за [авто](object)
+    - [вертитесь](action) до [берёзы](object) [по правую сторону](relation) тебя
+    - [стоп](action)
+    - [постигните](action) [оный](nearest) [коттедж](object)
+    - [облапошивайте](action) [липу](object) [сзади от](relation) [болида](object) [сзади от](relation) [домика](object)
+    - [оглядывай](action) [холмик](object) [назади](relation) себя
+    - [дежурь](action) по [орбите](object) радиуса 1 М
+    - [плыви](action) 40 М [вправо](direction)
+    - [рассматривай](action)
+    - [плывите](action) к [кедру](object)
+    - [сдвигайся](action) [взапядки](direction) 1 М
+    - [разведывайте](action) по [линии](object) 5
+    - [следуйте](action) к [авто](object)
+    - [тормозите](action)
+    - [заворачивай](action) к [камушку](object) [правее](relation) [пригорка](object)
+    - [выглядывайте](action) [отложение](object) [по левую руку](relation) [баррикады](object)
+    - [вращайтесь](action) к [баррикаде](object) [на юге от](relation) [точила](object) [на востоке относительно](relation) [провала](object)
+    - [изыщите](action) [ближайшее](nearest) [преграждение](object)
+    - [бочите](action) до [ореха](object) [в северной стороне от](relation) [впадины](object) [по левую руку](relation) [светоча](object)
+    - [проходите](action) к [близкому](nearest) [холмику](object)
+    - [бочи](action) 287 ° [вправо](direction)
+    - [просматривайте](action) [оный](nearest) [дворец](object)
+    - [просматривай](action) [тот](nearest) [хребет](object)
+    - [постигни](action) [массив](object) [с левой стороны от](relation) [кучи](object)
+    - [оглядывай](action) [точило](object) [справа от](relation) [щели](object) [справа от](relation) [дубравы](object)
+    - [сдавайте](action) к [близкой](nearest) [женщине](object)
+    - [оглядывай](action) [женщину](object) [перед](relation) тобой
+    - [бочите](action) до [данной](nearest) [души](object)
+    - [находите](action) [разлом](object) [по левую сторону](relation) [личности](object)
+    - [постигните](action) [булыгу](object)
+    - [бочите](action) к [близрасположенному](nearest) [бугру](object)
+    - [изыщи](action) [пальму](object)
+    - [бочите](action) 105 ° [на южный край](direction)
+    - [вращайтесь](action) к [перелескам](object)
+    - [приищите](action) [корыто](object) [на востоке относительно](relation) [массива](object) [на востоке относительно](relation) [пригорка](object)
+    - [дуй](action) [в сторону запада](direction)
+    - [прервите](action)
+    - [сторожите](action)
+    - [приищите](action) [кучу](object) [южнее](relation) тебя
+    - [найди](action) [соседнюю](nearest) [баррикаду](object)
+    - [крутись](action) [по правую руку](direction)
+    - [вертитесь](action) [на запад](direction)
+    - [выищи](action) [тайгу](object)
+    - [переходи](action)
+    - [обкатывайте](action) [коня](object) [с правой стороны от](relation) [электросветильника](object)
+    - [крутись](action) до [оврага](object)
+    - [полагайтесь](action) до [коня](object)
+    - [обгоняй](action) [данную](nearest) [воронку](object)
+    - [вращайся](action) к [трещине](object) [с правой стороны от](relation) тебя
+    - [крутитесь](action) до [соседственной](nearest) [горки](object)
+    - [езжай](action) 34 м [в западную сторону](direction)
+    - [вынюхивайте](action) по 2 [способу](object)
+    - [преследуйте](action) за [конём](object)
+    - [зондируйте](action) [мужчину](object) [в южной стороне от](relation) [ограждения](object)
+    - [обходи](action) [наблюдаемую](nearest) [канаву](object)
+    - [приезжайте](action) к [дворцу](object) [за](relation) собой
+    - [равняйтесь](action) до [машины](object)
+    - [нашарь](action)
+    - [разлагайте](action) [оный](nearest) [торшер](object)
+    - [придерживайся](action) к [болиду](object)
+    - [гоните](action) до [возвышенности](object) [восточнее](relation) [дубравы](object) [справа от](relation) [липы](object)
+    - [вертись](action) [на восток](direction)
+    - [перемещайтесь](action) [прямо](direction) 19 м
+    - [поворачивайте](action) к [пальме](object) [у](relation) [камушка](object) [на западе относительно](relation) [пригорка](object)
+    - [разыщите](action) [близлежащую](nearest) [липу](object)
+    - [увязывайся](action) к [ласточке](object)
+    - [сторожи](action) по [касательной](object) 5 м
+    - [бегите](action) до [чащобы](object) [левее](relation) [дома](object)
+    - [обскачи](action) [недалёкого](nearest) [человека](object)
+    - [загибайся](action) к [кедру](object) [в западной стороне от](relation) себя
+    - [вертитесь](action) к [наблюдаемому](nearest) [жилью](object)
+    - [просматривай](action) [голыш](object) [на юге относительно](relation) себя
+    - [обозревай](action)
+    - [плыви](action) к [электросветильнику](object) [на востоке от](relation) [ежа](object) [с правой стороны от](relation) [фигуры](object)
+    - [пойди](action) к [провалу](object) [на севере от](relation) себя
+    - [обследуй](action) [ограждение](object)
+    - [отыщите](action) [торшер](object) [на юге относительно](relation) [булыжника](object) [за](relation) [лесополосой](object)
+    - [шлёпай](action) 7 М [напролом](direction)
+    - [загибайтесь](action) до [чащи](object) [позадь](relation) [избы](object) [по левую руку](relation) [торшера](object)
+    - [бочите](action) 220 ° [в левую сторону](direction)
+    - [шлёпай](action) [в западную сторону](direction)
+    - [разглядывайте](action) [близрасположенного](nearest) [ежа](object)
+    - [сдвиньтесь](action) 1 м [направо](direction)
+    - [плыви](action) до [близлежащего](nearest) [заслона](object)
+    - [пробирайтесь](action) [в северную сторону](direction) 8 м
+    - [находи](action) [дом](object) [восточнее](relation) [валуна](object) [восточнее](relation) [лесополосы](object)
+    - [выглядывай](action) [дубраву](object) [спереди от](relation) [тополя](object)
+    - [барражируй](action) по [окружности](object) радиусом 1 М
+    - [исследуйте](action) [дубраву](object) [до](relation) тебя
+    - [крутитесь](action) 25 ° [напрямик](direction)
+    - [патрулируйте](action) по [окружности](object) 3 м
+    - [езжай](action) к [близрасположенной](nearest) [женщине](object)
+    - [припаркуйся](action)
+    - [обставь](action) [разрыв](object)
+    - [прощупайте](action) [таковую](nearest) [болид](object)
+    - [вертись](action)
+    - [отыщи](action) [данное](nearest) [препятствие](object)
+    - [обставь](action) [избу](object) [на западе относительно](relation) [тачки](object) [по правую руку](relation) [ограждения](object)
+    - [анализируй](action) [камушек](object) [пред](relation) [тополем](object) [на западе от](relation) [дворца](object)
+    - [минуй](action) [провал](object) [восточнее](relation) тебя
+    - [поворачивайте](action) [в южную сторону](direction) 292 °
+    - [беги](action) до [ближайшей](nearest) [горки](object)
+    - [вертитесь](action) [вправо](direction)
+    - [гони](action) [на восточный край](direction) 14 м
+    - [загибайтесь](action) [задом](direction)
+    - [обходи](action) [кедр](object) [позади](relation) [автомобиля](object) [позади](relation) [коттеджа](object)
+    - [вынюхивай](action) по [касательной](object) радиуса 9 м
+    - [довольно](action)
+    - [защищай](action) по [линии](object) 2
+    - [остановка](action)
+    - [вертись](action) 160 ° [на восточный край](direction)
+    - [езжайте](action) к [углублению](object)
+    - [придерживайтесь](action) за [конём](object)
+    - [рассматривайте](action) [барьер](object)
+    - [анализируй](action) [тайгу](object) [по левую руку](relation) [возвышенности](object)
+    - [поспевайте](action) до [автомобиля](object)
+    - [обозревай](action) [булыгу](object)
+    - [обставь](action) [близрасположенную](nearest) [пальму](object)
+    - [барражируйте](action) по [пути](object) номер 8
+    - [заворачивай](action) [на запад](direction)
+    - [разлагай](action) [коня](object) [с правой стороны от](relation) себя
+    - [поворачивай](action) [в восточную сторону](direction) 284 °
+    - [бочи](action) до [растения](object) [поблизости к](relation) [булыге](object) [западнее](relation) [холмика](object)
+    - [сыщите](action) [оный](nearest) [пригорок](object)
+    - [обкатывай](action) [надлом](object)
+    - [обскачите](action) [мужчину](object) [восточнее](relation) [голыша](object) [западнее](relation) [здания](object)
+    - [обкатывайте](action) [товарища](object) [в восточной стороне от](relation) [камня](object) [на западе относительно](relation) [жилья](object)
+    - [гуляйте](action) к [светочу](object) [восточнее](relation) [корыта](object) [на юге от](relation) [канавы](object)
+    - [проходите](action) [по левую руку](direction)
+    - [приходите](action) к [оной](nearest) [куче](object)
+    - [хватит](action)
+    - [бочи](action) 307 ° [в западную сторону](direction)
+    - [патрулируйте](action) по [кольцу](object) радиусом 4 м
+    - [бочи](action) до [данного](nearest) [тополя](object)
+    - [сдвигайтесь](action)
+    - [сдвинься](action) [вправо](direction)
+    - [просматривайте](action) [женщину](object)
+    - [разглядывайте](action) [углубление](object)
+    - [остановите](action)
+    - [крутитесь](action) к [лесу](object)
+    - [останови](action)
+    - [обнаружьте](action) [ольху](object)
+    - [поворачивай](action) до [дерева](object) [примерно у](relation) [булыги](object) [западнее](relation) [скалы](object)
+    - [плывите](action) [на западный край](direction) 28 М
+    - [вертись](action) к [отлупу](object)
+    - [загибайтесь](action) к [надлому](object)
+    - [зондируйте](action) [корыто](object)
+    - [сыщи](action) [мужчину](object) [за спиной](relation) тебя
+    - [барражируй](action) по 7 [плану](object)
+    - [перемещайтесь](action) к [впадине](object)
+    - [крутитесь](action) [на попятную](direction) 142 °
+    - [находи](action) [автомобиль](object) [поперед](relation) [прожектора](object)
+    - [обходите](action)
+    - [вертитесь](action) к [неотдалённой](nearest) [канаве](object)
+    - [рассматривайте](action) [валун](object)
+    - [загибайтесь](action) 255 ° [на юг](direction)
+    - [изыщи](action) [данный](nearest) [отлуп](object)
+    - [осматривайте](action) [липу](object) [левее](relation) [фигуры](object) [на севере относительно](relation) [пропасти](object)
+    - [увязывайтесь](action) за [точилом](object)
+    - [сыщи](action) [сию](nearest) [скалу](object)
+    - [рассматривайте](action) [ближайшее](nearest) [строение](object)
+    - [изучайте](action)
+    - [поспевай](action) до [коня](object)
+    - [минуй](action) [строение](object)
+    - [испытывайте](action) [мужчину](object) [справа от](relation) тебя
+    - [минуйте](action) [углубление](object) [на востоке от](relation) тебя
+    - [прите](action) [в сторону запада](direction) 27 М
+    - [обнаружь](action) [коня](object) [перед](relation) [электросветильником](object)
+    - [защищайте](action) по [касательной](object) 7 м
+    - [вынюхивай](action)
+    - [просматривайте](action) [таковую](nearest) [избу](object)
+    - [поворачивайте](action) к [щели](object) [с правой стороны от](relation) себя
+    - [загибайся](action) [на юг](direction) 202 °
+    - [вынюхивай](action) по [схеме](object) 6
+    - [вращайтесь](action) 234 ° [вправо](direction)
+    - [разглядывай](action) [данный](nearest) [разрыв](object)
+    - [захаживайте](action) 45 м [в южную сторону](direction)
+    - [минуй](action) [торшер](object) [южнее](relation) [болида](object) [справа от](relation) [разрыва](object)
+    - [обследуй](action) [недалёкую](nearest) [чащу](object)
+    - [летите](action) до [наблюдаемой](nearest) [сосны](object)
+    - [вынюхивай](action) по [касательной](object) 6 м
+    - [вынюхивайте](action) по [маршруту](object) номер 10
+    - [съезди](action) к [горке](object) [на востоке от](relation) [массива](object) [правее](relation) [липы](object)
+    - [освойте](action) [следующего](nearest) [овраг](object)
+    - [при](action) 37 м [налево](direction)
+    - [обходи](action)
+    - [обскачи](action) [тайгу](object)
+    - [крутись](action) к [этой](nearest) [липе](object)
+    - [испытывайте](action) [ребёнка](object) [по правую руку](relation) тебя
+    - [полагайтесь](action) за [авто](object)
+    - [барражируй](action) по [кругу](object) радиуса 5 М
+    - [маршируй](action) до [пропасти](object)
+    - [прокручивайтесь](action) [в обратном направлении](direction) 168 °
+    - [нащупайте](action) [кедр](object)
+    - [выищите](action) [автомобиль](object) [перед](relation) [столбом](object)
+    - [разглядывай](action) [расщелину](object) [на севере от](relation) тебя
+    - [прокручивайтесь](action) [прямо по курсу](direction) 224 °
+    - [полагайся](action) за [машиной](object)
+    - [облапошивайте](action) [близрасположенное](nearest) [растение](object)
+    - [вертись](action) к [пропасти](object)
+    - [уезжай](action) до [лампады](object) [на востоке относительно](relation) [личности](object)
+    - [приезжайте](action) 19 м [задом](direction)
+    - [обнаружь](action) [женщину](object) [позадь](relation) тебя
+    - [уезжайте](action) [назад](direction) 37 м
+    - [охраняй](action) по 6 [методу](object)
+    - [обследуйте](action)
+    - [нащупай](action) [расщелину](object) [справа от](relation) [кедра](object)
+    - [вращайтесь](action) [на северный край](direction)
+    - [сыщи](action)
+    - [преследуй](action) за [точилом](object)
+    - [увязывайся](action) за [корытом](object)
+    - [шествуй](action) к [домику](object) [в северной стороне от](relation) [точила](object)
+    - [преследуй](action) до [ласточки](object)
+    - [приищи](action) [постройку](object) [справа от](relation) себя
+    - [исследуй](action) [кругляш](object) [по левую руку](relation) [парня](object) [южнее](relation) [холмика](object)
+    - [постигни](action) [оный](nearest) [столб](object)
+    - [разыщите](action) [бричку](object) [на востоке от](relation) [рощи](object) [на востоке от](relation) [возвышенности](object)
+    - [исследуй](action) [тот](nearest) [столб](object)
+    - [разыщите](action) [близлежащую](nearest) [даму](object)
+    - [сдвигайся](action) до [данного](nearest) [особняка](object)
+    - [освой](action) [рощу](object) [перед](relation) тобой
+    - [разлагайте](action) [оное](nearest) [точило](object)
+    - [защищай](action) по 7 [пути](object)
+    - [анализируйте](action) [близрасположенную](nearest) [трещину](object)
+    - [выглядывайте](action) [массив](object) [пред](relation) [липой](object)
+    - [загибайтесь](action) до [перелесок](object) [на фоне](relation) [дома](object) [левее](relation) [светоча](object)
+    - [освой](action)
+    - [крутись](action) к [наблюдаемому](nearest) [жилью](object)
+    - [анализируй](action) [товарища](object) [по правую руку](relation) тебя
+    - [шныряйте](action) по [окружности](object) радиуса 4 м
+    - [вертитесь](action) к [камню](object) [пред](relation) [мужчиной](object)
+    - [дежурьте](action) по 4 [пути](object)
+    - [испытывайте](action) [наблюдаемого](nearest) [дом](object)
+    - [обходите](action) [столб](object)
+    - [собирайся](action) [обертасом](direction) 46 М
+    - [обходите](action) [таковую](nearest) [хребет](object)
+    - [оглядывайте](action) [следующего](nearest) [дом](object)
+    - [обходи](action) по [программе](object) номер 2
+    - [обставь](action) [неотдалённое](nearest) [дерево](object)
+    - [постигни](action) [массив](object) [справа от](relation) [дерева](object) [справа от](relation) [лампады](object)
+    - [охраняйте](action) по [трассе](object) номер 1
+    - [маршируй](action) до [таковой](nearest) [холма](object)
+    - [следуй](action) за [тачкой](object)
+    - [обследуй](action) [преграду](object)
+    - [изыщи](action)
+    - [заворачивайте](action) [по левую руку](direction)
+    - [разлагайте](action) [неотдалённую](nearest) [щель](object)
+    - [находите](action) [это](nearest) [ограждение](object)
+    - [поворачивайте](action) к [оному](nearest) [товарищу](object)
+    - [зондируй](action) [рощу](object) [с правой стороны от](relation) [берёзы](object) [с правой стороны от](relation) [света](object)
+    - [обгоняй](action) [лампаду](object)
+    - [разглядывайте](action) [наблюдаемое](nearest) [здание](object)
+    - [обставьте](action) [дом](object) [на западе относительно](relation) [машины](object) [по правую руку](relation) [загородки](object)
+    - [анализируй](action) [таковую](nearest) [фонарь](object)
+    - [собирайтесь](action) [на север](direction) 37 м
+    - [вращайтесь](action) к [оному](nearest) [ежу](object)
+    - [обставь](action) [баррикаду](object) [западнее](relation) тебя
+    - [заворачивай](action) [влево](direction) 34 °
+    - [обходите](action) по [маршруту](object) 7
+    - [защищайте](action) по [окружности](object) 8 м
+    - [маршируй](action) [вправо](direction)
+    - [вертись](action) до [следующей](nearest) [возвышенности](object)
+    - [бочи](action) к [следующей](nearest) [пальме](object)
+    - [освой](action) [орех](object) [с левой стороны от](relation) [камешка](object)
+    - [заворачивайте](action) до [валуна](object) [до](relation) себя
+    - [шлёпайте](action) [в том направлении](object)
+    - [оглядывай](action) [провал](object)
+    - [разглядывайте](action) [хребет](object) [на фоне](relation) тебя
+    - [полагайся](action) до [брички](object)
+    - [выглядывай](action)
+    - [газуй](action) 2 М [в восточную сторону](direction)
+    - [анализируйте](action) [дубраву](object) [впереди](relation) себя
+    - [сходи](action) [на восток](direction) 17 м
+    - [выищите](action) [коня](object) [с левой стороны от](relation) [лампады](object)
+    - [оглядывайте](action) [неотдалённого](nearest) [разлом](object)
+    - [разглядывайте](action) [перегородку](object) [на юге от](relation) [автомобиля](object) [у](relation) [впадины](object)
+    - [крутись](action) к [ольхе](object) [севернее](relation) [мужчины](object)
+    - [вращайся](action) [в правую сторону](direction) 159 °
+    - [обставь](action) [наблюдаемую](nearest) [гору](object)
+    - [беги](action) 10 м [напролом](direction)
+    - [собирайся](action) до [постройки](object) [в северной стороне от](relation) [ласточки](object)
+    - [минуй](action) [душу](object) [на фоне](relation) [электросветильника](object)
+    - [осматривайте](action) [лес](object) [по левую сторону](relation) [камешка](object) [в восточной стороне от](relation) [горы](object)
+    - [обследуй](action) [булыжник](object)
+    - [беги](action) к [близлежащему](nearest) [камушку](object)
+    - [прокручивайся](action) к [берёзе](object) [на севере от](relation) [женщины](object)
+    - [переместитесь](action) [в сторону востока](direction)
+    - [изучай](action) [чащу](object) [с правой стороны от](relation) [кедра](object) [с правой стороны от](relation) [торшера](object)
+    - [дежурь](action) по [линии](object) номер 6
+    - [двигайся](action) 25 м [на южный край](direction)
+    - [минуй](action) [отлуп](object) [впереди](relation) себя
+    - [защищай](action) по [кругу](object) радиуса 4 М
+    - [проезжай](action) к [трещине](object)
+    - [переступай](action) до [домика](object) [за спиной](relation) тебя
+    - [обставь](action) [данный](nearest) [свет](object)
+    - [прокручивайтесь](action) [обертасом](direction) 300 °
+    - [собирайся](action) к [домику](object) [на фоне](relation) тебя
+    - [пробирайтесь](action) 31 М [направо](direction)
+    - [проходи](action) [в восточную сторону](direction)
+    - [вертитесь](action) до [отложения](object) [впереди](relation) тебя
+    - [рассматривайте](action) [тачку](object) [назади](relation) [канавы](object)
+    - [обставь](action) [машину](object) [при](relation) [расщелине](object)
+    - [идите](action) [направо](direction) 1 М
+    - [разведывайте](action) по [пути](object) номер 8
+    - [неситесь](action) к [углублению](object) [по левую сторону](relation) себя
+    - [вращайтесь](action) [в сторону востока](direction)
+    - [полагайся](action) к [коню](object)
+    - [обозревай](action) [точило](object) [перед](relation) [преграждением](object)
+    - [поворачивай](action) до [этой](nearest) [берёзы](object)
+    - [приищите](action) [ольху](object)
+    - [переходи](action) 27 М [в сторону запада](direction)
+    - [оглядывайте](action) [ближайшее](nearest) [ограждение](object)
+    - [поворачивай](action) к [камню](object) [спереди от](relation) [парня](object)
+    - [лети](action) к [разрыву](object)
+    - [прокручивайся](action) [направо](direction)
+    - [изучайте](action) [камешек](object)
+    - [сыщи](action) [отлуп](object) [левее](relation) [мужчины](object)
+    - [стойте](action)
+    - [поворачивай](action) [вперед](direction) 265 °
+    - [вертись](action) [в западную сторону](direction) 35 °
+    - [находите](action) [воронку](object) [на севере от](relation) себя
+    - [зондируй](action) [кругляш](object) [до](relation) [сосны](object) [на западе от](relation) [домика](object)
+    - [поворачивайте](action) [в сторону востока](direction) 153 °
+    - [испытывайте](action) [соседственное](nearest) [корыто](object)
+    - [облапошивай](action) [электросветильник](object) [южнее](relation) [точила](object) [справа от](relation) [надлома](object)
+    - [гоните](action) до [фонаря](object) [на востоке относительно](relation) [дамы](object)
+    - [маршируйте](action) [влево](direction)
+    - [обставьте](action) [канаву](object) [за спиной](relation) тебя
+    - [перемещайтесь](action) [на север](direction)
+    - [минуйте](action) [корыто](object) [бок о бок с](relation) [трещиной](object)
+    - [осматривай](action) [дерево](object) [с левой стороны от](relation) [ребёнка](object) [севернее](relation) [пропасти](object)
+    - [нашарь](action) [возвышенность](object) [на юге от](relation) тебя
+    - [изыщи](action) [этот](nearest) [разлом](object)
+    - [дежурьте](action) по [трассе](object) 3
+    - [прокручивайтесь](action) до [недалёкого](nearest) [мужчины](object)
+    - [объезжайте](action) [данную](nearest) [бричку](object)
+    - [поспевай](action) к [ласточке](object)
+    - [надыбай](action) [домик](object)
+    - [обходи](action) [соседственного](nearest) [свет](object)
+    - [сыщите](action) [особняк](object) [восточнее](relation) [кругляша](object) [восточнее](relation) [леса](object)
+    - [обставьте](action) [лампу](object) [западнее](relation) [впадины](object)
+    - [бочи](action) к [воронке](object)
+    - [прокручивайся](action) к [близлежащему](nearest) [растению](object)
+    - [облапошивайте](action) [следующую](nearest) [перегородку](object)
+    - [крутись](action) 151 ° [на запад](direction)
+    - [обезьянь](action) за [машиной](object)
+    - [прощупай](action) [следующее](nearest) [коня](object)
+    - [лети](action) до [парня](object) [в южной стороне от](relation) [пробоины](object) [справа от](relation) [чащи](object)
+    - [изыщи](action) [ближайшее](nearest) [товарища](object)
+    - [обозревайте](action) [преграждение](object)
+    - [крутитесь](action)
+    - [обставь](action) [следующее](nearest) [ограждение](object)
+    - [разглядывай](action) [оную](nearest) [кучу](object)
+    - [патрулируй](action) по 3 [трассе](object)
+    - [дежурьте](action) по [схеме](object) 7
+    - [найди](action) [пробоину](object) [левее](relation) [фигуры](object)
+    - [бочи](action) к [близрасположенному](nearest) [парню](object)
+    - [езжайте](action) до [оной](nearest) [горы](object)
+    - [обозревайте](action)
+    - [осматривай](action) [соседственную](nearest) [расщелину](object)
+    - [преследуйте](action) за [бричкой](object)
+    - [разлагай](action) [отложение](object) [с левой стороны от](relation) [товарища](object) [южнее](relation) [кучи](object)
+    - [оглядывай](action) [оную](nearest) [кучу](object)
+    - [бочите](action) до [неотдалённого](nearest) [ребёнка](object)
+    - [заворачивай](action) к [трещине](object) [за](relation) [прожектором](object)
+    - [анализируй](action) [рощу](object) [с левой стороны от](relation) [возвышенности](object)
+    - [исследуй](action) [точило](object)
+    - [анализируй](action) [следующую](nearest) [канаву](object)
+    - [нашарь](action) [эту](nearest) [лампаду](object)
+    - [сыщи](action) [близрасположенную](nearest) [личность](object)
+    - [разыщите](action) [постройку](object)
+    - [защищай](action)
+    - [анализируй](action) [этот](nearest) [светоч](object)
+    - [просматривай](action) [недалёкую](nearest) [преграду](object)
+    - [переступайте](action) [влево](direction) 18 М
+    - [скачи](action) к [канаве](object)
+    - [обнаружьте](action) [строение](object) [правее](relation) тебя
+    - [разлагай](action) [соседственную](nearest) [пробоину](object)
+    - [вращайся](action) к [разрыву](object) [позади](relation) [фонаря](object)
+    - [проходите](action) к [оврагу](object) [с левой стороны от](relation) тебя
+    - [обозревай](action) [следующее](nearest) [препятствие](object)
+    - [прокручивайся](action) [в северную сторону](direction) 28 °
+    - [гуляйте](action) 3 М [обратно](direction)
+    - [обставь](action) [данную](nearest) [горку](object)
+    - [прощупай](action) [неотдалённую](nearest) [впадину](object)
+    - [газуйте](action) до [это](nearest) [растения](object)
+    - [зондируй](action) [недалёкое](nearest) [точило](object)
+    - [шныряй](action) по [окружности](object) размером 8 м
+    - [нарой](action) [возвышенность](object) [на юге относительно](relation) тебя
+    - [нащупай](action) [кедр](object)
+    - [обезьяньте](action) за [тачкой](object)
+    - [надыбай](action) [отлуп](object) [с правой стороны от](relation) [ольхи](object)
+    - [прощупайте](action) [камушек](object) [перед](relation) [орехом](object) [на западе от](relation) [жилья](object)
+    - [осматривайте](action) [отложение](object) [по левую руку](relation) [преграды](object)
+    - [собирайся](action) [на запад](direction)
+    - [обскачите](action) [близлежащую](nearest) [лампаду](object)
+    - [вращайтесь](action) до [горки](object)
+    - [обнаружь](action) [тот](nearest) [холм](object)
+    - [пойдите](action) к [данному](nearest) [бугру](object)
+    - [проходи](action) до [таковой](nearest) [пригорка](object)
+    - [разглядывай](action) [душу](object) [до](relation) себя
+    - [обезьянь](action) до [брички](object)
+    - [увязывайтесь](action) к [авто](object)
+    - [перемещайся](action) [на северный край](direction)
+    - [лети](action) [в восточную сторону](direction)
+    - [анализируй](action) [недалёкую](nearest) [перелески](object)
+    - [гоните](action) до [того](nearest) [ореха](object)
+    - [придерживайся](action) к [точилу](object)
+    - [шкандыбай](action) [в сторону севера](direction) 10 М
+    - [рассматривайте](action) [таковую](nearest) [дом](object)
+    - [бочи](action) к [отлупу](object) [за](relation) [светочем](object)
+    - [шагай](action) [в южную сторону](direction) 40 м
+    - [нарой](action) [воронку](object) [севернее](relation) тебя
+    - [бочите](action) до [разрыва](object) [правее](relation) тебя
+    - [обставь](action) [разрыв](object) [поперед](relation) тебя
+    - [шныряй](action) по 8 [дороге](object)
+    - [обкатывайте](action) [яму](object) [за](relation) собой
+    - [вращайся](action) 37 ° [на попятную](direction)
+    - [обозревай](action) [парня](object)
+    - [заворачивайте](action) до [сосны](object) [западнее](relation) себя
+    - [обозревайте](action) [недалёкую](nearest) [перегородку](object)
+    - [находи](action) [углубление](object) [на севере от](relation) себя
+    - [просматривай](action) [машину](object) [по правую сторону](relation) [трещины](object) [по правую сторону](relation) [дубравы](object)
+    - [поворачивай](action) 50 ° [в левую сторону](direction)
+    - [разглядывай](action) [разлом](object) [в северной стороне от](relation) тебя
+    - [шагайте](action) до [ореха](object) [на фоне](relation) тебя
+    - [прохаживайте](action) к [лесополосе](object) [левее](relation) [здания](object)
+    - [сходите](action) 36 м [на юг](direction)
+    - [осматривай](action) [булыгу](object)
+    - [выступай](action) к [этому](nearest) [дворцу](object)
+    - [переступай](action) до [фонаря](object) [на востоке относительно](relation) [препятствия](object) [по правую руку](relation) [дамы](object)
+    - [анализируйте](action) [лесополосу](object) [с правой стороны от](relation) [ребёнка](object)
+    - [обозревайте](action) [отложение](object) [на юге от](relation) себя
+    - [неситесь](action) [напрямик](direction) 46 м
+    - [дуй](action) 43 м [на север](direction)
+    - [осматривай](action) [хребет](object) [позади](relation) себя
+    - [пойдите](action) до [неотдалённого](nearest) [кругляша](object)
+    - [дерзайте](action) до [пропасти](object) [на севере от](relation) себя
+    - [надыбай](action) [следующее](nearest) [парня](object)
+    - [придерживайтесь](action) до [точила](object)
+    - [заворачивайте](action) до [оного](nearest) [заслона](object)
+    - [нарой](action) [ограждение](object) [на западе от](relation) [души](object) [позадь](relation) [массива](object)
+    - [разглядывайте](action) [лесополосу](object) [слева от](relation) [голыша](object) [восточнее](relation) [кучи](object)
+    - [поспевай](action) за [корытом](object)
+    - [защищайте](action) по [методу](object) номер 8
+    - [оглядывайте](action) [корыто](object) [с правой стороны от](relation) [разлома](object) [с правой стороны от](relation) [тайги](object)
+    - [шлёпайте](action) [в левую сторону](direction) 18 м
+    - [облапошивайте](action) [рытвину](object) [за спиной](relation) себя
+    - [просматривай](action) [перелески](object) [спереди от](relation) [липы](object)
+    - [нарой](action) [сию](nearest) [трещину](object)
+    - [шкандыбай](action) 26 м [в сторону севера](direction)
+    - [сходи](action) к [ореху](object) [на фоне](relation) тебя
+    - [шныряйте](action) по [плану](object) 10
+    - [вертись](action) [в северную сторону](direction)
+    - [облапошивайте](action)
+    - [просматривай](action) [автомобиль](object) [перед](relation) [ограждением](object)
+    - [обгоняйте](action) [преграждение](object) [на западе от](relation) себя
+    - [выищите](action) [светильник](object) [в южной стороне от](relation) [камешка](object) [за](relation) [лесополосой](object)
+    - [стой](action)
+    - [просматривай](action) [ласточку](object) [до](relation) [ежа](object)
+    - [прощупай](action) [эту](nearest) [лампу](object)
+    - [обнаружь](action) [сие](nearest) [препятствие](object)
+    - [гуляй](action) [на южный край](direction) 20 м
+    - [изыщи](action) [лес](object)
+    - [поворачивай](action) до [скалы](object)
+    - [поворачивайте](action) до [липы](object) [на западе от](relation) себя
+    - [следуйте](action) к [бричке](object)
+    - [облапошивай](action) [неотдалённую](nearest) [баррикаду](object)
+    - [исследуй](action) [данное](nearest) [авто](object)
+    - [пойдите](action) [напрямик](direction)
+    - [вертитесь](action) [по левую руку](direction) 311 °
+    - [двигайтесь](action) [на западный край](direction) 40 М
+    - [обгоняйте](action) [орех](object) [за спиной](relation) [автомобиля](object) [за спиной](relation) [постройки](object)
+    - [бочи](action) до [соседственной](nearest) [пропасти](object)
+    - [прощупай](action) [перелески](object) [западнее](relation) тебя
+    - [нарой](action) [чащобу](object)
+    - [прокручивайся](action) 287 ° [в северную сторону](direction)
+    - [обставьте](action) [чащу](object)
+    - [крутитесь](action) [на запад](direction) 347 °
+    - [приезжай](action) до [отлупа](object)
+    - [гуляйте](action) к [провалу](object)
+    - [заворачивай](action) [на восток](direction) 137 °
+    - [обскачи](action) [препятствие](object) [на западе от](relation) тебя
+    - [вертитесь](action) [на север](direction)
+    - [выищи](action) [болид](object) [слева от](relation) [лампы](object)
+    - [обскачите](action) [парня](object) [на востоке относительно](relation) [отложения](object) [на западе от](relation) [здания](object)
+    - [бочите](action) к [близрасположенной](nearest) [впадине](object)
+    - [охраняйте](action) по [трассе](object) номер 3

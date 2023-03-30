@@ -20,7 +20,7 @@ class Generator:
                           range_eng: list | tuple = (0, 10),
                           range_rus: list | tuple = (0, 10),
                           range_dig: list | tuple = (0, 10),
-                          range_spc: list | tuple = (0, 10)):
+                          range_spc: list | tuple = (0, 10)) -> list:
         """
         Создает некорректный ввод
 
@@ -49,9 +49,9 @@ class Generator:
             inp_string = ''.join(inp)
             commands.append(inp_string)
 
-        return {"nlu_fallback": commands}
+        return commands
 
-    def generate_action(self, amount: int = 10):
+    def generate_action(self, amount: int = 10) -> list:
         """
         Создает команды без атрибутов для уточнения
 
@@ -72,9 +72,9 @@ class Generator:
 
         commands = self.run(samples, amount=amount)
 
-        return {"action": commands}
+        return commands
 
-    def generate_wrong(self, amount: int = 10):
+    def generate_wrong(self, amount: int = 10) -> list:
         """
         Создает запросы на исправление команды
 
@@ -89,9 +89,9 @@ class Generator:
 
         commands = self.run(samples, amount=amount)
 
-        return {"wrong_command": commands}
+        return commands
 
-    def generate_patrol(self, amount: int = 10, start: int = 1, end: int = 10) -> dict:
+    def generate_patrol(self, amount: int = 10, start: int = 1, end: int = 10) -> list:
         """
         Создает команды патрулирования
 
@@ -118,9 +118,9 @@ class Generator:
 
         commands = self.run(samples, amount=amount, start=start, end=end)
 
-        return {"patrol": commands}
+        return commands
 
-    def generate_stop(self, amount: int = 10) -> dict:
+    def generate_stop(self, amount: int = 10) -> list:
         """
         Создает команды остановки
 
@@ -135,9 +135,9 @@ class Generator:
 
         commands = self.run(samples, amount=amount)
 
-        return {"stop": commands}
+        return commands
 
-    def generate_move_dir(self, amount: int = 10, start: int = 1, end: int = 50) -> dict:
+    def generate_move_dir(self, amount: int = 10, start: int = 1, end: int = 50) -> list:
         """
         Создает команды движения в направлении
 
@@ -168,9 +168,9 @@ class Generator:
 
         commands = self.run(samples, amount=amount, start=start, end=end)
 
-        return {"move_dir": commands}
+        return commands
 
-    def generate_rotate_dir(self, amount: int = 10, start: int = 1, end: int = 360) -> dict:
+    def generate_rotate_dir(self, amount: int = 10, start: int = 1, end: int = 360) -> list:
         """
         Создает команды поворота в направлении
 
@@ -201,9 +201,9 @@ class Generator:
 
         commands = self.run(samples, amount=amount, start=start, end=end)
 
-        return {"rotate_dir": commands}
+        return commands
 
-    def generate_follow(self, amount=10):
+    def generate_follow(self, amount=10) -> list:
         """
         Создает команды следования
 
@@ -217,9 +217,9 @@ class Generator:
 
         commands = self.run(samples, amount=amount)
 
-        return {"follow": commands}
+        return commands
 
-    def generate_objects(self, states: int = 10, amount: int = 10):
+    def generate_objects(self, states: int = 10, amount: int = 10) -> list:
         """
         Создает команды движения/поиска/анализа/осмотра/объезда/поворота к объектам
 
@@ -239,7 +239,7 @@ class Generator:
         relations_path = list(self.dictionary_path.glob('**/relation/*'))
         relations = list(map(lambda x: ':'.join(x.parts[-2:]), relations_path))
 
-        commands = {}
+        commands = []
         for action in ["action:move",
                        "action:analyze",
                        "action:find",
@@ -337,7 +337,7 @@ class Generator:
                 sample = f"|prep:robot|{action}|object:gaze|"
                 samples.append(sample)
 
-            commands[action.split(':')[-1]] = self.run(samples=samples, amount=amount)
+            commands.extend(self.run(samples=samples, amount=amount))
 
         return commands
 
@@ -441,7 +441,9 @@ class Generator:
             sample_to_inflect = sample_to_inflect.replace(key, random_word)
 
             # Выделение сущностей
-            if "object" in key:
+            if "action" in key:
+                random_word = f"[{random_word}](action)"
+            elif "object" in key:
                 random_word = f"[{random_word}](object)"
             elif "direction" in key:
                 random_word = f"[{random_word}](direction)"
