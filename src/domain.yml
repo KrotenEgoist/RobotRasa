@@ -1,26 +1,60 @@
 version: "3.1"
 
 intents:
+  - action:
+      use_entities: []
   - analyze:
-      use_entities: [object, relation, nearest, gaze]
+      use_entities:
+        - object
+        - relation
+        - nearest
+        - gaze
   - around:
-      use_entities: [object, relation, nearest, gaze]
+      use_entities:
+        - object
+        - relation
+        - nearest
+        - gaze
   - find:
-      use_entities: [object, relation, nearest, gaze]
+      use_entities:
+        - object
+        - relation
+        - nearest
+        - gaze
   - follow:
-      use_entities: [object]
+      use_entities:
+        - object
   - monitor:
-      use_entities: [object, relation, nearest, gaze]
+      use_entities:
+        - object
+        - relation
+        - nearest
+        - gaze
   - move:
-      use_entities: [object, relation, nearest, gaze]
+      use_entities:
+        - object
+        - relation
+        - nearest
+        - gaze
   - move_dir:
-      use_entities: [direction, ]
+      use_entities:
+        - direction
+        - distance
   - patrol:
-      use_entities: [object, ]
+      use_entities:
+        - object
+        - distance
   - rotate:
-      use_entities: [object, relation, nearest, gaze]
+      use_entities:
+        - object
+        - relation
+        - nearest
+        - gaze
   - rotate_dir:
-      use_entities: [direction, ]
+      use_entities:
+        - direction
+        - duration
+        - temperature
   - stop:
       use_entities: []
   - nlu_fallback:
@@ -34,6 +68,9 @@ entities:
   - relation
   - nearest
   - gaze
+  - distance
+  - duration
+  - temperature
 
 responses:
   utter_send_command:
@@ -42,6 +79,10 @@ responses:
     - text: "Исправляем команду"
   utter_rephrase:
     - text: "Перефразируйте"
+
+actions:
+  - action_hello_world
+
 
 session_config:
   session_expiration_time: 60

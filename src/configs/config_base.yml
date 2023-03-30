@@ -8,13 +8,21 @@ pipeline:
     analyzer: char_wb
     min_ngram: 1
     max_ngram: 4
+  - name: DucklingEntityExtractor
+    url: http://localhost:8000
+    locale: "ru_RU"
+    dimensions: ["distance", "duration"]
+  - name: DucklingEntityExtractor
+    url: http://localhost:8000
+    locale: "en_EN"
+    dimensions: ["temperature"]
   - name: DIETClassifier
     use_masked_language_model: True
     constrain_similarities: True
     random_seed: 42
     epochs: 100
   - name: FallbackClassifier
-    threshold: 0.7
+    threshold: 0.5
 
 policies:
   - name: TEDPolicy
