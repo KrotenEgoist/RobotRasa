@@ -154,6 +154,14 @@ class Generator:
 
         samples = []
         for direct in directions:
+            # вперед
+            sample = f"|{direct}|"
+            samples.append(sample)
+
+            # вперед на 4м
+            sample = f"|{direct}|" + "aux:on|{}|distance:meter|"
+            samples.append(sample)
+
             # иди вперед
             sample1 = f"|prep:robot|action:move|{direct}|"
             samples.append(sample1)
@@ -165,6 +173,14 @@ class Generator:
             # иди 10 м вперед
             sample3 = "|prep:robot|action:move|{}|distance:meter|" + f"{direct}|"
             samples.append(sample3)
+
+            # иди вперед на 10 м
+            sample4 = f"|prep:robot|action:move|{direct}|aux:on|" + "{}|distance:meter|"
+            samples.append(sample4)
+
+            # иди на 10 м вперед
+            sample5 = "|prep:robot|action:move|aux:on|{}|distance:meter|" + f"{direct}|"
+            samples.append(sample5)
 
         commands = self.run(samples, amount=amount, start=start, end=end)
 
@@ -187,6 +203,13 @@ class Generator:
 
         samples = []
         for direct in directions:
+            # направо
+            sample = f"|{direct}|"
+            samples.append(sample)
+
+            # направо на 90 °
+            sample = f"|{direct}|" + "{}|distance:degree|"
+
             # поворачивай направо
             sample1 = f"|prep:robot|action:rotate|{direct}|"
             samples.append(sample1)
@@ -198,6 +221,14 @@ class Generator:
             # поворачивай 90 ° направо
             sample3 = "|prep:robot|action:rotate|{}|distance:degree|" + f"{direct}|"
             samples.append(sample3)
+
+            # поворачивай направо на 90 °
+            sample4 = f"|prep:robot|action:rotate|{direct}|aux:on|" + "{}|distance:degree|"
+            samples.append(sample4)
+
+            # поворачивай на 90 ° направо
+            sample5 = "|prep:robot|action:rotate|aux:on|{}|distance:degree|" + f"{direct}|"
+            samples.append(sample5)
 
         commands = self.run(samples, amount=amount, start=start, end=end)
 
@@ -236,8 +267,8 @@ class Generator:
         objects.remove('object:route')
         objects.remove('object:gaze')
 
-        relations_path = list(self.dictionary_path.glob('**/relation/*'))
-        relations = list(map(lambda x: ':'.join(x.parts[-2:]), relations_path))
+        # relations_path = list(self.dictionary_path.glob('**/relation/*'))
+        # relations = list(map(lambda x: ':'.join(x.parts[-2:]), relations_path))
 
         commands = []
         for action in ["action:move",
@@ -260,82 +291,91 @@ class Generator:
 
                 samples.append(sample)
 
-            for _ in range(states):
-                temp_objects = objects.copy()
-                obj1 = random.choice(temp_objects)
-                temp_objects.remove(obj1)
-                obj2 = random.choice(temp_objects)
-                rel1 = random.choice(relations)
-
                 if action in ["action:move", "action:rotate"]:
-                    # иди к дому около дерева
-                    sample = f"|prep:robot|{action}|aux:to|{obj1}|{rel1}|{obj2}|"
+                    # к дому
+                    sample = f"|aux:to|{obj1}|"
                 else:
-                    # найди/обойди/осмотри/анализируй дом около дерева
-                    sample = f"|prep:robot|{action}|{obj1}|{rel1}|{obj2}|"
+                    # дом
+                    sample = f"|{obj1}|"
 
                 samples.append(sample)
 
-            for _ in range(states):
-                obj1 = random.choice(objects)
+            # for _ in range(states):
+            #     temp_objects = objects.copy()
+            #     obj1 = random.choice(temp_objects)
+            #     temp_objects.remove(obj1)
+            #     obj2 = random.choice(temp_objects)
+            #     rel1 = random.choice(relations)
+            #
+            #     if action in ["action:move", "action:rotate"]:
+            #         # иди к дому около дерева
+            #         sample = f"|prep:robot|{action}|aux:to|{obj1}|{rel1}|{obj2}|"
+            #     else:
+            #         # найди/обойди/осмотри/анализируй дом около дерева
+            #         sample = f"|prep:robot|{action}|{obj1}|{rel1}|{obj2}|"
+            #
+            #     samples.append(sample)
 
-                if action in ["action:move", "action:rotate"]:
-                    # иди к ближайшему дому
-                    sample = f"|prep:robot|{action}|aux:to|feature:nearest {obj1}|"
-                else:
-                    # найди/обойди/осмотри/анализируй ближайший дому
-                    sample = f"|prep:robot|{action}|feature:nearest {obj1}|"
-                samples.append(sample)
+            # for _ in range(states):
+            #     obj1 = random.choice(objects)
+            #
+            #     if action in ["action:move", "action:rotate"]:
+            #         # иди к ближайшему дому
+            #         sample = f"|prep:robot|{action}|aux:to|feature:nearest {obj1}|"
+            #     else:
+            #         # найди/обойди/осмотри/анализируй ближайший дому
+            #         sample = f"|prep:robot|{action}|feature:nearest {obj1}|"
+            #     samples.append(sample)
 
-            for _ in range(states):
-                temp_objects = objects.copy()
-                obj1 = random.choice(temp_objects)
-                temp_objects.remove(obj1)
-                obj2 = random.choice(temp_objects)
-                temp_objects.remove(obj2)
-                obj3 = random.choice(temp_objects)
-                rel1 = random.choice(relations)
-                rel2 = random.choice(relations)
+            # for _ in range(states):
+            #     temp_objects = objects.copy()
+            #     obj1 = random.choice(temp_objects)
+            #     temp_objects.remove(obj1)
+            #     obj2 = random.choice(temp_objects)
+            #     temp_objects.remove(obj2)
+            #     obj3 = random.choice(temp_objects)
+            #     rel1 = random.choice(relations)
+            #     rel2 = random.choice(relations)
+            #
+            #     if action in ["action:move", "action:rotate"]:
+            #         # иди к дому около дерева рядом с камнем
+            #         sample = f"|prep:robot|{action}|aux:to|{obj1}|{rel1}|{obj2}|{rel2}|{obj3}|"
+            #     else:
+            #         # найди/обойди/осмотри/анализируй дом около дерева рядом с камнем
+            #         sample = f"|prep:robot|{action}|{obj1}|{rel1}|{obj2}|{rel2}|{obj3}|"
+            #     samples.append(sample)
 
-                if action in ["action:move", "action:rotate"]:
-                    # иди к дому около дерева рядом с камнем
-                    sample = f"|prep:robot|{action}|aux:to|{obj1}|{rel1}|{obj2}|{rel2}|{obj3}|"
-                else:
-                    # найди/обойди/осмотри/анализируй дом около дерева рядом с камнем
-                    sample = f"|prep:robot|{action}|{obj1}|{rel1}|{obj2}|{rel2}|{obj3}|"
-                samples.append(sample)
+            # for _ in range(states):
+            #     obj1 = random.choice(objects)
+            #
+            #     if action in ["action:move", "action:rotate"]:
+            #         # иди к этому дому
+            #         sample = f"|prep:robot|{action}|aux:to|feature:gaze {obj1}|"
+            #     else:
+            #         # найди/обойди/осмотри/анализируй этот дом
+            #         sample = f"|prep:robot|{action}|feature:gaze {obj1}|"
+            #
+            #     samples.append(sample)
 
-            for _ in range(states):
-                obj1 = random.choice(objects)
+            # temp_relations = relations.copy()
+            # temp_relations.remove('relation:near')
+            # for _ in range(states):
+            #     obj1 = random.choice(objects)
+            #     rel1 = random.choice(temp_relations)
+            #
+            #     if action in ["action:move", "action:rotate"]:
+            #         # иди к дому левее себя
+            #         sample = f"|prep:robot|{action}|aux:to|{obj1}|{rel1}|aux:self|"
+            #     else:
+            #         # найди/обойди/осмотри/анализируй дом левее себя
+            #         sample = f"|prep:robot|{action}|{obj1}|{rel1}|aux:self|"
+            #
+            #     samples.append(sample)
 
-                if action in ["action:move", "action:rotate"]:
-                    # иди к этому дому
-                    sample = f"|prep:robot|{action}|aux:to|feature:gaze {obj1}|"
-                else:
-                    # найди/обойди/осмотри/анализируй этот дом
-                    sample = f"|prep:robot|{action}|feature:gaze {obj1}|"
-
-                samples.append(sample)
-
-            temp_relations = relations.copy()
-            temp_relations.remove('relation:near')
-            for _ in range(states):
-                obj1 = random.choice(objects)
-                rel1 = random.choice(temp_relations)
-
-                if action in ["action:move", "action:rotate"]:
-                    # иди к дому левее себя
-                    sample = f"|prep:robot|{action}|aux:to|{obj1}|{rel1}|aux:self|"
-                else:
-                    # найди/обойди/осмотри/анализируй дом левее себя
-                    sample = f"|prep:robot|{action}|{obj1}|{rel1}|aux:self|"
-
-                samples.append(sample)
-
-            if action in ["action:move", "action:rotate"]:
-                # иди туда
-                sample = f"|prep:robot|{action}|object:gaze|"
-                samples.append(sample)
+            # if action in ["action:move", "action:rotate"]:
+            #     # иди туда
+            #     sample = f"|prep:robot|{action}|object:gaze|"
+            #     samples.append(sample)
 
             commands.extend(self.run(samples=samples, amount=amount))
 
@@ -447,12 +487,12 @@ class Generator:
                 random_word = f"[{random_word}](object)"
             elif "direction" in key:
                 random_word = f"[{random_word}](direction)"
-            elif "relation" in key:
-                random_word = f"[{random_word}](relation)"
-            elif "nearest" in key:
-                random_word = f"[{random_word}](nearest)"
-            elif "feature:gaze" in key:
-                random_word = f"[{random_word}](nearest)"
+            # elif "relation" in key:
+            #     random_word = f"[{random_word}](relation)"
+            # elif "nearest" in key:
+            #     random_word = f"[{random_word}](nearest)"
+            # elif "feature:gaze" in key:
+            #     random_word = f"[{random_word}](gaza)"
 
             edited_sample = edited_sample.replace(key, random_word)
 

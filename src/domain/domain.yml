@@ -1,7 +1,7 @@
 version: "3.1"
 
 intents:
-  - command
+  - commands_with_attributes
   - nlu_fallback:
       use_entities: []
   - wrong_command:
@@ -11,14 +11,22 @@ entities:
   - action
   - object
   - direction
-  - relation
-  - nearest
-  - gaze
   - distance
-  - duration
-  - temperature
 
 responses:
+  utter_test_1:
+    - text: "Укажите объект или направление"
+
+  utter_ask_rel:
+    - text: "Уточните местоположение объекта"
+  utter_obj_values:
+    - text: "{act}, {obj}, {rel}"
+
+  utter_ask_dim:
+    - text: "Уточните расстояние"
+  utter_dir_values:
+    - text: "{act}, {dir}, {dim}"
+
   utter_send_command:
     - text: "Команда отправлена"
   utter_wrong_command:
@@ -32,50 +40,45 @@ actions:
 
 slots:
   act:
-    type: list
+    type: text
     mappings:
       - type: from_entity
         entity: action
   obj:
-    type: list
+    type: text
     mappings:
       - type: from_entity
         entity: object
+
   dir:
-    type: list
+    type: text
     mappings:
       - type: from_entity
         entity: direction
-  rel:
-    type: list
-    mappings:
-      - type: from_entity
-        entity: relation
-  near:
-    type: list
-    mappings:
-      - type: from_entity
-        entity: nearest
-  gz:
-    type: list
-    mappings:
-      - type: from_entity
-        entity: gaze
-  dist:
-    type: list
+
+  dim:
+    type: text
     mappings:
       - type: from_entity
         entity: distance
-  dur:
-    type: list
+        conditions:
+          - active_loop: direction_form
+            requested_slot: dim
+
+  rel:
+    type: any
     mappings:
-      - type: from_entity
-        entity: duration
-  deg:
-    type: list
-    mappings:
-      - type: from_entity
-        entity: temperature
+      - type: from_text
+        conditions:
+          - active_loop: object_form
+            requested_slot: rel
+forms:
+  direction_form:
+    required_slots:
+      - dim
+  object_form:
+    required_slots:
+      - rel
 
 session_config:
   session_expiration_time: 60

@@ -1,0 +1,683 @@
+version: "3.1"
+
+nlu:
+- intent: commands_with_attributes
+  examples: |
+    - [вертись](action) [в южную сторону](direction) 138 °
+    - [шлёпайте](action) [в сторону запада](direction) на 49 м
+    - [вертитесь](action) 119 ° [вперед](direction)
+    - к [свету](object)
+    - [разглядывай](action) [дерево](object)
+    - [в сторону севера](direction)
+    - [взад](direction)
+    - [облапошивайте](action) [чащобу](object)
+    - [на юг](direction) на 32 М
+    - [находи](action) [электросветильник](object)
+    - [поворачивай](action) [в левую сторону](direction) на 33 °
+    - [прокручивайся](action) на 286 ° [в южную сторону](direction)
+    - [шествуй](action) [в правую сторону](direction)
+    - [поворачивай](action) к [прожектору](object)
+    - [уезжай](action) на 8 М [задом](direction)
+    - [роща](object)
+    - [вертись](action) [в северную сторону](direction) на 188 °
+    - [бочи](action) 74 ° [в правую сторону](direction)
+    - [шлёпай](action) [на западный край](direction) на 8 м
+    - [вертись](action) [прямо по курсу](direction)
+    - [сыщи](action) [рощу](object)
+    - [прите](action) 27 м [направо](direction)
+    - [загородка](object)
+    - [поворачивайте](action) [обратно](direction) 300 °
+    - [вращайтесь](action) [на восток](direction) на 69 °
+    - [поворачивай](action) на 334 ° [в сторону запада](direction)
+    - [тополь](object)
+    - [загибайся](action) [влево](direction) 121 °
+    - [обгоняйте](action) [парня](object)
+    - [сдавай](action) 31 М [на север](direction)
+    - [обставь](action) [рощу](object)
+    - [вертись](action) на 120 ° [на западный край](direction)
+    - [прокручивайся](action) [на южный край](direction) на 289 °
+    - [уезжайте](action) 15 м [в сторону запада](direction)
+    - [переходите](action) [прямо](direction) на 24 м
+    - [катись](action) [в сторону севера](direction) на 20 М
+    - [вертись](action) на 164 ° [на южный край](direction)
+    - [находите](action) [перегородку](object)
+    - [пробирайтесь](action) [на северный край](direction) на 48 М
+    - [фонарь](object)
+    - [сдвигайся](action) [налево](direction) 31 М
+    - [прокручивайся](action) [направо](direction) на 275 °
+    - [крутитесь](action) на 267 ° [по левую руку](direction)
+    - [конь](object)
+    - [прямо по курсу](direction) на 38 м
+    - [в восточную сторону](direction)
+    - [прокручивайся](action) [на северный край](direction)
+    - [авто](object)
+    - [крутись](action) [в сторону севера](direction) 180 °
+    - [загибайся](action) на 216 ° [в сторону востока](direction)
+    - [приезжайте](action) [в восточную сторону](direction) 38 м
+    - [крутись](action) [в сторону юга](direction) на 211 °
+    - [иди](action) на 18 М [в сторону запада](direction)
+    - [лети](action) [на попятную](direction) на 35 М
+    - [разлагай](action) [ласточку](object)
+    - [захаживайте](action) на 6 м [на южный край](direction)
+    - [заворачивайте](action) 36 ° [вправо](direction)
+    - [катитесь](action) [по левую руку](direction) 34 м
+    - [скачите](action) к [мужчине](object)
+    - [сдавайте](action) [прямо](direction)
+    - [вертитесь](action) [налево](direction) на 292 °
+    - [приезжайте](action) [на север](direction) на 14 М
+    - [постигни](action) [светоч](object)
+    - [вращайтесь](action) 326 ° [на восток](direction)
+    - [шествуй](action) [на юг](direction) на 22 М
+    - [чаща](object)
+    - до [личности](object)
+    - [заворачивай](action) 111 ° [в сторону севера](direction)
+    - [рассматривай](action) [возвышенность](object)
+    - [выступайте](action) [на южный край](direction)
+    - [лети](action) до [фигуры](object)
+    - [изыщите](action) [перегородку](object)
+    - [шкандыбайте](action) на 42 М [в южную сторону](direction)
+    - [прощупай](action) [машину](object)
+    - [летите](action) [в левую сторону](direction) на 17 М
+    - [разлагайте](action) [коттедж](object)
+    - [заворачивайте](action) [по левую руку](direction)
+    - [обставьте](action) [дерево](object)
+    - [летите](action) [на западный край](direction) 34 М
+    - [отыщите](action) [барьер](object)
+    - [собирайся](action) [возвратно](direction) 7 М
+    - [крутись](action) 293 ° [в правую сторону](direction)
+    - [шлёпайте](action) [налево](direction) 22 М
+    - [осматривайте](action) [хребет](object)
+    - [маршируйте](action) [вспять](direction) 36 М
+    - [осматривай](action) [светоч](object)
+    - до [парня](object)
+    - [вертись](action) [в сторону юга](direction)
+    - [неситесь](action) к [человеку](object)
+    - [шкандыбай](action) [по правую руку](direction) 44 м
+    - [прокручивайтесь](action) 318 ° [прямо](direction)
+    - [скачи](action) [вперед](direction) 18 М
+    - [загибайтесь](action) [на северный край](direction) 332 °
+    - [влево](direction) на 18 м
+    - [в левую сторону](direction)
+    - [взад](direction) на 27 м
+    - [прокручивайтесь](action) [вспять](direction) на 222 °
+    - [скачи](action) [на западный край](direction) на 38 М
+    - [прямо](direction)
+    - [бочи](action) 161 ° [напролом](direction)
+    - [загибайся](action) на 244 ° [в сторону востока](direction)
+    - [вертитесь](action) на 153 ° [в южную сторону](direction)
+    - [вращайтесь](action) на 217 ° [в сторону юга](direction)
+    - [вращайся](action) [в сторону запада](direction) 52 °
+    - [гуляй](action) [на восток](direction)
+    - [торшер](object)
+    - [уходите](action) к [личности](object)
+    - [несись](action) 36 м [налево](direction)
+    - [пойдите](action) 3 м [на юг](direction)
+    - [катитесь](action) [по правую руку](direction) на 22 М
+    - [пойди](action) [взапядки](direction)
+    - [переходите](action) [взад](direction) 38 М
+    - [бочи](action) [на восток](direction) на 183 °
+    - [отправляйся](action) к [душе](object)
+    - [дуб](object)
+    - [в южную сторону](direction) на 2 М
+    - [в северную сторону](direction) на 25 м
+    - [дерзайте](action) на 24 м [в обратном направлении](direction)
+    - [бегите](action) [в восточную сторону](direction) на 38 М
+    - [перемещайтесь](action) [направо](direction)
+    - [поворачивай](action) [напрямик](direction)
+    - к [душе](object)
+    - [переходи](action) [задом](direction) на 21 М
+    - [скачите](action) [в восточную сторону](direction) на 49 м
+    - [в правую сторону](direction) на 45 м
+    - [человек](object)
+    - [прокручивайтесь](action) [на восточный край](direction)
+    - [облапошивайте](action) [мужчину](object)
+    - [обертасом](direction)
+    - [на западный край](direction) на 34 м
+    - [заворачивай](action) [напролом](direction)
+    - [по левую руку](direction)
+    - [прокручивайтесь](action) на 294 ° [взад](direction)
+    - [заворачивайте](action) [в правую сторону](direction) на 180 °
+    - [съезди](action) [в восточную сторону](direction)
+    - [гони](action) на 2 м [напролом](direction)
+    - [постигните](action) [парня](object)
+    - [загибайся](action) 29 ° [на запад](direction)
+    - [прокручивайся](action) [влево](direction) 236 °
+    - [вертись](action) [в западную сторону](direction)
+    - [поворачивайте](action) на 194 ° [на восточный край](direction)
+    - [маршируйте](action) [в правую сторону](direction)
+    - [шагай](action) 27 М [на север](direction)
+    - [вправо](direction) на 44 м
+    - [береза](object)
+    - [изучай](action) [мужчину](object)
+    - [сдвинься](action) [в южную сторону](direction) 38 М
+    - [назад](direction) на 17 м
+    - [топайте](action) [в западную сторону](direction) 30 М
+    - [крутитесь](action) до [светоча](object)
+    - [вертись](action) [на восток](direction)
+    - [приищи](action) [прожектор](object)
+    - [на восточный край](direction) на 3 м
+    - [прокручивайтесь](action) [вперед](direction) 209 °
+    - [в правую сторону](direction)
+    - [отправляйтесь](action) [в западную сторону](direction) 20 М
+    - [перелесок](object)
+    - [на западный край](direction) на 26 М
+    - [на юг](direction) на 36 м
+    - [бочи](action) [вспять](direction) 96 °
+    - [прощупай](action) [автомобиль](object)
+    - [бочите](action) [по левую руку](direction)
+    - [столб](object)
+    - [напролом](direction) на 31 м
+    - [шествуйте](action) [в сторону запада](direction) 32 М
+    - [иди](action) 41 М [влево](direction)
+    - [переступай](action) 28 М [в западную сторону](direction)
+    - [езжай](action) [в левую сторону](direction) на 17 м
+    - [вертись](action) 135 ° [вправо](direction)
+    - [массив](object)
+    - [светильник](object)
+    - [прокручивайтесь](action) 272 ° [в восточную сторону](direction)
+    - [проезжайте](action) на 6 м [напролом](direction)
+    - [мчись](action) [в южную сторону](direction)
+    - [вертитесь](action) на 321 ° [взад](direction)
+    - [выходите](action) на 11 М [в обратном направлении](direction)
+    - [поворачивайте](action) [в северную сторону](direction)
+    - [исследуйте](action) [постройку](object)
+    - [поворачивай](action) 13 ° [вспять](direction)
+    - [прохаживай](action) [в южную сторону](direction) 32 м
+    - [плывите](action) на 41 М [направо](direction)
+    - [съезди](action) 3 М [в сторону юга](direction)
+    - [вышагивай](action) [на восточный край](direction) 32 М
+    - [дерзай](action) к [горе](object)
+    - [поворачивайте](action) 245 ° [в южную сторону](direction)
+    - [бочи](action) 115 ° [в западную сторону](direction)
+    - [двигайся](action) [на западный край](direction) на 30 м
+    - [особняк](object)
+    - [обставьте](action) [мужчину](object)
+    - [поворачивай](action) до [оврага](object)
+    - [на северный край](direction) на 31 м
+    - [поворачивай](action) [обертасом](direction)
+    - [поворачивайте](action) 296 ° [налево](direction)
+    - [бочи](action) 8 ° [обертасом](direction)
+    - [просматривайте](action) [столб](object)
+    - [скачи](action) на 27 м [по правую руку](direction)
+    - [заворачивайте](action) [по правую руку](direction) 327 °
+    - [заворачивай](action) [в правую сторону](direction)
+    - [пальма](object)
+    - [обозревай](action) [лампаду](object)
+    - [вращайтесь](action) [в сторону юга](direction) 242 °
+    - [вышагивай](action) [в левую сторону](direction) на 35 М
+    - к [куче](object)
+    - [орех](object)
+    - [приищите](action) [преграждение](object)
+    - [вращайся](action) [в восточную сторону](direction)
+    - [прокручивайся](action) до [электросветильника](object)
+    - к [ласточке](object)
+    - [по левую руку](direction) на 34 М
+    - [заворачивайте](action) [влево](direction) на 209 °
+    - [при](action) 24 м [в восточную сторону](direction)
+    - [обходи](action) [растение](object)
+    - [прокручивайся](action) [направо](direction) 53 °
+    - [бочи](action) [по левую руку](direction) 65 °
+    - [прокручивайтесь](action) 346 ° [на восточный край](direction)
+    - [заслон](object)
+    - [поворачивайте](action) [на север](direction) 185 °
+    - [бочи](action) к [яме](object)
+    - [дом](object)
+    - [загибайся](action) [обратно](direction) на 51 °
+    - [вертитесь](action) [прямо](direction) 271 °
+    - [заворачивай](action) до [оврага](object)
+    - [разглядывай](action) [электросветильник](object)
+    - [на попятную](direction)
+    - [прощупай](action) [человека](object)
+    - [поворачивайте](action) [назад](direction) 115 °
+    - [тайга](object)
+    - [поворачивай](action) [в западную сторону](direction)
+    - [двигайся](action) 39 М [на восток](direction)
+    - [крутись](action) на 204 ° [в левую сторону](direction)
+    - [на южный край](direction)
+    - к [бугру](object)
+    - [сдвигайся](action) [налево](direction) 8 М
+    - [сыщи](action) [провал](object)
+    - [мчитесь](action) на 24 м [налево](direction)
+    - [крутись](action) [в восточную сторону](direction) 236 °
+    - [прокручивайтесь](action) [в левую сторону](direction)
+    - [нащупайте](action) [канаву](object)
+    - [прохаживайте](action) 32 м [вперед](direction)
+    - [вращайтесь](action) на 288 ° [взад](direction)
+    - [поворачивайте](action) до [провала](object)
+    - [вращайтесь](action) на 8 ° [по левую руку](direction)
+    - [перемещайся](action) 32 М [напрямик](direction)
+    - [сдвигайся](action) [на восток](direction)
+    - [несись](action) 6 М [на южный край](direction)
+    - [мчись](action) [в сторону севера](direction) 28 М
+    - [разыщи](action) [провал](object)
+    - [назад](direction) на 39 М
+    - [отправляйтесь](action) до [точила](object)
+    - [несись](action) на 40 М [вправо](direction)
+    - [отправляйся](action) [в северную сторону](direction) 31 м
+    - [поворачивайте](action) [вперед](direction) на 129 °
+    - [отправляйся](action) 18 м [по правую руку](direction)
+    - к [женщине](object)
+    - [просматривай](action) [липу](object)
+    - [осматривай](action) [холмик](object)
+    - [направляйся](action) к [точилу](object)
+    - [на западный край](direction)
+    - [маршируй](action) 40 М [на восток](direction)
+    - [перемещайся](action) 44 м [налево](direction)
+    - [шлёпай](action) [в сторону севера](direction) 31 М
+    - к [столбу](object)
+    - [загибайся](action) 2 ° [на север](direction)
+    - к [машине](object)
+    - [езжайте](action) [вспять](direction) на 18 м
+    - [облапошивайте](action) [массив](object)
+    - [зондируйте](action) [точило](object)
+    - [обставь](action) [массив](object)
+    - [мужчина](object)
+    - [испытывай](action) [лампу](object)
+    - [проходи](action) [на южный край](direction) на 17 М
+    - к [рытвине](object)
+    - [катись](action) [на северный край](direction) 45 м
+    - [сдвинься](action) на 11 М [в сторону востока](direction)
+    - [поворачивай](action) на 63 ° [направо](direction)
+    - [сосна](object)
+    - [загибайтесь](action) на 195 ° [прямо](direction)
+    - [пригорок](object)
+    - до [точила](object)
+    - [загибайтесь](action) 288 ° [в сторону юга](direction)
+    - [разглядывайте](action) [гору](object)
+    - [проезжай](action) [на западный край](direction)
+    - [разыщи](action) [светоч](object)
+    - [загибайся](action) [в западную сторону](direction)
+    - [отправляйтесь](action) [в обратном направлении](direction)
+    - [пробирайтесь](action) на 30 М [в правую сторону](direction)
+    - [вращайтесь](action) до [света](object)
+    - [вращайся](action) [направо](direction) на 36 °
+    - [уезжай](action) на 36 М [на южный край](direction)
+    - [крутись](action) [на западный край](direction) на 100 °
+    - [в северную сторону](direction)
+    - [обследуйте](action) [коттедж](object)
+    - [вышагивайте](action) на 47 М [в сторону востока](direction)
+    - [крутитесь](action) [влево](direction) 157 °
+    - [приезжайте](action) [направо](direction) на 2 М
+    - [проезжай](action) 15 м [вправо](direction)
+    - [загибайся](action) [по правую руку](direction)
+    - [выступай](action) [в сторону юга](direction) 31 М
+    - [поворачивайте](action) [в восточную сторону](direction) 269 °
+    - [бочи](action) [прямо по курсу](direction)
+    - [вертитесь](action) [на северный край](direction)
+    - [неситесь](action) [в левую сторону](direction)
+    - [в северную сторону](direction) на 35 м
+    - [плыви](action) [задом](direction) на 15 М
+    - [бочите](action) на 56 ° [на южный край](direction)
+    - [беги](action) [на юг](direction) 43 м
+    - [шествуйте](action) [в правую сторону](direction) на 42 м
+    - [горка](object)
+    - [проезжай](action) [в правую сторону](direction) 46 М
+    - [напролом](direction) на 33 М
+    - [назад](direction)
+    - [уезжай](action) [прямо по курсу](direction) 23 М
+    - [дама](object)
+    - до [рытвины](object)
+    - [отправляйся](action) [напрямик](direction)
+    - [бочите](action) [вправо](direction) 119 °
+    - [дерзай](action) [на юг](direction)
+    - [заворачивайте](action) [напрямик](direction) на 332 °
+    - [дуй](action) [назад](direction)
+    - к [канаве](object)
+    - [поворачивай](action) 307 ° [на северный край](direction)
+    - [в сторону юга](direction) на 17 М
+    - [в южную сторону](direction)
+    - [маршируйте](action) 22 м [напрямик](direction)
+    - [пойдите](action) 6 м [возвратно](direction)
+    - [вращайся](action) [в сторону севера](direction) на 221 °
+    - [крутитесь](action) [напрямик](direction)
+    - [бочите](action) [в западную сторону](direction) 29 °
+    - [топай](action) к [товарищу](object)
+    - [переступайте](action) 40 м [вперед](direction)
+    - [вертись](action) на 151 ° [назад](direction)
+    - [загибайся](action) [в сторону востока](direction)
+    - [прокручивайтесь](action) до [фонаря](object)
+    - до [прожектора](object)
+    - [вертитесь](action) [в сторону запада](direction)
+    - [на север](direction)
+    - [прокручивайся](action) на 341 ° [по правую руку](direction)
+    - [точила](object)
+    - [лес](object)
+    - [прощупайте](action) [торшер](object)
+    - до [света](object)
+    - [газуйте](action) 38 м [вспять](direction)
+    - [маршируй](action) 2 М [в южную сторону](direction)
+    - до [пропасти](object)
+    - [газуй](action) [вправо](direction) 4 М
+    - [вращайся](action) [на восточный край](direction)
+    - [переступай](action) [направо](direction)
+    - до [хребта](object)
+    - [зондируй](action) [парня](object)
+    - [двигайтесь](action) [вперед](direction)
+    - [обкатывай](action) [мужчину](object)
+    - [прямо по курсу](direction) на 25 М
+    - до [человека](object)
+    - [на западный край](direction) на 42 М
+    - [маршируй](action) [в сторону запада](direction)
+    - [загибайтесь](action) [влево](direction)
+    - [крутись](action) [в южную сторону](direction) на 187 °
+    - [вертитесь](action) [на запад](direction) на 126 °
+    - [в левую сторону](direction) на 6 м
+    - к [даме](object)
+    - [заворачивайте](action) [в северную сторону](direction)
+    - [пробирайся](action) [на северный край](direction) на 39 м
+    - [переступай](action) 44 м [на север](direction)
+    - [заворачивай](action) 339 ° [в сторону севера](direction)
+    - [прокручивайся](action) [вправо](direction) 257 °
+    - [переместись](action) на 40 М [влево](direction)
+    - [вращайся](action) 134 ° [в сторону юга](direction)
+    - [уходите](action) [по правую руку](direction) на 47 м
+    - [вертитесь](action) на 63 ° [в западную сторону](direction)
+    - [вертитесь](action) [задом](direction) 309 °
+    - [крутитесь](action) [на восточный край](direction) 357 °
+    - до [бугра](object)
+    - [бочите](action) 32 ° [взад](direction)
+    - [обставьте](action) [перелески](object)
+    - к [светильнику](object)
+    - [сходите](action) [прямо по курсу](direction) 13 М
+    - [просматривайте](action) [скалу](object)
+    - [гуляй](action) [в правую сторону](direction) 28 м
+    - [прокручивайтесь](action) [напролом](direction) на 192 °
+    - [сдвигайтесь](action) [в правую сторону](direction) 7 м
+    - [по правую руку](direction) на 30 м
+    - [лампа](object)
+    - [найди](action) [прожектор](object)
+    - [загибайтесь](action) к [лампаде](object)
+    - [вращайтесь](action) [в восточную сторону](direction) 177 °
+    - [двигайтесь](action) на 33 м [взад](direction)
+    - [загибайся](action) [вспять](direction) на 323 °
+    - [несись](action) [на северный край](direction)
+    - [загибайся](action) [на запад](direction) 153 °
+    - [крутись](action) 131 ° [налево](direction)
+    - [собирайся](action) 31 М [в сторону севера](direction)
+    - [вертись](action) [на западный край](direction)
+    - [вращайся](action) 290 ° [вспять](direction)
+    - к [точилу](object)
+    - [домик](object)
+    - [оглядывай](action) [растение](object)
+    - [лети](action) 46 М [в обратном направлении](direction)
+    - [собирайтесь](action) на 17 м [в западную сторону](direction)
+    - [прокручивайтесь](action) 85 ° [прямо](direction)
+    - [направо](direction)
+    - [катись](action) на 8 м [в северную сторону](direction)
+    - [овраг](object)
+    - [собирайтесь](action) [на восточный край](direction) на 5 М
+    - [прокручивайтесь](action) 306 ° [влево](direction)
+    - [топай](action) на 28 М [в сторону юга](direction)
+    - к [прожектору](object)
+    - [гуляй](action) к [мужчине](object)
+    - [бочи](action) [в сторону юга](direction)
+    - [шлёпай](action) 24 м [налево](direction)
+    - [вращайся](action) [по правую руку](direction)
+    - [прокручивайтесь](action) [на восточный край](direction) на 48 °
+    - [на юг](direction)
+    - [заворачивай](action) [в сторону севера](direction) на 288 °
+    - [собирайся](action) [на север](direction)
+    - [вращайтесь](action) [прямо по курсу](direction) 153 °
+    - [освой](action) [светильник](object)
+    - [крутись](action) [на восточный край](direction) на 89 °
+    - [вертись](action) 37 ° [в правую сторону](direction)
+    - [вертись](action) 145 ° [на запад](direction)
+    - [перемещайся](action) [на южный край](direction) на 4 М
+    - [в северную сторону](direction) на 4 М
+    - [проезжайте](action) [в сторону юга](direction) на 35 м
+    - [вертитесь](action) 109 ° [на юг](direction)
+    - [двигайтесь](action) [налево](direction) на 32 М
+    - [поворачивайте](action) до [торшера](object)
+    - [крутись](action) [в сторону севера](direction) на 153 °
+    - [возвышенность](object)
+    - до [торшера](object)
+    - [отправляйся](action) [прямо по курсу](direction) 39 М
+    - [фигура](object)
+    - [двигайся](action) [напролом](direction) 17 М
+    - [маршируйте](action) 21 М [в северную сторону](direction)
+    - [прокручивайтесь](action) [на запад](direction) на 156 °
+    - [просматривайте](action) [дерево](object)
+    - [езжай](action) к [бричке](object)
+    - [влево](direction) на 39 м
+    - [загибайтесь](action) к [провалу](object)
+    - [бочи](action) до [ямы](object)
+    - [прощупай](action) [коня](object)
+    - [проходи](action) [в сторону востока](direction)
+    - [двигайся](action) на 30 М [в северную сторону](direction)
+    - [приищи](action) [углубление](object)
+    - [сдвинься](action) [по левую руку](direction) 2 М
+    - до [провала](object)
+    - [крутитесь](action) на 156 ° [в сторону севера](direction)
+    - до [пригорка](object)
+    - [ольха](object)
+    - [бочите](action) на 334 ° [прямо по курсу](direction)
+    - [провал](object)
+    - [вращайся](action) до [лампы](object)
+    - [дуйте](action) 1 М [по левую руку](direction)
+    - [переходите](action) до [автомобиля](object)
+    - [заворачивай](action) на 329 ° [на северный край](direction)
+    - [крутись](action) 360 ° [назад](direction)
+    - [катитесь](action) на 31 М [на западный край](direction)
+    - [проезжай](action) на 17 м [на юг](direction)
+    - [беги](action) 27 М [взапядки](direction)
+    - [вращайся](action) [налево](direction)
+    - [заворачивай](action) [в левую сторону](direction) на 129 °
+    - [бочите](action) 98 ° [в восточную сторону](direction)
+    - [прокручивайтесь](action) [в сторону юга](direction) 126 °
+    - [поворачивайте](action) [вспять](direction)
+    - [переступайте](action) [в сторону севера](direction)
+    - [по правую руку](direction) на 6 м
+    - [проходите](action) на 48 м [в левую сторону](direction)
+    - [двигайся](action) [в сторону востока](direction) 43 м
+    - [вертись](action) [взапядки](direction)
+    - [плыви](action) 16 м [на запад](direction)
+    - [направляйтесь](action) [налево](direction)
+    - [в сторону востока](direction)
+    - [езжайте](action) [прямо по курсу](direction) на 30 м
+    - [скачите](action) к [женщине](object)
+    - [корыто](object)
+    - к [провалу](object)
+    - [летите](action) к [личности](object)
+    - [минуйте](action) [лесополосу](object)
+    - [канава](object)
+    - [разыщи](action) [впадину](object)
+    - [собирайтесь](action) [прямо по курсу](direction) на 48 М
+    - [поворачивайте](action) [напролом](direction) 314 °
+    - [пробирайся](action) до [хребта](object)
+    - [отправляйся](action) 1 М [на восток](direction)
+    - [в южную сторону](direction) на 16 М
+    - [вправо](direction)
+    - [несись](action) [напрямик](direction)
+    - [иди](action) [в западную сторону](direction) на 49 М
+    - [в сторону востока](direction) на 8 М
+    - [пойдите](action) [в сторону юга](direction)
+    - [переходи](action) на 9 м [на запад](direction)
+    - [взапядки](direction)
+    - [на восток](direction)
+    - [нарой](action) [тайгу](object)
+    - [нарой](action) [преграду](object)
+    - [выглядывайте](action) [лампу](object)
+    - [вышагивай](action) 24 м [в сторону запада](direction)
+    - [гуляй](action) [направо](direction) на 16 м
+    - [в сторону юга](direction)
+    - [исследуй](action) [столб](object)
+    - [выглядывайте](action) [лампаду](object)
+    - [вперед](direction)
+    - [заворачивай](action) на 263 ° [направо](direction)
+    - [езжайте](action) [на север](direction)
+    - [в западную сторону](direction)
+    - [шкандыбай](action) к [точилу](object)
+    - [сдвигайся](action) [по левую руку](direction)
+    - к [лампаде](object)
+    - до [канавы](object)
+    - [подходите](action) [прямо по курсу](direction)
+    - [отправляйтесь](action) [на южный край](direction)
+    - [объезжай](action) [перелески](object)
+    - [съездите](action) [прямо](direction) на 43 М
+    - [приходите](action) [назад](direction)
+    - [в западную сторону](direction) на 11 м
+    - [тачка](object)
+    - [прокручивайся](action) [вспять](direction)
+    - [вращайся](action) [в северную сторону](direction) 156 °
+    - [поворачивайте](action) 326 ° [напрямик](direction)
+    - [поворачивайте](action) на 91 ° [прямо](direction)
+    - [загибайся](action) [на север](direction) на 25 °
+    - [обскачи](action) [дубраву](object)
+    - [гуляй](action) до [личности](object)
+    - [мчитесь](action) на 38 М [на запад](direction)
+    - [по правую руку](direction)
+    - [бочите](action) [вперед](direction) 183 °
+    - [прокручивайтесь](action) [взад](direction) 265 °
+    - [крутись](action) [на попятную](direction) на 65 °
+    - [вертитесь](action) 130 ° [на запад](direction)
+    - [бочите](action) [на восток](direction) на 260 °
+    - [сдвигайся](action) 46 м [прямо по курсу](direction)
+    - [вращайтесь](action) к [углублению](object)
+    - [обскачите](action) [лесополосу](object)
+    - [скачи](action) [возвратно](direction) 10 М
+    - [поворачивай](action) на 57 ° [в северную сторону](direction)
+    - [прожектор](object)
+    - [бочи](action) [на северный край](direction)
+    - [в восточную сторону](direction) на 46 м
+    - до [столба](object)
+    - [препятствие](object)
+    - [подходите](action) на 24 М [задом](direction)
+    - [приходи](action) [задом](direction) на 9 М
+    - [возвратно](direction)
+    - [объезжайте](action) [растение](object)
+    - [отправляйся](action) [в левую сторону](direction) на 9 М
+    - [летите](action) [на восток](direction) на 48 м
+    - [на северный край](direction)
+    - [парень](object)
+    - [поворачивай](action) [на юг](direction) 335 °
+    - [на восточный край](direction)
+    - [загибайся](action) на 193 ° [напрямик](direction)
+    - [крутитесь](action) до [фонаря](object)
+    - [крутитесь](action) на 253 ° [напролом](direction)
+    - [разлагай](action) [ребёнка](object)
+    - [летите](action) [в западную сторону](direction) 49 М
+    - [бочи](action) к [светильнику](object)
+    - [дворец](object)
+    - [бочи](action) на 247 ° [в левую сторону](direction)
+    - [прокручивайтесь](action) [в сторону юга](direction)
+    - [поворачивайте](action) [на западный край](direction) на 305 °
+    - [рассматривай](action) [орех](object)
+    - [лампада](object)
+    - [прокручивайтесь](action) к [рытвине](object)
+    - [надыбай](action) [рощу](object)
+    - [газуйте](action) на 23 М [на северный край](direction)
+    - [осматривай](action) [торшер](object)
+    - [сдавайте](action) [на восточный край](direction) на 28 м
+    - [иди](action) 10 м [на запад](direction)
+    - [влево](direction) на 2 м
+    - [вращайся](action) [в южную сторону](direction) 264 °
+    - [загибайтесь](action) [в сторону запада](direction) 94 °
+    - [вертись](action) [в западную сторону](direction) 41 °
+    - [заворачивай](action) [в сторону востока](direction) 245 °
+    - [обертасом](direction) на 31 м
+    - [налево](direction)
+    - [крутитесь](action) [вперед](direction) на 100 °
+    - [обследуйте](action) [домик](object)
+    - [напролом](direction)
+    - [объезжай](action) [растение](object)
+    - [освойте](action) [дом](object)
+    - [объезжай](action) [рощу](object)
+    - [в западную сторону](direction) на 12 м
+    - [гуляйте](action) [на запад](direction)
+    - [в сторону запада](direction)
+    - [проходите](action) 38 М [на юг](direction)
+    - [подходите](action) [в сторону востока](direction) 41 м
+    - [нашарь](action) [рощу](object)
+    - [проходите](action) на 32 м [на север](direction)
+    - [заворачивай](action) [на попятную](direction)
+    - [гуляй](action) на 11 М [вправо](direction)
+    - [загибайтесь](action) на 51 ° [в левую сторону](direction)
+    - [напролом](direction) на 38 м
+    - [лесополоса](object)
+    - [сдвинься](action) 49 М [в восточную сторону](direction)
+    - [переступайте](action) [напрямик](direction) на 29 м
+    - [проезжай](action) 29 М [взад](direction)
+    - [прокручивайся](action) на 69 ° [на север](direction)
+    - [иди](action) на 8 М [прямо по курсу](direction)
+    - [плыви](action) [задом](direction)
+    - [строение](object)
+    - [поворачивай](action) на 311 ° [в правую сторону](direction)
+    - [в сторону севера](direction) на 15 м
+    - [загибайтесь](action) [на западный край](direction) на 116 °
+    - [углубление](object)
+    - [поворачивай](action) на 17 ° [в сторону востока](direction)
+    - [съезди](action) на 49 м [прямо](direction)
+    - [вращайся](action) на 292 ° [в западную сторону](direction)
+    - [поворачивайте](action) на 67 ° [в северную сторону](direction)
+    - [обкатывайте](action) [дуб](object)
+    - [крутись](action) 41 ° [в восточную сторону](direction)
+    - [вращайся](action) на 249 ° [в восточную сторону](direction)
+    - [обставь](action) [фигуру](object)
+    - [мчись](action) [в западную сторону](direction)
+    - [уходите](action) [на южный край](direction) 14 М
+    - [напрямик](direction)
+    - [по правую руку](direction) на 7 м
+    - [топай](action) [на южный край](direction) на 42 М
+    - [направляйся](action) [в сторону запада](direction)
+    - [дерзайте](action) [в северную сторону](direction) на 14 м
+    - [преграждение](object)
+    - [влево](direction)
+    - [рытвина](object)
+    - [светоч](object)
+    - [прокручивайтесь](action) к [провалу](object)
+    - [вращайтесь](action) на 174 ° [задом](direction)
+    - [захаживайте](action) [в восточную сторону](direction) 36 м
+    - [дубрава](object)
+    - [на восток](direction) на 41 м
+    - [на запад](direction)
+    - [поворачивай](action) [на южный край](direction)
+    - [на восток](direction) на 33 М
+    - [сдвигайся](action) на 10 м [на восточный край](direction)
+    - [скачите](action) [налево](direction)
+    - [вертитесь](action) [в правую сторону](direction) на 358 °
+    - [электросветильник](object)
+    - [мчитесь](action) к [горе](object)
+    - [женщина](object)
+    - к [мужчине](object)
+    - [проходите](action) на 46 М [влево](direction)
+    - [подходи](action) на 28 М [на восток](direction)
+    - [крутитесь](action) [в правую сторону](direction)
+    - [вращайтесь](action) на 255 ° [на западный край](direction)
+    - [вращайтесь](action) [задом](direction) на 67 °
+    - [вертись](action) [на южный край](direction) на 102 °
+    - [вертись](action) [направо](direction)
+    - [вращайтесь](action) [влево](direction) на 125 °
+    - [взад](direction) на 15 м
+    - [шествуйте](action) [в сторону востока](direction)
+    - [переступай](action) на 2 М [на восточный край](direction)
+    - [скала](object)
+    - [газуйте](action) [в обратном направлении](direction) 24 М
+    - [собирайся](action) до [возвышенности](object)
+    - [нащупайте](action) [торшер](object)
+    - [сходите](action) [по левую руку](direction)
+    - [выглядывай](action) [светоч](object)
+    - [поворачивайте](action) [вперед](direction) на 131 °
+    - [заворачивай](action) [в сторону юга](direction) на 74 °
+    - [заворачивай](action) [вправо](direction) 178 °
+    - [поворачивайте](action) [вправо](direction) на 43 °
+    - [несись](action) [на северный край](direction) 4 М
+    - [заворачивай](action) [на южный край](direction)
+    - [бочи](action) 284 ° [в сторону юга](direction)
+    - [прите](action) [направо](direction)
+    - [вертитесь](action) [в левую сторону](direction) 333 °
+    - [иди](action) на 12 м [напрямик](direction)
+    - [гони](action) 47 М [по правую руку](direction)
+    - [гуляй](action) на 8 м [в сторону севера](direction)
+    - [заворачивай](action) к [канаве](object)
+    - [сдвиньтесь](action) 19 м [направо](direction)
+    - [прокручивайся](action) 267 ° [в западную сторону](direction)
+    - [загибайся](action) на 183 ° [вправо](direction)
+    - [неситесь](action) до [холмика](object)
+    - [прите](action) на 34 М [в левую сторону](direction)
+    - [вертись](action) [на север](direction) 70 °
+    - [поворачивай](action) 243 ° [влево](direction)
+    - [загибайся](action) 318 ° [влево](direction)
+    - к [лампе](object)
+    - [поворачивай](action) 86 ° [на север](direction)
+    - [обратно](direction)
+    - [оглядывайте](action) [лампаду](object)

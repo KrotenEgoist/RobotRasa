@@ -2,8 +2,35 @@ version: "3.1"
 
 stories:
 
-  - story: send command
+  - story: action only
     steps:
-      - intent: command
-      - action: action_send_command
+      - intent: commands_with_attributes
+      - slot_was_set:
+          - obj: null
+          - dir: null
+      - action: utter_test_1
+      - action: action_reset_slots
+
+  - story: action and object
+    steps:
+      - intent: commands_with_attributes
+      - slot_was_set:
+          - obj
+          - dir: null
+      - action: object_form
+      - active_loop: object_form
+      - active_loop: null
+      - action: utter_obj_values
+      - action: action_reset_slots
+
+  - story: action and direction
+    steps:
+      - intent: commands_with_attributes
+      - slot_was_set:
+          - obj: null
+          - dir
+      - action: direction_form
+      - active_loop: direction_form
+      - active_loop: null
+      - action: utter_dir_values
       - action: action_reset_slots
