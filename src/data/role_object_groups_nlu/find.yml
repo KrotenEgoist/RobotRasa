@@ -1,0 +1,105 @@
+version: "3.1"
+
+nlu:
+- intent: find
+  examples: |
+    - найди близкий [фонарь]{"entity": "lamp_post", "role": "object", "group": "1"}
+    - отыщи близлежащий [барьер]{"entity": "barrier", "role": "object", "group": "1"}
+    - обнаружь ближний [останец]{"entity": "butte", "role": "object", "group": "1"}
+    - обнаружь недалёкое [срубленное дерево]{"entity": "broken_tree", "role": "object", "group": "1"}
+    - разыщи близкое [растение]{"entity": "tree", "role": "object", "group": "1"}
+    - отыщи близкого [товарища]{"entity": "human", "role": "object", "group": "1"}
+    - отыщи ближайший [лес]{"entity": "forest", "role": "object", "group": "1"}
+    - найди близкую [булыгу]{"entity": "rock", "role": "object", "group": "1"}
+    - отыщи близлежащего [товарища]{"entity": "human", "role": "object", "group": "1"}
+    - разыщи близкий [особняк]{"entity": "house", "role": "object", "group": "1"}
+    - обнаружь недалекий [останец]{"entity": "butte", "role": "object", "group": "1"}
+    - отыщи недалекий [останец]{"entity": "butte", "role": "object", "group": "1"}
+    - найди ближайшее [авто]{"entity": "car", "role": "object", "group": "1"}
+    - разыщи недалёкого [пьяного человека]{"entity": "man_lay", "role": "object", "group": "1"}
+    - найди близкую [горку]{"entity": "hill", "role": "object", "group": "1"}
+    - обнаружь близлежащую [тачку]{"entity": "car", "role": "object", "group": "1"}
+    - отыщи близкую [чащу]{"entity": "forest", "role": "object", "group": "1"}
+    - отыщи недалёкого [пьяного человека]{"entity": "man_lay", "role": "object", "group": "1"}
+    - обнаружь ближний [разрыв]{"entity": "fissure", "role": "object", "group": "1"}
+    - отыщи близкую [преграду]{"entity": "barrier", "role": "object", "group": "1"}
+    - отыщи [пропасть]{"entity": "pit", "role": "object", "group": "1"}
+    - разыщи [мужчину]{"entity": "human", "role": "object", "group": "1"}
+    - отыщи [ограждение]{"entity": "barrier", "role": "object", "group": "1"}
+    - обнаружь [камушек]{"entity": "rock", "role": "object", "group": "1"}
+    - отыщи [дерево]{"entity": "tree", "role": "object", "group": "1"}
+    - обнаружь [здание]{"entity": "house", "role": "object", "group": "1"}
+    - обнаружь [берёзу]{"entity": "tree", "role": "object", "group": "1"}
+    - отыщи [трещину]{"entity": "fissure", "role": "object", "group": "1"}
+    - разыщи [валун]{"entity": "butte", "role": "object", "group": "1"}
+    - отыщи [впадину]{"entity": "pit", "role": "object", "group": "1"}
+    - найди [останец]{"entity": "butte", "role": "object", "group": "1"}
+    - отыщи [овраг]{"entity": "pit", "role": "object", "group": "1"}
+    - разыщи [провал]{"entity": "pit", "role": "object", "group": "1"}
+    - отыщи [лежащего человека]{"entity": "man_lay", "role": "object", "group": "1"}
+    - найди [дубраву]{"entity": "forest", "role": "object", "group": "1"}
+    - обнаружь [сломанное дерево]{"entity": "broken_tree", "role": "object", "group": "1"}
+    - разыщи [расщелину]{"entity": "fissure", "role": "object", "group": "1"}
+    - разыщи [машину]{"entity": "car", "role": "object", "group": "1"}
+    - обнаружь [ограждение]{"entity": "barrier", "role": "object", "group": "1"}
+    - найди [булыжник]{"entity": "rock", "role": "object", "group": "1"}
+    - обнаружь [холм]{"entity": "hill", "role": "object", "group": "1"}, что располагается [сзади от]{"entity": "relation", "group": "1"} [сосны]{"entity": "tree", "role": "object", "group": "2"}
+    - отыщи [разрыв]{"entity": "fissure", "role": "object", "group": "1"}, что [в северной стороне от]{"entity": "relation", "group": "1"} [барьера]{"entity": "barrier", "role": "object", "group": "2"}
+    - обнаружь [упавшего человека]{"entity": "man_lay", "role": "object", "group": "1"} [правее]{"entity": "relation", "group": "1"} [булыжника]{"entity": "rock", "role": "object", "group": "2"}
+    - найди [валун]{"entity": "butte", "role": "object", "group": "1"}, который находится [на юге от]{"entity": "relation", "group": "1"} [камушка]{"entity": "rock", "role": "object", "group": "2"}
+    - отыщи [расщелину]{"entity": "fissure", "role": "object", "group": "1"}, что [около]{"entity": "relation", "group": "1"} [барьера]{"entity": "barrier", "role": "object", "group": "2"}
+    - разыщи [рытвину]{"entity": "pit", "role": "object", "group": "1"}, что располагается [сзади от]{"entity": "relation", "group": "1"} [растения]{"entity": "tree", "role": "object", "group": "2"}
+    - обнаружь [овраг]{"entity": "pit", "role": "object", "group": "1"}, который [правее]{"entity": "relation", "group": "1"} [лампы]{"entity": "lamp_post", "role": "object", "group": "2"}
+    - отыщи [загородку]{"entity": "barrier", "role": "object", "group": "1"}, что располагается [рядом с]{"entity": "relation", "group": "1"} [фонарём]{"entity": "lamp_post", "role": "object", "group": "2"}
+    - разыщи [препятствие]{"entity": "barrier", "role": "object", "group": "1"}, что [правее]{"entity": "relation", "group": "1"} [расщелины]{"entity": "fissure", "role": "object", "group": "2"}
+    - отыщи [человека]{"entity": "human", "role": "object", "group": "1"} [неподалеку от]{"entity": "relation", "group": "1"} [трещины]{"entity": "fissure", "role": "object", "group": "2"}
+    - отыщи [здание]{"entity": "house", "role": "object", "group": "1"}, что располагается [сзади от]{"entity": "relation", "group": "1"} [камня]{"entity": "rock", "role": "object", "group": "2"}
+    - найди [постройку]{"entity": "house", "role": "object", "group": "1"}, что [на западе относительно]{"entity": "relation", "group": "1"} [ограждения]{"entity": "barrier", "role": "object", "group": "2"}
+    - разыщи [срубленное дерево]{"entity": "broken_tree", "role": "object", "group": "1"} [правее]{"entity": "relation", "group": "1"} [разрыва]{"entity": "fissure", "role": "object", "group": "2"}
+    - обнаружь [горку]{"entity": "hill", "role": "object", "group": "1"}, которая находится [спереди от]{"entity": "relation", "group": "1"} [камня]{"entity": "rock", "role": "object", "group": "2"}
+    - разыщи [яму]{"entity": "pit", "role": "object", "group": "1"}, которая [в северной стороне от]{"entity": "relation", "group": "1"} [разлома]{"entity": "fissure", "role": "object", "group": "2"}
+    - обнаружь [гору]{"entity": "hill", "role": "object", "group": "1"} [западнее]{"entity": "relation", "group": "1"} [расщелины]{"entity": "fissure", "role": "object", "group": "2"}
+    - разыщи [возвышенность]{"entity": "hill", "role": "object", "group": "1"}, что располагается [перед]{"entity": "relation", "group": "1"} [канавой]{"entity": "pit", "role": "object", "group": "2"}
+    - отыщи [барьер]{"entity": "barrier", "role": "object", "group": "1"}, что находится [слева от]{"entity": "relation", "group": "1"} [срубленного дерева]{"entity": "broken_tree", "role": "object", "group": "2"}
+    - отыщи [препятствие]{"entity": "barrier", "role": "object", "group": "1"}, что располагается [в западной стороне от]{"entity": "relation", "group": "1"} [железного коня]{"entity": "car", "role": "object", "group": "2"}
+    - разыщи [упавшее дерево]{"entity": "broken_tree", "role": "object", "group": "1"}, что находится [рядом с]{"entity": "relation", "group": "1"} [препятствием]{"entity": "barrier", "role": "object", "group": "2"}
+    - отыщи [особняк]{"entity": "house", "role": "object", "group": "1"}, что находится [правее]{"entity": "relation", "group": "1"} [сосны]{"entity": "tree", "role": "object", "group": "2"}, которая [за]{"entity": "relation", "group": "2"} [препятствием]{"entity": "barrier", "role": "object", "group": "3"}
+    - разыщи [машину]{"entity": "car", "role": "object", "group": "1"}, которая находится [позади]{"entity": "relation", "group": "1"} [чащи]{"entity": "forest", "role": "object", "group": "2"}, которая располагается [спереди от]{"entity": "relation", "group": "2"} [срубленного дерева]{"entity": "broken_tree", "role": "object", "group": "3"}
+    - разыщи [останец]{"entity": "butte", "role": "object", "group": "1"}, который [правее]{"entity": "relation", "group": "1"} [домика]{"entity": "house", "role": "object", "group": "2"}, что располагается [на западе от]{"entity": "relation", "group": "2"} [ямы]{"entity": "pit", "role": "object", "group": "3"}
+    - обнаружь [женщину]{"entity": "human", "role": "object", "group": "1"}, которая находится [за]{"entity": "relation", "group": "1"} [расщелиной]{"entity": "fissure", "role": "object", "group": "2"}, находящуюся [спереди от]{"entity": "relation", "group": "2"} [впадины]{"entity": "pit", "role": "object", "group": "3"}
+    - отыщи [останец]{"entity": "butte", "role": "object", "group": "1"}, располагающийся [восточнее]{"entity": "relation", "group": "1"} [упавшего человека]{"entity": "man_lay", "role": "object", "group": "2"} [правее]{"entity": "relation", "group": "2"} [дуба]{"entity": "tree", "role": "object", "group": "3"}
+    - найди [пьяного человека]{"entity": "man_lay", "role": "object", "group": "1"}, что располагается [на востоке от]{"entity": "relation", "group": "1"} [канавы]{"entity": "pit", "role": "object", "group": "2"}, что располагается [за]{"entity": "relation", "group": "2"} [дамой]{"entity": "human", "role": "object", "group": "3"}
+    - обнаружь [холмик]{"entity": "hill", "role": "object", "group": "1"}, что находится [спереди от]{"entity": "relation", "group": "1"} [рытвины]{"entity": "pit", "role": "object", "group": "2"}, которая располагается [слева от]{"entity": "relation", "group": "2"} [расщелины]{"entity": "fissure", "role": "object", "group": "3"}
+    - отыщи [женщину]{"entity": "human", "role": "object", "group": "1"}, располагающуюся [на западе от]{"entity": "relation", "group": "1"} [машины]{"entity": "car", "role": "object", "group": "2"}, находящуюся [перед]{"entity": "relation", "group": "2"} [останцем]{"entity": "butte", "role": "object", "group": "3"}
+    - отыщи [останец]{"entity": "butte", "role": "object", "group": "1"}, который располагается [на юге относительно]{"entity": "relation", "group": "1"} [булыжника]{"entity": "rock", "role": "object", "group": "2"}, который [слева от]{"entity": "relation", "group": "2"} [бугра]{"entity": "hill", "role": "object", "group": "3"}
+    - разыщи [валун]{"entity": "butte", "role": "object", "group": "1"}, который располагается [правее]{"entity": "relation", "group": "1"} [булыги]{"entity": "rock", "role": "object", "group": "2"}, располагающуюся [левее]{"entity": "relation", "group": "2"} [товарища]{"entity": "human", "role": "object", "group": "3"}
+    - разыщи [упавшего человека]{"entity": "man_lay", "role": "object", "group": "1"} [справа от]{"entity": "relation", "group": "1"} [дамы]{"entity": "human", "role": "object", "group": "2"}, которая [на западе от]{"entity": "relation", "group": "2"} [валуна]{"entity": "butte", "role": "object", "group": "3"}
+    - разыщи [разлом]{"entity": "fissure", "role": "object", "group": "1"}, что располагается [рядом с]{"entity": "relation", "group": "1"} [преградой]{"entity": "barrier", "role": "object", "group": "2"}, что находится [на севере относительно]{"entity": "relation", "group": "2"} [сломанного дерева]{"entity": "broken_tree", "role": "object", "group": "3"}
+    - отыщи [дуб]{"entity": "tree", "role": "object", "group": "1"}, находящийся [на западе от]{"entity": "relation", "group": "1"} [срубленного дерева]{"entity": "broken_tree", "role": "object", "group": "2"}, которое [перед]{"entity": "relation", "group": "2"} [авто]{"entity": "car", "role": "object", "group": "3"}
+    - разыщи [свалившегося человека]{"entity": "man_lay", "role": "object", "group": "1"}, располагающегося [в южной стороне от]{"entity": "relation", "group": "1"} [человека]{"entity": "human", "role": "object", "group": "2"}, который [южнее]{"entity": "relation", "group": "2"} [останца]{"entity": "butte", "role": "object", "group": "3"}
+    - обнаружь [сломанное дерево]{"entity": "broken_tree", "role": "object", "group": "1"} [на юге относительно]{"entity": "relation", "group": "1"} [дуба]{"entity": "tree", "role": "object", "group": "2"}, находящийся [на востоке относительно]{"entity": "relation", "group": "2"} [столба]{"entity": "lamp_post", "role": "object", "group": "3"}
+    - отыщи [чащу]{"entity": "forest", "role": "object", "group": "1"} [справа от]{"entity": "relation", "group": "1"} [провала]{"entity": "pit", "role": "object", "group": "2"}, который находится [около]{"entity": "relation", "group": "2"} [возвышенности]{"entity": "hill", "role": "object", "group": "3"}
+    - найди [авто]{"entity": "car", "role": "object", "group": "1"}, которое располагается [в восточной стороне от]{"entity": "relation", "group": "1"} [препятствия]{"entity": "barrier", "role": "object", "group": "2"}, которое [левее]{"entity": "relation", "group": "2"} [разлома]{"entity": "fissure", "role": "object", "group": "3"}
+    - разыщи [лес]{"entity": "forest", "role": "object", "group": "1"}, который располагается [спереди от]{"entity": "relation", "group": "1"} [канавы]{"entity": "pit", "role": "object", "group": "2"}, что [левее]{"entity": "relation", "group": "2"} [лежащего человека]{"entity": "man_lay", "role": "object", "group": "3"}
+    - отыщи [трещину]{"entity": "fissure", "role": "object", "group": "1"}, которая [в северной стороне от]{"entity": "relation", "group": "1"} [возвышенности]{"entity": "hill", "role": "object", "group": "2"}, что [перед]{"entity": "relation", "group": "2"} [камнем]{"entity": "rock", "role": "object", "group": "3"}
+    - разыщи [мужчину]{"entity": "human", "role": "object", "group": "1"}, что располагается [слева от]{"entity": "relation", "group": "1"} [камушка]{"entity": "rock", "role": "object", "group": "2"}, который располагается [на западе относительно]{"entity": "relation", "group": "2"} [леса]{"entity": "forest", "role": "object", "group": "3"}
+    - разыщи [останец]{"entity": "butte", "role": "object", "group": "1"} [за]{"entity": "relation", "group": "1"} [собой]{"entity": "self", "role": "object", "group": "2"}
+    - обнаружь [машину]{"entity": "car", "role": "object", "group": "1"} [восточнее]{"entity": "relation", "group": "1"} [себя]{"entity": "self", "role": "object", "group": "2"}
+    - обнаружь [разлом]{"entity": "fissure", "role": "object", "group": "1"} [позади]{"entity": "relation", "group": "1"} 
+    - разыщи [фонарь]{"entity": "lamp_post", "role": "object", "group": "1"} [на востоке]{"entity": "relation", "group": "1"} 
+    - обнаружь [свет]{"entity": "lamp_post", "role": "object", "group": "1"} [правее]{"entity": "relation", "group": "1"} [себя]{"entity": "self", "role": "object", "group": "2"}
+    - найди [упавшего человека]{"entity": "man_lay", "role": "object", "group": "1"} [на востоке]{"entity": "relation", "group": "1"} [тебя]{"entity": "self", "role": "object", "group": "2"}
+    - отыщи [упавшего человека]{"entity": "man_lay", "role": "object", "group": "1"} [в западной стороне]{"entity": "relation", "group": "1"} 
+    - обнаружь [пьяного человека]{"entity": "man_lay", "role": "object", "group": "1"} [слева]{"entity": "relation", "group": "1"} 
+    - найди [разлом]{"entity": "fissure", "role": "object", "group": "1"} [правее]{"entity": "relation", "group": "1"} 
+    - отыщи [разрыв]{"entity": "fissure", "role": "object", "group": "1"} [севернее]{"entity": "relation", "group": "1"} [себя]{"entity": "self", "role": "object", "group": "2"}
+    - разыщи [светильник]{"entity": "lamp_post", "role": "object", "group": "1"} [западнее]{"entity": "relation", "group": "1"} 
+    - разыщи [камень]{"entity": "rock", "role": "object", "group": "1"} [за]{"entity": "relation", "group": "1"} [тобой]{"entity": "self", "role": "object", "group": "2"}
+    - найди [человека]{"entity": "human", "role": "object", "group": "1"} [спереди]{"entity": "relation", "group": "1"} 
+    - обнаружь [берёзу]{"entity": "tree", "role": "object", "group": "1"} [на юге]{"entity": "relation", "group": "1"} 
+    - найди [лесополосу]{"entity": "forest", "role": "object", "group": "1"} [слева от]{"entity": "relation", "group": "1"} [тебя]{"entity": "self", "role": "object", "group": "2"}
+    - найди [ребёнка]{"entity": "human", "role": "object", "group": "1"} [в южной стороне]{"entity": "relation", "group": "1"} 
+    - разыщи [разрыв]{"entity": "fissure", "role": "object", "group": "1"} [за]{"entity": "relation", "group": "1"} [собой]{"entity": "self", "role": "object", "group": "2"}
+    - найди [рытвину]{"entity": "pit", "role": "object", "group": "1"} [на юге]{"entity": "relation", "group": "1"} [себя]{"entity": "self", "role": "object", "group": "2"}
+    - отыщи [валун]{"entity": "butte", "role": "object", "group": "1"} [в северной стороне]{"entity": "relation", "group": "1"} 
+    - обнаружь [камушек]{"entity": "rock", "role": "object", "group": "1"} [на востоке]{"entity": "relation", "group": "1"} [себя]{"entity": "self", "role": "object", "group": "2"}

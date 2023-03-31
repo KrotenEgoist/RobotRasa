@@ -1,0 +1,102 @@
+version: "3.1"
+
+nlu:
+- intent: monitor
+  examples: |
+    - рассматривай ближнее [ограждение]{"entity": "object", "role": "barrier"}
+    - осматривай близкое [авто]{"entity": "object", "role": "car"}
+    - начни рассматривать недалёкого [ребёнка]{"entity": "object", "role": "human"}
+    - рассматривай близкий [холмик]{"entity": "object", "role": "hill"}
+    - рассматривай близлежащего [свалившегося человека]{"entity": "object", "role": "man_lay"}
+    - обозревай недалёкое [сваленное дерево]{"entity": "object", "role": "broken_tree"}
+    - осматривай близкую [впадину]{"entity": "object", "role": "pit"}
+    - рассмотри близкий [фонарь]{"entity": "object", "role": "lamp_post"}
+    - рассматривай ближнюю [сосну]{"entity": "object", "role": "tree"}
+    - рассмотри близлежащую [яму]{"entity": "object", "role": "pit"}
+    - начинай разглядывать недалёкого [железного коня]{"entity": "object", "role": "car"}
+    - попробуй осматривать недалёкую [рытвину]{"entity": "object", "role": "pit"}
+    - рассмотри ближайшего [мужчину]{"entity": "object", "role": "human"}
+    - пытайся обозревать недалёкого [упавшего человека]{"entity": "object", "role": "man_lay"}
+    - пытайся разглядывать близкую [рощу]{"entity": "object", "role": "forest"}
+    - осмотри близлежащего [мужчину]{"entity": "object", "role": "human"}
+    - пытайся осматривать [спиленное дерево]{"entity": "object", "role": "broken_tree"}
+    - попробуй разглядывать [ограждение]{"entity": "object", "role": "barrier"}
+    - рассмотри [валун]{"entity": "object", "role": "butte"}
+    - попробуй рассматривать [ребёнка]{"entity": "object", "role": "human"}
+    - начинай рассматривать [здание]{"entity": "object", "role": "house"}
+    - начни разглядывать [берёзу]{"entity": "object", "role": "tree"}
+    - рассмотри [автомобиль]{"entity": "object", "role": "car"}
+    - осматривай [горку]{"entity": "object", "role": "hill"}
+    - пытайся разглядывать [срубленное дерево]{"entity": "object", "role": "broken_tree"}
+    - рассмотри [мужчину]{"entity": "object", "role": "human"}
+    - рассматривай [барьер]{"entity": "object", "role": "barrier"}
+    - рассматривай [дубраву]{"entity": "object", "role": "forest"}
+    - рассмотри [поваленное дерево]{"entity": "object", "role": "broken_tree"}
+    - разглядывай [тачку]{"entity": "object", "role": "car"}
+    - рассматривай [фонарь]{"entity": "object", "role": "lamp_post"}
+    - обозревай [берёзу]{"entity": "object", "role": "tree"}
+    - обозревай [расщелину]{"entity": "object", "role": "fissure"}, которая располагается [в южной стороне от](relation) [домика]{"entity": "object", "role": "house"}
+    - попробуй обозревать [лежащего человека]{"entity": "object", "role": "man_lay"}, который находится [спереди от](relation) [камушка]{"entity": "object", "role": "rock"}
+    - осмотри [автомобиль]{"entity": "object", "role": "car"}, который находится [неподалеку от](relation) [загородки]{"entity": "object", "role": "barrier"}
+    - осматривай [лесополосу]{"entity": "object", "role": "forest"}, располагающуюся [рядом с](relation) [булыгой]{"entity": "object", "role": "rock"}
+    - попробуй рассматривать [овраг]{"entity": "object", "role": "pit"}, располагающийся [неподалеку от](relation) [человека]{"entity": "object", "role": "human"}
+    - осмотри [машину]{"entity": "object", "role": "car"}, что [рядом с](relation) [сломанным деревом]{"entity": "object", "role": "broken_tree"}
+    - осматривай [пьяного человека]{"entity": "object", "role": "man_lay"}, находящегося [севернее](relation) [останца]{"entity": "object", "role": "butte"}
+    - разглядывай [столб]{"entity": "object", "role": "lamp_post"}, который располагается [справа от](relation) [женщины]{"entity": "object", "role": "human"}
+    - начни осматривать [пьяного человека]{"entity": "object", "role": "man_lay"}, располагающегося [на севере относительно](relation) [светильника]{"entity": "object", "role": "lamp_post"}
+    - обозревай [рытвину]{"entity": "object", "role": "pit"}, что располагается [справа от](relation) [человека]{"entity": "object", "role": "human"}
+    - рассмотри [лес]{"entity": "object", "role": "forest"}, находящийся [рядом с](relation) [разломом]{"entity": "object", "role": "fissure"}
+    - обозревай [загородку]{"entity": "object", "role": "barrier"}, которая находится [в восточной стороне от](relation) [машины]{"entity": "object", "role": "car"}
+    - рассмотри [канаву]{"entity": "object", "role": "pit"}, которая находится [справа от](relation) [холмика]{"entity": "object", "role": "hill"}
+    - рассмотри [загородку]{"entity": "object", "role": "barrier"}, что [восточнее](relation) [строения]{"entity": "object", "role": "house"}
+    - рассмотри [овраг]{"entity": "object", "role": "pit"}, который [на востоке относительно](relation) [дерева]{"entity": "object", "role": "tree"}
+    - пытайся осматривать [сосну]{"entity": "object", "role": "tree"}, которая располагается [неподалеку от](relation) [валуна]{"entity": "object", "role": "butte"}
+    - осмотри [камень]{"entity": "object", "role": "rock"}, что [за](relation) [бугром]{"entity": "object", "role": "hill"}, находящийся [на западе относительно](relation) [дуба]{"entity": "object", "role": "tree"}
+    - осмотри [машину]{"entity": "object", "role": "car"}, что [на востоке относительно](relation) [канавы]{"entity": "object", "role": "pit"}, которая находится [на севере относительно](relation) [товарища]{"entity": "object", "role": "human"}
+    - пытайся осматривать [авто]{"entity": "object", "role": "car"}, которое находится [левее](relation) [разрыва]{"entity": "object", "role": "fissure"}, что [в восточной стороне от](relation) [света]{"entity": "object", "role": "lamp_post"}
+    - осматривай [спиленное дерево]{"entity": "object", "role": "broken_tree"}, что находится [севернее](relation) [сосны]{"entity": "object", "role": "tree"}, располагающуюся [на западе от](relation) [дамы]{"entity": "object", "role": "human"}
+    - разглядывай [трещину]{"entity": "object", "role": "fissure"}, которая располагается [западнее](relation) [спиленного дерева]{"entity": "object", "role": "broken_tree"}, которое располагается [справа от](relation) [провала]{"entity": "object", "role": "pit"}
+    - разглядывай [пропасть]{"entity": "object", "role": "pit"}, что располагается [южнее](relation) [леса]{"entity": "object", "role": "forest"}, что располагается [в западной стороне от](relation) [домика]{"entity": "object", "role": "house"}
+    - осматривай [преграду]{"entity": "object", "role": "barrier"}, которая располагается [в восточной стороне от](relation) [впадины]{"entity": "object", "role": "pit"}, что находится [южнее](relation) [столба]{"entity": "object", "role": "lamp_post"}
+    - обозревай [избу]{"entity": "object", "role": "house"}, располагающуюся [позади](relation) [светильника]{"entity": "object", "role": "lamp_post"}, который располагается [перед](relation) [свалившимся человеком]{"entity": "object", "role": "man_lay"}
+    - разглядывай [пропасть]{"entity": "object", "role": "pit"}, располагающуюся [западнее](relation) [здания]{"entity": "object", "role": "house"}, находящееся [неподалеку от](relation) [барьера]{"entity": "object", "role": "barrier"}
+    - попробуй разглядывать [лежащего человека]{"entity": "object", "role": "man_lay"}, находящегося [около](relation) [ребёнка]{"entity": "object", "role": "human"}, что находится [на севере от](relation) [ямы]{"entity": "object", "role": "pit"}
+    - рассматривай [трещину]{"entity": "object", "role": "fissure"} [за](relation) [рытвиной]{"entity": "object", "role": "pit"} [спереди от](relation) [спиленного дерева]{"entity": "object", "role": "broken_tree"}
+    - осмотри [строение]{"entity": "object", "role": "house"}, которое [позади](relation) [дамы]{"entity": "object", "role": "human"}, которая [в восточной стороне от](relation) [светильника]{"entity": "object", "role": "lamp_post"}
+    - начни осматривать [лесополосу]{"entity": "object", "role": "forest"}, располагающуюся [за](relation) [преградой]{"entity": "object", "role": "barrier"}, которая располагается [на севере от](relation) [света]{"entity": "object", "role": "lamp_post"}
+    - рассмотри [чащу]{"entity": "object", "role": "forest"}, что находится [сзади от](relation) [валуна]{"entity": "object", "role": "butte"} [на востоке относительно](relation) [трещины]{"entity": "object", "role": "fissure"}
+    - рассмотри [кучу]{"entity": "object", "role": "hill"} [на юге от](relation) [упавшего дерева]{"entity": "object", "role": "broken_tree"}, которое находится [перед](relation) [коттеджем]{"entity": "object", "role": "house"}
+    - осматривай [валун]{"entity": "object", "role": "butte"}, располагающийся [неподалеку от](relation) [лежащего человека]{"entity": "object", "role": "man_lay"}, что располагается [на юге относительно](relation) [упавшего дерева]{"entity": "object", "role": "broken_tree"}
+    - рассматривай [поваленное дерево]{"entity": "object", "role": "broken_tree"} [южнее](relation) 
+    - рассмотри [загородку]{"entity": "object", "role": "barrier"} [южнее](relation) [тебя]{"entity": "object", "role": "self"}
+    - рассматривай [избу]{"entity": "object", "role": "house"} [южнее](relation) [себя]{"entity": "object", "role": "self"}
+    - осмотри [дерево]{"entity": "object", "role": "tree"} [правее](relation) 
+    - осмотри [поваленное дерево]{"entity": "object", "role": "broken_tree"} [в северной стороне](relation) [тебя]{"entity": "object", "role": "self"}
+    - обозревай [женщину]{"entity": "object", "role": "human"} [левее](relation) 
+    - начинай осматривать [горку]{"entity": "object", "role": "hill"} [за](relation) [собой]{"entity": "object", "role": "self"}
+    - начинай обозревать [расщелину]{"entity": "object", "role": "fissure"} [севернее](relation) [тебя]{"entity": "object", "role": "self"}
+    - обозревай [пропасть]{"entity": "object", "role": "pit"} [в южной стороне](relation) [тебя]{"entity": "object", "role": "self"}
+    - рассмотри [канаву]{"entity": "object", "role": "pit"} [на западе](relation) 
+    - начинай осматривать [женщину]{"entity": "object", "role": "human"} [позади](relation) [тебя]{"entity": "object", "role": "self"}
+    - разглядывай [разрыв]{"entity": "object", "role": "fissure"} [в западной стороне](relation) [себя]{"entity": "object", "role": "self"}
+    - начни разглядывать [здание]{"entity": "object", "role": "house"} [впереди](relation) [себя]{"entity": "object", "role": "self"}
+    - пытайся разглядывать [авто]{"entity": "object", "role": "car"} [справа от](relation) [тебя]{"entity": "object", "role": "self"}
+    - рассмотри [преграду]{"entity": "object", "role": "barrier"} [перед](relation) [собой]{"entity": "object", "role": "self"}
+    - осмотри [наблюдаемую](gaze) [лампу]{"entity": "object", "role": "lamp_post"}
+    - пытайся разглядывать [этого](gaze) [свалившегося человека]{"entity": "object", "role": "man_lay"}
+    - осмотри [это](gaze) [дерево]{"entity": "object", "role": "tree"}
+    - начни рассматривать [наблюдаемое](gaze) [растение]{"entity": "object", "role": "tree"}
+    - разглядывай [данное](gaze) [авто]{"entity": "object", "role": "car"}
+    - осмотри [наблюдаемый](gaze) [лес]{"entity": "object", "role": "forest"}
+    - осмотри [данную](gaze) [сосну]{"entity": "object", "role": "tree"}
+    - осматривай [данную](gaze) [расщелину]{"entity": "object", "role": "fissure"}
+    - рассмотри [того](gaze) [железного коня]{"entity": "object", "role": "car"}
+    - рассмотри [в ту сторону](gaze), до [валуна]{"entity": "object", "role": "butte"}
+    - рассматривай [в ту сторону](gaze), к [останцу]{"entity": "object", "role": "butte"}
+    - рассмотри [в эту сторону](gaze), до [пьяного человека]{"entity": "object", "role": "man_lay"}
+    - начинай обозревать [туда](gaze), до [пропасти]{"entity": "object", "role": "pit"}
+    - попробуй обозревать [туда](gaze), к [холму]{"entity": "object", "role": "hill"}
+    - разглядывай [сюда](gaze), к [свалившемуся человеку]{"entity": "object", "role": "man_lay"}
+    - рассмотри [туда](gaze), до [авто]{"entity": "object", "role": "car"}
+    - осматривай [в этом направлении](gaze), к [свету]{"entity": "object", "role": "lamp_post"}
+    - обозревай [куда смотрю](gaze), до [товарища]{"entity": "object", "role": "human"}

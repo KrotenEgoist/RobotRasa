@@ -1,0 +1,103 @@
+version: "3.1"
+
+nlu:
+- intent: analyze
+  examples: |
+    - обследуй недалёкое [поваленное дерево]{"entity": "object", "role": "broken_tree", "group": "1"}
+    - попробуй обследовать близлежащий [валун]{"entity": "object", "role": "butte", "group": "1"}
+    - начинай обследовать ближайшее [сломанное дерево]{"entity": "object", "role": "broken_tree", "group": "1"}
+    - попробуй анализировать близлежащего [товарища]{"entity": "object", "role": "human", "group": "1"}
+    - начни исследовать близлежащий [провал]{"entity": "object", "role": "pit", "group": "1"}
+    - исследуй ближнюю [загородку]{"entity": "object", "role": "barrier", "group": "1"}
+    - анализируй недалёкую [горку]{"entity": "object", "role": "hill", "group": "1"}
+    - подвергни анализу ближайшего [свалившегося человека]{"entity": "object", "role": "man_lay", "group": "1"}
+    - начни исследовать ближний [камушек]{"entity": "object", "role": "rock", "group": "1"}
+    - анализируй ближайшую [машину]{"entity": "object", "role": "car", "group": "1"}
+    - начни исследовать ближний [разрыв]{"entity": "object", "role": "fissure", "group": "1"}
+    - начинай обследовать близкую [тачку]{"entity": "object", "role": "car", "group": "1"}
+    - начни исследовать близкий [лес]{"entity": "object", "role": "forest", "group": "1"}
+    - исследуй недалёкую [лесополосу]{"entity": "object", "role": "forest", "group": "1"}
+    - анализируй близлежащий [валун]{"entity": "object", "role": "butte", "group": "1"}
+    - попробуй анализировать близлежащую [тачку]{"entity": "object", "role": "car", "group": "1"}
+    - подвергни анализу [женщину]{"entity": "object", "role": "human", "group": "1"}
+    - попробуй исследовать [сваленное дерево]{"entity": "object", "role": "broken_tree", "group": "1"}
+    - подвергни анализу [дом]{"entity": "object", "role": "house", "group": "1"}
+    - анализируй [коттедж]{"entity": "object", "role": "house", "group": "1"}
+    - подвергни анализу [строение]{"entity": "object", "role": "house", "group": "1"}
+    - начинай анализировать [столб]{"entity": "object", "role": "lamp_post", "group": "1"}
+    - начни исследовать [останец]{"entity": "object", "role": "butte", "group": "1"}
+    - пытайся исследовать [автомобиль]{"entity": "object", "role": "car", "group": "1"}
+    - исследуй [рытвину]{"entity": "object", "role": "pit", "group": "1"}
+    - начинай исследовать [впадину]{"entity": "object", "role": "pit", "group": "1"}
+    - попробуй анализировать [валун]{"entity": "object", "role": "butte", "group": "1"}
+    - обследуй [камень]{"entity": "object", "role": "rock", "group": "1"}
+    - исследуй [дубраву]{"entity": "object", "role": "forest", "group": "1"}
+    - попробуй исследовать [сосну]{"entity": "object", "role": "tree", "group": "1"}
+    - подвергни анализу [расщелину]{"entity": "object", "role": "fissure", "group": "1"}
+    - начни исследовать [лежащего человека]{"entity": "object", "role": "man_lay", "group": "1"}
+    - попробуй обследовать [мужчину]{"entity": "object", "role": "human", "group": "1"}, который [перед]{"entity": "relation", "group": "1"} [рытвиной]{"entity": "object", "role": "pit", "group": "2"}
+    - подвергни анализу [лесополосу]{"entity": "object", "role": "forest", "group": "1"}, находящуюся [справа от]{"entity": "relation", "group": "1"} [разрыва]{"entity": "object", "role": "fissure", "group": "2"}
+    - анализируй [мужчину]{"entity": "object", "role": "human", "group": "1"}, располагающегося [на севере от]{"entity": "relation", "group": "1"} [сломанного дерева]{"entity": "object", "role": "broken_tree", "group": "2"}
+    - анализируй [лежащего человека]{"entity": "object", "role": "man_lay", "group": "1"}, располагающегося [спереди от]{"entity": "relation", "group": "1"} [кучи]{"entity": "object", "role": "hill", "group": "2"}
+    - обследуй [расщелину]{"entity": "object", "role": "fissure", "group": "1"}, находящуюся [на востоке относительно]{"entity": "relation", "group": "1"} [постройки]{"entity": "object", "role": "house", "group": "2"}
+    - начинай анализировать [бугор]{"entity": "object", "role": "hill", "group": "1"}, находящийся [на юге относительно]{"entity": "relation", "group": "1"} [пропасти]{"entity": "object", "role": "pit", "group": "2"}
+    - пытайся обследовать [разлом]{"entity": "object", "role": "fissure", "group": "1"}, что [неподалеку от]{"entity": "relation", "group": "1"} [ограждения]{"entity": "object", "role": "barrier", "group": "2"}
+    - подвергни анализу [ограждение]{"entity": "object", "role": "barrier", "group": "1"}, которое располагается [за]{"entity": "relation", "group": "1"} [останцем]{"entity": "object", "role": "butte", "group": "2"}
+    - исследуй [автомобиль]{"entity": "object", "role": "car", "group": "1"}, находящийся [на востоке от]{"entity": "relation", "group": "1"} [упавшего человека]{"entity": "object", "role": "man_lay", "group": "2"}
+    - обследуй [разлом]{"entity": "object", "role": "fissure", "group": "1"}, который располагается [слева от]{"entity": "relation", "group": "1"} [особняка]{"entity": "object", "role": "house", "group": "2"}
+    - исследуй [лес]{"entity": "object", "role": "forest", "group": "1"}, что располагается [восточнее]{"entity": "relation", "group": "1"} [пропасти]{"entity": "object", "role": "pit", "group": "2"}
+    - анализируй [упавшего человека]{"entity": "object", "role": "man_lay", "group": "1"} [за]{"entity": "relation", "group": "1"} [растением]{"entity": "object", "role": "tree", "group": "2"}
+    - подвергни анализу [лес]{"entity": "object", "role": "forest", "group": "1"}, что располагается [на севере от]{"entity": "relation", "group": "1"} [булыжника]{"entity": "object", "role": "rock", "group": "2"}
+    - начни анализировать [горку]{"entity": "object", "role": "hill", "group": "1"}, которая [на севере от]{"entity": "relation", "group": "1"} [ограждения]{"entity": "object", "role": "barrier", "group": "2"}
+    - подвергни анализу [лампу]{"entity": "object", "role": "lamp_post", "group": "1"}, что располагается [справа от]{"entity": "relation", "group": "1"} [возвышенности]{"entity": "object", "role": "hill", "group": "2"}
+    - обследуй [пьяного человека]{"entity": "object", "role": "man_lay", "group": "1"}, находящегося [за]{"entity": "relation", "group": "1"} [препятствием]{"entity": "object", "role": "barrier", "group": "2"}
+    - пытайся исследовать [столб]{"entity": "object", "role": "lamp_post", "group": "1"}, который [сзади от]{"entity": "relation", "group": "1"} [разлома]{"entity": "object", "role": "fissure", "group": "2"}, что [восточнее]{"entity": "relation", "group": "2"} [особняка]{"entity": "object", "role": "house", "group": "3"}
+    - анализируй [останец]{"entity": "object", "role": "butte", "group": "1"}, который находится [рядом с]{"entity": "relation", "group": "1"} [канавой]{"entity": "object", "role": "pit", "group": "2"}, располагающуюся [рядом с]{"entity": "relation", "group": "2"} [лесополосой]{"entity": "object", "role": "forest", "group": "3"}
+    - обследуй [здание]{"entity": "object", "role": "house", "group": "1"}, что находится [левее]{"entity": "relation", "group": "1"} [железного коня]{"entity": "object", "role": "car", "group": "2"}, который находится [южнее]{"entity": "relation", "group": "2"} [преграды]{"entity": "object", "role": "barrier", "group": "3"}
+    - пытайся анализировать [препятствие]{"entity": "object", "role": "barrier", "group": "1"} [рядом с]{"entity": "relation", "group": "1"} [разломом]{"entity": "object", "role": "fissure", "group": "2"}, который располагается [восточнее]{"entity": "relation", "group": "2"} [провала]{"entity": "object", "role": "pit", "group": "3"}
+    - обследуй [преграду]{"entity": "object", "role": "barrier", "group": "1"}, что располагается [за]{"entity": "relation", "group": "1"} [домиком]{"entity": "object", "role": "house", "group": "2"}, который находится [за]{"entity": "relation", "group": "2"} [камушком]{"entity": "object", "role": "rock", "group": "3"}
+    - подвергни анализу [пропасть]{"entity": "object", "role": "pit", "group": "1"}, которая находится [левее]{"entity": "relation", "group": "1"} [камушка]{"entity": "object", "role": "rock", "group": "2"}, находящийся [на севере относительно]{"entity": "relation", "group": "2"} [ограждения]{"entity": "object", "role": "barrier", "group": "3"}
+    - исследуй [лесополосу]{"entity": "object", "role": "forest", "group": "1"}, что [севернее]{"entity": "relation", "group": "1"} [упавшего человека]{"entity": "object", "role": "man_lay", "group": "2"}, что располагается [на востоке относительно]{"entity": "relation", "group": "2"} [лампы]{"entity": "object", "role": "lamp_post", "group": "3"}
+    - попробуй анализировать [впадину]{"entity": "object", "role": "pit", "group": "1"} [на севере от]{"entity": "relation", "group": "1"} [лампы]{"entity": "object", "role": "lamp_post", "group": "2"}, что находится [на севере от]{"entity": "relation", "group": "2"} [растения]{"entity": "object", "role": "tree", "group": "3"}
+    - обследуй [растение]{"entity": "object", "role": "tree", "group": "1"}, что находится [на востоке относительно]{"entity": "relation", "group": "1"} [дубравы]{"entity": "object", "role": "forest", "group": "2"}, которая находится [на юге относительно]{"entity": "relation", "group": "2"} [коттеджа]{"entity": "object", "role": "house", "group": "3"}
+    - исследуй [бугор]{"entity": "object", "role": "hill", "group": "1"}, который располагается [на востоке относительно]{"entity": "relation", "group": "1"} [строения]{"entity": "object", "role": "house", "group": "2"}, которое [перед]{"entity": "relation", "group": "2"} [поваленным деревом]{"entity": "object", "role": "broken_tree", "group": "3"}
+    - подвергни анализу [лес]{"entity": "object", "role": "forest", "group": "1"}, что [за]{"entity": "relation", "group": "1"} [кучей]{"entity": "object", "role": "hill", "group": "2"}, что [перед]{"entity": "relation", "group": "2"} [пропастью]{"entity": "object", "role": "pit", "group": "3"}
+    - исследуй [сваленное дерево]{"entity": "object", "role": "broken_tree", "group": "1"}, что находится [левее]{"entity": "relation", "group": "1"} [машины]{"entity": "object", "role": "car", "group": "2"}, которая [в западной стороне от]{"entity": "relation", "group": "2"} [женщины]{"entity": "object", "role": "human", "group": "3"}
+    - подвергни анализу [канаву]{"entity": "object", "role": "pit", "group": "1"}, что располагается [сзади от]{"entity": "relation", "group": "1"} [препятствия]{"entity": "object", "role": "barrier", "group": "2"}, которое находится [за]{"entity": "relation", "group": "2"} [железным конём]{"entity": "object", "role": "car", "group": "3"}
+    - подвергни анализу [лежащего человека]{"entity": "object", "role": "man_lay", "group": "1"}, который находится [в восточной стороне от]{"entity": "relation", "group": "1"} [расщелины]{"entity": "object", "role": "fissure", "group": "2"}, которая [справа от]{"entity": "relation", "group": "2"} [валуна]{"entity": "object", "role": "butte", "group": "3"}
+    - исследуй [рощу]{"entity": "object", "role": "forest", "group": "1"}, что находится [справа от]{"entity": "relation", "group": "1"} [человека]{"entity": "object", "role": "human", "group": "2"} [западнее]{"entity": "relation", "group": "2"} [кучи]{"entity": "object", "role": "hill", "group": "3"}
+    - подвергни анализу [останец]{"entity": "object", "role": "butte", "group": "1"} [в западной стороне от]{"entity": "relation", "group": "1"} [рощи]{"entity": "object", "role": "forest", "group": "2"}, располагающуюся [на востоке относительно]{"entity": "relation", "group": "2"} [упавшего человека]{"entity": "object", "role": "man_lay", "group": "3"}
+    - анализируй [возвышенность]{"entity": "object", "role": "hill", "group": "1"} [позади]{"entity": "relation", "group": "1"} 
+    - анализируй [преграду]{"entity": "object", "role": "barrier", "group": "1"} [левее]{"entity": "relation", "group": "1"} 
+    - анализируй [лежащего человека]{"entity": "object", "role": "man_lay", "group": "1"} [западнее]{"entity": "relation", "group": "1"} [тебя]{"entity": "object", "role": "self", "group": "2"}
+    - анализируй [останец]{"entity": "object", "role": "butte", "group": "1"} [слева от]{"entity": "relation", "group": "1"} [тебя]{"entity": "object", "role": "self", "group": "2"}
+    - попробуй обследовать [булыжник]{"entity": "object", "role": "rock", "group": "1"} [восточнее]{"entity": "relation", "group": "1"} [себя]{"entity": "object", "role": "self", "group": "2"}
+    - подвергни анализу [останец]{"entity": "object", "role": "butte", "group": "1"} [в северной стороне]{"entity": "relation", "group": "1"} 
+    - исследуй [валун]{"entity": "object", "role": "butte", "group": "1"} [спереди]{"entity": "relation", "group": "1"} [тебя]{"entity": "object", "role": "self", "group": "2"}
+    - начни исследовать [останец]{"entity": "object", "role": "butte", "group": "1"} [восточнее]{"entity": "relation", "group": "1"} [тебя]{"entity": "object", "role": "self", "group": "2"}
+    - попробуй исследовать [тачку]{"entity": "object", "role": "car", "group": "1"} [впереди]{"entity": "relation", "group": "1"} [себя]{"entity": "object", "role": "self", "group": "2"}
+    - обследуй [пропасть]{"entity": "object", "role": "pit", "group": "1"} [сзади]{"entity": "relation", "group": "1"} [тебя]{"entity": "object", "role": "self", "group": "2"}
+    - обследуй [впадину]{"entity": "object", "role": "pit", "group": "1"} [сзади]{"entity": "relation", "group": "1"} [тебя]{"entity": "object", "role": "self", "group": "2"}
+    - начни анализировать [валун]{"entity": "object", "role": "butte", "group": "1"} [на севере]{"entity": "relation", "group": "1"} [тебя]{"entity": "object", "role": "self", "group": "2"}
+    - анализируй [булыгу]{"entity": "object", "role": "rock", "group": "1"} [в западной стороне]{"entity": "relation", "group": "1"} [себя]{"entity": "object", "role": "self", "group": "2"}
+    - начни исследовать [свет]{"entity": "object", "role": "lamp_post", "group": "1"} [правее]{"entity": "relation", "group": "1"} [тебя]{"entity": "object", "role": "self", "group": "2"}
+    - исследуй [булыгу]{"entity": "object", "role": "rock", "group": "1"} [восточнее]{"entity": "relation", "group": "1"} [тебя]{"entity": "object", "role": "self", "group": "2"}
+    - подвергни анализу [булыжник]{"entity": "object", "role": "rock", "group": "1"} [в северной стороне]{"entity": "relation", "group": "1"} 
+    - начни обследовать [наблюдаемую](gaze) [машину]{"entity": "object", "role": "car", "group": "1"}
+    - обследуй [наблюдаемой](gaze) [женщину]{"entity": "object", "role": "human", "group": "1"}
+    - попробуй обследовать [ту](gaze) [чащу]{"entity": "object", "role": "forest", "group": "1"}
+    - попробуй анализировать [этот](gaze) [особняк]{"entity": "object", "role": "house", "group": "1"}
+    - начинай анализировать [данное](gaze) [препятствие]{"entity": "object", "role": "barrier", "group": "1"}
+    - исследуй [эту](gaze) [избу]{"entity": "object", "role": "house", "group": "1"}
+    - начни анализировать [наблюдаемого](gaze) [упавшего человека]{"entity": "object", "role": "man_lay", "group": "1"}
+    - подвергни анализу [наблюдаемый](gaze) [свет]{"entity": "object", "role": "lamp_post", "group": "1"}
+    - исследуй [данное](gaze) [строение]{"entity": "object", "role": "house", "group": "1"}
+    - подвергни анализу [сюда](gaze), до [рощи]{"entity": "object", "role": "forest", "group": "1"}
+    - подвергни анализу [в этом направлении](gaze), до [особняка]{"entity": "object", "role": "house", "group": "1"}
+    - подвергни анализу [в ту сторону](gaze), до [оврага]{"entity": "object", "role": "pit", "group": "1"}
+    - пытайся анализировать [в том направлении](gaze), к [ольхе]{"entity": "object", "role": "tree", "group": "1"}
+    - исследуй [сюда](gaze), к [валуну]{"entity": "object", "role": "butte", "group": "1"}
+    - подвергни анализу [в это место](gaze), к [куче]{"entity": "object", "role": "hill", "group": "1"}
+    - анализируй [в это место](gaze), до [постройки]{"entity": "object", "role": "house", "group": "1"}
+    - анализируй [в это место](gaze), до [расщелины]{"entity": "object", "role": "fissure", "group": "1"}
+    - подвергни анализу [куда смотрю](gaze), до [ольхи]{"entity": "object", "role": "tree", "group": "1"}

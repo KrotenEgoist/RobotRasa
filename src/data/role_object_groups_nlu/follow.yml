@@ -1,0 +1,103 @@
+version: "3.1"
+
+nlu:
+- intent: follow
+  examples: |
+    - начни идти за [железным конём]{"entity": "car", "role": "object", "group": "1"}
+    - иди за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - пытайся выступать за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - скачи за [железным конём]{"entity": "car", "role": "object", "group": "1"}
+    - пытайся пробираться за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - мчи за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - мчись за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - выдвигайся за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - убирайся за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - устремись за [авто]{"entity": "car", "role": "object", "group": "1"}
+    - пытайся вышагивать за [тачкой]{"entity": "car", "role": "object", "group": "1"}
+    - начни валить за [железным конём]{"entity": "car", "role": "object", "group": "1"}
+    - поезжай за [тачкой]{"entity": "car", "role": "object", "group": "1"}
+    - стягивайся за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - прилети за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - броссься за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - подвигайся за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - дефилируй за [авто]{"entity": "car", "role": "object", "group": "1"}
+    - направляйся за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - начинай гнать за [железным конём]{"entity": "car", "role": "object", "group": "1"}
+    - пошел за [железным конём]{"entity": "car", "role": "object", "group": "1"}
+    - начни отправляться за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - броди за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - начинай спешить за [железным конём]{"entity": "car", "role": "object", "group": "1"}
+    - устремись за [железным конём]{"entity": "car", "role": "object", "group": "1"}
+    - загребай за [авто]{"entity": "car", "role": "object", "group": "1"}
+    - попробуй валить за [авто]{"entity": "car", "role": "object", "group": "1"}
+    - попробуй убираться за [авто]{"entity": "car", "role": "object", "group": "1"}
+    - направляйся за [авто]{"entity": "car", "role": "object", "group": "1"}
+    - приедь за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - следи за [авто]{"entity": "car", "role": "object", "group": "1"}
+    - отправляйся за [железным конём]{"entity": "car", "role": "object", "group": "1"}
+    - шагай за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - начинай подвигаться за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - начинай влачиться за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - пробирайся за [тачкой]{"entity": "car", "role": "object", "group": "1"}
+    - начни выдвигаться за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - газуй за [тачкой]{"entity": "car", "role": "object", "group": "1"}
+    - семени за [тачкой]{"entity": "car", "role": "object", "group": "1"}
+    - броссься за [железным конём]{"entity": "car", "role": "object", "group": "1"}
+    - ступай за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - начинай газовать за [авто]{"entity": "car", "role": "object", "group": "1"}
+    - начинай шествовать за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - начинай уноситься за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - пошел за [тачкой]{"entity": "car", "role": "object", "group": "1"}
+    - чаль за [железным конём]{"entity": "car", "role": "object", "group": "1"}
+    - семени за [авто]{"entity": "car", "role": "object", "group": "1"}
+    - начни уезжать за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - пойди за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - бреди за [железным конём]{"entity": "car", "role": "object", "group": "1"}
+    - прогуляйся за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - начинай брести за [авто]{"entity": "car", "role": "object", "group": "1"}
+    - попробуй уноситься за [железным конём]{"entity": "car", "role": "object", "group": "1"}
+    - начинай передвигаться за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - пытайся езжать за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - трюшчи за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - переступай за [авто]{"entity": "car", "role": "object", "group": "1"}
+    - пытайся скакать за [железным конём]{"entity": "car", "role": "object", "group": "1"}
+    - начни нестись за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - захаживай за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - начинай перемещаться за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - попробуй трогать за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - начинай следить за [тачкой]{"entity": "car", "role": "object", "group": "1"}
+    - начни брести за [тачкой]{"entity": "car", "role": "object", "group": "1"}
+    - попробуй шлёпать за [тачкой]{"entity": "car", "role": "object", "group": "1"}
+    - пытайся дерзать за [авто]{"entity": "car", "role": "object", "group": "1"}
+    - прохаживай за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - начни ковылять за [тачкой]{"entity": "car", "role": "object", "group": "1"}
+    - начни убираться за [железным конём]{"entity": "car", "role": "object", "group": "1"}
+    - начни прохаживать за [железным конём]{"entity": "car", "role": "object", "group": "1"}
+    - начинай приходить за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - двигайся за [тачкой]{"entity": "car", "role": "object", "group": "1"}
+    - приспевай за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - съезди за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - стягивайся за [железным конём]{"entity": "car", "role": "object", "group": "1"}
+    - попробуй загребать за [авто]{"entity": "car", "role": "object", "group": "1"}
+    - начинай проезжать за [авто]{"entity": "car", "role": "object", "group": "1"}
+    - шаркай за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - пытайся катиться за [тачкой]{"entity": "car", "role": "object", "group": "1"}
+    - перемещайся за [тачкой]{"entity": "car", "role": "object", "group": "1"}
+    - поторопись за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - уезжай за [тачкой]{"entity": "car", "role": "object", "group": "1"}
+    - выметайся за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - езжай за [железным конём]{"entity": "car", "role": "object", "group": "1"}
+    - попробуй передвигаться за [железным конём]{"entity": "car", "role": "object", "group": "1"}
+    - плыви за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - попробуй нестись за [железным конём]{"entity": "car", "role": "object", "group": "1"}
+    - беги за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - начинай направляться за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - трогай за [авто]{"entity": "car", "role": "object", "group": "1"}
+    - начни шагать за [тачкой]{"entity": "car", "role": "object", "group": "1"}
+    - отправляйся за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - выйди за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - начни семенить за [железным конём]{"entity": "car", "role": "object", "group": "1"}
+    - попробуй езжать за [машиной]{"entity": "car", "role": "object", "group": "1"}
+    - беги за [железным конём]{"entity": "car", "role": "object", "group": "1"}
+    - уезжай за [автомобилем]{"entity": "car", "role": "object", "group": "1"}
+    - ползи за [железным конём]{"entity": "car", "role": "object", "group": "1"}

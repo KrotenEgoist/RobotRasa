@@ -1,0 +1,102 @@
+version: "3.1"
+
+nlu:
+- intent: go_around
+  examples: |
+    - опереди близлежащее [препятствие]{"entity": "barrier", "role": "object", "group": "1"}
+    - обставь близлежащую [даму]{"entity": "human", "role": "object", "group": "1"}
+    - обставь недалёкую [булыгу]{"entity": "rock", "role": "object", "group": "1"}
+    - оставь позади ближайшего [железного коня]{"entity": "car", "role": "object", "group": "1"}
+    - оставь позади недалёкое [сломанное дерево]{"entity": "broken_tree", "role": "object", "group": "1"}
+    - обскочи ближний [коттедж]{"entity": "house", "role": "object", "group": "1"}
+    - обскакивай ближайшую [канаву]{"entity": "pit", "role": "object", "group": "1"}
+    - оставь позади близкую [преграду]{"entity": "barrier", "role": "object", "group": "1"}
+    - обскочи близлежащее [дерево]{"entity": "tree", "role": "object", "group": "1"}
+    - опережай ближнюю [рощу]{"entity": "forest", "role": "object", "group": "1"}
+    - оставь позади ближайшую [сосну]{"entity": "tree", "role": "object", "group": "1"}
+    - обскакивай ближний [коттедж]{"entity": "house", "role": "object", "group": "1"}
+    - обскочи недалёкую [берёзу]{"entity": "tree", "role": "object", "group": "1"}
+    - обскочи ближайшее [препятствие]{"entity": "barrier", "role": "object", "group": "1"}
+    - обходи близкий [останец]{"entity": "butte", "role": "object", "group": "1"}
+    - оставь позади близлежащую [лампу]{"entity": "lamp_post", "role": "object", "group": "1"}
+    - обскочи [лесополосу]{"entity": "forest", "role": "object", "group": "1"}
+    - обходи [рощу]{"entity": "forest", "role": "object", "group": "1"}
+    - обставь [спиленное дерево]{"entity": "broken_tree", "role": "object", "group": "1"}
+    - обскочи [дуб]{"entity": "tree", "role": "object", "group": "1"}
+    - начни опережать [здание]{"entity": "house", "role": "object", "group": "1"}
+    - опереди [даму]{"entity": "human", "role": "object", "group": "1"}
+    - пытайся обскакивать [машину]{"entity": "car", "role": "object", "group": "1"}
+    - попробуй обскакивать [мужчину]{"entity": "human", "role": "object", "group": "1"}
+    - обскочи [строение]{"entity": "house", "role": "object", "group": "1"}
+    - опереди [булыжник]{"entity": "rock", "role": "object", "group": "1"}
+    - опережай [разлом]{"entity": "fissure", "role": "object", "group": "1"}
+    - обставь [пьяного человека]{"entity": "man_lay", "role": "object", "group": "1"}
+    - обскочи [человека]{"entity": "human", "role": "object", "group": "1"}
+    - обскакивай [человека]{"entity": "human", "role": "object", "group": "1"}
+    - обставь [рощу]{"entity": "forest", "role": "object", "group": "1"}
+    - оставь позади [растение]{"entity": "tree", "role": "object", "group": "1"}
+    - объезжай [овраг]{"entity": "pit", "role": "object", "group": "1"}, который находится [на западе от]{"entity": "relation", "group": "1"} [валуна]{"entity": "butte", "role": "object", "group": "2"}
+    - обставь [коттедж]{"entity": "house", "role": "object", "group": "1"}, находящийся [слева от]{"entity": "relation", "group": "1"} [сосны]{"entity": "tree", "role": "object", "group": "2"}
+    - опережай [впадину]{"entity": "pit", "role": "object", "group": "1"}, располагающуюся [справа от]{"entity": "relation", "group": "1"} [разлома]{"entity": "fissure", "role": "object", "group": "2"}
+    - объезжай [товарища]{"entity": "human", "role": "object", "group": "1"}, что располагается [перед]{"entity": "relation", "group": "1"} [чащей]{"entity": "forest", "role": "object", "group": "2"}
+    - обставь [дуб]{"entity": "tree", "role": "object", "group": "1"} [справа от]{"entity": "relation", "group": "1"} [загородки]{"entity": "barrier", "role": "object", "group": "2"}
+    - пытайся опережать [гору]{"entity": "hill", "role": "object", "group": "1"}, находящуюся [около]{"entity": "relation", "group": "1"} [останца]{"entity": "butte", "role": "object", "group": "2"}
+    - опереди [расщелину]{"entity": "fissure", "role": "object", "group": "1"}, что располагается [на востоке от]{"entity": "relation", "group": "1"} [авто]{"entity": "car", "role": "object", "group": "2"}
+    - обскочи [трещину]{"entity": "fissure", "role": "object", "group": "1"}, располагающуюся [левее]{"entity": "relation", "group": "1"} [фонаря]{"entity": "lamp_post", "role": "object", "group": "2"}
+    - обходи [разлом]{"entity": "fissure", "role": "object", "group": "1"}, что [севернее]{"entity": "relation", "group": "1"} [автомобиля]{"entity": "car", "role": "object", "group": "2"}
+    - оставь позади [камень]{"entity": "rock", "role": "object", "group": "1"}, располагающийся [западнее]{"entity": "relation", "group": "1"} [женщины]{"entity": "human", "role": "object", "group": "2"}
+    - обскочи [сломанное дерево]{"entity": "broken_tree", "role": "object", "group": "1"}, что находится [правее]{"entity": "relation", "group": "1"} [лесополосы]{"entity": "forest", "role": "object", "group": "2"}
+    - опереди [упавшее дерево]{"entity": "broken_tree", "role": "object", "group": "1"}, находящееся [на востоке от]{"entity": "relation", "group": "1"} [мужчины]{"entity": "human", "role": "object", "group": "2"}
+    - опережай [горку]{"entity": "hill", "role": "object", "group": "1"}, что находится [слева от]{"entity": "relation", "group": "1"} [булыжника]{"entity": "rock", "role": "object", "group": "2"}
+    - объезжай [дубраву]{"entity": "forest", "role": "object", "group": "1"}, которая располагается [севернее]{"entity": "relation", "group": "1"} [поваленного дерева]{"entity": "broken_tree", "role": "object", "group": "2"}
+    - начни обскакивать [свалившегося человека]{"entity": "man_lay", "role": "object", "group": "1"}, который [южнее]{"entity": "relation", "group": "1"} [бугра]{"entity": "hill", "role": "object", "group": "2"}
+    - обскочи [лес]{"entity": "forest", "role": "object", "group": "1"}, располагающийся [в северной стороне от]{"entity": "relation", "group": "1"} [расщелины]{"entity": "fissure", "role": "object", "group": "2"}
+    - обходи [рытвину]{"entity": "pit", "role": "object", "group": "1"}, что [восточнее]{"entity": "relation", "group": "1"} [товарища]{"entity": "human", "role": "object", "group": "2"}, что располагается [слева от]{"entity": "relation", "group": "2"} [упавшего человека]{"entity": "man_lay", "role": "object", "group": "3"}
+    - попробуй опережать [сломанное дерево]{"entity": "broken_tree", "role": "object", "group": "1"}, находящееся [спереди от]{"entity": "relation", "group": "1"} [впадины]{"entity": "pit", "role": "object", "group": "2"}, которая располагается [спереди от]{"entity": "relation", "group": "2"} [мужчины]{"entity": "human", "role": "object", "group": "3"}
+    - опереди [пригорок]{"entity": "hill", "role": "object", "group": "1"}, который находится [за]{"entity": "relation", "group": "1"} [пьяным человеком]{"entity": "man_lay", "role": "object", "group": "2"}, что располагается [правее]{"entity": "relation", "group": "2"} [трещины]{"entity": "fissure", "role": "object", "group": "3"}
+    - обставь [ребёнка]{"entity": "human", "role": "object", "group": "1"}, что располагается [на востоке относительно]{"entity": "relation", "group": "1"} [пьяного человека]{"entity": "man_lay", "role": "object", "group": "2"}, который располагается [на западе относительно]{"entity": "relation", "group": "2"} [машины]{"entity": "car", "role": "object", "group": "3"}
+    - объезжай [бугор]{"entity": "hill", "role": "object", "group": "1"}, что [на западе от]{"entity": "relation", "group": "1"} [булыжника]{"entity": "rock", "role": "object", "group": "2"}, который располагается [спереди от]{"entity": "relation", "group": "2"} [сломанного дерева]{"entity": "broken_tree", "role": "object", "group": "3"}
+    - начни объезжать [рощу]{"entity": "forest", "role": "object", "group": "1"} [на востоке относительно]{"entity": "relation", "group": "1"} [разлома]{"entity": "fissure", "role": "object", "group": "2"}, располагающийся [правее]{"entity": "relation", "group": "2"} [спиленного дерева]{"entity": "broken_tree", "role": "object", "group": "3"}
+    - опереди [ограждение]{"entity": "barrier", "role": "object", "group": "1"}, которое [на западе от]{"entity": "relation", "group": "1"} [дуба]{"entity": "tree", "role": "object", "group": "2"}, который располагается [на юге от]{"entity": "relation", "group": "2"} [свалившегося человека]{"entity": "man_lay", "role": "object", "group": "3"}
+    - обставь [светильник]{"entity": "lamp_post", "role": "object", "group": "1"}, располагающийся [слева от]{"entity": "relation", "group": "1"} [горы]{"entity": "hill", "role": "object", "group": "2"} [западнее]{"entity": "relation", "group": "2"} [леса]{"entity": "forest", "role": "object", "group": "3"}
+    - оставь позади [расщелину]{"entity": "fissure", "role": "object", "group": "1"} [на юге относительно]{"entity": "relation", "group": "1"} [лесополосы]{"entity": "forest", "role": "object", "group": "2"}, находящуюся [на востоке от]{"entity": "relation", "group": "2"} [ольхи]{"entity": "tree", "role": "object", "group": "3"}
+    - оставь позади [столб]{"entity": "lamp_post", "role": "object", "group": "1"}, который [западнее]{"entity": "relation", "group": "1"} [леса]{"entity": "forest", "role": "object", "group": "2"}, находящийся [сзади от]{"entity": "relation", "group": "2"} [провала]{"entity": "pit", "role": "object", "group": "3"}
+    - объезжай [рытвину]{"entity": "pit", "role": "object", "group": "1"}, находящуюся [левее]{"entity": "relation", "group": "1"} [товарища]{"entity": "human", "role": "object", "group": "2"} [справа от]{"entity": "relation", "group": "2"} [спиленного дерева]{"entity": "broken_tree", "role": "object", "group": "3"}
+    - оставь позади [рощу]{"entity": "forest", "role": "object", "group": "1"}, что [на юге относительно]{"entity": "relation", "group": "1"} [дерева]{"entity": "tree", "role": "object", "group": "2"}, находящееся [на юге от]{"entity": "relation", "group": "2"} [особняка]{"entity": "house", "role": "object", "group": "3"}
+    - опереди [бугор]{"entity": "hill", "role": "object", "group": "1"}, находящийся [восточнее]{"entity": "relation", "group": "1"} [железного коня]{"entity": "car", "role": "object", "group": "2"} [перед]{"entity": "relation", "group": "2"} [светом]{"entity": "lamp_post", "role": "object", "group": "3"}
+    - оставь позади [разрыв]{"entity": "fissure", "role": "object", "group": "1"}, который находится [перед]{"entity": "relation", "group": "1"} [рощей]{"entity": "forest", "role": "object", "group": "2"} [левее]{"entity": "relation", "group": "2"} [столба]{"entity": "lamp_post", "role": "object", "group": "3"}
+    - опереди [бугор]{"entity": "hill", "role": "object", "group": "1"}, который располагается [левее]{"entity": "relation", "group": "1"} [булыжника]{"entity": "rock", "role": "object", "group": "2"}, который [правее]{"entity": "relation", "group": "2"} [пропасти]{"entity": "pit", "role": "object", "group": "3"}
+    - обскакивай [избу]{"entity": "house", "role": "object", "group": "1"}, которая располагается [восточнее]{"entity": "relation", "group": "1"} [валуна]{"entity": "butte", "role": "object", "group": "2"}, который [правее]{"entity": "relation", "group": "2"} [авто]{"entity": "car", "role": "object", "group": "3"}
+    - обставь [трещину]{"entity": "fissure", "role": "object", "group": "1"} [слева от]{"entity": "relation", "group": "1"} [тебя]{"entity": "self", "role": "object", "group": "2"}
+    - опереди [здание]{"entity": "house", "role": "object", "group": "1"} [восточнее]{"entity": "relation", "group": "1"} [себя]{"entity": "self", "role": "object", "group": "2"}
+    - попробуй объезжать [рытвину]{"entity": "pit", "role": "object", "group": "1"} [на западе]{"entity": "relation", "group": "1"} [тебя]{"entity": "self", "role": "object", "group": "2"}
+    - обскакивай [тачку]{"entity": "car", "role": "object", "group": "1"} [в южной стороне]{"entity": "relation", "group": "1"} [тебя]{"entity": "self", "role": "object", "group": "2"}
+    - опережай [овраг]{"entity": "pit", "role": "object", "group": "1"} [в западной стороне]{"entity": "relation", "group": "1"} [тебя]{"entity": "self", "role": "object", "group": "2"}
+    - начни объезжать [свалившегося человека]{"entity": "man_lay", "role": "object", "group": "1"} [за]{"entity": "relation", "group": "1"} [собой]{"entity": "self", "role": "object", "group": "2"}
+    - обставь [столб]{"entity": "lamp_post", "role": "object", "group": "1"} [южнее]{"entity": "relation", "group": "1"} 
+    - обскочи [лесополосу]{"entity": "forest", "role": "object", "group": "1"} [сзади]{"entity": "relation", "group": "1"} 
+    - обходи [провал]{"entity": "pit", "role": "object", "group": "1"} [на севере]{"entity": "relation", "group": "1"} 
+    - оставь позади [свалившегося человека]{"entity": "man_lay", "role": "object", "group": "1"} [перед]{"entity": "relation", "group": "1"} [тобой]{"entity": "self", "role": "object", "group": "2"}
+    - обходи [дуб]{"entity": "tree", "role": "object", "group": "1"} [за]{"entity": "relation", "group": "1"} [тобой]{"entity": "self", "role": "object", "group": "2"}
+    - обходи [упавшее дерево]{"entity": "broken_tree", "role": "object", "group": "1"} [на западе]{"entity": "relation", "group": "1"} [тебя]{"entity": "self", "role": "object", "group": "2"}
+    - опереди [преграду]{"entity": "barrier", "role": "object", "group": "1"} [справа от]{"entity": "relation", "group": "1"} [тебя]{"entity": "self", "role": "object", "group": "2"}
+    - обставь [срубленное дерево]{"entity": "broken_tree", "role": "object", "group": "1"} [за]{"entity": "relation", "group": "1"} [тобой]{"entity": "self", "role": "object", "group": "2"}
+    - начинай обскакивать [лежащего человека]{"entity": "man_lay", "role": "object", "group": "1"} [на севере]{"entity": "relation", "group": "1"} [себя]{"entity": "self", "role": "object", "group": "2"}
+    - попробуй объезжать [это](gaze) [поваленное дерево]{"entity": "broken_tree", "role": "object", "group": "1"}
+    - обскакивай [данное](gaze) [растение]{"entity": "tree", "role": "object", "group": "1"}
+    - опереди [эту](gaze) [чащу]{"entity": "forest", "role": "object", "group": "1"}
+    - оставь позади [наблюдаемую](gaze) [ольху]{"entity": "tree", "role": "object", "group": "1"}
+    - обходи [того](gaze) [свалившегося человека]{"entity": "man_lay", "role": "object", "group": "1"}
+    - обходи [эту](gaze) [загородку]{"entity": "barrier", "role": "object", "group": "1"}
+    - начинай обскакивать [наблюдаемый](gaze) [останец]{"entity": "butte", "role": "object", "group": "1"}
+    - обскочи [наблюдаемое](gaze) [упавшее дерево]{"entity": "broken_tree", "role": "object", "group": "1"}
+    - обходи [данный](gaze) [особняк]{"entity": "house", "role": "object", "group": "1"}
+    - попробуй обскакивать [куда смотрю](gaze), к [пьяному человеку]{"entity": "man_lay", "role": "object", "group": "1"}
+    - обставь [туда](gaze), к [автомобилю]{"entity": "car", "role": "object", "group": "1"}
+    - обставь [в ту сторону](gaze), до [лежащего человека]{"entity": "man_lay", "role": "object", "group": "1"}
+    - опереди [куда смотрю](gaze), к [валуну]{"entity": "butte", "role": "object", "group": "1"}
+    - обставь [в ту сторону](gaze), к [рытвине]{"entity": "pit", "role": "object", "group": "1"}
+    - опереди [в том направлении](gaze), до [булыжника]{"entity": "rock", "role": "object", "group": "1"}
+    - обставь [в это место](gaze), к [железному коню]{"entity": "car", "role": "object", "group": "1"}
+    - оставь позади [в эту сторону](gaze), до [женщины]{"entity": "human", "role": "object", "group": "1"}
+    - обскакивай [в ту сторону](gaze), до [барьера]{"entity": "barrier", "role": "object", "group": "1"}

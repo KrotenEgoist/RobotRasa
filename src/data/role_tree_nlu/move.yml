@@ -1,0 +1,104 @@
+version: "3.1"
+
+nlu:
+- intent: move
+  examples: |
+    - начинай мчаться [по левую руку](direction) 87м
+    - вылети 22м [взад](direction)
+    - поезжай [напролом](direction) 25м
+    - поторопись на 7м
+    - отгреби [в сторону юга](direction) 42м
+    - ковыляй [вправо](direction) на 1м
+    - начни грести [на южный край](direction) 22m
+    - перекинься [в правую сторону](direction) на 40 м
+    - канай [влево](direction) на 51m
+    - дуй 18 м [взад](direction)
+    - при 53 м [в западную сторону](direction)
+    - захаживай [в правую сторону](direction) на 75 м
+    - начинай ковылять на 10m [на южный край](direction)
+    - приедь 4м [на южный край](direction)
+    - прилети к ближайшей [лесополосе]{"entity": "object", "role": "forest"}
+    - хромай до ближайшего [авто]{"entity": "object", "role": "car"}
+    - поддай к ближайшему [строению]{"entity": "object", "role": "house"}
+    - поезжай к ближнему [лежащему человеку]{"entity": "object", "role": "man_lay"}
+    - попробуй спешить к недалёкой [даме]{"entity": "object", "role": "human"}
+    - делай маневр к близлежащей [впадине]{"entity": "object", "role": "pit"}
+    - пробеги к ближайшему [холму]{"entity": "object", "role": "hill"}
+    - волочись до близлежащего [строения]{"entity": "object", "role": "house"}
+    - выскочи к близкому [холмику]{"entity": "object", "role": "hill"}
+    - поезжай до недалёкого [срубленного дерева]{"entity": "object", "role": "broken_tree"}
+    - начинай передвигаться до близкого [разлома]{"entity": "object", "role": "fissure"}
+    - катись до близкого [авто]{"entity": "object", "role": "car"}
+    - пустись до близлежащего [оврага]{"entity": "object", "role": "pit"}
+    - устремись к близкой [роще]{"entity": "object", "role": "forest"}
+    - пробеги к [поваленному дереву]{"entity": "object", "role": "broken_tree"}
+    - осуществи перемещение до [валуна]{"entity": "object", "role": "butte"}
+    - лети к [мужчине]{"entity": "object", "role": "human"}
+    - устройся до [холма]{"entity": "object", "role": "hill"}
+    - откатись к [камню]{"entity": "object", "role": "rock"}
+    - хромай до [дуба]{"entity": "object", "role": "tree"}
+    - попробуй скатываться к [горе]{"entity": "object", "role": "hill"}
+    - торопись к [провалу]{"entity": "object", "role": "pit"}
+    - убеги к [валуну]{"entity": "object", "role": "butte"}
+    - дуй к [валуну]{"entity": "object", "role": "butte"}
+    - вези до [столба]{"entity": "object", "role": "lamp_post"}
+    - поезжай к [избе]{"entity": "object", "role": "house"}
+    - бреди до [железного коня]{"entity": "object", "role": "car"}
+    - вези до [останца]{"entity": "object", "role": "butte"}
+    - трюшчи к [тачке]{"entity": "object", "role": "car"}, что находится [на севере относительно](relation) [провала]{"entity": "object", "role": "pit"}
+    - подвигайся к [лампе]{"entity": "object", "role": "lamp_post"}, располагающейся [справа от](relation) [холмика]{"entity": "object", "role": "hill"}
+    - ступай к [дубраве]{"entity": "object", "role": "forest"}, которая [в восточной стороне от](relation) [фонаря]{"entity": "object", "role": "lamp_post"}
+    - прорывайся до [товарища]{"entity": "object", "role": "human"}, находящегося [на востоке относительно](relation) [булыжника]{"entity": "object", "role": "rock"}
+    - убеги до [кучи]{"entity": "object", "role": "hill"}, что [рядом с](relation) [провалом]{"entity": "object", "role": "pit"}
+    - начинай трусить к [сломанному дереву]{"entity": "object", "role": "broken_tree"}, что находится [перед](relation) [расщелиной]{"entity": "object", "role": "fissure"}
+    - начинай собираться к [валуну]{"entity": "object", "role": "butte"}, который [восточнее](relation) [сосны]{"entity": "object", "role": "tree"}
+    - углубись к [светильнику]{"entity": "object", "role": "lamp_post"}, располагающемуся [слева от](relation) [расщелины]{"entity": "object", "role": "fissure"}
+    - попробуй тянуться к [упавшему человеку]{"entity": "object", "role": "man_lay"} [на востоке относительно](relation) [избы]{"entity": "object", "role": "house"}
+    - начни танцевать до [женщины]{"entity": "object", "role": "human"}, которая находится [слева от](relation) [растения]{"entity": "object", "role": "tree"}
+    - попробуй спускаться к [останцу]{"entity": "object", "role": "butte"} [на востоке от](relation) [столба]{"entity": "object", "role": "lamp_post"}
+    - пытайся везти до [строения]{"entity": "object", "role": "house"}, которое [севернее](relation) [барьера]{"entity": "object", "role": "barrier"}
+    - гуляй к [берёзе]{"entity": "object", "role": "tree"}, что находится [позади](relation) [машины]{"entity": "object", "role": "car"}
+    - начинай ступать к [поваленному дереву]{"entity": "object", "role": "broken_tree"}, что [в западной стороне от](relation) [камня]{"entity": "object", "role": "rock"}
+    - шкандыбарь к [преграде]{"entity": "object", "role": "barrier"}, что [левее](relation) [леса]{"entity": "object", "role": "forest"}, который располагается [на севере относительно](relation) [сосны]{"entity": "object", "role": "tree"}
+    - смойся до [упавшего дерева]{"entity": "object", "role": "broken_tree"}, которое находится [слева от](relation) [камня]{"entity": "object", "role": "rock"}, что находится [севернее](relation) [дерева]{"entity": "object", "role": "tree"}
+    - следуй по пути до [сломанного дерева]{"entity": "object", "role": "broken_tree"}, которое находится [за](relation) [дубравой]{"entity": "object", "role": "forest"}, что располагается [на востоке от](relation) [холма]{"entity": "object", "role": "hill"}
+    - захаживай до [возвышенности]{"entity": "object", "role": "hill"}, что находится [в северной стороне от](relation) [срубленного дерева]{"entity": "object", "role": "broken_tree"}, что располагается [рядом с](relation) [рытвиной]{"entity": "object", "role": "pit"}
+    - поезжай к [провалу]{"entity": "object", "role": "pit"}, который находится [на востоке от](relation) [товарища]{"entity": "object", "role": "human"}, находящемуся [левее](relation) [пригорка]{"entity": "object", "role": "hill"}
+    - смойся к [упавшему дереву]{"entity": "object", "role": "broken_tree"}, что располагается [севернее](relation) [трещины]{"entity": "object", "role": "fissure"}, что [левее](relation) [камня]{"entity": "object", "role": "rock"}
+    - отступи до [камушка]{"entity": "object", "role": "rock"}, что располагается [рядом с](relation) [расщелиной]{"entity": "object", "role": "fissure"}, находящейся [справа от](relation) [пьяного человека]{"entity": "object", "role": "man_lay"}
+    - устремись до [препятствия]{"entity": "object", "role": "barrier"}, что располагается [севернее](relation) [дубравы]{"entity": "object", "role": "forest"}, что располагается [западнее](relation) [машины]{"entity": "object", "role": "car"}
+    - поторопись к [роще]{"entity": "object", "role": "forest"}, что располагается [сзади от](relation) [постройки]{"entity": "object", "role": "house"}, которая находится [на севере относительно](relation) [пропасти]{"entity": "object", "role": "pit"}
+    - волочись до [рощи]{"entity": "object", "role": "forest"}, что располагается [за](relation) [домиком]{"entity": "object", "role": "house"}, располагающегося [на западе относительно](relation) [дамы]{"entity": "object", "role": "human"}
+    - начинай толкаться к [ограждению]{"entity": "object", "role": "barrier"}, находящемуся [за](relation) [пьяным человеком]{"entity": "object", "role": "man_lay"}, который находится [на востоке от](relation) [железного коня]{"entity": "object", "role": "car"}
+    - мчи к [разлому]{"entity": "object", "role": "fissure"}, располагающемуся [на севере от](relation) [ямы]{"entity": "object", "role": "pit"}, что [в северной стороне от](relation) [останца]{"entity": "object", "role": "butte"}
+    - пытайся ковылять до [разрыва]{"entity": "object", "role": "fissure"}, располагающегося [левее](relation) [кучи]{"entity": "object", "role": "hill"}, которая [на севере от](relation) [берёзы]{"entity": "object", "role": "tree"}
+    - углубись до [ольхи]{"entity": "object", "role": "tree"}, которая [в северной стороне от](relation) [коттеджа]{"entity": "object", "role": "house"}, что находится [перед](relation) [лампой]{"entity": "object", "role": "lamp_post"}
+    - приедь к [ребёнку]{"entity": "object", "role": "human"} [позади](relation) [тебя]{"entity": "object", "role": "self"}
+    - броди к [авто]{"entity": "object", "role": "car"} [на западе](relation) [себя]{"entity": "object", "role": "self"}
+    - попробуй волочься до [чащи]{"entity": "object", "role": "forest"} [севернее](relation) [тебя]{"entity": "object", "role": "self"}
+    - наступай к [тачке]{"entity": "object", "role": "car"} [слева](relation) 
+    - попробуй брести до [горки]{"entity": "object", "role": "hill"} [в северной стороне](relation) 
+    - начни грести к [домику]{"entity": "object", "role": "house"} [на западе](relation) [себя]{"entity": "object", "role": "self"}
+    - начинай выбрасываться до [валуна]{"entity": "object", "role": "butte"} [справа от](relation) [себя]{"entity": "object", "role": "self"}
+    - мчись до [упавшего дерева]{"entity": "object", "role": "broken_tree"} [на западе](relation) 
+    - канай до [разлома]{"entity": "object", "role": "fissure"} [спереди](relation) [себя]{"entity": "object", "role": "self"}
+    - беги до [железного коня]{"entity": "object", "role": "car"} [на западе](relation) 
+    - маршируй до [упавшего человека]{"entity": "object", "role": "man_lay"} [перед](relation) [тобой]{"entity": "object", "role": "self"}
+    - бреди к [ольхе]{"entity": "object", "role": "tree"} [слева](relation) 
+    - приедь до [здания]{"entity": "object", "role": "house"} [севернее](relation) [тебя]{"entity": "object", "role": "self"}
+    - пытайся колобродить до [товарища]{"entity": "object", "role": "human"} [спереди](relation) 
+    - устройся [в это место](gaze)
+    - уносись [в этом направлении](gaze)
+    - стремись [туда](gaze)
+    - начинай течь [куда смотрю](gaze)
+    - тянись [в этом направлении](gaze)
+    - отходи к [этой](gaze) [берёзе]{"entity": "object", "role": "tree"}
+    - хлюпай до [данного](gaze) [останца]{"entity": "object", "role": "butte"}
+    - шмыгай к [той](gaze) [расщелине]{"entity": "object", "role": "fissure"}
+    - начни выметаться до [наблюдаемого](gaze) [фонаря]{"entity": "object", "role": "lamp_post"}
+    - пробеги к [наблюдаемой](gaze) [трещине]{"entity": "object", "role": "fissure"}
+    - газуй [в это место](gaze), до [столба]{"entity": "object", "role": "lamp_post"}
+    - броди [сюда](gaze), к [трещине]{"entity": "object", "role": "fissure"}
+    - поезжай [туда](gaze), к [свету]{"entity": "object", "role": "lamp_post"}
+    - попробуй спешить [сюда](gaze), до [света]{"entity": "object", "role": "lamp_post"}
+    - устройся [в ту сторону](gaze), к [пригорку]{"entity": "object", "role": "hill"}

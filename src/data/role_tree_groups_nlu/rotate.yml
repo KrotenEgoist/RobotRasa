@@ -1,0 +1,103 @@
+version: "3.1"
+
+nlu:
+- intent: rotate
+  examples: |
+    - соверши поворот 235° [в сторону востока](direction)
+    - попробуй заворчивать [в северную сторону](direction) 48°
+    - заворчивай 277°
+    - сделай поворот 38 ° [в сторону запада](direction)
+    - соверши поворот [на север](direction) 39°
+    - поворачивай на 279 °
+    - сделай поворот [в левую сторону](direction) 208 °
+    - поворачивай 226 градусов [влево](direction)
+    - соверши поворот [в южную сторону](direction) 311°
+    - соверши поворот 73 °
+    - соверши поворот [по левую руку](direction) 12 °
+    - развернись в обратную сторону
+    - разверни 
+    - разверни в обратную сторону
+    - попробуй разворачиваться вспять
+    - разверни вспять
+    - разворачивайся обратно
+    - разворот 
+    - разворот в обратную сторону
+    - разворот назад
+    - развернись назад
+    - заворчивай на час
+    - повернись [вправо](direction) 500
+    - поворачивай [на северный край](direction) на 11:00 0 минут
+    - начинай заворчивать [на восток](direction) на 1200
+    - поворачивай [на восточный край](direction) 7:00
+    - повернись на 8 часов [влево](direction)
+    - сделай поворот [в сторону юга](direction) на 11:30
+    - сделай поворот 3 30 [на северный край](direction)
+    - сделай поворот 5:30
+    - соверши поворот 1,5 час
+    - попробуй поворачивать до недалёкого [валуна]{"entity": "object", "role": "butte", "group": "1"}
+    - повернись до близкого [столба]{"entity": "object", "role": "lamp_post", "group": "1"}
+    - поворачивай к близкому [оврагу]{"entity": "object", "role": "pit", "group": "1"}
+    - сделай поворот к ближнему [человеку]{"entity": "object", "role": "human", "group": "1"}
+    - попробуй заворчивать до близкого [валуна]{"entity": "object", "role": "butte", "group": "1"}
+    - сделай поворот до недалёкого [строения]{"entity": "object", "role": "house", "group": "1"}
+    - повернись к близкому [ребёнку]{"entity": "object", "role": "human", "group": "1"}
+    - соверши поворот к ближайшему [ограждению]{"entity": "object", "role": "barrier", "group": "1"}
+    - сделай поворот до ближнего [разрыва]{"entity": "object", "role": "fissure", "group": "1"}
+    - повернись к ближнему [упавшему дереву]{"entity": "object", "role": "broken_tree", "group": "1"}
+    - соверши поворот к ближайшей [постройке]{"entity": "object", "role": "house", "group": "1"}
+    - повернись к [преграде]{"entity": "object", "role": "barrier", "group": "1"}
+    - поворачивай до [фонаря]{"entity": "object", "role": "lamp_post", "group": "1"}
+    - пытайся заворчивать до [строения]{"entity": "object", "role": "house", "group": "1"}
+    - поворачивай к [дому]{"entity": "object", "role": "house", "group": "1"}
+    - пытайся заворчивать к [расщелине]{"entity": "object", "role": "fissure", "group": "1"}
+    - повернись к [свалившемуся человеку]{"entity": "object", "role": "man_lay", "group": "1"}
+    - пытайся поворачивать до [спиленного дерева]{"entity": "object", "role": "broken_tree", "group": "1"}
+    - пытайся поворачивать к [разлому]{"entity": "object", "role": "fissure", "group": "1"}
+    - сделай поворот до [лежащего человека]{"entity": "object", "role": "man_lay", "group": "1"}
+    - поворачивай к [валуну]{"entity": "object", "role": "butte", "group": "1"}
+    - повернись до [холмика]{"entity": "object", "role": "hill", "group": "1"}
+    - повернись до [срубленного дерева]{"entity": "object", "role": "broken_tree", "group": "1"}, находящегося [левее]{"entity": "relation", "group": "1"} [трещины]{"entity": "object", "role": "fissure", "group": "2"}
+    - соверши поворот до [пьяного человека]{"entity": "object", "role": "man_lay", "group": "1"} [западнее]{"entity": "relation", "group": "1"} [лесополосы]{"entity": "object", "role": "forest", "group": "2"}
+    - соверши поворот к [останцу]{"entity": "object", "role": "butte", "group": "1"}, что располагается [правее]{"entity": "relation", "group": "1"} [сломанного дерева]{"entity": "object", "role": "broken_tree", "group": "2"}
+    - попробуй поворачивать до [бугра]{"entity": "object", "role": "hill", "group": "1"}, который располагается [на юге относительно]{"entity": "relation", "group": "1"} [загородки]{"entity": "object", "role": "barrier", "group": "2"}
+    - попробуй поворачивать к [лесу]{"entity": "object", "role": "forest", "group": "1"} [слева от]{"entity": "relation", "group": "1"} [упавшего человека]{"entity": "object", "role": "man_lay", "group": "2"}
+    - соверши поворот до [авто]{"entity": "object", "role": "car", "group": "1"}, которое [спереди от]{"entity": "relation", "group": "1"} [камня]{"entity": "object", "role": "rock", "group": "2"}
+    - повернись до [булыжника]{"entity": "object", "role": "rock", "group": "1"}, находящегося [южнее]{"entity": "relation", "group": "1"} [свалившегося человека]{"entity": "object", "role": "man_lay", "group": "2"}
+    - повернись до [дубравы]{"entity": "object", "role": "forest", "group": "1"}, что располагается [в южной стороне от]{"entity": "relation", "group": "1"} [женщины]{"entity": "object", "role": "human", "group": "2"}
+    - поворачивай до [срубленного дерева]{"entity": "object", "role": "broken_tree", "group": "1"}, располагающегося [спереди от]{"entity": "relation", "group": "1"} [железного коня]{"entity": "object", "role": "car", "group": "2"}
+    - заворчивай до [берёзы]{"entity": "object", "role": "tree", "group": "1"}, которая располагается [перед]{"entity": "relation", "group": "1"} [провалом]{"entity": "object", "role": "pit", "group": "2"}
+    - заворчивай до [ребёнка]{"entity": "object", "role": "human", "group": "1"}, располагающегося [на востоке от]{"entity": "relation", "group": "1"} [дома]{"entity": "object", "role": "house", "group": "2"}
+    - повернись до [разрыва]{"entity": "object", "role": "fissure", "group": "1"}, который располагается [перед]{"entity": "relation", "group": "1"} [строением]{"entity": "object", "role": "house", "group": "2"}, которое [севернее]{"entity": "relation", "group": "2"} [камня]{"entity": "object", "role": "rock", "group": "3"}
+    - начни заворчивать до [провала]{"entity": "object", "role": "pit", "group": "1"}, который находится [на севере относительно]{"entity": "relation", "group": "1"} [дуба]{"entity": "object", "role": "tree", "group": "2"}, который [на западе от]{"entity": "relation", "group": "2"} [сваленного дерева]{"entity": "object", "role": "broken_tree", "group": "3"}
+    - соверши поворот к [ольхе]{"entity": "object", "role": "tree", "group": "1"}, что [на юге относительно]{"entity": "relation", "group": "1"} [разлома]{"entity": "object", "role": "fissure", "group": "2"}, располагающемуся [на юге от]{"entity": "relation", "group": "2"} [барьера]{"entity": "object", "role": "barrier", "group": "3"}
+    - заворчивай к [канаве]{"entity": "object", "role": "pit", "group": "1"}, которая находится [сзади от]{"entity": "relation", "group": "1"} [леса]{"entity": "object", "role": "forest", "group": "2"}, располагающемуся [около]{"entity": "relation", "group": "2"} [спиленного дерева]{"entity": "object", "role": "broken_tree", "group": "3"}
+    - повернись к [берёзе]{"entity": "object", "role": "tree", "group": "1"}, располагающейся [левее]{"entity": "relation", "group": "1"} [впадины]{"entity": "object", "role": "pit", "group": "2"}, располагающейся [в северной стороне от]{"entity": "relation", "group": "2"} [свалившегося человека]{"entity": "object", "role": "man_lay", "group": "3"}
+    - начни заворчивать до [канавы]{"entity": "object", "role": "pit", "group": "1"}, что [слева от]{"entity": "relation", "group": "1"} [света]{"entity": "object", "role": "lamp_post", "group": "2"} [за]{"entity": "relation", "group": "2"} [горкой]{"entity": "object", "role": "hill", "group": "3"}
+    - попробуй заворчивать к [барьеру]{"entity": "object", "role": "barrier", "group": "1"}, что находится [рядом с]{"entity": "relation", "group": "1"} [растением]{"entity": "object", "role": "tree", "group": "2"}, располагающемуся [рядом с]{"entity": "relation", "group": "2"} [домиком]{"entity": "object", "role": "house", "group": "3"}
+    - повернись до [товарища]{"entity": "object", "role": "human", "group": "1"}, находящегося [севернее]{"entity": "relation", "group": "1"} [лежащего человека]{"entity": "object", "role": "man_lay", "group": "2"}, что [на западе относительно]{"entity": "relation", "group": "2"} [дерева]{"entity": "object", "role": "tree", "group": "3"}
+    - поворачивай до [света]{"entity": "object", "role": "lamp_post", "group": "1"}, что [в западной стороне от]{"entity": "relation", "group": "1"} [валуна]{"entity": "object", "role": "butte", "group": "2"}, что [слева от]{"entity": "relation", "group": "2"} [авто]{"entity": "object", "role": "car", "group": "3"}
+    - повернись к [лесополосе]{"entity": "object", "role": "forest", "group": "1"}, которая находится [около]{"entity": "relation", "group": "1"} [впадины]{"entity": "object", "role": "pit", "group": "2"}, которая находится [правее]{"entity": "relation", "group": "2"} [человека]{"entity": "object", "role": "human", "group": "3"}
+    - пытайся поворачивать до [лампы]{"entity": "object", "role": "lamp_post", "group": "1"}, которая располагается [слева от]{"entity": "relation", "group": "1"} [берёзы]{"entity": "object", "role": "tree", "group": "2"}, что [позади]{"entity": "relation", "group": "2"} [ограждения]{"entity": "object", "role": "barrier", "group": "3"}
+    - поворачивай к [фонарю]{"entity": "object", "role": "lamp_post", "group": "1"} [левее]{"entity": "relation", "group": "1"} [себя]{"entity": "object", "role": "self", "group": "2"}
+    - начинай поворачивать до [возвышенности]{"entity": "object", "role": "hill", "group": "1"} [впереди]{"entity": "relation", "group": "1"} 
+    - повернись до [преграды]{"entity": "object", "role": "barrier", "group": "1"} [слева от]{"entity": "relation", "group": "1"} [тебя]{"entity": "object", "role": "self", "group": "2"}
+    - сделай поворот до [разрыва]{"entity": "object", "role": "fissure", "group": "1"} [за]{"entity": "relation", "group": "1"} [тобой]{"entity": "object", "role": "self", "group": "2"}
+    - поворачивай до [горы]{"entity": "object", "role": "hill", "group": "1"} [слева от]{"entity": "relation", "group": "1"} [тебя]{"entity": "object", "role": "self", "group": "2"}
+    - заворчивай к [авто]{"entity": "object", "role": "car", "group": "1"} [левее]{"entity": "relation", "group": "1"} [себя]{"entity": "object", "role": "self", "group": "2"}
+    - повернись до [ребёнка]{"entity": "object", "role": "human", "group": "1"} [левее]{"entity": "relation", "group": "1"} [себя]{"entity": "object", "role": "self", "group": "2"}
+    - сделай поворот к [дереву]{"entity": "object", "role": "tree", "group": "1"} [на востоке]{"entity": "relation", "group": "1"} 
+    - пытайся поворачивать к [сосне]{"entity": "object", "role": "tree", "group": "1"} [сзади]{"entity": "relation", "group": "1"} 
+    - сделай поворот к [камню]{"entity": "object", "role": "rock", "group": "1"} [правее]{"entity": "relation", "group": "1"} [тебя]{"entity": "object", "role": "self", "group": "2"}
+    - повернись до [поваленного дерева]{"entity": "object", "role": "broken_tree", "group": "1"} [правее]{"entity": "relation", "group": "1"} [себя]{"entity": "object", "role": "self", "group": "2"}
+    - сделай поворот к [данному](gaze) [барьеру]{"entity": "object", "role": "barrier", "group": "1"}
+    - начинай заворчивать до [данного](gaze) [растения]{"entity": "object", "role": "tree", "group": "1"}
+    - сделай поворот к [наблюдаемому](gaze) [препятствию]{"entity": "object", "role": "barrier", "group": "1"}
+    - соверши поворот к [данному](gaze) [свету]{"entity": "object", "role": "lamp_post", "group": "1"}
+    - сделай поворот до [данного](gaze) [останца]{"entity": "object", "role": "butte", "group": "1"}
+    - попробуй заворчивать к [этой](gaze) [впадине]{"entity": "object", "role": "pit", "group": "1"}
+    - заворчивай [куда смотрю](gaze), к [горке]{"entity": "object", "role": "hill", "group": "1"}
+    - соверши поворот [куда смотрю](gaze), до [авто]{"entity": "object", "role": "car", "group": "1"}
+    - начинай поворачивать [в это место](gaze), к [останцу]{"entity": "object", "role": "butte", "group": "1"}
+    - повернись [в ту сторону](gaze), до [препятствия]{"entity": "object", "role": "barrier", "group": "1"}
+    - повернись [в том направлении](gaze), до [мужчины]{"entity": "object", "role": "human", "group": "1"}
+    - поворачивай [куда смотрю](gaze), к [камушку]{"entity": "object", "role": "rock", "group": "1"}

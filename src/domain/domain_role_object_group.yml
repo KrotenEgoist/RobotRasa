@@ -1,0 +1,258 @@
+version: "3.1"
+
+intents:
+  - analyze
+  - find
+  - follow
+  - monitor
+  - move
+  - rotate
+  - route
+  - go_around
+  - circle
+  - story_command
+  - wrong_command
+
+entities:
+  - command_number
+  - house:
+      roles:
+        - object
+      groups:
+        - 1
+        - 2
+        - 3
+  - tree:
+      roles:
+        - object
+      groups:
+        - 1
+        - 2
+        - 3
+  - broken_tree:
+      roles:
+        - object
+      groups:
+        - 1
+        - 2
+        - 3
+  - forest:
+      roles:
+        - object
+      groups:
+        - 1
+        - 2
+        - 3
+  - pit:
+      roles:
+        - object
+      groups:
+        - 1
+        - 2
+        - 3
+  - human:
+      roles:
+        - object
+      groups:
+        - 1
+        - 2
+        - 3
+  - hill:
+      roles:
+        - object
+      groups:
+        - 1
+        - 2
+        - 3
+  - fissure:
+      roles:
+        - object
+      groups:
+        - 1
+        - 2
+        - 3
+  - man_lay:
+      roles:
+        - object
+      groups:
+        - 1
+        - 2
+        - 3
+  - rock:
+      roles:
+        - object
+      groups:
+        - 1
+        - 2
+        - 3
+  - butte:
+      roles:
+        - object
+      groups:
+        - 1
+        - 2
+        - 3
+  - barrier:
+      roles:
+        - object
+      groups:
+        - 1
+        - 2
+        - 3
+  - lamp_post:
+      roles:
+        - object
+      groups:
+        - 1
+        - 2
+        - 3
+  - car:
+      roles:
+        - object
+      groups:
+        - 1
+        - 2
+        - 3
+  - self:
+      roles:
+        - object
+      groups:
+        - 1
+        - 2
+        - 3
+  - direction
+  - distance
+  - duration
+  - time
+  - temperature
+  - relation:
+      groups:
+        - 1
+        - 2
+  - gaze
+
+actions:
+  - send_command
+  - send_wrong_command
+  - send_story_command
+  - action_slot_reset
+  - move_category
+  - validate_move_category_form
+  - action_ask_param
+
+slots:
+  direction:
+    type: any
+    initial_value: null
+    mappings:
+      - type: from_entity
+        entity: direction
+  object:
+    type: any
+    initial_value: null
+    mappings:
+      - type: from_entity
+        entity: object
+  move_category:
+    type: categorical
+    influence_conversation: true
+    values:
+      - object
+      - direction
+      - empty
+    mappings:
+      - type: custom
+  param:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+        - active_loop: which_form
+          requested_slot: param
+        - active_loop: how_many_form
+          requested_slot: param
+  move_category_2:
+    type: categorical
+    influence_conversation: true
+    values:
+      - object
+      - direction
+      - empty
+    mappings:
+      - type: from_text
+        conditions:
+        - active_loop: move_category_form
+          requested_slot: move_category_2
+
+
+forms:
+  move_category_form:
+    required_slots:
+      - move_category_2
+
+  which_form:
+    required_slots:
+      - param
+
+  how_many_form:
+    required_slots:
+      - param
+
+responses:
+
+  utter_please_rephrase:
+  - text: "Я не понял, повторите"
+
+  utter_analyze:
+  - text: "utter_analyze"
+
+  utter_find:
+  - text: "utter_find"
+
+  utter_follow:
+  - text: "utter_follow"
+
+  utter_monitor:
+  - text: "utter_monitor"
+
+  utter_move:
+  - text: "utter_move"
+
+  utter_rotate:
+  - text: "utter_rotate"
+
+  utter_route:
+  - text: "utter_route"
+
+  utter_go_around:
+    - text: "utter_go_around"
+    
+  utter_circle:
+    - text: "utter_circle"
+
+  utter_story_command:
+  - text: "utter_story_command"
+
+  utter_wrong_command:
+  - text: "utter_wrong_command"
+
+  utter_where:
+  - text: "Куда?"
+
+  utter_which:
+  - text: "К какому?"
+
+  utter_how_many:
+    - text: "На сколько?"
+
+  utter_move_direction:
+    - text: "dir"
+
+  utter_move_object:
+    - text: "obj"
+
+  utter_ask_move_category_2:
+    - text: "Куда?"
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -15,10 +15,36 @@ intents:
 
 entities:
   - command_number
-  - object
+  - object:
+      roles:
+        - house
+        - tree
+        - broken_tree
+        - forest
+        - pit
+        - human
+        - hill
+        - fissure
+        - man_lay
+        - rock
+        - butte
+        - barrier
+        - lamp_post
+        - car
+        - self
+      groups:
+        - 1
+        - 2
+        - 3
   - direction
   - distance
-  - relation
+  - duration
+  - time
+  - temperature
+  - relation:
+      groups:
+        - 1
+        - 2
   - gaze
 
 actions:
