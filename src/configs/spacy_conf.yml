@@ -30,6 +30,14 @@ pipeline:
     random_seed: 1
     epochs: 200
     constrain_similarities: True
+  - name: DucklingEntityExtractor
+    url: "http://localhost:8000"
+    dimensions: [ "duration", "distance", "time" ]
+    locale: "ru_RU"
+  - name: DucklingEntityExtractor
+    url: "http://localhost:8000"
+    dimensions: [ "temperature" ]
+    locale: "en_EN"
   - name: FallbackClassifier
     threshold: 0.999
     ambiguity_threshold: 0.1
