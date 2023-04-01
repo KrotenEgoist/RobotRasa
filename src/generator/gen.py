@@ -13,7 +13,7 @@ class Generator:
         self.dictionary = self.create_dictionary()
         self.morph = pymorphy2.MorphAnalyzer()
         self.key_pattern = re.compile(r'\w+:\w+')
-        self.word_pattern = re.compile(r'([\w\s,]+)')
+        self.word_pattern = re.compile(r'([\w\s-]+)')
 
     @staticmethod
     def generate_fallback(amount: int = 100,
@@ -157,29 +157,23 @@ class Generator:
             # вперед
             sample = f"|{direct}|"
             samples.append(sample)
-
             # вперед на 4м
-            sample = f"|{direct}|" + "aux:on|{}|distance:meter|"
+            sample = f"|{direct}|" + "aux:on|$|distance:meter|"
             samples.append(sample)
-
             # иди вперед
             sample1 = f"|prep:robot|action:move|{direct}|"
             samples.append(sample1)
-
             # иди вперед 10 м
-            sample2 = f"|prep:robot|action:move|{direct}|" + "{}|distance:meter|"
+            sample2 = f"|prep:robot|action:move|{direct}|" + "$|distance:meter|"
             samples.append(sample2)
-
             # иди 10 м вперед
-            sample3 = "|prep:robot|action:move|{}|distance:meter|" + f"{direct}|"
+            sample3 = "|prep:robot|action:move|$|distance:meter|" + f"{direct}|"
             samples.append(sample3)
-
             # иди вперед на 10 м
-            sample4 = f"|prep:robot|action:move|{direct}|aux:on|" + "{}|distance:meter|"
+            sample4 = f"|prep:robot|action:move|{direct}|aux:on|" + "$|distance:meter|"
             samples.append(sample4)
-
             # иди на 10 м вперед
-            sample5 = "|prep:robot|action:move|aux:on|{}|distance:meter|" + f"{direct}|"
+            sample5 = "|prep:robot|action:move|aux:on|$|distance:meter|" + f"{direct}|"
             samples.append(sample5)
 
         commands = self.run(samples, amount=amount, start=start, end=end)
@@ -236,17 +230,41 @@ class Generator:
 
     def generate_follow(self, amount=10) -> list:
         """
-        Создает команды следования
+        Создает команды следования за машиной
 
         :param amount: количество примеров на один шаблон
         :return:
             Список команд следования
         """
         samples = [
+            # следуй за машиной
             "|prep:robot|action:follow|aux:into|object:car|"
         ]
 
         commands = self.run(samples, amount=amount)
+
+        return commands
+
+    def generate_move_to(self, states: int = 10, amount: int = 10):
+
+        objects_path = list(self.dictionary_path.glob('**/object/*'))
+        objects = list(map(lambda x: ':'.join(x.parts[-2:]), objects_path))
+        objects.remove('object:circle')
+        objects.remove('object:route')
+        objects.remove('object:gaze')
+
+        samples = []
+        commands = []
+        for _ in range(states):
+            obj1 = random.choice(objects)
+            # иди к дому
+            sample = f"|prep:robot|action:move|aux:to|{obj1}|"
+            samples.append(sample)
+            # к дому
+            sample = f"|aux:to|{obj1}|"
+            samples.append(sample)
+
+        commands.extend(self.run(samples=samples, amount=amount))
 
         return commands
 
@@ -457,13 +475,13 @@ class Generator:
 
         :param sample: Шаблон, пример "prep:robot action:patrol"
             Словарь: {
-                "prep:robot": [",excl", ",excl,plur"],
+                "prep:robot": ["-excl", "-excl-plur"],
                 "action:patrol" ["патрулировать", "разведывать", "охранять"],
                 ...
             }
 
             P.S.: для работы преобразования слов, необходимо указывать в файлах словаря требуемые граммемы,
-            пример для файла prep:robot: ",excl" означает, что преобразование применится к следующему слову в шаблоне
+            пример для файла prep:robot: "-excl" означает, что преобразование применится к следующему слову в шаблоне
         :return:
             измененная строка в соответствии с выбранными значениями словаря
 
@@ -482,17 +500,17 @@ class Generator:
 
             # Выделение сущностей
             if "action" in key:
-                random_word = f"[{random_word}](action)"
+                random_word = f'[{random_word}]' + '{"entity": "action"}'
             elif "object" in key:
-                random_word = f"[{random_word}](object)"
+                random_word = f'[{random_word}]' + '{"entity": "subject", "role": "object"}'
             elif "direction" in key:
-                random_word = f"[{random_word}](direction)"
+                random_word = f'[{random_word}]' + '{"entity": "subject", "role": "direction"}'
             # elif "relation" in key:
             #     random_word = f"[{random_word}](relation)"
             # elif "nearest" in key:
             #     random_word = f"[{random_word}](nearest)"
             # elif "feature:gaze" in key:
-            #     random_word = f"[{random_word}](gaza)"
+            #     random_word = f"[{random_word}](gaze)"
 
             edited_sample = edited_sample.replace(key, random_word)
 
@@ -501,7 +519,7 @@ class Generator:
 
         case = None
         for stuff in words:
-            word_and_case = stuff.split(',')
+            word_and_case = stuff.split('-')
 
             word = word_and_case[0]
 
@@ -511,14 +529,14 @@ class Generator:
                 new_word = word
 
             case = word_and_case[1:]
-            edited_sample = edited_sample.replace(','.join(case), '')
+            edited_sample = edited_sample.replace('-'.join(case), '')
 
             if new_word:
                 # Корректная замена слов в шаблоне с учетом сущностей
                 for new, old in zip(new_word.split(" "), word.split(" ")):
                     edited_sample = edited_sample.replace(old, new)
 
-        edited_sample = edited_sample.replace(',', '')
+        edited_sample = edited_sample.replace('-', '')
         edited_sample = edited_sample.replace('|', ' ')
         edited_sample = edited_sample.strip()
 
@@ -543,7 +561,7 @@ class Generator:
                 example = self.create(sample)
                 if start and end:
                     n = random.randint(start, end)
-                    example = example.format(n)
+                    example = example.replace("$", str(n))
 
                 cmd_list.append(example)
 
