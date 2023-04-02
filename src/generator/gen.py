@@ -51,10 +51,11 @@ class Generator:
 
         return commands
 
-    def generate_action(self, amount: int = 10) -> list:
+    def generate_action(self, action_type: str = "action:move", amount: int = 10) -> list:
         """
         Создает команды без атрибутов для уточнения
 
+        :param action_type: тип действия
         :param amount: количество примеров на шаблон
         :return:
         """
@@ -65,10 +66,8 @@ class Generator:
             actions.remove(ignore)
 
         samples = []
-        for act in actions:
-            # иди, двигайся, поворачивай и т.д.
-            sample = f"|prep:robot|{act}|"
-            samples.append(sample)
+        sample = f"|prep:robot|{action_type}|"
+        samples.append(sample)
 
         commands = self.run(samples, amount=amount)
 
@@ -253,15 +252,26 @@ class Generator:
         objects.remove('object:route')
         objects.remove('object:gaze')
 
+        relations_path = list(self.dictionary_path.glob('**/relation/*'))
+        relations = list(map(lambda x: ':'.join(x.parts[-2:]), relations_path))
+
         samples = []
         commands = []
         for _ in range(states):
-            obj1 = random.choice(objects)
+            temp_objects = objects.copy()
+            obj1 = random.choice(temp_objects)
+            temp_objects.remove(obj1)
+            obj2 = random.choice(temp_objects)
+            rel1 = random.choice(relations)
+
             # иди к дому
             sample = f"|prep:robot|action:move|aux:to|{obj1}|"
             samples.append(sample)
             # к дому
             sample = f"|aux:to|{obj1}|"
+            samples.append(sample)
+            # иди к дому около дерева
+            sample = f"|prep:robot|action:move|aux:to|{obj1}|{rel1}|{obj2}|"
             samples.append(sample)
 
         commands.extend(self.run(samples=samples, amount=amount))
@@ -493,6 +503,7 @@ class Generator:
         keys = self.key_pattern.findall(sample)
 
         # Извлечение ключей для словаря по шаблону
+        addition_object = 0
         for key in keys:
             random_word = random.choice(self.dictionary[key])
 
@@ -501,12 +512,15 @@ class Generator:
             # Выделение сущностей
             if "action" in key:
                 random_word = f'[{random_word}]' + '{"entity": "action"}'
-            elif "object" in key:
+            elif "object" in key and addition_object > 0:
+                random_word = f'[{random_word}]' + '{"entity": "subject", "role": "addition"}'
+            elif "object" in key and addition_object == 0:
                 random_word = f'[{random_word}]' + '{"entity": "subject", "role": "object"}'
+                addition_object += 1
             elif "direction" in key:
                 random_word = f'[{random_word}]' + '{"entity": "subject", "role": "direction"}'
-            # elif "relation" in key:
-            #     random_word = f"[{random_word}](relation)"
+            elif "relation" in key:
+                random_word = f'[{random_word}]' + '{"entity": "relation"}'
             # elif "nearest" in key:
             #     random_word = f"[{random_word}](nearest)"
             # elif "feature:gaze" in key:

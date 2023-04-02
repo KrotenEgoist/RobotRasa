@@ -2,35 +2,18 @@ version: "3.1"
 
 stories:
 
-  - story: action only
+  - story: command move subject
     steps:
-      - intent: commands_with_attributes
+      - intent: command_move_subject
+      - action: subject_form
+      - active_loop: subject_form
       - slot_was_set:
-          - obj: null
-          - dir: null
-      - action: utter_test_1
-      - action: action_reset_slots
-
-  - story: action and object
-    steps:
-      - intent: commands_with_attributes
-      - slot_was_set:
-          - obj
-          - dir: null
-      - action: object_form
-      - active_loop: object_form
+          - requested_slot: subject
       - active_loop: null
-      - action: utter_obj_values
-      - action: action_reset_slots
-
-  - story: action and direction
-    steps:
-      - intent: commands_with_attributes
+      - action: feature_form
+      - active_loop: feature_form
       - slot_was_set:
-          - obj: null
-          - dir
-      - action: direction_form
-      - active_loop: direction_form
+          - requested_slot: feature
       - active_loop: null
-      - action: utter_dir_values
+      - action: utter_send_command
       - action: action_reset_slots

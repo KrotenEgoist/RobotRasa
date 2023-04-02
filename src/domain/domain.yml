@@ -1,7 +1,7 @@
 version: "3.1"
 
 intents:
-  - commands_with_attributes
+  - command_move_subject
   - nlu_fallback:
       use_entities: []
   - wrong_command:
@@ -9,76 +9,64 @@ intents:
 
 entities:
   - action
-  - object
-  - direction
+  - subject:
+      roles:
+        - object
+        - direction
+        - addition
   - distance
+  - relation
+
+slots:
+  action:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: action
+
+  subject:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: subject
+        role: object
+      - type: from_entity
+        entity: subject
+        role: direction
+
+  feature:
+    type: list
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: distance
+      - type: from_entity
+        entity: relation
+      - type: from_entity
+        entity: subject
+        role: addition
+
+forms:
+  subject_form:
+    required_slots:
+      - subject
+  feature_form:
+    required_slots:
+      - feature
 
 responses:
-  utter_test_1:
-    - text: "Укажите объект или направление"
-
-  utter_ask_rel:
-    - text: "Уточните местоположение объекта"
-  utter_obj_values:
-    - text: "{act}, {obj}, {rel}"
-
-  utter_ask_dim:
-    - text: "Уточните расстояние"
-  utter_dir_values:
-    - text: "{act}, {dir}, {dim}"
-
   utter_send_command:
-    - text: "Команда отправлена"
+    - text: "Команда отправлена: {action} {subject} {feature}"
   utter_wrong_command:
     - text: "Исправляем команду"
   utter_rephrase:
     - text: "Перефразируйте"
 
 actions:
-  - action_send_command
+  - action_ask_feature
+  - action_ask_subject
   - action_reset_slots
 
-slots:
-  act:
-    type: text
-    mappings:
-      - type: from_entity
-        entity: action
-  obj:
-    type: text
-    mappings:
-      - type: from_entity
-        entity: object
-
-  dir:
-    type: text
-    mappings:
-      - type: from_entity
-        entity: direction
-
-  dim:
-    type: text
-    mappings:
-      - type: from_entity
-        entity: distance
-        conditions:
-          - active_loop: direction_form
-            requested_slot: dim
-
-  rel:
-    type: any
-    mappings:
-      - type: from_text
-        conditions:
-          - active_loop: object_form
-            requested_slot: rel
-forms:
-  direction_form:
-    required_slots:
-      - dim
-  object_form:
-    required_slots:
-      - rel
 
 session_config:
   session_expiration_time: 60
