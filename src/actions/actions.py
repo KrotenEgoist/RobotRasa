@@ -1,4 +1,4 @@
-from rasa_sdk import Action, Tracker
+from rasa_sdk import Action, Tracker, FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import AllSlotsReset, SlotSet
 
@@ -34,16 +34,35 @@ class AskFeatureAction(Action):
         for entity in tracker.latest_message['entities']:
             try:
                 role = entity['role']
+                subject = entity['value']
+                slot = SlotSet("subject", subject)
             except KeyError:
                 role = None
+                slot = SlotSet("subject", None)
 
         match role:
             case "direction":
                 dispatcher.utter_message(text="Укажите количество метров")
             case "object":
-                dispatcher.utter_message(text="Уточните местоположение объекта")
+                dispatcher.utter_message(text=f"Уточните местоположение объекта {subject}")
 
-        return []
+        return [slot]
+
+
+class ValidateFeatureForm(FormValidationAction):
+
+    def name(self):
+        return "validate_feature_form"
+
+    def validate_feature(
+        self,
+        slot_value,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain,
+    ):
+
+        return {"feature": slot_value}
 
 
 class ActionResetSlots(Action):

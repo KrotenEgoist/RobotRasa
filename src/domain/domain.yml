@@ -30,21 +30,23 @@ slots:
       - type: from_entity
         entity: subject
         role: object
+        conditions:
+          - active_loop: subject_form
+            requested_slot: subject
       - type: from_entity
         entity: subject
         role: direction
+        conditions:
+          - active_loop: subject_form
+            requested_slot: subject
 
   feature:
-    type: list
-    influence_conversation: true
+    type: text
     mappings:
-      - type: from_entity
-        entity: distance
-      - type: from_entity
-        entity: relation
-      - type: from_entity
-        entity: subject
-        role: addition
+      - type: from_text
+        conditions:
+          - active_loop: feature_form
+            requested_slot: feature
 
 forms:
   subject_form:
@@ -64,6 +66,7 @@ responses:
 
 actions:
   - action_ask_feature
+  - validate_feature_form
   - action_ask_subject
   - action_reset_slots
 
