@@ -10,5 +10,7 @@ nlu_path = project_path.joinpath("src/data")
 g = Generator(data_path)
 
 move_dir = g.generate_move_dir(amount=10, start=1, end=50)
-move_to = g.generate_move_to(states=10, amount=20)
+print(f"Создано {len(move_dir)} примеров команд move_dir")
+move_to = g.generate_move_to(states=10, amount=15)
+print(f"Создано {len(move_to)} примеров команд move_to")
 g.save({"command_move_subject": move_dir + move_to}, nlu_path)

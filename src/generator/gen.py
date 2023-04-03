@@ -251,6 +251,7 @@ class Generator:
         objects.remove('object:circle')
         objects.remove('object:route')
         objects.remove('object:gaze')
+        objects.remove('object:void')
 
         relations_path = list(self.dictionary_path.glob('**/relation/*'))
         relations = list(map(lambda x: ':'.join(x.parts[-2:]), relations_path))
@@ -272,6 +273,9 @@ class Generator:
             samples.append(sample)
             # иди к дому около дерева
             sample = f"|prep:robot|action:move|aux:to|{obj1}|{rel1}|{obj2}|"
+            samples.append(sample)
+            # около дерева
+            sample = f"|object:void|{rel1}|{obj2}|"
             samples.append(sample)
 
         commands.extend(self.run(samples=samples, amount=amount))
@@ -515,7 +519,10 @@ class Generator:
             elif "object" in key and addition_object > 0:
                 random_word = f'[{random_word}]' + '{"entity": "subject", "role": "addition"}'
             elif "object" in key and addition_object == 0:
-                random_word = f'[{random_word}]' + '{"entity": "subject", "role": "object"}'
+                if random_word == '_':
+                    random_word = ''
+                else:
+                    random_word = f'[{random_word}]' + '{"entity": "subject", "role": "object"}'
                 addition_object += 1
             elif "direction" in key:
                 random_word = f'[{random_word}]' + '{"entity": "subject", "role": "direction"}'

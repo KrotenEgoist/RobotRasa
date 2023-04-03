@@ -30,15 +30,34 @@ slots:
       - type: from_entity
         entity: subject
         role: object
-        conditions:
-          - active_loop: subject_form
-            requested_slot: subject
+#        conditions:
+#          - active_loop: subject_form
+#            requested_slot: subject
       - type: from_entity
         entity: subject
         role: direction
-        conditions:
-          - active_loop: subject_form
-            requested_slot: subject
+#        conditions:
+#          - active_loop: subject_form
+#            requested_slot: subject
+
+#  addition:
+#    type: list
+#    mappings:
+#      - type: from_entity
+#        entity: subject
+#        role: addition
+#
+#  relation:
+#    type: list
+#    mappings:
+#      - type: from_entity
+#        entity: relation
+#
+#  distance:
+#    type: text
+#    mappings:
+#      - type: from_entity
+#        entity: distance
 
   feature:
     type: text
