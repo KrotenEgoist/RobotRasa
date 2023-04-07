@@ -22,6 +22,7 @@ stories:
     steps:
       - intent: command_move_subject
         entities:
+          - action
           - subject:
             role: object
       - action: feature_form
@@ -36,6 +37,7 @@ stories:
     steps:
       - intent: command_move_subject
         entities:
+          - action
           - subject:
             role: direction
       - action: feature_form

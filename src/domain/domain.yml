@@ -83,10 +83,13 @@ responses:
   utter_rephrase:
     - text: "Перефразируйте"
 
+  utter_ask_subject:
+    - text: "Назовите объект или направление"
+
 actions:
   - action_ask_feature
   - validate_feature_form
-  - action_ask_subject
+#  - action_ask_subject
   - action_reset_slots
 
 
