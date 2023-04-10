@@ -11,3 +11,6 @@ __pycache__/
 models/
 results/
 src/train_test_split/
+
+# archived data
+archived

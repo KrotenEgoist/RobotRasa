@@ -39,3 +39,31 @@ stories:
           - distance
       - action: utter_send_command
       - action: action_reset_slots
+
+  - story: Команда с объектами
+    steps:
+      - intent: command_objects
+      - action: subject_form
+      - active_loop: subject_form
+      - slot_was_set:
+          - requested_slot: subject
+      - active_loop: null
+      - action: feature_form
+      - active_loop: feature_form
+      - slot_was_set:
+          - requested_slot: feature
+      - active_loop: null
+      - action: utter_send_command
+      - action: action_reset_slots
+
+  - story: Команда со всеми слотами для объектов
+    steps:
+      - intent: command_objects
+      - slot_was_set:
+          - subject
+      - slot_was_set:
+          - relation
+      - slot_was_set:
+          - addition
+      - action: utter_send_command
+      - action: action_reset_slots

@@ -2,6 +2,8 @@ recipe: default.v1
 language: ru
 pipeline:
 - name: WhitespaceTokenizer
+  intent_tokenization_flag: True
+  intent_split_symbol: "+"
 - name: LexicalSyntacticFeaturizer
 - name: CountVectorsFeaturizer
   analyzer: char_wb

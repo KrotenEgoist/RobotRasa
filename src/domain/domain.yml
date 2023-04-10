@@ -2,6 +2,7 @@ version: "3.1"
 
 intents:
   - command_move_subject
+  - command_objects
   - wrong_command:
       use_entities: []
 
