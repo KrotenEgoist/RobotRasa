@@ -201,26 +201,26 @@ class Generator:
             samples.append(sample)
 
             # направо на 90 °
-            sample = f"|{direct}|" + "{}|distance:degree|"
+            sample = f"|{direct}|" + "$|distance:degree|"
 
             # поворачивай направо
             sample1 = f"|prep:robot|action:rotate|{direct}|"
             samples.append(sample1)
 
             # поворачивай направо 90 °
-            sample2 = f"|prep:robot|action:rotate|{direct}|" + "{}|distance:degree|"
+            sample2 = f"|prep:robot|action:rotate|{direct}|" + "$|distance:degree|"
             samples.append(sample2)
 
             # поворачивай 90 ° направо
-            sample3 = "|prep:robot|action:rotate|{}|distance:degree|" + f"{direct}|"
+            sample3 = "|prep:robot|action:rotate|$|distance:degree|" + f"{direct}|"
             samples.append(sample3)
 
             # поворачивай направо на 90 °
-            sample4 = f"|prep:robot|action:rotate|{direct}|aux:on|" + "{}|distance:degree|"
+            sample4 = f"|prep:robot|action:rotate|{direct}|aux:on|" + "$|distance:degree|"
             samples.append(sample4)
 
             # поворачивай на 90 ° направо
-            sample5 = "|prep:robot|action:rotate|aux:on|{}|distance:degree|" + f"{direct}|"
+            sample5 = "|prep:robot|action:rotate|aux:on|$|distance:degree|" + f"{direct}|"
             samples.append(sample5)
 
         commands = self.run(samples, amount=amount, start=start, end=end)
