@@ -10,6 +10,50 @@ class SampleGenerator(Generator):
     def __init__(self, dictionary_path: Path):
         super(SampleGenerator, self).__init__(dictionary_path)
 
+    def ner(self, sample):
+        """
+        Добавление разметки сущностей для шаблонов
+
+        :param sample: шаблон
+        :return:
+            шаблон для склонений и шаблон для подстановки
+        """
+        sample_to_inflect = sample
+        edited_sample = sample
+
+        keys = self.key_pattern.findall(sample)
+
+        # Извлечение ключей для словаря по шаблону
+        addition_object = 0
+        for key in keys:
+            random_word = random.choice(self.dictionary[key])
+
+            sample_to_inflect = sample_to_inflect.replace(key, random_word)
+
+            # Выделение сущностей
+            if "action" in key:
+                random_word = f'[{random_word}]' + '{"entity": "action"}'
+            elif "object" in key and addition_object > 0:
+                random_word = f'[{random_word}]' + '{"entity": "subject", "role": "addition"}'
+            elif "object" in key and addition_object == 0:
+                if random_word == '_':
+                    random_word = ''
+                else:
+                    random_word = f'[{random_word}]' + '{"entity": "subject", "role": "object"}'
+                addition_object += 1
+            elif "direction" in key:
+                random_word = f'[{random_word}]' + '{"entity": "subject", "role": "direction"}'
+            elif "relation" in key:
+                random_word = f'[{random_word}]' + '{"entity": "relation"}'
+            # elif "nearest" in key:
+            #     random_word = f"[{random_word}](nearest)"
+            # elif "feature:gaze" in key:
+            #     random_word = f"[{random_word}](gaze)"
+
+            edited_sample = edited_sample.replace(key, random_word)
+
+        return sample_to_inflect, edited_sample
+
     def generate_move_dir(self, amount: int = 10, start: int = 1, end: int = 50) -> list:
         """
         Создает команды движения в направлении
