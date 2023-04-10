@@ -2,7 +2,7 @@ version: "3.1"
 
 stories:
 
-  - story: command move subject
+  - story: Команда с заполнением всех слотов
     steps:
       - intent: command_move_subject
       - action: subject_form
@@ -18,54 +18,24 @@ stories:
       - action: utter_send_command
       - action: action_reset_slots
 
-  - story: command move object
+  - story: Команда со всеми слотами для объектов
     steps:
       - intent: command_move_subject
-        entities:
-          - action
-          - subject:
-            role: object
-      - action: feature_form
-      - active_loop: feature_form
       - slot_was_set:
-          - requested_slot: feature
-      - active_loop: null
-      - action: utter_send_command
-      - action: action_reset_slots
-
-  - story: command move direction
-    steps:
-      - intent: command_move_subject
-        entities:
-          - action
-          - subject:
-            role: direction
-      - action: feature_form
-      - active_loop: feature_form
+          - subject
       - slot_was_set:
-          - requested_slot: feature
-      - active_loop: null
-      - action: utter_send_command
-      - action: action_reset_slots
-
-  - story: command move object with relation
-    steps:
-      - intent: command_move_subject
-        entities:
-          - subject:
-            role: object
-          - subject:
-            role: addition
           - relation
+      - slot_was_set:
+          - addition
       - action: utter_send_command
       - action: action_reset_slots
 
-  - story: command move direction with meters
+  - story: Команда со всеми слотами для направлений
     steps:
       - intent: command_move_subject
-        entities:
-          - subject:
-            role: direction
+      - slot_was_set:
+          - subject
+      - slot_was_set:
           - distance
       - action: utter_send_command
       - action: action_reset_slots

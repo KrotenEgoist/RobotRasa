@@ -2,8 +2,6 @@ version: "3.1"
 
 intents:
   - command_move_subject
-  - nlu_fallback:
-      use_entities: []
   - wrong_command:
       use_entities: []
 
@@ -15,6 +13,7 @@ entities:
         - direction
         - addition
   - distance
+  - temperature
   - relation
 
 slots:
@@ -30,34 +29,30 @@ slots:
       - type: from_entity
         entity: subject
         role: object
-#        conditions:
-#          - active_loop: subject_form
-#            requested_slot: subject
       - type: from_entity
         entity: subject
         role: direction
-#        conditions:
-#          - active_loop: subject_form
-#            requested_slot: subject
 
-#  addition:
-#    type: list
-#    mappings:
-#      - type: from_entity
-#        entity: subject
-#        role: addition
-#
-#  relation:
-#    type: list
-#    mappings:
-#      - type: from_entity
-#        entity: relation
-#
-#  distance:
-#    type: text
-#    mappings:
-#      - type: from_entity
-#        entity: distance
+  addition:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: subject
+        role: addition
+
+  relation:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: relation
+
+  distance:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: distance
+      - type: from_entity
+        entity: temperature
 
   feature:
     type: text
@@ -77,7 +72,7 @@ forms:
 
 responses:
   utter_send_command:
-    - text: "Команда отправлена: {action} {subject} {feature}"
+    - text: "Команда отправлена: {action} {subject} {relation} {addition} {distance}"
   utter_wrong_command:
     - text: "Исправляем команду"
   utter_rephrase:
@@ -85,11 +80,10 @@ responses:
 
   utter_ask_subject:
     - text: "Назовите объект или направление"
+  utter_ask_feature:
+    - text: "Уточните команду"
 
 actions:
-  - action_ask_feature
-  - validate_feature_form
-#  - action_ask_subject
   - action_reset_slots
 
 
