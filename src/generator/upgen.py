@@ -24,19 +24,27 @@ class SampleGenerator(Generator):
 
         keys = self.key_pattern.findall(sample)
 
+        addition = 0
         for key in keys:
             random_word = random.choice(self.dictionary[key])
 
             sample_to_inflect = sample_to_inflect.replace(key, random_word)
 
             entity, role = key.split(':')
+
             match entity:
                 case "action":
                     random_word = f'[{random_word}]' + str(json.dumps({"entity": entity, "role": role}))
                 case "direction":
                     random_word = f'[{random_word}]' + str(json.dumps({"entity": "subject", "role": "direction"}))
                 case "object":
-                    random_word = f'[{random_word}]' + str(json.dumps({"entity": "subject", "role": "object"}))
+                    if addition == 0 and random_word != '_':
+                        random_word = f'[{random_word}]' + str(json.dumps({"entity": "subject", "role": "object"}))
+                    else:
+                        random_word = ''
+                    if addition > 0:
+                        random_word = f'[{random_word}]' + str(json.dumps({"entity": "subject", "role": "addition"}))
+                    addition += 1
                 case "relation":
                     random_word = f'[{random_word}]' + str(json.dumps({"entity": entity}))
 
@@ -147,7 +155,7 @@ class SampleGenerator(Generator):
             sample = f"|aux:to|{obj1}|{rel1}|{obj2}|"
             samples.append(sample)
             # около дерева
-            sample = f"|{rel1}|{obj2}|"
+            sample = f"|object:void|{rel1}|{obj2}|"
             samples.append(sample)
 
         commands = self.run(samples, amount=amount)

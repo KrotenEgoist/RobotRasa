@@ -3,402 +3,401 @@ version: "3.1"
 nlu:
 - intent: action+directions
   examples: |
-    - [пойди]{"entity": "action", "role": "move"} [в сторону юга]{"entity": "subject", "role": "direction"} 12 м
-    - [перемещайся]{"entity": "action", "role": "move"} на 39 М [на западный край]{"entity": "subject", "role": "direction"}
-    - [сдвигайся]{"entity": "action", "role": "move"} 17 м [в восточную сторону]{"entity": "subject", "role": "direction"}
-    - [летите]{"entity": "action", "role": "move"} на 3 м [прямо]{"entity": "subject", "role": "direction"}
-    - [направляйся]{"entity": "action", "role": "move"} [в восточную сторону]{"entity": "subject", "role": "direction"} на 39 м
-    - [переходи]{"entity": "action", "role": "move"} [на восточный край]{"entity": "subject", "role": "direction"} 37 м
-    - [гоните]{"entity": "action", "role": "move"} на 32 м [на попятную]{"entity": "subject", "role": "direction"}
-    - [проходи]{"entity": "action", "role": "move"} 39 М [в западную сторону]{"entity": "subject", "role": "direction"}
-    - [катитесь]{"entity": "action", "role": "move"} на 38 М [в левую сторону]{"entity": "subject", "role": "direction"}
-    - [при]{"entity": "action", "role": "move"} на 1 м [на юг]{"entity": "subject", "role": "direction"}
-    - [проезжайте]{"entity": "action", "role": "move"} [на попятную]{"entity": "subject", "role": "direction"}
-    - [сдавайте]{"entity": "action", "role": "move"} на 42 М [в сторону востока]{"entity": "subject", "role": "direction"}
-    - [маршируйте]{"entity": "action", "role": "move"} [взапядки]{"entity": "subject", "role": "direction"}
-    - [шествуй]{"entity": "action", "role": "move"} 13 м [прямо по курсу]{"entity": "subject", "role": "direction"}
-    - [мчитесь]{"entity": "action", "role": "move"} [на восточный край]{"entity": "subject", "role": "direction"}
-    - [дуйте]{"entity": "action", "role": "move"} 16 М [в северную сторону]{"entity": "subject", "role": "direction"}
-    - [выходи]{"entity": "action", "role": "move"} 28 м [на северный край]{"entity": "subject", "role": "direction"}
-    - [уходи]{"entity": "action", "role": "move"} [в северную сторону]{"entity": "subject", "role": "direction"} на 1 М
-    - [пойди]{"entity": "action", "role": "move"} [направо]{"entity": "subject", "role": "direction"} 30 М
-    - [вышагивайте]{"entity": "action", "role": "move"} [в северную сторону]{"entity": "subject", "role": "direction"} на 12 м
-    - [дерзай]{"entity": "action", "role": "move"} [обратно]{"entity": "subject", "role": "direction"} на 4 м
+    - [сдвиньтесь]{"entity": "action", "role": "move"} 48 М [назад]{"entity": "subject", "role": "direction"}
+    - [езжайте]{"entity": "action", "role": "move"} [обратно]{"entity": "subject", "role": "direction"} 4 М
+    - [съездите]{"entity": "action", "role": "move"} [влево]{"entity": "subject", "role": "direction"}
+    - [сдвиньтесь]{"entity": "action", "role": "move"} [на восточный край]{"entity": "subject", "role": "direction"} на 18 м
+    - [плыви]{"entity": "action", "role": "move"} 40 м [вправо]{"entity": "subject", "role": "direction"}
+    - [топай]{"entity": "action", "role": "move"} на 38 м [на восток]{"entity": "subject", "role": "direction"}
+    - [мчись]{"entity": "action", "role": "move"} 11 м [в северную сторону]{"entity": "subject", "role": "direction"}
+    - [беги]{"entity": "action", "role": "move"} 3 М [по правую руку]{"entity": "subject", "role": "direction"}
+    - [перемещайся]{"entity": "action", "role": "move"} на 40 М [на южный край]{"entity": "subject", "role": "direction"}
+    - [проходите]{"entity": "action", "role": "move"} [на запад]{"entity": "subject", "role": "direction"} 20 М
+    - [маршируй]{"entity": "action", "role": "move"} 48 м [обратно]{"entity": "subject", "role": "direction"}
+    - [топай]{"entity": "action", "role": "move"} на 8 М [по левую руку]{"entity": "subject", "role": "direction"}
+    - [скачите]{"entity": "action", "role": "move"} 48 М [на запад]{"entity": "subject", "role": "direction"}
+    - [гоните]{"entity": "action", "role": "move"} 3 м [в западную сторону]{"entity": "subject", "role": "direction"}
+    - [прохаживай]{"entity": "action", "role": "move"} 18 м [напролом]{"entity": "subject", "role": "direction"}
+    - [газуй]{"entity": "action", "role": "move"} 37 м [влево]{"entity": "subject", "role": "direction"}
+    - [съезди]{"entity": "action", "role": "move"} [в сторону юга]{"entity": "subject", "role": "direction"}
+    - [уезжай]{"entity": "action", "role": "move"} [на север]{"entity": "subject", "role": "direction"}
+    - [шкандыбай]{"entity": "action", "role": "move"} [напролом]{"entity": "subject", "role": "direction"} 18 м
+    - [шагайте]{"entity": "action", "role": "move"} [в северную сторону]{"entity": "subject", "role": "direction"} на 18 м
+    - [сдвинься]{"entity": "action", "role": "move"} 1 м [напролом]{"entity": "subject", "role": "direction"}
+    - [выступай]{"entity": "action", "role": "move"} 48 М [по левую руку]{"entity": "subject", "role": "direction"}
+    - [приходите]{"entity": "action", "role": "move"} 36 М [в сторону востока]{"entity": "subject", "role": "direction"}
+    - [приезжайте]{"entity": "action", "role": "move"} [напрямик]{"entity": "subject", "role": "direction"} 12 м
+    - [переместись]{"entity": "action", "role": "move"} на 19 м [в левую сторону]{"entity": "subject", "role": "direction"}
+    - [езжай]{"entity": "action", "role": "move"} на 38 м [обертасом]{"entity": "subject", "role": "direction"}
+    - [отправляйтесь]{"entity": "action", "role": "move"} 40 м [в правую сторону]{"entity": "subject", "role": "direction"}
+    - [вышагивайте]{"entity": "action", "role": "move"} [в сторону севера]{"entity": "subject", "role": "direction"} на 22 М
+    - [сходи]{"entity": "action", "role": "move"} [на север]{"entity": "subject", "role": "direction"} на 42 М
+    - [собирайтесь]{"entity": "action", "role": "move"} 22 м [в правую сторону]{"entity": "subject", "role": "direction"}
+    - [летите]{"entity": "action", "role": "move"} 27 м [прямо по курсу]{"entity": "subject", "role": "direction"}
+    - [скачите]{"entity": "action", "role": "move"} [в левую сторону]{"entity": "subject", "role": "direction"} 34 М
+    - [идите]{"entity": "action", "role": "move"} [влево]{"entity": "subject", "role": "direction"} 1 м
+    - [дерзайте]{"entity": "action", "role": "move"} на 27 М [в сторону севера]{"entity": "subject", "role": "direction"}
+    - [съездите]{"entity": "action", "role": "move"} на 16 м [в сторону востока]{"entity": "subject", "role": "direction"}
+    - [топай]{"entity": "action", "role": "move"} на 47 м [напролом]{"entity": "subject", "role": "direction"}
+    - [переступайте]{"entity": "action", "role": "move"} 2 М [на южный край]{"entity": "subject", "role": "direction"}
+    - [лети]{"entity": "action", "role": "move"} на 37 М [налево]{"entity": "subject", "role": "direction"}
+    - [шествуй]{"entity": "action", "role": "move"} [направо]{"entity": "subject", "role": "direction"}
+    - [сходите]{"entity": "action", "role": "move"} [влево]{"entity": "subject", "role": "direction"} на 47 М
+    - [гоните]{"entity": "action", "role": "move"} [напрямик]{"entity": "subject", "role": "direction"}
+    - [шлёпайте]{"entity": "action", "role": "move"} [вспять]{"entity": "subject", "role": "direction"} 5 М
+    - [сдвигайтесь]{"entity": "action", "role": "move"} на 42 М [взад]{"entity": "subject", "role": "direction"}
+    - [гони]{"entity": "action", "role": "move"} [в правую сторону]{"entity": "subject", "role": "direction"}
+    - [беги]{"entity": "action", "role": "move"} на 35 м [по левую руку]{"entity": "subject", "role": "direction"}
+    - [приезжайте]{"entity": "action", "role": "move"} [на северный край]{"entity": "subject", "role": "direction"}
+    - [направляйся]{"entity": "action", "role": "move"} [по правую руку]{"entity": "subject", "role": "direction"} на 25 М
+    - [сходи]{"entity": "action", "role": "move"} [на юг]{"entity": "subject", "role": "direction"} 22 м
+    - [отправляйся]{"entity": "action", "role": "move"} 49 м [назад]{"entity": "subject", "role": "direction"}
+    - [выступайте]{"entity": "action", "role": "move"} [налево]{"entity": "subject", "role": "direction"} на 40 м
+    - [переместись]{"entity": "action", "role": "move"} на 27 М [налево]{"entity": "subject", "role": "direction"}
+    - [переходи]{"entity": "action", "role": "move"} [на южный край]{"entity": "subject", "role": "direction"}
+    - [шкандыбай]{"entity": "action", "role": "move"} [направо]{"entity": "subject", "role": "direction"} 43 м
+    - [гуляй]{"entity": "action", "role": "move"} [налево]{"entity": "subject", "role": "direction"}
+    - [уходи]{"entity": "action", "role": "move"} 15 м [на восток]{"entity": "subject", "role": "direction"}
+    - [уходите]{"entity": "action", "role": "move"} [обертасом]{"entity": "subject", "role": "direction"}
+    - [иди]{"entity": "action", "role": "move"} [на восток]{"entity": "subject", "role": "direction"}
+    - [гуляй]{"entity": "action", "role": "move"} [на юг]{"entity": "subject", "role": "direction"} на 49 м
+    - [шкандыбай]{"entity": "action", "role": "move"} [на восточный край]{"entity": "subject", "role": "direction"} на 36 М
+    - [катись]{"entity": "action", "role": "move"} [по правую руку]{"entity": "subject", "role": "direction"} 14 М
+    - [пробирайся]{"entity": "action", "role": "move"} [на север]{"entity": "subject", "role": "direction"}
+    - [газуйте]{"entity": "action", "role": "move"} на 2 М [прямо]{"entity": "subject", "role": "direction"}
+    - [несись]{"entity": "action", "role": "move"} 50 М [в левую сторону]{"entity": "subject", "role": "direction"}
+    - [иди]{"entity": "action", "role": "move"} 15 м [на попятную]{"entity": "subject", "role": "direction"}
+    - [иди]{"entity": "action", "role": "move"} [в сторону запада]{"entity": "subject", "role": "direction"} на 23 м
+    - [выступай]{"entity": "action", "role": "move"} [на южный край]{"entity": "subject", "role": "direction"} 7 м
+    - [сдвигайся]{"entity": "action", "role": "move"} [прямо]{"entity": "subject", "role": "direction"} 17 м
+    - [переступайте]{"entity": "action", "role": "move"} [в западную сторону]{"entity": "subject", "role": "direction"} 28 М
+    - [маршируйте]{"entity": "action", "role": "move"} [по правую руку]{"entity": "subject", "role": "direction"}
+    - [шествуй]{"entity": "action", "role": "move"} [на восточный край]{"entity": "subject", "role": "direction"} на 41 М
+    - [сдвигайтесь]{"entity": "action", "role": "move"} [в сторону севера]{"entity": "subject", "role": "direction"} 45 м
+    - [гони]{"entity": "action", "role": "move"} [направо]{"entity": "subject", "role": "direction"} на 35 м
+    - [дуй]{"entity": "action", "role": "move"} на 27 м [напролом]{"entity": "subject", "role": "direction"}
+    - [проезжай]{"entity": "action", "role": "move"} [по левую руку]{"entity": "subject", "role": "direction"}
+    - [захаживайте]{"entity": "action", "role": "move"} [на север]{"entity": "subject", "role": "direction"} 17 М
+    - [двигайся]{"entity": "action", "role": "move"} 49 М [на северный край]{"entity": "subject", "role": "direction"}
+    - [катитесь]{"entity": "action", "role": "move"} [напрямик]{"entity": "subject", "role": "direction"} на 2 М
+    - [уезжай]{"entity": "action", "role": "move"} на 44 м [вправо]{"entity": "subject", "role": "direction"}
+    - [перемещайтесь]{"entity": "action", "role": "move"} 6 М [в сторону севера]{"entity": "subject", "role": "direction"}
+    - [сдвигайся]{"entity": "action", "role": "move"} [по правую руку]{"entity": "subject", "role": "direction"} 37 М
+    - [проходите]{"entity": "action", "role": "move"} 30 м [в восточную сторону]{"entity": "subject", "role": "direction"}
+    - [двигайтесь]{"entity": "action", "role": "move"} [напролом]{"entity": "subject", "role": "direction"} на 10 М
+    - [гуляйте]{"entity": "action", "role": "move"} на 35 М [в южную сторону]{"entity": "subject", "role": "direction"}
+    - [сдвинься]{"entity": "action", "role": "move"} [взапядки]{"entity": "subject", "role": "direction"}
+    - [шкандыбай]{"entity": "action", "role": "move"} 38 М [в северную сторону]{"entity": "subject", "role": "direction"}
+    - [мчись]{"entity": "action", "role": "move"} [влево]{"entity": "subject", "role": "direction"} 41 М
+    - [переместитесь]{"entity": "action", "role": "move"} [прямо по курсу]{"entity": "subject", "role": "direction"} на 43 М
+    - [гоните]{"entity": "action", "role": "move"} 2 м [вправо]{"entity": "subject", "role": "direction"}
+    - [пробирайся]{"entity": "action", "role": "move"} [на восток]{"entity": "subject", "role": "direction"} 37 м
+    - [сдвигайтесь]{"entity": "action", "role": "move"} на 25 м [по правую руку]{"entity": "subject", "role": "direction"}
+    - [выходи]{"entity": "action", "role": "move"} [в северную сторону]{"entity": "subject", "role": "direction"} 36 м
+    - [приходите]{"entity": "action", "role": "move"} [в левую сторону]{"entity": "subject", "role": "direction"} 21 м
+    - [приезжайте]{"entity": "action", "role": "move"} на 36 М [в восточную сторону]{"entity": "subject", "role": "direction"}
+    - [двигайся]{"entity": "action", "role": "move"} на 24 М [в сторону севера]{"entity": "subject", "role": "direction"}
+    - [пойди]{"entity": "action", "role": "move"} [в левую сторону]{"entity": "subject", "role": "direction"} 13 м
+    - [летите]{"entity": "action", "role": "move"} [задом]{"entity": "subject", "role": "direction"} на 33 М
+    - [съездите]{"entity": "action", "role": "move"} [в южную сторону]{"entity": "subject", "role": "direction"} на 42 м
+    - [сдавайте]{"entity": "action", "role": "move"} [вправо]{"entity": "subject", "role": "direction"} на 16 М
+    - [лети]{"entity": "action", "role": "move"} [взапядки]{"entity": "subject", "role": "direction"} на 2 м
+    - [идите]{"entity": "action", "role": "move"} на 35 М [в южную сторону]{"entity": "subject", "role": "direction"}
+    - [отправляйтесь]{"entity": "action", "role": "move"} [в левую сторону]{"entity": "subject", "role": "direction"}
+    - [сдвигайся]{"entity": "action", "role": "move"} [вправо]{"entity": "subject", "role": "direction"}
+    - [пробирайся]{"entity": "action", "role": "move"} на 22 М [в правую сторону]{"entity": "subject", "role": "direction"}
+    - [плывите]{"entity": "action", "role": "move"} [на север]{"entity": "subject", "role": "direction"}
+    - [дерзайте]{"entity": "action", "role": "move"} [на восточный край]{"entity": "subject", "role": "direction"}
+    - [вышагивайте]{"entity": "action", "role": "move"} [возвратно]{"entity": "subject", "role": "direction"} на 25 м
+    - [собирайся]{"entity": "action", "role": "move"} [на северный край]{"entity": "subject", "role": "direction"} 1 М
+    - [шествуй]{"entity": "action", "role": "move"} на 37 М [направо]{"entity": "subject", "role": "direction"}
+    - [перемещайся]{"entity": "action", "role": "move"} [на восток]{"entity": "subject", "role": "direction"} на 42 М
+    - [переходи]{"entity": "action", "role": "move"} 32 М [по левую руку]{"entity": "subject", "role": "direction"}
+    - [дуйте]{"entity": "action", "role": "move"} на 43 М [на восток]{"entity": "subject", "role": "direction"}
+    - [выходите]{"entity": "action", "role": "move"} 14 М [по правую руку]{"entity": "subject", "role": "direction"}
+    - [шлёпайте]{"entity": "action", "role": "move"} на 18 м [на запад]{"entity": "subject", "role": "direction"}
+    - [плыви]{"entity": "action", "role": "move"} на 40 м [на восток]{"entity": "subject", "role": "direction"}
+    - [езжайте]{"entity": "action", "role": "move"} [в южную сторону]{"entity": "subject", "role": "direction"}
+    - [мчись]{"entity": "action", "role": "move"} [на западный край]{"entity": "subject", "role": "direction"}
+    - [гоните]{"entity": "action", "role": "move"} на 21 М [вправо]{"entity": "subject", "role": "direction"}
+    - [выходи]{"entity": "action", "role": "move"} [направо]{"entity": "subject", "role": "direction"}
+    - [сдавайте]{"entity": "action", "role": "move"} [в сторону запада]{"entity": "subject", "role": "direction"}
+    - [прите]{"entity": "action", "role": "move"} на 22 м [на восточный край]{"entity": "subject", "role": "direction"}
+    - [пойдите]{"entity": "action", "role": "move"} на 10 М [вперед]{"entity": "subject", "role": "direction"}
+    - [дуй]{"entity": "action", "role": "move"} [в левую сторону]{"entity": "subject", "role": "direction"} на 18 М
+    - [выступайте]{"entity": "action", "role": "move"} [вправо]{"entity": "subject", "role": "direction"} 35 м
+    - [прохаживай]{"entity": "action", "role": "move"} на 20 м [на запад]{"entity": "subject", "role": "direction"}
+    - [пробирайся]{"entity": "action", "role": "move"} [в южную сторону]{"entity": "subject", "role": "direction"}
+    - [переступайте]{"entity": "action", "role": "move"} [на север]{"entity": "subject", "role": "direction"} 23 М
+    - [проезжайте]{"entity": "action", "role": "move"} [на южный край]{"entity": "subject", "role": "direction"}
+    - [плывите]{"entity": "action", "role": "move"} [на попятную]{"entity": "subject", "role": "direction"}
+    - [сдвигайтесь]{"entity": "action", "role": "move"} [на южный край]{"entity": "subject", "role": "direction"} 26 М
+    - [шествуй]{"entity": "action", "role": "move"} [в южную сторону]{"entity": "subject", "role": "direction"} на 37 м
+    - [проезжайте]{"entity": "action", "role": "move"} [на восток]{"entity": "subject", "role": "direction"} на 48 м
+    - [прохаживайте]{"entity": "action", "role": "move"} [на западный край]{"entity": "subject", "role": "direction"} на 16 м
+    - [вышагивайте]{"entity": "action", "role": "move"} на 49 М [налево]{"entity": "subject", "role": "direction"}
+    - [пробирайтесь]{"entity": "action", "role": "move"} [на юг]{"entity": "subject", "role": "direction"} на 39 М
+    - [дерзай]{"entity": "action", "role": "move"} на 27 м [задом]{"entity": "subject", "role": "direction"}
+    - [гоните]{"entity": "action", "role": "move"} на 15 м [на южный край]{"entity": "subject", "role": "direction"}
+    - [топайте]{"entity": "action", "role": "move"} [на восток]{"entity": "subject", "role": "direction"}
+    - [дуйте]{"entity": "action", "role": "move"} на 25 м [взад]{"entity": "subject", "role": "direction"}
+    - [двигайтесь]{"entity": "action", "role": "move"} [обратно]{"entity": "subject", "role": "direction"}
+    - [маршируйте]{"entity": "action", "role": "move"} [в восточную сторону]{"entity": "subject", "role": "direction"} 50 М
+    - [идите]{"entity": "action", "role": "move"} на 27 М [на север]{"entity": "subject", "role": "direction"}
+    - [подходи]{"entity": "action", "role": "move"} [направо]{"entity": "subject", "role": "direction"} 22 М
+    - [беги]{"entity": "action", "role": "move"} 1 М [на северный край]{"entity": "subject", "role": "direction"}
+    - [проезжай]{"entity": "action", "role": "move"} [налево]{"entity": "subject", "role": "direction"}
+    - [переместись]{"entity": "action", "role": "move"} [возвратно]{"entity": "subject", "role": "direction"} 38 М
+    - [сдвигайся]{"entity": "action", "role": "move"} [по левую руку]{"entity": "subject", "role": "direction"} 42 М
+    - [вышагивайте]{"entity": "action", "role": "move"} на 15 м [в западную сторону]{"entity": "subject", "role": "direction"}
+    - [съезди]{"entity": "action", "role": "move"} [напролом]{"entity": "subject", "role": "direction"} на 17 м
+    - [сходи]{"entity": "action", "role": "move"} 35 м [в сторону запада]{"entity": "subject", "role": "direction"}
+    - [сдвигайся]{"entity": "action", "role": "move"} [на запад]{"entity": "subject", "role": "direction"}
+    - [гуляйте]{"entity": "action", "role": "move"} [на попятную]{"entity": "subject", "role": "direction"} на 28 м
+    - [езжайте]{"entity": "action", "role": "move"} [на западный край]{"entity": "subject", "role": "direction"} 11 М
+    - [гуляй]{"entity": "action", "role": "move"} на 21 М [на север]{"entity": "subject", "role": "direction"}
+    - [вышагивайте]{"entity": "action", "role": "move"} [в северную сторону]{"entity": "subject", "role": "direction"} 2 М
+    - [неситесь]{"entity": "action", "role": "move"} [на восточный край]{"entity": "subject", "role": "direction"} 25 м
+    - [неситесь]{"entity": "action", "role": "move"} [обратно]{"entity": "subject", "role": "direction"} на 15 м
+    - [подходите]{"entity": "action", "role": "move"} [в западную сторону]{"entity": "subject", "role": "direction"} на 27 м
+    - [езжайте]{"entity": "action", "role": "move"} [обратно]{"entity": "subject", "role": "direction"}
+    - [выходи]{"entity": "action", "role": "move"} на 36 М [прямо]{"entity": "subject", "role": "direction"}
+    - [гони]{"entity": "action", "role": "move"} [на север]{"entity": "subject", "role": "direction"} на 40 м
+    - [катись]{"entity": "action", "role": "move"} [налево]{"entity": "subject", "role": "direction"} 21 М
+    - [шкандыбай]{"entity": "action", "role": "move"} [обратно]{"entity": "subject", "role": "direction"} 26 М
+    - [пробирайся]{"entity": "action", "role": "move"} [в левую сторону]{"entity": "subject", "role": "direction"} на 10 м
+    - [переступай]{"entity": "action", "role": "move"} [в сторону востока]{"entity": "subject", "role": "direction"}
+    - [несись]{"entity": "action", "role": "move"} [в северную сторону]{"entity": "subject", "role": "direction"} на 25 М
+    - [сдвиньтесь]{"entity": "action", "role": "move"} на 11 м [на южный край]{"entity": "subject", "role": "direction"}
+    - [дуйте]{"entity": "action", "role": "move"} на 42 М [в обратном направлении]{"entity": "subject", "role": "direction"}
+    - [шествуйте]{"entity": "action", "role": "move"} на 46 М [в южную сторону]{"entity": "subject", "role": "direction"}
+    - [шествуй]{"entity": "action", "role": "move"} [напролом]{"entity": "subject", "role": "direction"}
+    - [собирайтесь]{"entity": "action", "role": "move"} 2 м [на восточный край]{"entity": "subject", "role": "direction"}
+    - [шествуй]{"entity": "action", "role": "move"} [на западный край]{"entity": "subject", "role": "direction"} на 35 М
+    - [уходите]{"entity": "action", "role": "move"} [назад]{"entity": "subject", "role": "direction"} на 35 м
+    - [сдавай]{"entity": "action", "role": "move"} [в западную сторону]{"entity": "subject", "role": "direction"} 7 М
+    - [приезжайте]{"entity": "action", "role": "move"} 18 М [в сторону севера]{"entity": "subject", "role": "direction"}
     - [уходите]{"entity": "action", "role": "move"} [прямо]{"entity": "subject", "role": "direction"}
-    - [уезжай]{"entity": "action", "role": "move"} [по левую руку]{"entity": "subject", "role": "direction"}
-    - [дерзайте]{"entity": "action", "role": "move"} на 44 М [на восток]{"entity": "subject", "role": "direction"}
-    - [маршируй]{"entity": "action", "role": "move"} [на северный край]{"entity": "subject", "role": "direction"}
-    - [уезжайте]{"entity": "action", "role": "move"} [задом]{"entity": "subject", "role": "direction"} 44 М
-    - [газуй]{"entity": "action", "role": "move"} 33 М [в восточную сторону]{"entity": "subject", "role": "direction"}
-    - [проезжай]{"entity": "action", "role": "move"} [по левую руку]{"entity": "subject", "role": "direction"} на 44 м
-    - [скачите]{"entity": "action", "role": "move"} [прямо по курсу]{"entity": "subject", "role": "direction"} 42 М
-    - [катись]{"entity": "action", "role": "move"} [прямо по курсу]{"entity": "subject", "role": "direction"}
-    - [езжай]{"entity": "action", "role": "move"} 32 М [на восток]{"entity": "subject", "role": "direction"}
-    - [двигайтесь]{"entity": "action", "role": "move"} [налево]{"entity": "subject", "role": "direction"}
-    - [сдвиньтесь]{"entity": "action", "role": "move"} [в южную сторону]{"entity": "subject", "role": "direction"} на 29 м
-    - [шествуйте]{"entity": "action", "role": "move"} [по левую руку]{"entity": "subject", "role": "direction"}
-    - [газуйте]{"entity": "action", "role": "move"} [на юг]{"entity": "subject", "role": "direction"}
-    - [иди]{"entity": "action", "role": "move"} [на запад]{"entity": "subject", "role": "direction"} 33 М
-    - [выходите]{"entity": "action", "role": "move"} [прямо по курсу]{"entity": "subject", "role": "direction"}
-    - [газуй]{"entity": "action", "role": "move"} 47 М [напрямик]{"entity": "subject", "role": "direction"}
-    - [захаживай]{"entity": "action", "role": "move"} [на восточный край]{"entity": "subject", "role": "direction"} 35 м
-    - [уходи]{"entity": "action", "role": "move"} [на восточный край]{"entity": "subject", "role": "direction"} 42 м
-    - [выступай]{"entity": "action", "role": "move"} [в западную сторону]{"entity": "subject", "role": "direction"}
-    - [мчитесь]{"entity": "action", "role": "move"} 50 м [вспять]{"entity": "subject", "role": "direction"}
-    - [гоните]{"entity": "action", "role": "move"} [в северную сторону]{"entity": "subject", "role": "direction"}
-    - [подходи]{"entity": "action", "role": "move"} [на юг]{"entity": "subject", "role": "direction"}
-    - [выступай]{"entity": "action", "role": "move"} [в восточную сторону]{"entity": "subject", "role": "direction"} 24 М
-    - [лети]{"entity": "action", "role": "move"} 20 м [на юг]{"entity": "subject", "role": "direction"}
-    - [прохаживай]{"entity": "action", "role": "move"} 17 м [на север]{"entity": "subject", "role": "direction"}
-    - [двигайтесь]{"entity": "action", "role": "move"} [на восток]{"entity": "subject", "role": "direction"} 2 м
-    - [плывите]{"entity": "action", "role": "move"} [возвратно]{"entity": "subject", "role": "direction"} 8 М
-    - [шагайте]{"entity": "action", "role": "move"} [в западную сторону]{"entity": "subject", "role": "direction"} 50 М
-    - [сдавай]{"entity": "action", "role": "move"} на 44 м [по левую руку]{"entity": "subject", "role": "direction"}
-    - [при]{"entity": "action", "role": "move"} [обратно]{"entity": "subject", "role": "direction"} на 8 М
-    - [приходите]{"entity": "action", "role": "move"} [вперед]{"entity": "subject", "role": "direction"}
-    - [съезди]{"entity": "action", "role": "move"} [в восточную сторону]{"entity": "subject", "role": "direction"} на 32 М
-    - [уезжай]{"entity": "action", "role": "move"} 19 М [обратно]{"entity": "subject", "role": "direction"}
-    - [уходите]{"entity": "action", "role": "move"} 20 м [на северный край]{"entity": "subject", "role": "direction"}
-    - [езжай]{"entity": "action", "role": "move"} на 41 М [на восточный край]{"entity": "subject", "role": "direction"}
-    - [двигайтесь]{"entity": "action", "role": "move"} [на запад]{"entity": "subject", "role": "direction"} на 34 М
-    - [сдвинься]{"entity": "action", "role": "move"} на 49 м [вправо]{"entity": "subject", "role": "direction"}
-    - [пойдите]{"entity": "action", "role": "move"} [в южную сторону]{"entity": "subject", "role": "direction"} на 21 м
-    - [пробирайся]{"entity": "action", "role": "move"} на 17 м [вправо]{"entity": "subject", "role": "direction"}
-    - [гоните]{"entity": "action", "role": "move"} [в южную сторону]{"entity": "subject", "role": "direction"}
-    - [выходите]{"entity": "action", "role": "move"} 30 М [в сторону севера]{"entity": "subject", "role": "direction"}
-    - [переходите]{"entity": "action", "role": "move"} 1 М [по правую руку]{"entity": "subject", "role": "direction"}
-    - [сдвигайтесь]{"entity": "action", "role": "move"} [по левую руку]{"entity": "subject", "role": "direction"}
-    - [проезжайте]{"entity": "action", "role": "move"} [вспять]{"entity": "subject", "role": "direction"} на 33 м
-    - [приезжайте]{"entity": "action", "role": "move"} [вперед]{"entity": "subject", "role": "direction"} на 37 м
-    - [гони]{"entity": "action", "role": "move"} [обертасом]{"entity": "subject", "role": "direction"}
-    - [иди]{"entity": "action", "role": "move"} [в сторону севера]{"entity": "subject", "role": "direction"} 32 м
-    - [сдвиньтесь]{"entity": "action", "role": "move"} [в обратном направлении]{"entity": "subject", "role": "direction"} на 24 м
-    - [отправляйтесь]{"entity": "action", "role": "move"} [на попятную]{"entity": "subject", "role": "direction"}
-    - [шествуйте]{"entity": "action", "role": "move"} на 41 М [на запад]{"entity": "subject", "role": "direction"}
-    - [выступайте]{"entity": "action", "role": "move"} [в северную сторону]{"entity": "subject", "role": "direction"} 50 М
-    - [сдавай]{"entity": "action", "role": "move"} на 24 М [вперед]{"entity": "subject", "role": "direction"}
-    - [переходите]{"entity": "action", "role": "move"} 49 М [прямо]{"entity": "subject", "role": "direction"}
-    - [уезжайте]{"entity": "action", "role": "move"} [в сторону юга]{"entity": "subject", "role": "direction"} 6 М
-    - [прите]{"entity": "action", "role": "move"} 21 М [вправо]{"entity": "subject", "role": "direction"}
-    - [езжай]{"entity": "action", "role": "move"} [по правую руку]{"entity": "subject", "role": "direction"}
-    - [сдвинься]{"entity": "action", "role": "move"} на 2 м [в левую сторону]{"entity": "subject", "role": "direction"}
-    - [гуляй]{"entity": "action", "role": "move"} [в южную сторону]{"entity": "subject", "role": "direction"} на 11 М
-    - [подходите]{"entity": "action", "role": "move"} на 21 М [взад]{"entity": "subject", "role": "direction"}
-    - [катитесь]{"entity": "action", "role": "move"} [прямо]{"entity": "subject", "role": "direction"} 18 м
-    - [захаживай]{"entity": "action", "role": "move"} [вправо]{"entity": "subject", "role": "direction"} на 42 М
-    - [плывите]{"entity": "action", "role": "move"} [в правую сторону]{"entity": "subject", "role": "direction"} на 25 М
-    - [шкандыбайте]{"entity": "action", "role": "move"} 1 м [на запад]{"entity": "subject", "role": "direction"}
-    - [лети]{"entity": "action", "role": "move"} [на юг]{"entity": "subject", "role": "direction"}
-    - [прите]{"entity": "action", "role": "move"} [на юг]{"entity": "subject", "role": "direction"} на 43 М
-    - [уходи]{"entity": "action", "role": "move"} [прямо по курсу]{"entity": "subject", "role": "direction"} на 11 М
-    - [мчитесь]{"entity": "action", "role": "move"} 40 м [в сторону востока]{"entity": "subject", "role": "direction"}
-    - [шагай]{"entity": "action", "role": "move"} 35 М [в сторону запада]{"entity": "subject", "role": "direction"}
-    - [пойдите]{"entity": "action", "role": "move"} на 16 м [в сторону запада]{"entity": "subject", "role": "direction"}
-    - [газуй]{"entity": "action", "role": "move"} 45 М [в сторону юга]{"entity": "subject", "role": "direction"}
-    - [съезди]{"entity": "action", "role": "move"} [взад]{"entity": "subject", "role": "direction"} 1 м
-    - [плывите]{"entity": "action", "role": "move"} [в восточную сторону]{"entity": "subject", "role": "direction"} на 11 М
-    - [собирайся]{"entity": "action", "role": "move"} [в северную сторону]{"entity": "subject", "role": "direction"} 36 м
-    - [пойди]{"entity": "action", "role": "move"} [на запад]{"entity": "subject", "role": "direction"} 31 М
-    - [приезжай]{"entity": "action", "role": "move"} 49 м [по левую руку]{"entity": "subject", "role": "direction"}
-    - [двигайся]{"entity": "action", "role": "move"} на 38 М [вперед]{"entity": "subject", "role": "direction"}
-    - [при]{"entity": "action", "role": "move"} [на восточный край]{"entity": "subject", "role": "direction"}
-    - [сходите]{"entity": "action", "role": "move"} [в восточную сторону]{"entity": "subject", "role": "direction"}
-    - [проходи]{"entity": "action", "role": "move"} [на попятную]{"entity": "subject", "role": "direction"} 28 м
-    - [подходите]{"entity": "action", "role": "move"} [в сторону востока]{"entity": "subject", "role": "direction"}
-    - [уходи]{"entity": "action", "role": "move"} [на северный край]{"entity": "subject", "role": "direction"}
-    - [собирайся]{"entity": "action", "role": "move"} [вперед]{"entity": "subject", "role": "direction"} на 17 М
-    - [переступай]{"entity": "action", "role": "move"} [по левую руку]{"entity": "subject", "role": "direction"} 31 м
-    - [подходите]{"entity": "action", "role": "move"} [на южный край]{"entity": "subject", "role": "direction"} на 41 м
-    - [приезжайте]{"entity": "action", "role": "move"} на 32 м [на южный край]{"entity": "subject", "role": "direction"}
-    - [сдавайте]{"entity": "action", "role": "move"} [обертасом]{"entity": "subject", "role": "direction"} 14 М
-    - [дуйте]{"entity": "action", "role": "move"} [в восточную сторону]{"entity": "subject", "role": "direction"} на 39 м
-    - [езжайте]{"entity": "action", "role": "move"} [в сторону востока]{"entity": "subject", "role": "direction"} на 44 М
-    - [сдвиньтесь]{"entity": "action", "role": "move"} [по правую руку]{"entity": "subject", "role": "direction"} на 16 М
-    - [перемещайтесь]{"entity": "action", "role": "move"} на 26 м [вправо]{"entity": "subject", "role": "direction"}
-    - [идите]{"entity": "action", "role": "move"} 41 м [в восточную сторону]{"entity": "subject", "role": "direction"}
-    - [гони]{"entity": "action", "role": "move"} 45 М [на западный край]{"entity": "subject", "role": "direction"}
-    - [съезди]{"entity": "action", "role": "move"} на 7 м [на западный край]{"entity": "subject", "role": "direction"}
-    - [приезжай]{"entity": "action", "role": "move"} на 10 М [на южный край]{"entity": "subject", "role": "direction"}
-    - [сдавай]{"entity": "action", "role": "move"} на 21 м [на север]{"entity": "subject", "role": "direction"}
-    - [шлёпайте]{"entity": "action", "role": "move"} 36 М [на южный край]{"entity": "subject", "role": "direction"}
-    - [захаживайте]{"entity": "action", "role": "move"} [в западную сторону]{"entity": "subject", "role": "direction"} на 49 М
-    - [сдвинься]{"entity": "action", "role": "move"} [в обратном направлении]{"entity": "subject", "role": "direction"}
-    - [вышагивай]{"entity": "action", "role": "move"} на 7 м [в западную сторону]{"entity": "subject", "role": "direction"}
-    - [пойди]{"entity": "action", "role": "move"} на 25 М [взад]{"entity": "subject", "role": "direction"}
-    - [выступайте]{"entity": "action", "role": "move"} [в южную сторону]{"entity": "subject", "role": "direction"} 37 м
-    - [подходите]{"entity": "action", "role": "move"} [вправо]{"entity": "subject", "role": "direction"}
-    - [съезди]{"entity": "action", "role": "move"} на 37 М [на запад]{"entity": "subject", "role": "direction"}
-    - [скачите]{"entity": "action", "role": "move"} на 28 М [на юг]{"entity": "subject", "role": "direction"}
-    - [выходите]{"entity": "action", "role": "move"} на 29 м [в сторону юга]{"entity": "subject", "role": "direction"}
-    - [перемещайся]{"entity": "action", "role": "move"} 30 м [в левую сторону]{"entity": "subject", "role": "direction"}
-    - [подходи]{"entity": "action", "role": "move"} на 21 М [напрямик]{"entity": "subject", "role": "direction"}
-    - [шкандыбайте]{"entity": "action", "role": "move"} на 40 м [в обратном направлении]{"entity": "subject", "role": "direction"}
-    - [шлёпай]{"entity": "action", "role": "move"} на 8 М [на юг]{"entity": "subject", "role": "direction"}
-    - [переместитесь]{"entity": "action", "role": "move"} [на восток]{"entity": "subject", "role": "direction"}
-    - [прохаживай]{"entity": "action", "role": "move"} [в сторону севера]{"entity": "subject", "role": "direction"}
-    - [пробирайся]{"entity": "action", "role": "move"} [на запад]{"entity": "subject", "role": "direction"} 7 м
-    - [приходи]{"entity": "action", "role": "move"} [обратно]{"entity": "subject", "role": "direction"} 29 м
-    - [проезжай]{"entity": "action", "role": "move"} [направо]{"entity": "subject", "role": "direction"} 45 м
-    - [иди]{"entity": "action", "role": "move"} на 25 М [напрямик]{"entity": "subject", "role": "direction"}
-    - [езжайте]{"entity": "action", "role": "move"} 31 М [на западный край]{"entity": "subject", "role": "direction"}
-    - [двигайтесь]{"entity": "action", "role": "move"} [в сторону запада]{"entity": "subject", "role": "direction"} 39 м
-    - [проходите]{"entity": "action", "role": "move"} [вправо]{"entity": "subject", "role": "direction"}
-    - [маршируй]{"entity": "action", "role": "move"} [влево]{"entity": "subject", "role": "direction"} на 38 М
-    - [пробирайся]{"entity": "action", "role": "move"} [в левую сторону]{"entity": "subject", "role": "direction"} 28 м
-    - [вышагивайте]{"entity": "action", "role": "move"} [на западный край]{"entity": "subject", "role": "direction"}
-    - [проезжайте]{"entity": "action", "role": "move"} [налево]{"entity": "subject", "role": "direction"} 44 м
-    - [выходи]{"entity": "action", "role": "move"} [на север]{"entity": "subject", "role": "direction"}
-    - [проезжайте]{"entity": "action", "role": "move"} [в сторону запада]{"entity": "subject", "role": "direction"} на 36 м
-    - [несись]{"entity": "action", "role": "move"} [в левую сторону]{"entity": "subject", "role": "direction"} 15 М
-    - [гуляй]{"entity": "action", "role": "move"} [на север]{"entity": "subject", "role": "direction"}
-    - [проходите]{"entity": "action", "role": "move"} [на запад]{"entity": "subject", "role": "direction"}
-    - [сдавай]{"entity": "action", "role": "move"} [влево]{"entity": "subject", "role": "direction"}
-    - [переместитесь]{"entity": "action", "role": "move"} [на юг]{"entity": "subject", "role": "direction"}
-    - [газуй]{"entity": "action", "role": "move"} на 30 м [в сторону юга]{"entity": "subject", "role": "direction"}
-    - [мчитесь]{"entity": "action", "role": "move"} на 13 М [по левую руку]{"entity": "subject", "role": "direction"}
-    - [топай]{"entity": "action", "role": "move"} [в сторону севера]{"entity": "subject", "role": "direction"} на 33 м
-    - [катись]{"entity": "action", "role": "move"} [в сторону юга]{"entity": "subject", "role": "direction"} на 30 м
-    - [скачите]{"entity": "action", "role": "move"} на 24 м [налево]{"entity": "subject", "role": "direction"}
-    - [проезжай]{"entity": "action", "role": "move"} 6 м [направо]{"entity": "subject", "role": "direction"}
-    - [уходи]{"entity": "action", "role": "move"} [на западный край]{"entity": "subject", "role": "direction"} на 48 М
-    - [переместитесь]{"entity": "action", "role": "move"} на 30 м [в правую сторону]{"entity": "subject", "role": "direction"}
-    - [сдавайте]{"entity": "action", "role": "move"} [взапядки]{"entity": "subject", "role": "direction"} на 10 м
-    - [переместитесь]{"entity": "action", "role": "move"} 38 М [в левую сторону]{"entity": "subject", "role": "direction"}
-    - [захаживай]{"entity": "action", "role": "move"} [прямо по курсу]{"entity": "subject", "role": "direction"} на 12 м
-    - [мчись]{"entity": "action", "role": "move"} 23 м [вправо]{"entity": "subject", "role": "direction"}
-    - [топайте]{"entity": "action", "role": "move"} [в западную сторону]{"entity": "subject", "role": "direction"}
-    - [подходите]{"entity": "action", "role": "move"} [на запад]{"entity": "subject", "role": "direction"}
-    - [пойдите]{"entity": "action", "role": "move"} [на северный край]{"entity": "subject", "role": "direction"}
-    - [сдвинься]{"entity": "action", "role": "move"} 49 м [вспять]{"entity": "subject", "role": "direction"}
-    - [сдвиньтесь]{"entity": "action", "role": "move"} [напролом]{"entity": "subject", "role": "direction"}
-    - [гуляй]{"entity": "action", "role": "move"} [на южный край]{"entity": "subject", "role": "direction"}
-    - [пойди]{"entity": "action", "role": "move"} 30 М [в сторону востока]{"entity": "subject", "role": "direction"}
-    - [езжай]{"entity": "action", "role": "move"} 35 М [задом]{"entity": "subject", "role": "direction"}
-    - [перемещайся]{"entity": "action", "role": "move"} 18 М [напрямик]{"entity": "subject", "role": "direction"}
-    - [уезжайте]{"entity": "action", "role": "move"} на 14 м [прямо по курсу]{"entity": "subject", "role": "direction"}
-    - [шагай]{"entity": "action", "role": "move"} [на север]{"entity": "subject", "role": "direction"} на 18 м
-    - [дуйте]{"entity": "action", "role": "move"} [направо]{"entity": "subject", "role": "direction"} 6 м
-    - [переместись]{"entity": "action", "role": "move"} на 23 м [на восток]{"entity": "subject", "role": "direction"}
-    - [плыви]{"entity": "action", "role": "move"} на 29 м [на восточный край]{"entity": "subject", "role": "direction"}
-    - [захаживайте]{"entity": "action", "role": "move"} на 21 М [на восток]{"entity": "subject", "role": "direction"}
-    - [бегите]{"entity": "action", "role": "move"} 28 М [в левую сторону]{"entity": "subject", "role": "direction"}
-    - [идите]{"entity": "action", "role": "move"} 10 м [прямо по курсу]{"entity": "subject", "role": "direction"}
-    - [сдвигайтесь]{"entity": "action", "role": "move"} 47 м [назад]{"entity": "subject", "role": "direction"}
-    - [беги]{"entity": "action", "role": "move"} [по левую руку]{"entity": "subject", "role": "direction"} на 31 м
-    - [уходите]{"entity": "action", "role": "move"} 22 М [на западный край]{"entity": "subject", "role": "direction"}
-    - [выходите]{"entity": "action", "role": "move"} на 37 м [влево]{"entity": "subject", "role": "direction"}
-    - [пробирайся]{"entity": "action", "role": "move"} [задом]{"entity": "subject", "role": "direction"} 44 м
-    - [маршируйте]{"entity": "action", "role": "move"} на 33 М [вправо]{"entity": "subject", "role": "direction"}
-    - [пойди]{"entity": "action", "role": "move"} [вправо]{"entity": "subject", "role": "direction"} 11 М
-    - [переступай]{"entity": "action", "role": "move"} на 39 м [на южный край]{"entity": "subject", "role": "direction"}
-    - [катитесь]{"entity": "action", "role": "move"} на 43 М [в северную сторону]{"entity": "subject", "role": "direction"}
-    - [дуй]{"entity": "action", "role": "move"} 28 М [на попятную]{"entity": "subject", "role": "direction"}
-    - [захаживайте]{"entity": "action", "role": "move"} [на запад]{"entity": "subject", "role": "direction"} на 30 М
-    - [перемещайся]{"entity": "action", "role": "move"} 43 м [обертасом]{"entity": "subject", "role": "direction"}
-    - [двигайтесь]{"entity": "action", "role": "move"} [на южный край]{"entity": "subject", "role": "direction"} 16 М
-    - [прохаживай]{"entity": "action", "role": "move"} [вперед]{"entity": "subject", "role": "direction"}
-    - [съездите]{"entity": "action", "role": "move"} 47 М [напролом]{"entity": "subject", "role": "direction"}
-    - [езжайте]{"entity": "action", "role": "move"} [на юг]{"entity": "subject", "role": "direction"} на 4 м
-    - [переходи]{"entity": "action", "role": "move"} 40 М [вперед]{"entity": "subject", "role": "direction"}
-    - [газуй]{"entity": "action", "role": "move"} [в левую сторону]{"entity": "subject", "role": "direction"} 30 м
-    - [переходи]{"entity": "action", "role": "move"} на 2 М [в восточную сторону]{"entity": "subject", "role": "direction"}
-    - [съезди]{"entity": "action", "role": "move"} на 15 М [на южный край]{"entity": "subject", "role": "direction"}
-    - [направляйся]{"entity": "action", "role": "move"} 23 м [по левую руку]{"entity": "subject", "role": "direction"}
-    - [беги]{"entity": "action", "role": "move"} [на запад]{"entity": "subject", "role": "direction"} на 33 М
-    - [захаживайте]{"entity": "action", "role": "move"} [в восточную сторону]{"entity": "subject", "role": "direction"}
-    - [выходите]{"entity": "action", "role": "move"} на 3 м [на север]{"entity": "subject", "role": "direction"}
-    - [приезжайте]{"entity": "action", "role": "move"} [на северный край]{"entity": "subject", "role": "direction"} 48 м
-    - [мчитесь]{"entity": "action", "role": "move"} [на северный край]{"entity": "subject", "role": "direction"} на 15 м
-    - [уезжайте]{"entity": "action", "role": "move"} на 16 м [возвратно]{"entity": "subject", "role": "direction"}
-    - [сдвигайся]{"entity": "action", "role": "move"} [назад]{"entity": "subject", "role": "direction"} на 18 м
-    - [езжай]{"entity": "action", "role": "move"} 8 М [по левую руку]{"entity": "subject", "role": "direction"}
-    - [перемещайся]{"entity": "action", "role": "move"} [в восточную сторону]{"entity": "subject", "role": "direction"}
-    - [гуляйте]{"entity": "action", "role": "move"} 26 м [на попятную]{"entity": "subject", "role": "direction"}
-    - [проезжай]{"entity": "action", "role": "move"} 39 м [направо]{"entity": "subject", "role": "direction"}
-    - [бегите]{"entity": "action", "role": "move"} [на восточный край]{"entity": "subject", "role": "direction"} 40 М
-    - [сходи]{"entity": "action", "role": "move"} [в западную сторону]{"entity": "subject", "role": "direction"}
-    - [шлёпай]{"entity": "action", "role": "move"} [направо]{"entity": "subject", "role": "direction"} 48 м
-    - [переходи]{"entity": "action", "role": "move"} [на юг]{"entity": "subject", "role": "direction"} на 49 м
-    - [гуляйте]{"entity": "action", "role": "move"} [напрямик]{"entity": "subject", "role": "direction"}
-    - [приходите]{"entity": "action", "role": "move"} [в сторону юга]{"entity": "subject", "role": "direction"} 15 м
-    - [проезжайте]{"entity": "action", "role": "move"} [взад]{"entity": "subject", "role": "direction"} 32 М
-    - [скачите]{"entity": "action", "role": "move"} [в сторону юга]{"entity": "subject", "role": "direction"}
-    - [гони]{"entity": "action", "role": "move"} [прямо]{"entity": "subject", "role": "direction"}
-    - [переходи]{"entity": "action", "role": "move"} 29 м [в западную сторону]{"entity": "subject", "role": "direction"}
-    - [выступайте]{"entity": "action", "role": "move"} 28 м [вправо]{"entity": "subject", "role": "direction"}
-    - [пробирайся]{"entity": "action", "role": "move"} [направо]{"entity": "subject", "role": "direction"}
-    - [идите]{"entity": "action", "role": "move"} [задом]{"entity": "subject", "role": "direction"}
-    - [гоните]{"entity": "action", "role": "move"} [на восток]{"entity": "subject", "role": "direction"} 49 М
-    - [выходи]{"entity": "action", "role": "move"} [напролом]{"entity": "subject", "role": "direction"} 34 М
-    - [захаживай]{"entity": "action", "role": "move"} [по левую руку]{"entity": "subject", "role": "direction"} на 9 м
-    - [топай]{"entity": "action", "role": "move"} [на южный край]{"entity": "subject", "role": "direction"} 34 м
-    - [гони]{"entity": "action", "role": "move"} [на северный край]{"entity": "subject", "role": "direction"}
-    - [беги]{"entity": "action", "role": "move"} [на север]{"entity": "subject", "role": "direction"}
-    - [бегите]{"entity": "action", "role": "move"} [вправо]{"entity": "subject", "role": "direction"} на 13 М
-    - [переступайте]{"entity": "action", "role": "move"} 30 м [в сторону запада]{"entity": "subject", "role": "direction"}
-    - [шлёпайте]{"entity": "action", "role": "move"} [на восток]{"entity": "subject", "role": "direction"} 2 м
-    - [переступай]{"entity": "action", "role": "move"} [на север]{"entity": "subject", "role": "direction"}
-    - [проходи]{"entity": "action", "role": "move"} на 20 М [на запад]{"entity": "subject", "role": "direction"}
-    - [гоните]{"entity": "action", "role": "move"} [в сторону юга]{"entity": "subject", "role": "direction"} на 37 м
-    - [скачите]{"entity": "action", "role": "move"} [налево]{"entity": "subject", "role": "direction"} 38 м
-    - [пойдите]{"entity": "action", "role": "move"} на 37 М [влево]{"entity": "subject", "role": "direction"}
-    - [идите]{"entity": "action", "role": "move"} [на запад]{"entity": "subject", "role": "direction"} 33 М
-    - [подходите]{"entity": "action", "role": "move"} на 44 М [вправо]{"entity": "subject", "role": "direction"}
-    - [переместитесь]{"entity": "action", "role": "move"} [на запад]{"entity": "subject", "role": "direction"} на 30 М
-    - [гуляйте]{"entity": "action", "role": "move"} [на попятную]{"entity": "subject", "role": "direction"}
-    - [неситесь]{"entity": "action", "role": "move"} [на западный край]{"entity": "subject", "role": "direction"}
-    - [съездите]{"entity": "action", "role": "move"} на 43 М [вперед]{"entity": "subject", "role": "direction"}
-    - [беги]{"entity": "action", "role": "move"} 39 М [на восточный край]{"entity": "subject", "role": "direction"}
-    - [шагай]{"entity": "action", "role": "move"} [обратно]{"entity": "subject", "role": "direction"}
-    - [катитесь]{"entity": "action", "role": "move"} 48 М [направо]{"entity": "subject", "role": "direction"}
-    - [прохаживайте]{"entity": "action", "role": "move"} [в левую сторону]{"entity": "subject", "role": "direction"} на 42 м
-    - [езжай]{"entity": "action", "role": "move"} [на север]{"entity": "subject", "role": "direction"} на 27 М
-    - [плыви]{"entity": "action", "role": "move"} [в левую сторону]{"entity": "subject", "role": "direction"}
-    - [выступайте]{"entity": "action", "role": "move"} [напролом]{"entity": "subject", "role": "direction"} на 19 м
-    - [переступай]{"entity": "action", "role": "move"} [направо]{"entity": "subject", "role": "direction"} 14 м
-    - [топайте]{"entity": "action", "role": "move"} [напролом]{"entity": "subject", "role": "direction"} 26 М
-    - [при]{"entity": "action", "role": "move"} [на юг]{"entity": "subject", "role": "direction"}
-    - [двигайся]{"entity": "action", "role": "move"} на 21 м [на северный край]{"entity": "subject", "role": "direction"}
-    - [пробирайся]{"entity": "action", "role": "move"} [на запад]{"entity": "subject", "role": "direction"} 48 м
-    - [переместитесь]{"entity": "action", "role": "move"} [вправо]{"entity": "subject", "role": "direction"} на 36 М
-    - [прохаживайте]{"entity": "action", "role": "move"} [на запад]{"entity": "subject", "role": "direction"} на 50 М
-    - [съездите]{"entity": "action", "role": "move"} [направо]{"entity": "subject", "role": "direction"} 9 М
-    - [сдвиньтесь]{"entity": "action", "role": "move"} [прямо по курсу]{"entity": "subject", "role": "direction"} 36 м
-    - [выступай]{"entity": "action", "role": "move"} 25 м [в обратном направлении]{"entity": "subject", "role": "direction"}
-    - [пробирайся]{"entity": "action", "role": "move"} 3 М [в правую сторону]{"entity": "subject", "role": "direction"}
-    - [перемещайтесь]{"entity": "action", "role": "move"} [на западный край]{"entity": "subject", "role": "direction"} на 21 м
-    - [прохаживайте]{"entity": "action", "role": "move"} 42 м [на восток]{"entity": "subject", "role": "direction"}
-    - [прохаживайте]{"entity": "action", "role": "move"} [по левую руку]{"entity": "subject", "role": "direction"} 16 М
-    - [выходи]{"entity": "action", "role": "move"} [в правую сторону]{"entity": "subject", "role": "direction"}
-    - [шествуйте]{"entity": "action", "role": "move"} на 9 м [на западный край]{"entity": "subject", "role": "direction"}
-    - [плыви]{"entity": "action", "role": "move"} [прямо по курсу]{"entity": "subject", "role": "direction"} на 41 М
-    - [перемещайся]{"entity": "action", "role": "move"} [вправо]{"entity": "subject", "role": "direction"}
-    - [шлёпай]{"entity": "action", "role": "move"} [по левую руку]{"entity": "subject", "role": "direction"}
-    - [дуйте]{"entity": "action", "role": "move"} [на восток]{"entity": "subject", "role": "direction"} 31 М
-    - [прохаживайте]{"entity": "action", "role": "move"} [на западный край]{"entity": "subject", "role": "direction"} на 44 М
-    - [скачите]{"entity": "action", "role": "move"} на 16 М [напрямик]{"entity": "subject", "role": "direction"}
-    - [проезжайте]{"entity": "action", "role": "move"} 5 м [в южную сторону]{"entity": "subject", "role": "direction"}
-    - [приезжайте]{"entity": "action", "role": "move"} 11 м [налево]{"entity": "subject", "role": "direction"}
-    - [катись]{"entity": "action", "role": "move"} 45 м [на юг]{"entity": "subject", "role": "direction"}
-    - [переходите]{"entity": "action", "role": "move"} [в сторону запада]{"entity": "subject", "role": "direction"}
-    - [переместись]{"entity": "action", "role": "move"} на 33 м [по левую руку]{"entity": "subject", "role": "direction"}
-    - [захаживайте]{"entity": "action", "role": "move"} [прямо по курсу]{"entity": "subject", "role": "direction"} на 11 м
-    - [выступайте]{"entity": "action", "role": "move"} на 26 м [в северную сторону]{"entity": "subject", "role": "direction"}
-    - [маршируй]{"entity": "action", "role": "move"} [налево]{"entity": "subject", "role": "direction"} на 6 м
-    - [сдвигайтесь]{"entity": "action", "role": "move"} [в сторону юга]{"entity": "subject", "role": "direction"} 45 м
-    - [уходи]{"entity": "action", "role": "move"} на 11 м [в восточную сторону]{"entity": "subject", "role": "direction"}
-    - [пробирайтесь]{"entity": "action", "role": "move"} [вперед]{"entity": "subject", "role": "direction"} на 36 М
-    - [переступай]{"entity": "action", "role": "move"} 38 М [в сторону юга]{"entity": "subject", "role": "direction"}
-    - [пойдите]{"entity": "action", "role": "move"} [в северную сторону]{"entity": "subject", "role": "direction"} на 48 М
-    - [выходите]{"entity": "action", "role": "move"} [прямо]{"entity": "subject", "role": "direction"} на 14 м
-    - [летите]{"entity": "action", "role": "move"} на 34 М [в правую сторону]{"entity": "subject", "role": "direction"}
-    - [шлёпай]{"entity": "action", "role": "move"} 40 М [в восточную сторону]{"entity": "subject", "role": "direction"}
-    - [уезжай]{"entity": "action", "role": "move"} на 32 М [в северную сторону]{"entity": "subject", "role": "direction"}
-    - [иди]{"entity": "action", "role": "move"} 12 м [прямо]{"entity": "subject", "role": "direction"}
-    - [топай]{"entity": "action", "role": "move"} на 32 м [назад]{"entity": "subject", "role": "direction"}
-    - [езжай]{"entity": "action", "role": "move"} 38 м [в сторону востока]{"entity": "subject", "role": "direction"}
-    - [маршируй]{"entity": "action", "role": "move"} [прямо]{"entity": "subject", "role": "direction"}
-    - [пойдите]{"entity": "action", "role": "move"} [в северную сторону]{"entity": "subject", "role": "direction"} на 36 м
+    - [иди]{"entity": "action", "role": "move"} [вправо]{"entity": "subject", "role": "direction"} 24 м
+    - [газуйте]{"entity": "action", "role": "move"} 17 м [обратно]{"entity": "subject", "role": "direction"}
+    - [лети]{"entity": "action", "role": "move"} [в южную сторону]{"entity": "subject", "role": "direction"} на 36 М
+    - [беги]{"entity": "action", "role": "move"} 22 М [на восток]{"entity": "subject", "role": "direction"}
+    - [уезжайте]{"entity": "action", "role": "move"} [напролом]{"entity": "subject", "role": "direction"} 20 м
+    - [шкандыбайте]{"entity": "action", "role": "move"} на 17 м [прямо]{"entity": "subject", "role": "direction"}
+    - [подходите]{"entity": "action", "role": "move"} на 28 М [на запад]{"entity": "subject", "role": "direction"}
+    - [сдвиньтесь]{"entity": "action", "role": "move"} 49 м [взад]{"entity": "subject", "role": "direction"}
+    - [переступайте]{"entity": "action", "role": "move"} на 35 м [в сторону запада]{"entity": "subject", "role": "direction"}
+    - [переходи]{"entity": "action", "role": "move"} [налево]{"entity": "subject", "role": "direction"} 20 М
+    - [выходите]{"entity": "action", "role": "move"} [по правую руку]{"entity": "subject", "role": "direction"} на 16 м
+    - [маршируйте]{"entity": "action", "role": "move"} 11 м [в левую сторону]{"entity": "subject", "role": "direction"}
+    - [подходите]{"entity": "action", "role": "move"} 27 м [назад]{"entity": "subject", "role": "direction"}
+    - [прохаживайте]{"entity": "action", "role": "move"} на 46 м [на западный край]{"entity": "subject", "role": "direction"}
+    - [топайте]{"entity": "action", "role": "move"} [в правую сторону]{"entity": "subject", "role": "direction"} на 17 М
+    - [газуйте]{"entity": "action", "role": "move"} [на восточный край]{"entity": "subject", "role": "direction"}
+    - [уезжайте]{"entity": "action", "role": "move"} [на запад]{"entity": "subject", "role": "direction"} 18 м
+    - [беги]{"entity": "action", "role": "move"} [на западный край]{"entity": "subject", "role": "direction"} 12 м
+    - [идите]{"entity": "action", "role": "move"} 30 М [на восточный край]{"entity": "subject", "role": "direction"}
+    - [лети]{"entity": "action", "role": "move"} на 42 М [на южный край]{"entity": "subject", "role": "direction"}
+    - [переходи]{"entity": "action", "role": "move"} [напролом]{"entity": "subject", "role": "direction"} 7 М
+    - [проходи]{"entity": "action", "role": "move"} [вправо]{"entity": "subject", "role": "direction"} 15 м
+    - [переступай]{"entity": "action", "role": "move"} [на западный край]{"entity": "subject", "role": "direction"} на 6 м
+    - [пойди]{"entity": "action", "role": "move"} 25 М [по левую руку]{"entity": "subject", "role": "direction"}
+    - [приходите]{"entity": "action", "role": "move"} [на запад]{"entity": "subject", "role": "direction"}
+    - [двигайтесь]{"entity": "action", "role": "move"} на 14 м [в южную сторону]{"entity": "subject", "role": "direction"}
+    - [собирайтесь]{"entity": "action", "role": "move"} [вспять]{"entity": "subject", "role": "direction"} 41 М
+    - [гони]{"entity": "action", "role": "move"} [в сторону севера]{"entity": "subject", "role": "direction"} на 10 М
+    - [уходи]{"entity": "action", "role": "move"} 25 М [на северный край]{"entity": "subject", "role": "direction"}
+    - [беги]{"entity": "action", "role": "move"} [назад]{"entity": "subject", "role": "direction"}
+    - [сдавайте]{"entity": "action", "role": "move"} на 47 м [в сторону юга]{"entity": "subject", "role": "direction"}
+    - [маршируй]{"entity": "action", "role": "move"} [в левую сторону]{"entity": "subject", "role": "direction"}
+    - [приходи]{"entity": "action", "role": "move"} [в западную сторону]{"entity": "subject", "role": "direction"}
+    - [маршируй]{"entity": "action", "role": "move"} на 48 м [на западный край]{"entity": "subject", "role": "direction"}
+    - [летите]{"entity": "action", "role": "move"} [на попятную]{"entity": "subject", "role": "direction"} 26 м
+    - [подходите]{"entity": "action", "role": "move"} [в сторону запада]{"entity": "subject", "role": "direction"}
+    - [вышагивайте]{"entity": "action", "role": "move"} [в сторону севера]{"entity": "subject", "role": "direction"}
+    - [пробирайся]{"entity": "action", "role": "move"} 29 М [на юг]{"entity": "subject", "role": "direction"}
+    - [переходи]{"entity": "action", "role": "move"} на 48 м [на восточный край]{"entity": "subject", "role": "direction"}
+    - [шкандыбайте]{"entity": "action", "role": "move"} [в сторону юга]{"entity": "subject", "role": "direction"} на 13 м
+    - [пойди]{"entity": "action", "role": "move"} [на восток]{"entity": "subject", "role": "direction"} 48 м
+    - [шкандыбай]{"entity": "action", "role": "move"} [на восток]{"entity": "subject", "role": "direction"}
+    - [пойдите]{"entity": "action", "role": "move"} на 35 М [вправо]{"entity": "subject", "role": "direction"}
+    - [переместись]{"entity": "action", "role": "move"} [на север]{"entity": "subject", "role": "direction"} 29 м
+    - [приезжайте]{"entity": "action", "role": "move"} [в сторону запада]{"entity": "subject", "role": "direction"} на 27 м
+    - [иди]{"entity": "action", "role": "move"} 33 М [вперед]{"entity": "subject", "role": "direction"}
+    - [отправляйтесь]{"entity": "action", "role": "move"} [влево]{"entity": "subject", "role": "direction"} на 49 м
+    - [прите]{"entity": "action", "role": "move"} на 24 М [в сторону востока]{"entity": "subject", "role": "direction"}
+    - [катитесь]{"entity": "action", "role": "move"} [возвратно]{"entity": "subject", "role": "direction"}
+    - [переместитесь]{"entity": "action", "role": "move"} 18 М [на южный край]{"entity": "subject", "role": "direction"}
+    - [катитесь]{"entity": "action", "role": "move"} [на юг]{"entity": "subject", "role": "direction"} на 19 м
+    - [проходите]{"entity": "action", "role": "move"} [налево]{"entity": "subject", "role": "direction"} на 37 М
+    - [проезжай]{"entity": "action", "role": "move"} [на южный край]{"entity": "subject", "role": "direction"} 9 м
+    - [уезжай]{"entity": "action", "role": "move"} [на юг]{"entity": "subject", "role": "direction"}
+    - [проезжай]{"entity": "action", "role": "move"} [в северную сторону]{"entity": "subject", "role": "direction"}
+    - [маршируй]{"entity": "action", "role": "move"} 19 м [на восточный край]{"entity": "subject", "role": "direction"}
+    - [выходите]{"entity": "action", "role": "move"} на 35 м [в обратном направлении]{"entity": "subject", "role": "direction"}
+    - [проезжайте]{"entity": "action", "role": "move"} 33 М [в западную сторону]{"entity": "subject", "role": "direction"}
+    - [подходите]{"entity": "action", "role": "move"} на 25 М [в правую сторону]{"entity": "subject", "role": "direction"}
+    - [уезжайте]{"entity": "action", "role": "move"} на 46 М [по правую руку]{"entity": "subject", "role": "direction"}
+    - [пробирайтесь]{"entity": "action", "role": "move"} [по левую руку]{"entity": "subject", "role": "direction"}
+    - [двигайтесь]{"entity": "action", "role": "move"} [влево]{"entity": "subject", "role": "direction"} на 37 м
+    - [шкандыбай]{"entity": "action", "role": "move"} [в сторону запада]{"entity": "subject", "role": "direction"} 33 М
+    - [шагай]{"entity": "action", "role": "move"} [в сторону востока]{"entity": "subject", "role": "direction"}
+    - [езжай]{"entity": "action", "role": "move"} на 36 М [направо]{"entity": "subject", "role": "direction"}
+    - [подходите]{"entity": "action", "role": "move"} 21 М [на южный край]{"entity": "subject", "role": "direction"}
+    - [шкандыбайте]{"entity": "action", "role": "move"} [вперед]{"entity": "subject", "role": "direction"} на 41 м
+    - [плывите]{"entity": "action", "role": "move"} [на западный край]{"entity": "subject", "role": "direction"}
+    - [проходи]{"entity": "action", "role": "move"} [вперед]{"entity": "subject", "role": "direction"}
+    - [мчитесь]{"entity": "action", "role": "move"} [на южный край]{"entity": "subject", "role": "direction"} 9 м
+    - [направляйся]{"entity": "action", "role": "move"} [в северную сторону]{"entity": "subject", "role": "direction"}
+    - [шествуй]{"entity": "action", "role": "move"} [в правую сторону]{"entity": "subject", "role": "direction"} на 38 М
+    - [топай]{"entity": "action", "role": "move"} [в сторону запада]{"entity": "subject", "role": "direction"} на 3 М
+    - [сдавай]{"entity": "action", "role": "move"} [на попятную]{"entity": "subject", "role": "direction"} 49 м
+    - [мчись]{"entity": "action", "role": "move"} [в сторону юга]{"entity": "subject", "role": "direction"} 34 М
+    - [прохаживайте]{"entity": "action", "role": "move"} [напролом]{"entity": "subject", "role": "direction"} 31 М
+    - [при]{"entity": "action", "role": "move"} 17 М [в левую сторону]{"entity": "subject", "role": "direction"}
+    - [уезжайте]{"entity": "action", "role": "move"} [в северную сторону]{"entity": "subject", "role": "direction"} 36 М
+    - [шагайте]{"entity": "action", "role": "move"} 12 М [прямо]{"entity": "subject", "role": "direction"}
+    - [гуляй]{"entity": "action", "role": "move"} [прямо по курсу]{"entity": "subject", "role": "direction"}
+    - [иди]{"entity": "action", "role": "move"} 23 М [в сторону востока]{"entity": "subject", "role": "direction"}
+    - [сдвигайтесь]{"entity": "action", "role": "move"} [в сторону юга]{"entity": "subject", "role": "direction"} на 34 М
     - [переступай]{"entity": "action", "role": "move"} [направо]{"entity": "subject", "role": "direction"}
-    - [отправляйся]{"entity": "action", "role": "move"} [в сторону севера]{"entity": "subject", "role": "direction"} 17 М
-    - [съезди]{"entity": "action", "role": "move"} 5 М [в сторону юга]{"entity": "subject", "role": "direction"}
-    - [лети]{"entity": "action", "role": "move"} [в восточную сторону]{"entity": "subject", "role": "direction"} 30 м
-    - [катитесь]{"entity": "action", "role": "move"} [возвратно]{"entity": "subject", "role": "direction"} 46 м
-    - [пробирайся]{"entity": "action", "role": "move"} 39 М [на северный край]{"entity": "subject", "role": "direction"}
-    - [выступайте]{"entity": "action", "role": "move"} [взапядки]{"entity": "subject", "role": "direction"} на 4 м
-    - [проезжайте]{"entity": "action", "role": "move"} 41 м [в левую сторону]{"entity": "subject", "role": "direction"}
-    - [неситесь]{"entity": "action", "role": "move"} [направо]{"entity": "subject", "role": "direction"} 7 М
-    - [езжайте]{"entity": "action", "role": "move"} 34 м [по правую руку]{"entity": "subject", "role": "direction"}
-    - [перемещайся]{"entity": "action", "role": "move"} на 13 М [в сторону севера]{"entity": "subject", "role": "direction"}
-    - [сходите]{"entity": "action", "role": "move"} на 50 М [прямо]{"entity": "subject", "role": "direction"}
-    - [пробирайся]{"entity": "action", "role": "move"} 36 м [на юг]{"entity": "subject", "role": "direction"}
-    - [шлёпайте]{"entity": "action", "role": "move"} 28 м [обертасом]{"entity": "subject", "role": "direction"}
-    - [идите]{"entity": "action", "role": "move"} [прямо]{"entity": "subject", "role": "direction"} 24 м
-    - [переместитесь]{"entity": "action", "role": "move"} [напролом]{"entity": "subject", "role": "direction"} 47 м
-    - [шкандыбай]{"entity": "action", "role": "move"} [вперед]{"entity": "subject", "role": "direction"} 22 м
-    - [переходи]{"entity": "action", "role": "move"} [по левую руку]{"entity": "subject", "role": "direction"} на 22 М
-    - [плыви]{"entity": "action", "role": "move"} [по левую руку]{"entity": "subject", "role": "direction"}
-    - [иди]{"entity": "action", "role": "move"} [в правую сторону]{"entity": "subject", "role": "direction"} на 38 М
-    - [пойдите]{"entity": "action", "role": "move"} [в правую сторону]{"entity": "subject", "role": "direction"} 45 м
-    - [направляйся]{"entity": "action", "role": "move"} [напрямик]{"entity": "subject", "role": "direction"} 45 м
-    - [шагайте]{"entity": "action", "role": "move"} на 34 М [на запад]{"entity": "subject", "role": "direction"}
-    - [идите]{"entity": "action", "role": "move"} [на запад]{"entity": "subject", "role": "direction"} 12 М
-    - [выступай]{"entity": "action", "role": "move"} на 3 М [на попятную]{"entity": "subject", "role": "direction"}
-    - [езжайте]{"entity": "action", "role": "move"} [направо]{"entity": "subject", "role": "direction"}
-    - [газуй]{"entity": "action", "role": "move"} [на восток]{"entity": "subject", "role": "direction"}
-    - [подходи]{"entity": "action", "role": "move"} на 2 м [обертасом]{"entity": "subject", "role": "direction"}
-    - [шлёпайте]{"entity": "action", "role": "move"} на 4 М [по левую руку]{"entity": "subject", "role": "direction"}
-    - [неситесь]{"entity": "action", "role": "move"} [обертасом]{"entity": "subject", "role": "direction"} на 1 м
-    - [пробирайтесь]{"entity": "action", "role": "move"} на 48 М [вправо]{"entity": "subject", "role": "direction"}
-    - [захаживайте]{"entity": "action", "role": "move"} [вспять]{"entity": "subject", "role": "direction"} 47 М
-    - [гоните]{"entity": "action", "role": "move"} на 13 м [взад]{"entity": "subject", "role": "direction"}
-    - [переходите]{"entity": "action", "role": "move"} [в левую сторону]{"entity": "subject", "role": "direction"} 38 М
-    - [плыви]{"entity": "action", "role": "move"} [в левую сторону]{"entity": "subject", "role": "direction"} на 24 м
-    - [пробирайтесь]{"entity": "action", "role": "move"} 20 М [прямо]{"entity": "subject", "role": "direction"}
-    - [прите]{"entity": "action", "role": "move"} 26 М [на северный край]{"entity": "subject", "role": "direction"}
-    - [идите]{"entity": "action", "role": "move"} на 42 м [на западный край]{"entity": "subject", "role": "direction"}
-    - [летите]{"entity": "action", "role": "move"} [в западную сторону]{"entity": "subject", "role": "direction"}
-    - [скачите]{"entity": "action", "role": "move"} [на запад]{"entity": "subject", "role": "direction"}
-    - [направляйся]{"entity": "action", "role": "move"} [на восток]{"entity": "subject", "role": "direction"} на 7 М
-    - [собирайтесь]{"entity": "action", "role": "move"} на 6 М [в сторону севера]{"entity": "subject", "role": "direction"}
-    - [катитесь]{"entity": "action", "role": "move"} [на юг]{"entity": "subject", "role": "direction"} 17 м
-    - [сходите]{"entity": "action", "role": "move"} 49 м [в сторону севера]{"entity": "subject", "role": "direction"}
-    - [бегите]{"entity": "action", "role": "move"} [задом]{"entity": "subject", "role": "direction"}
-    - [пробирайся]{"entity": "action", "role": "move"} [в левую сторону]{"entity": "subject", "role": "direction"} на 26 м
+    - [переступай]{"entity": "action", "role": "move"} [взапядки]{"entity": "subject", "role": "direction"}
+    - [сдавайте]{"entity": "action", "role": "move"} [прямо]{"entity": "subject", "role": "direction"} 30 м
+    - [газуйте]{"entity": "action", "role": "move"} [в восточную сторону]{"entity": "subject", "role": "direction"} 41 М
+    - [переместись]{"entity": "action", "role": "move"} 26 М [вправо]{"entity": "subject", "role": "direction"}
+    - [подходите]{"entity": "action", "role": "move"} [напролом]{"entity": "subject", "role": "direction"} на 17 М
+    - [подходи]{"entity": "action", "role": "move"} [на север]{"entity": "subject", "role": "direction"} на 20 М
+    - [проходите]{"entity": "action", "role": "move"} [на юг]{"entity": "subject", "role": "direction"}
+    - [проходите]{"entity": "action", "role": "move"} [прямо по курсу]{"entity": "subject", "role": "direction"} на 8 М
+    - [переступайте]{"entity": "action", "role": "move"} на 50 м [в южную сторону]{"entity": "subject", "role": "direction"}
+    - [маршируй]{"entity": "action", "role": "move"} [в восточную сторону]{"entity": "subject", "role": "direction"} 32 м
+    - [приходите]{"entity": "action", "role": "move"} на 1 м [направо]{"entity": "subject", "role": "direction"}
+    - [сходите]{"entity": "action", "role": "move"} на 11 М [вспять]{"entity": "subject", "role": "direction"}
+    - [идите]{"entity": "action", "role": "move"} [в сторону юга]{"entity": "subject", "role": "direction"} 7 м
+    - [проходи]{"entity": "action", "role": "move"} на 15 М [налево]{"entity": "subject", "role": "direction"}
+    - [мчись]{"entity": "action", "role": "move"} [в сторону севера]{"entity": "subject", "role": "direction"}
+    - [иди]{"entity": "action", "role": "move"} на 20 м [назад]{"entity": "subject", "role": "direction"}
+    - [иди]{"entity": "action", "role": "move"} [в северную сторону]{"entity": "subject", "role": "direction"} 40 м
+    - [сходи]{"entity": "action", "role": "move"} [влево]{"entity": "subject", "role": "direction"} на 6 м
+    - [выступай]{"entity": "action", "role": "move"} на 20 м [по левую руку]{"entity": "subject", "role": "direction"}
+    - [выходите]{"entity": "action", "role": "move"} на 37 м [налево]{"entity": "subject", "role": "direction"}
+    - [перемещайтесь]{"entity": "action", "role": "move"} на 12 м [в сторону севера]{"entity": "subject", "role": "direction"}
+    - [неситесь]{"entity": "action", "role": "move"} 28 м [в сторону востока]{"entity": "subject", "role": "direction"}
+    - [направляйтесь]{"entity": "action", "role": "move"} на 29 м [налево]{"entity": "subject", "role": "direction"}
+    - [приезжайте]{"entity": "action", "role": "move"} [на юг]{"entity": "subject", "role": "direction"}
+    - [катись]{"entity": "action", "role": "move"} [прямо по курсу]{"entity": "subject", "role": "direction"}
+    - [сдвигайся]{"entity": "action", "role": "move"} 17 м [в правую сторону]{"entity": "subject", "role": "direction"}
+    - [шагай]{"entity": "action", "role": "move"} [на западный край]{"entity": "subject", "role": "direction"}
+    - [сходите]{"entity": "action", "role": "move"} [напрямик]{"entity": "subject", "role": "direction"}
+    - [шкандыбайте]{"entity": "action", "role": "move"} [на южный край]{"entity": "subject", "role": "direction"}
+    - [беги]{"entity": "action", "role": "move"} 15 м [вспять]{"entity": "subject", "role": "direction"}
+    - [захаживай]{"entity": "action", "role": "move"} [на запад]{"entity": "subject", "role": "direction"} 44 м
+    - [езжай]{"entity": "action", "role": "move"} [в сторону запада]{"entity": "subject", "role": "direction"} на 43 м
+    - [лети]{"entity": "action", "role": "move"} 12 М [по правую руку]{"entity": "subject", "role": "direction"}
+    - [переступайте]{"entity": "action", "role": "move"} [на попятную]{"entity": "subject", "role": "direction"} 6 м
+    - [собирайтесь]{"entity": "action", "role": "move"} на 17 м [на север]{"entity": "subject", "role": "direction"}
+    - [газуйте]{"entity": "action", "role": "move"} на 8 М [на западный край]{"entity": "subject", "role": "direction"}
+    - [пробирайся]{"entity": "action", "role": "move"} [на северный край]{"entity": "subject", "role": "direction"}
+    - [шествуй]{"entity": "action", "role": "move"} на 48 м [назад]{"entity": "subject", "role": "direction"}
+    - [сдавай]{"entity": "action", "role": "move"} на 46 м [прямо по курсу]{"entity": "subject", "role": "direction"}
+    - [выходите]{"entity": "action", "role": "move"} [напролом]{"entity": "subject", "role": "direction"} на 2 м
+    - [скачите]{"entity": "action", "role": "move"} [напролом]{"entity": "subject", "role": "direction"} на 19 М
+    - [сдавайте]{"entity": "action", "role": "move"} 6 м [в сторону юга]{"entity": "subject", "role": "direction"}
+    - [выступайте]{"entity": "action", "role": "move"} на 47 М [напролом]{"entity": "subject", "role": "direction"}
+    - [шкандыбайте]{"entity": "action", "role": "move"} [на северный край]{"entity": "subject", "role": "direction"} на 9 М
+    - [езжайте]{"entity": "action", "role": "move"} на 20 М [в сторону запада]{"entity": "subject", "role": "direction"}
+    - [переходите]{"entity": "action", "role": "move"} 47 М [в южную сторону]{"entity": "subject", "role": "direction"}
+    - [скачи]{"entity": "action", "role": "move"} [по левую руку]{"entity": "subject", "role": "direction"}
+    - [съездите]{"entity": "action", "role": "move"} 11 М [по левую руку]{"entity": "subject", "role": "direction"}
+    - [двигайся]{"entity": "action", "role": "move"} [в сторону юга]{"entity": "subject", "role": "direction"} на 26 М
+    - [топайте]{"entity": "action", "role": "move"} [на запад]{"entity": "subject", "role": "direction"} на 47 М
+    - [плыви]{"entity": "action", "role": "move"} [налево]{"entity": "subject", "role": "direction"} 42 м
+    - [лети]{"entity": "action", "role": "move"} [налево]{"entity": "subject", "role": "direction"} на 42 М
+    - [переместись]{"entity": "action", "role": "move"} [на западный край]{"entity": "subject", "role": "direction"} 15 М
+    - [пробирайтесь]{"entity": "action", "role": "move"} [в западную сторону]{"entity": "subject", "role": "direction"} 4 М
+    - [переступайте]{"entity": "action", "role": "move"} на 23 м [напролом]{"entity": "subject", "role": "direction"}
+    - [выходите]{"entity": "action", "role": "move"} [влево]{"entity": "subject", "role": "direction"}
+    - [гони]{"entity": "action", "role": "move"} [на юг]{"entity": "subject", "role": "direction"} 49 м
+    - [переходите]{"entity": "action", "role": "move"} 41 м [в сторону севера]{"entity": "subject", "role": "direction"}
+    - [катитесь]{"entity": "action", "role": "move"} [прямо по курсу]{"entity": "subject", "role": "direction"} на 39 м
+    - [катись]{"entity": "action", "role": "move"} [в восточную сторону]{"entity": "subject", "role": "direction"} на 45 м
+    - [сдавайте]{"entity": "action", "role": "move"} [в сторону востока]{"entity": "subject", "role": "direction"} 49 м
+    - [шествуйте]{"entity": "action", "role": "move"} 36 м [на западный край]{"entity": "subject", "role": "direction"}
+    - [катитесь]{"entity": "action", "role": "move"} 49 м [прямо по курсу]{"entity": "subject", "role": "direction"}
+    - [шествуйте]{"entity": "action", "role": "move"} [на северный край]{"entity": "subject", "role": "direction"} на 8 М
+    - [дуй]{"entity": "action", "role": "move"} 16 м [на запад]{"entity": "subject", "role": "direction"}
+    - [сходите]{"entity": "action", "role": "move"} на 19 М [на запад]{"entity": "subject", "role": "direction"}
+    - [приходите]{"entity": "action", "role": "move"} [взапядки]{"entity": "subject", "role": "direction"} на 4 м
+    - [скачите]{"entity": "action", "role": "move"} на 21 М [в обратном направлении]{"entity": "subject", "role": "direction"}
+    - [прите]{"entity": "action", "role": "move"} [на северный край]{"entity": "subject", "role": "direction"} 19 М
+    - [собирайтесь]{"entity": "action", "role": "move"} [назад]{"entity": "subject", "role": "direction"}
+    - [езжайте]{"entity": "action", "role": "move"} [в правую сторону]{"entity": "subject", "role": "direction"} на 18 м
+    - [катись]{"entity": "action", "role": "move"} 23 м [на восточный край]{"entity": "subject", "role": "direction"}
+    - [двигайся]{"entity": "action", "role": "move"} [на южный край]{"entity": "subject", "role": "direction"} 28 М
+    - [неситесь]{"entity": "action", "role": "move"} [на западный край]{"entity": "subject", "role": "direction"} на 5 м
+    - [идите]{"entity": "action", "role": "move"} на 26 М [на север]{"entity": "subject", "role": "direction"}
+    - [плывите]{"entity": "action", "role": "move"} [по правую руку]{"entity": "subject", "role": "direction"}
+    - [лети]{"entity": "action", "role": "move"} [направо]{"entity": "subject", "role": "direction"} на 30 м
+    - [сходите]{"entity": "action", "role": "move"} [влево]{"entity": "subject", "role": "direction"} 48 м
+    - [отправляйтесь]{"entity": "action", "role": "move"} [задом]{"entity": "subject", "role": "direction"} 45 М
+    - [топай]{"entity": "action", "role": "move"} [напролом]{"entity": "subject", "role": "direction"} 3 м
+    - [несись]{"entity": "action", "role": "move"} [напролом]{"entity": "subject", "role": "direction"}
+    - [дуй]{"entity": "action", "role": "move"} 37 М [прямо]{"entity": "subject", "role": "direction"}
+    - [топай]{"entity": "action", "role": "move"} [на север]{"entity": "subject", "role": "direction"}
+    - [плыви]{"entity": "action", "role": "move"} [на северный край]{"entity": "subject", "role": "direction"} на 49 М
+    - [выходите]{"entity": "action", "role": "move"} [по правую руку]{"entity": "subject", "role": "direction"} на 42 М
+    - [несись]{"entity": "action", "role": "move"} на 15 М [в северную сторону]{"entity": "subject", "role": "direction"}
+    - [сдвигайтесь]{"entity": "action", "role": "move"} 29 м [на северный край]{"entity": "subject", "role": "direction"}
+    - [шкандыбайте]{"entity": "action", "role": "move"} [напролом]{"entity": "subject", "role": "direction"}
+    - [отправляйтесь]{"entity": "action", "role": "move"} [напролом]{"entity": "subject", "role": "direction"} 5 М
+    - [уходи]{"entity": "action", "role": "move"} 5 м [взапядки]{"entity": "subject", "role": "direction"}
+    - [выступай]{"entity": "action", "role": "move"} 41 М [влево]{"entity": "subject", "role": "direction"}
+    - [бегите]{"entity": "action", "role": "move"} [в правую сторону]{"entity": "subject", "role": "direction"} 11 М
+    - [неситесь]{"entity": "action", "role": "move"} [вперед]{"entity": "subject", "role": "direction"}
+    - [проезжайте]{"entity": "action", "role": "move"} [на восток]{"entity": "subject", "role": "direction"} 43 М
+    - [шлёпай]{"entity": "action", "role": "move"} [на восточный край]{"entity": "subject", "role": "direction"}
+    - [уходи]{"entity": "action", "role": "move"} 26 м [в левую сторону]{"entity": "subject", "role": "direction"}
+    - [скачи]{"entity": "action", "role": "move"} 35 М [прямо по курсу]{"entity": "subject", "role": "direction"}
+    - [катитесь]{"entity": "action", "role": "move"} [вспять]{"entity": "subject", "role": "direction"} на 16 М
+    - [беги]{"entity": "action", "role": "move"} [на юг]{"entity": "subject", "role": "direction"}
+    - [шкандыбай]{"entity": "action", "role": "move"} 31 М [в западную сторону]{"entity": "subject", "role": "direction"}
+    - [топай]{"entity": "action", "role": "move"} 10 м [на юг]{"entity": "subject", "role": "direction"}
+    - [уезжайте]{"entity": "action", "role": "move"} [в сторону востока]{"entity": "subject", "role": "direction"}
+    - [уходите]{"entity": "action", "role": "move"} 49 м [на северный край]{"entity": "subject", "role": "direction"}
+    - [перемещайтесь]{"entity": "action", "role": "move"} на 26 м [в восточную сторону]{"entity": "subject", "role": "direction"}
+    - [неситесь]{"entity": "action", "role": "move"} [в обратном направлении]{"entity": "subject", "role": "direction"} 22 м
+    - [перемещайся]{"entity": "action", "role": "move"} [в сторону востока]{"entity": "subject", "role": "direction"} на 41 м
+    - [приезжайте]{"entity": "action", "role": "move"} [по правую руку]{"entity": "subject", "role": "direction"}
+    - [прохаживай]{"entity": "action", "role": "move"} [в сторону востока]{"entity": "subject", "role": "direction"} на 40 М
+    - [шагайте]{"entity": "action", "role": "move"} [в сторону юга]{"entity": "subject", "role": "direction"} на 34 м
+    - [приезжай]{"entity": "action", "role": "move"} 2 М [в южную сторону]{"entity": "subject", "role": "direction"}
+    - [несись]{"entity": "action", "role": "move"} 9 м [по правую руку]{"entity": "subject", "role": "direction"}
+    - [пойдите]{"entity": "action", "role": "move"} [на восточный край]{"entity": "subject", "role": "direction"} 47 М
+    - [уезжайте]{"entity": "action", "role": "move"} на 26 М [на восточный край]{"entity": "subject", "role": "direction"}
     - [мчитесь]{"entity": "action", "role": "move"} [в правую сторону]{"entity": "subject", "role": "direction"}
-    - [гуляйте]{"entity": "action", "role": "move"} [на южный край]{"entity": "subject", "role": "direction"} 47 м
-    - [пробирайся]{"entity": "action", "role": "move"} [направо]{"entity": "subject", "role": "direction"} на 31 М
-    - [катитесь]{"entity": "action", "role": "move"} [в восточную сторону]{"entity": "subject", "role": "direction"} на 50 М
-    - [съезди]{"entity": "action", "role": "move"} на 47 М [в сторону севера]{"entity": "subject", "role": "direction"}
-    - [проезжай]{"entity": "action", "role": "move"} на 44 м [возвратно]{"entity": "subject", "role": "direction"}
-    - [собирайся]{"entity": "action", "role": "move"} [в сторону севера]{"entity": "subject", "role": "direction"} 45 м
-    - [захаживай]{"entity": "action", "role": "move"} [в восточную сторону]{"entity": "subject", "role": "direction"} на 10 М
-    - [сдвигайся]{"entity": "action", "role": "move"} на 44 м [в северную сторону]{"entity": "subject", "role": "direction"}
-    - [гуляй]{"entity": "action", "role": "move"} 31 М [налево]{"entity": "subject", "role": "direction"}
-    - [собирайся]{"entity": "action", "role": "move"} [напрямик]{"entity": "subject", "role": "direction"} на 40 м
-    - [приходи]{"entity": "action", "role": "move"} [на попятную]{"entity": "subject", "role": "direction"} на 23 м
-    - [переступай]{"entity": "action", "role": "move"} [налево]{"entity": "subject", "role": "direction"}
-    - [собирайся]{"entity": "action", "role": "move"} [в сторону севера]{"entity": "subject", "role": "direction"} 46 м
-    - [переместись]{"entity": "action", "role": "move"} [в правую сторону]{"entity": "subject", "role": "direction"} на 31 м
-    - [отправляйтесь]{"entity": "action", "role": "move"} 37 м [налево]{"entity": "subject", "role": "direction"}
-    - [пойди]{"entity": "action", "role": "move"} на 17 м [прямо]{"entity": "subject", "role": "direction"}
-    - [летите]{"entity": "action", "role": "move"} на 12 М [в левую сторону]{"entity": "subject", "role": "direction"}
-    - [выходите]{"entity": "action", "role": "move"} [по правую руку]{"entity": "subject", "role": "direction"} на 38 М
-    - [шагай]{"entity": "action", "role": "move"} 5 м [на юг]{"entity": "subject", "role": "direction"}
-    - [приезжайте]{"entity": "action", "role": "move"} [напролом]{"entity": "subject", "role": "direction"} 16 М
-    - [беги]{"entity": "action", "role": "move"} [влево]{"entity": "subject", "role": "direction"} 13 м
-    - [летите]{"entity": "action", "role": "move"} [по правую руку]{"entity": "subject", "role": "direction"} на 3 м
-    - [направляйтесь]{"entity": "action", "role": "move"} [налево]{"entity": "subject", "role": "direction"} 39 м
-    - [мчись]{"entity": "action", "role": "move"} 43 М [в сторону запада]{"entity": "subject", "role": "direction"}
-    - [гоните]{"entity": "action", "role": "move"} 1 м [в сторону севера]{"entity": "subject", "role": "direction"}
-    - [сдвинься]{"entity": "action", "role": "move"} [в сторону севера]{"entity": "subject", "role": "direction"} 35 м
-    - [переместись]{"entity": "action", "role": "move"} 41 м [по правую руку]{"entity": "subject", "role": "direction"}
-    - [переходите]{"entity": "action", "role": "move"} [по правую руку]{"entity": "subject", "role": "direction"}
-    - [захаживай]{"entity": "action", "role": "move"} [на восточный край]{"entity": "subject", "role": "direction"} на 29 М
-    - [приезжай]{"entity": "action", "role": "move"} [в левую сторону]{"entity": "subject", "role": "direction"}
-    - [пойди]{"entity": "action", "role": "move"} [возвратно]{"entity": "subject", "role": "direction"} на 50 м
-    - [перемещайтесь]{"entity": "action", "role": "move"} [на южный край]{"entity": "subject", "role": "direction"}
-    - [шагайте]{"entity": "action", "role": "move"} на 30 м [направо]{"entity": "subject", "role": "direction"}
-    - [лети]{"entity": "action", "role": "move"} [на восток]{"entity": "subject", "role": "direction"}
-    - [сдвигайся]{"entity": "action", "role": "move"} [на западный край]{"entity": "subject", "role": "direction"} 31 м
-    - [мчись]{"entity": "action", "role": "move"} на 33 М [в сторону востока]{"entity": "subject", "role": "direction"}
-    - [катитесь]{"entity": "action", "role": "move"} на 27 м [на южный край]{"entity": "subject", "role": "direction"}
-    - [переместись]{"entity": "action", "role": "move"} [в правую сторону]{"entity": "subject", "role": "direction"} 20 м
-    - [вышагивай]{"entity": "action", "role": "move"} 30 М [вперед]{"entity": "subject", "role": "direction"}
-    - [выходите]{"entity": "action", "role": "move"} 6 м [в западную сторону]{"entity": "subject", "role": "direction"}
-    - [сходите]{"entity": "action", "role": "move"} 33 М [в сторону севера]{"entity": "subject", "role": "direction"}
-    - [отправляйся]{"entity": "action", "role": "move"} [на северный край]{"entity": "subject", "role": "direction"} 2 м
-    - [бегите]{"entity": "action", "role": "move"} [в сторону севера]{"entity": "subject", "role": "direction"} на 39 м
-    - [плыви]{"entity": "action", "role": "move"} [на южный край]{"entity": "subject", "role": "direction"} 36 м
-    - [шествуй]{"entity": "action", "role": "move"} [на западный край]{"entity": "subject", "role": "direction"} 31 М
-    - [собирайся]{"entity": "action", "role": "move"} 27 М [в южную сторону]{"entity": "subject", "role": "direction"}
-    - [езжайте]{"entity": "action", "role": "move"} на 44 М [вправо]{"entity": "subject", "role": "direction"}
-    - [выходи]{"entity": "action", "role": "move"} на 26 М [в сторону востока]{"entity": "subject", "role": "direction"}
-    - [прохаживай]{"entity": "action", "role": "move"} [налево]{"entity": "subject", "role": "direction"} на 50 м
-    - [шкандыбай]{"entity": "action", "role": "move"} [в сторону юга]{"entity": "subject", "role": "direction"}
-    - [мчитесь]{"entity": "action", "role": "move"} [на восток]{"entity": "subject", "role": "direction"} на 6 М
-    - [выступай]{"entity": "action", "role": "move"} [на восток]{"entity": "subject", "role": "direction"}
-    - [шествуйте]{"entity": "action", "role": "move"} [на юг]{"entity": "subject", "role": "direction"} на 13 М
-    - [сходите]{"entity": "action", "role": "move"} [задом]{"entity": "subject", "role": "direction"}
-    - [пойди]{"entity": "action", "role": "move"} [на северный край]{"entity": "subject", "role": "direction"} 18 м
-    - [дуй]{"entity": "action", "role": "move"} [на север]{"entity": "subject", "role": "direction"} на 37 м
+    - [уходите]{"entity": "action", "role": "move"} 24 М [назад]{"entity": "subject", "role": "direction"}
+    - [сдвигайся]{"entity": "action", "role": "move"} [по правую руку]{"entity": "subject", "role": "direction"} 23 м
+    - [скачите]{"entity": "action", "role": "move"} [напролом]{"entity": "subject", "role": "direction"} 20 М
+    - [двигайся]{"entity": "action", "role": "move"} 17 м [на южный край]{"entity": "subject", "role": "direction"}
+    - [дуй]{"entity": "action", "role": "move"} [в правую сторону]{"entity": "subject", "role": "direction"} 5 М
+    - [сдвинься]{"entity": "action", "role": "move"} на 20 м [напролом]{"entity": "subject", "role": "direction"}
+    - [вышагивай]{"entity": "action", "role": "move"} 47 м [в сторону запада]{"entity": "subject", "role": "direction"}
+    - [маршируйте]{"entity": "action", "role": "move"} [в сторону юга]{"entity": "subject", "role": "direction"} 24 м
+    - [проезжай]{"entity": "action", "role": "move"} [в сторону востока]{"entity": "subject", "role": "direction"} на 45 М
+    - [сдавайте]{"entity": "action", "role": "move"} 4 м [прямо]{"entity": "subject", "role": "direction"}
+    - [двигайся]{"entity": "action", "role": "move"} [на восток]{"entity": "subject", "role": "direction"}
+    - [подходите]{"entity": "action", "role": "move"} [обратно]{"entity": "subject", "role": "direction"}
+    - [уезжайте]{"entity": "action", "role": "move"} [взапядки]{"entity": "subject", "role": "direction"} на 46 м
+    - [проезжай]{"entity": "action", "role": "move"} 19 М [на запад]{"entity": "subject", "role": "direction"}
+    - [переступайте]{"entity": "action", "role": "move"} [в правую сторону]{"entity": "subject", "role": "direction"} на 22 м
+    - [несись]{"entity": "action", "role": "move"} [на восток]{"entity": "subject", "role": "direction"} 40 м
+    - [гони]{"entity": "action", "role": "move"} 11 м [на запад]{"entity": "subject", "role": "direction"}
+    - [направляйся]{"entity": "action", "role": "move"} [возвратно]{"entity": "subject", "role": "direction"} на 41 М
+    - [пробирайтесь]{"entity": "action", "role": "move"} [в восточную сторону]{"entity": "subject", "role": "direction"} на 21 м
+    - [иди]{"entity": "action", "role": "move"} 44 м [на юг]{"entity": "subject", "role": "direction"}
+    - [уходи]{"entity": "action", "role": "move"} на 42 М [на северный край]{"entity": "subject", "role": "direction"}
+    - [топай]{"entity": "action", "role": "move"} [по левую руку]{"entity": "subject", "role": "direction"} на 3 М
+    - [собирайтесь]{"entity": "action", "role": "move"} [на западный край]{"entity": "subject", "role": "direction"}
+    - [езжай]{"entity": "action", "role": "move"} 13 м [вперед]{"entity": "subject", "role": "direction"}
+    - [направляйся]{"entity": "action", "role": "move"} [в западную сторону]{"entity": "subject", "role": "direction"}
+    - [отправляйтесь]{"entity": "action", "role": "move"} на 43 м [в северную сторону]{"entity": "subject", "role": "direction"}

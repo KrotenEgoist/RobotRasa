@@ -24,6 +24,7 @@ entities:
       roles:
         - direction
         - object
+        - addition
   - distance
   - relation
 
@@ -43,6 +44,13 @@ slots:
     mappings:
       - type: from_entity
         entity: relation
+
+  addition:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: subject
+        role: addition
 
   distance:
     type: text
@@ -74,7 +82,7 @@ forms:
 
 responses:
   utter_send_command:
-    - text: "Команда отправлена {subject} {relation} {distance}"
+    - text: "Команда отправлена {subject} {distance} {relation} {addition}"
   utter_wrong_command:
     - text: "Исправляем команду"
   utter_rephrase:

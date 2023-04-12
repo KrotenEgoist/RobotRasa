@@ -3,203 +3,203 @@ version: "3.1"
 nlu:
 - intent: action+objects
   examples: |
-    - [переходи]{"entity": "action", "role": "move"} до [преграждения]{"entity": "subject", "role": "object"} [поперед]{"entity": "relation"} [женщины]{"entity": "subject", "role": "object"}
-    - [дерзай]{"entity": "action", "role": "move"} до [кругляша]{"entity": "subject", "role": "object"} [по правую руку]{"entity": "relation"} [тайги]{"entity": "subject", "role": "object"}
-    - [выступай]{"entity": "action", "role": "move"} к [впадине]{"entity": "subject", "role": "object"} [у]{"entity": "relation"} [валуна]{"entity": "subject", "role": "object"}
-    - [прохаживай]{"entity": "action", "role": "move"} до [ежа]{"entity": "subject", "role": "object"}
-    - [уезжай]{"entity": "action", "role": "move"} к [канаве]{"entity": "subject", "role": "object"} [около]{"entity": "relation"} [кругляша]{"entity": "subject", "role": "object"}
-    - [перемещайся]{"entity": "action", "role": "move"} до [женщины]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} [преграждения]{"entity": "subject", "role": "object"}
-    - [шагай]{"entity": "action", "role": "move"} к [хребту]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} [столба]{"entity": "subject", "role": "object"}
-    - [собирайся]{"entity": "action", "role": "move"} к [горе]{"entity": "subject", "role": "object"}
-    - [сходи]{"entity": "action", "role": "move"} к [барьеру]{"entity": "subject", "role": "object"} [в восточной стороне от]{"entity": "relation"} [чащи]{"entity": "subject", "role": "object"}
+    - [захаживай]{"entity": "action", "role": "move"} до [постройки]{"entity": "subject", "role": "object"}
+    - [гуляйте]{"entity": "action", "role": "move"} к [электросветильнику]{"entity": "subject", "role": "object"}
+    - [шествуйте]{"entity": "action", "role": "move"} до [чащобы]{"entity": "subject", "role": "object"}
+    - [скачите]{"entity": "action", "role": "move"} к [скале]{"entity": "subject", "role": "object"}
+    - [уезжай]{"entity": "action", "role": "move"} до [постройки]{"entity": "subject", "role": "object"}
+    - [дуй]{"entity": "action", "role": "move"} до [провала]{"entity": "subject", "role": "object"}
+    - [уходите]{"entity": "action", "role": "move"} к [тайге]{"entity": "subject", "role": "object"}
+    - [иди]{"entity": "action", "role": "move"} к [яме]{"entity": "subject", "role": "object"}
+    - [переходите]{"entity": "action", "role": "move"} до [светильника]{"entity": "subject", "role": "object"}
+    - [переместись]{"entity": "action", "role": "move"} к [лампаде]{"entity": "subject", "role": "object"}
+    - [несись]{"entity": "action", "role": "move"} до [брички]{"entity": "subject", "role": "object"}
+    - [пробирайтесь]{"entity": "action", "role": "move"} к [углублению]{"entity": "subject", "role": "object"} [справа от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [двигайся]{"entity": "action", "role": "move"} до [электросветильника]{"entity": "subject", "role": "object"}
+    - [гоните]{"entity": "action", "role": "move"} до [чащи]{"entity": "subject", "role": "object"}
+    - [отправляйся]{"entity": "action", "role": "move"} до [лампы]{"entity": "subject", "role": "object"}
+    - [прохаживай]{"entity": "action", "role": "move"} до [ольхи]{"entity": "subject", "role": "object"} [по правую руку]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [катись]{"entity": "action", "role": "move"} к [машине]{"entity": "subject", "role": "object"} [на востоке относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [проезжай]{"entity": "action", "role": "move"} до [фонаря]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [дерзай]{"entity": "action", "role": "move"} к [преграде]{"entity": "subject", "role": "object"}
+    - [шкандыбай]{"entity": "action", "role": "move"} к [горе]{"entity": "subject", "role": "object"}
+    - [езжайте]{"entity": "action", "role": "move"} к [кедру]{"entity": "subject", "role": "object"}
+    - [лети]{"entity": "action", "role": "move"} до [дубравы]{"entity": "subject", "role": "object"} [до]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [сходите]{"entity": "action", "role": "move"} до [тачки]{"entity": "subject", "role": "object"} [на востоке относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [шлёпайте]{"entity": "action", "role": "move"} до [рощи]{"entity": "subject", "role": "object"}
+    - [приходите]{"entity": "action", "role": "move"} к [бричке]{"entity": "subject", "role": "object"}
+    - [подходите]{"entity": "action", "role": "move"} до [пригорка]{"entity": "subject", "role": "object"}
+    - [шагайте]{"entity": "action", "role": "move"} к [впадине]{"entity": "subject", "role": "object"}
+    - [шлёпайте]{"entity": "action", "role": "move"} к [машине]{"entity": "subject", "role": "object"}
+    - [мчись]{"entity": "action", "role": "move"} до [чащи]{"entity": "subject", "role": "object"} [перед]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [газуйте]{"entity": "action", "role": "move"} к [домику]{"entity": "subject", "role": "object"} [за]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [шагай]{"entity": "action", "role": "move"} до [торшера]{"entity": "subject", "role": "object"} [с левой стороны от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [езжайте]{"entity": "action", "role": "move"} до [электросветильника]{"entity": "subject", "role": "object"} [левее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [выступай]{"entity": "action", "role": "move"} к [берёзе]{"entity": "subject", "role": "object"} [по правую сторону]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [при]{"entity": "action", "role": "move"} до [коня]{"entity": "subject", "role": "object"} [в западной стороне от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [шагай]{"entity": "action", "role": "move"} к [бричке]{"entity": "subject", "role": "object"} [на востоке от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [дуй]{"entity": "action", "role": "move"} до [дубравы]{"entity": "subject", "role": "object"}
+    - [переходите]{"entity": "action", "role": "move"} к [жилью]{"entity": "subject", "role": "object"} [позадь]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [шкандыбайте]{"entity": "action", "role": "move"} до [перелесок]{"entity": "subject", "role": "object"}
+    - [иди]{"entity": "action", "role": "move"} до [берёзы]{"entity": "subject", "role": "object"} [по правую сторону]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [уезжайте]{"entity": "action", "role": "move"} к [жилью]{"entity": "subject", "role": "object"} [за спиной]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [уезжайте]{"entity": "action", "role": "move"} до [чащи]{"entity": "subject", "role": "object"}
+    - [дерзайте]{"entity": "action", "role": "move"} до [корыта]{"entity": "subject", "role": "object"}
+    - [дуйте]{"entity": "action", "role": "move"} к [углублению]{"entity": "subject", "role": "object"}
+    - [двигайтесь]{"entity": "action", "role": "move"} к [канаве]{"entity": "subject", "role": "object"}
+    - [перемещайся]{"entity": "action", "role": "move"} до [фонаря]{"entity": "subject", "role": "object"}
+    - [прохаживайте]{"entity": "action", "role": "move"} до [прожектора]{"entity": "subject", "role": "object"}
+    - [катитесь]{"entity": "action", "role": "move"} до [бугра]{"entity": "subject", "role": "object"}
+    - [шествуйте]{"entity": "action", "role": "move"} до [здания]{"entity": "subject", "role": "object"} [сзади от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [мчись]{"entity": "action", "role": "move"} к [коню]{"entity": "subject", "role": "object"}
+    - [газуйте]{"entity": "action", "role": "move"} до [ежа]{"entity": "subject", "role": "object"} [позади]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [шагайте]{"entity": "action", "role": "move"} к [торшеру]{"entity": "subject", "role": "object"}
+    - [пробирайся]{"entity": "action", "role": "move"} к [холмику]{"entity": "subject", "role": "object"} [спереди от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [катись]{"entity": "action", "role": "move"} к [баррикаде]{"entity": "subject", "role": "object"} [позадь]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [катитесь]{"entity": "action", "role": "move"} до [лампы]{"entity": "subject", "role": "object"} [по левую руку]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [неситесь]{"entity": "action", "role": "move"} к [загородке]{"entity": "subject", "role": "object"}
+    - [вышагивай]{"entity": "action", "role": "move"} к [зданию]{"entity": "subject", "role": "object"}
+    - [при]{"entity": "action", "role": "move"} к [ольхе]{"entity": "subject", "role": "object"}
+    - [прите]{"entity": "action", "role": "move"} до [коня]{"entity": "subject", "role": "object"}
+    - [пробирайтесь]{"entity": "action", "role": "move"} к [строению]{"entity": "subject", "role": "object"}
+    - [сдвигайся]{"entity": "action", "role": "move"} к [препятствию]{"entity": "subject", "role": "object"} [назади]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [вышагивай]{"entity": "action", "role": "move"} к [болиду]{"entity": "subject", "role": "object"} [на западе относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [пойдите]{"entity": "action", "role": "move"} до [электросветильника]{"entity": "subject", "role": "object"} [в южной стороне от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [дерзай]{"entity": "action", "role": "move"} к [лампе]{"entity": "subject", "role": "object"} [с левой стороны от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [собирайся]{"entity": "action", "role": "move"} до [барьера]{"entity": "subject", "role": "object"}
+    - [иди]{"entity": "action", "role": "move"} к [горке]{"entity": "subject", "role": "object"} [до]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [плыви]{"entity": "action", "role": "move"} до [избы]{"entity": "subject", "role": "object"} [позадь]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [проезжайте]{"entity": "action", "role": "move"} до [прожектора]{"entity": "subject", "role": "object"}
+    - [топайте]{"entity": "action", "role": "move"} до [преграждения]{"entity": "subject", "role": "object"} [на фоне]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [вышагивайте]{"entity": "action", "role": "move"} до [авто]{"entity": "subject", "role": "object"} [западнее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [съезди]{"entity": "action", "role": "move"} до [заслона]{"entity": "subject", "role": "object"} [назади]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [двигайся]{"entity": "action", "role": "move"} до [дубравы]{"entity": "subject", "role": "object"} [перед]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [сдвигайся]{"entity": "action", "role": "move"} к [автомобилю]{"entity": "subject", "role": "object"} [на западе от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [приезжай]{"entity": "action", "role": "move"} до [загородки]{"entity": "subject", "role": "object"} [за]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [уезжай]{"entity": "action", "role": "move"} к [пальме]{"entity": "subject", "role": "object"}
+    - [съездите]{"entity": "action", "role": "move"} до [липы]{"entity": "subject", "role": "object"} [правее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [прите]{"entity": "action", "role": "move"} до [болида]{"entity": "subject", "role": "object"}
+    - [уходи]{"entity": "action", "role": "move"} к [пригорку]{"entity": "subject", "role": "object"} [до]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [шагайте]{"entity": "action", "role": "move"} к [роще]{"entity": "subject", "role": "object"}
+    - [катись]{"entity": "action", "role": "move"} до [светоча]{"entity": "subject", "role": "object"} [на юге от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [плыви]{"entity": "action", "role": "move"} до [впадины]{"entity": "subject", "role": "object"}
+    - [проезжайте]{"entity": "action", "role": "move"} к [воронке]{"entity": "subject", "role": "object"} [по правую сторону]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [выступай]{"entity": "action", "role": "move"} до [авто]{"entity": "subject", "role": "object"} [на востоке относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [приходите]{"entity": "action", "role": "move"} до [дуба]{"entity": "subject", "role": "object"} [справа от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [гоните]{"entity": "action", "role": "move"} к [дому]{"entity": "subject", "role": "object"}
+    - [дуйте]{"entity": "action", "role": "move"} к [автомобилю]{"entity": "subject", "role": "object"}
+    - [езжайте]{"entity": "action", "role": "move"} к [болиду]{"entity": "subject", "role": "object"}
+    - [направляйся]{"entity": "action", "role": "move"} к [дубу]{"entity": "subject", "role": "object"} [по правую руку]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [неситесь]{"entity": "action", "role": "move"} до [электросветильника]{"entity": "subject", "role": "object"}
+    - [приезжайте]{"entity": "action", "role": "move"} до [дубравы]{"entity": "subject", "role": "object"}
+    - [дерзайте]{"entity": "action", "role": "move"} до [торшера]{"entity": "subject", "role": "object"} [по левую сторону]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [вышагивай]{"entity": "action", "role": "move"} до [фонаря]{"entity": "subject", "role": "object"} [в южной стороне от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [проходи]{"entity": "action", "role": "move"} до [автомобиля]{"entity": "subject", "role": "object"} [в западной стороне от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [сдавай]{"entity": "action", "role": "move"} к [корыту]{"entity": "subject", "role": "object"} [в восточной стороне от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [выступайте]{"entity": "action", "role": "move"} к [постройке]{"entity": "subject", "role": "object"} [за спиной]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [пойди]{"entity": "action", "role": "move"} к [углублению]{"entity": "subject", "role": "object"} [с правой стороны от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [дуй]{"entity": "action", "role": "move"} к [чащобе]{"entity": "subject", "role": "object"} [перед]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [приезжай]{"entity": "action", "role": "move"} к [авто]{"entity": "subject", "role": "object"} [на востоке относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [проезжайте]{"entity": "action", "role": "move"} до [пальмы]{"entity": "subject", "role": "object"} [с правой стороны от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [проходите]{"entity": "action", "role": "move"} к [строению]{"entity": "subject", "role": "object"} [на фоне]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
     - [шагайте]{"entity": "action", "role": "move"} к [преграде]{"entity": "subject", "role": "object"}
-    - [лети]{"entity": "action", "role": "move"} до [камня]{"entity": "subject", "role": "object"}
-    - [переместитесь]{"entity": "action", "role": "move"} к [камешку]{"entity": "subject", "role": "object"}
-    - [выходи]{"entity": "action", "role": "move"} к [хребту]{"entity": "subject", "role": "object"}
-    - [выходите]{"entity": "action", "role": "move"} к [бричке]{"entity": "subject", "role": "object"}
-    - [гуляйте]{"entity": "action", "role": "move"} к [камешку]{"entity": "subject", "role": "object"}
-    - [гуляйте]{"entity": "action", "role": "move"} до [бугра]{"entity": "subject", "role": "object"}
-    - [езжайте]{"entity": "action", "role": "move"} к [преграждению]{"entity": "subject", "role": "object"} [в восточной стороне от]{"entity": "relation"} [рощи]{"entity": "subject", "role": "object"}
-    - [катись]{"entity": "action", "role": "move"} к [товарищу]{"entity": "subject", "role": "object"}
-    - [проходите]{"entity": "action", "role": "move"} к [бугру]{"entity": "subject", "role": "object"}
-    - [приезжайте]{"entity": "action", "role": "move"} к [баррикаде]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} [разлома]{"entity": "subject", "role": "object"}
-    - [при]{"entity": "action", "role": "move"} до [коня]{"entity": "subject", "role": "object"} [при]{"entity": "relation"} [лампе]{"entity": "subject", "role": "object"}
-    - [езжай]{"entity": "action", "role": "move"} к [провалу]{"entity": "subject", "role": "object"}
-    - [перемещайтесь]{"entity": "action", "role": "move"} до [скалы]{"entity": "subject", "role": "object"}
-    - [выходите]{"entity": "action", "role": "move"} до [пригорка]{"entity": "subject", "role": "object"} [у]{"entity": "relation"} [камешка]{"entity": "subject", "role": "object"}
-    - [сдвигайтесь]{"entity": "action", "role": "move"} к [баррикаде]{"entity": "subject", "role": "object"}
-    - [при]{"entity": "action", "role": "move"} к [перегородке]{"entity": "subject", "role": "object"} [на востоке от]{"entity": "relation"} [тайги]{"entity": "subject", "role": "object"}
-    - [пробирайтесь]{"entity": "action", "role": "move"} к [болиду]{"entity": "subject", "role": "object"} [рядом с]{"entity": "relation"} [светом]{"entity": "subject", "role": "object"}
-    - [маршируйте]{"entity": "action", "role": "move"} до [тачки]{"entity": "subject", "role": "object"} [у]{"entity": "relation"} [лампы]{"entity": "subject", "role": "object"}
-    - [подходите]{"entity": "action", "role": "move"} до [лампады]{"entity": "subject", "role": "object"} [за]{"entity": "relation"} [воронкой]{"entity": "subject", "role": "object"}
-    - [собирайся]{"entity": "action", "role": "move"} к [горке]{"entity": "subject", "role": "object"}
-    - [переместись]{"entity": "action", "role": "move"} к [возвышенности]{"entity": "subject", "role": "object"} [в районе]{"entity": "relation"} [булыги]{"entity": "subject", "role": "object"}
-    - [дуй]{"entity": "action", "role": "move"} к [возвышенности]{"entity": "subject", "role": "object"} [в южной стороне от]{"entity": "relation"} [прожектора]{"entity": "subject", "role": "object"}
-    - [дерзайте]{"entity": "action", "role": "move"} до [кучи]{"entity": "subject", "role": "object"} [неподалеку от]{"entity": "relation"} [камня]{"entity": "subject", "role": "object"}
-    - [шкандыбай]{"entity": "action", "role": "move"} к [горке]{"entity": "subject", "role": "object"} [возле]{"entity": "relation"} [булыги]{"entity": "subject", "role": "object"}
-    - [двигайся]{"entity": "action", "role": "move"} к [препятствию]{"entity": "subject", "role": "object"} [поперед]{"entity": "relation"} [души]{"entity": "subject", "role": "object"}
-    - [гуляй]{"entity": "action", "role": "move"} к [болиду]{"entity": "subject", "role": "object"}
-    - [прохаживайте]{"entity": "action", "role": "move"} к [ограждению]{"entity": "subject", "role": "object"}
-    - [захаживай]{"entity": "action", "role": "move"} до [фигуры]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} [преграждения]{"entity": "subject", "role": "object"}
-    - [уезжай]{"entity": "action", "role": "move"} до [женщины]{"entity": "subject", "role": "object"}
-    - [сдвинься]{"entity": "action", "role": "move"} к [заслону]{"entity": "subject", "role": "object"} [восточнее]{"entity": "relation"} [массива]{"entity": "subject", "role": "object"}
-    - [сходите]{"entity": "action", "role": "move"} до [машины]{"entity": "subject", "role": "object"} [поблизости к]{"entity": "relation"} [столбу]{"entity": "subject", "role": "object"}
-    - [несись]{"entity": "action", "role": "move"} к [коню]{"entity": "subject", "role": "object"} [возле]{"entity": "relation"} [торшера]{"entity": "subject", "role": "object"}
-    - [летите]{"entity": "action", "role": "move"} до [перегородки]{"entity": "subject", "role": "object"}
-    - [съездите]{"entity": "action", "role": "move"} до [болида]{"entity": "subject", "role": "object"} [примерно у]{"entity": "relation"} [электросветильника]{"entity": "subject", "role": "object"}
-    - [направляйся]{"entity": "action", "role": "move"} к [отложению]{"entity": "subject", "role": "object"} [с правой стороны от]{"entity": "relation"} [чащобы]{"entity": "subject", "role": "object"}
-    - [шагайте]{"entity": "action", "role": "move"} до [ребёнка]{"entity": "subject", "role": "object"}
-    - [топайте]{"entity": "action", "role": "move"} к [канаве]{"entity": "subject", "role": "object"} [в районе]{"entity": "relation"} [булыги]{"entity": "subject", "role": "object"}
-    - [дуй]{"entity": "action", "role": "move"} к [лампаде]{"entity": "subject", "role": "object"}
-    - [топай]{"entity": "action", "role": "move"} до [ребёнка]{"entity": "subject", "role": "object"}
-    - [топайте]{"entity": "action", "role": "move"} до [пригорка]{"entity": "subject", "role": "object"}
-    - [несись]{"entity": "action", "role": "move"} до [лампады]{"entity": "subject", "role": "object"} [позади]{"entity": "relation"} [пропасти]{"entity": "subject", "role": "object"}
-    - [пойдите]{"entity": "action", "role": "move"} до [товарища]{"entity": "subject", "role": "object"} [на юге от]{"entity": "relation"} [преграды]{"entity": "subject", "role": "object"}
-    - [выходите]{"entity": "action", "role": "move"} к [булыжнику]{"entity": "subject", "role": "object"}
-    - [сходите]{"entity": "action", "role": "move"} до [ежа]{"entity": "subject", "role": "object"} [впереди]{"entity": "relation"} [парня]{"entity": "subject", "role": "object"}
-    - [езжай]{"entity": "action", "role": "move"} до [баррикады]{"entity": "subject", "role": "object"} [восточнее]{"entity": "relation"} [лесополосы]{"entity": "subject", "role": "object"}
-    - [выходите]{"entity": "action", "role": "move"} до [баррикады]{"entity": "subject", "role": "object"} [перед]{"entity": "relation"} [ребёнком]{"entity": "subject", "role": "object"}
-    - [шагайте]{"entity": "action", "role": "move"} до [торшера]{"entity": "subject", "role": "object"}
-    - [сходите]{"entity": "action", "role": "move"} к [товарищу]{"entity": "subject", "role": "object"}
-    - [собирайтесь]{"entity": "action", "role": "move"} к [провалу]{"entity": "subject", "role": "object"} [неподалеку от]{"entity": "relation"} [кругляша]{"entity": "subject", "role": "object"}
-    - [шагай]{"entity": "action", "role": "move"} до [пригорка]{"entity": "subject", "role": "object"}
-    - [собирайся]{"entity": "action", "role": "move"} к [авто]{"entity": "subject", "role": "object"} [рядом с]{"entity": "relation"} [светильником]{"entity": "subject", "role": "object"}
-    - [пойдите]{"entity": "action", "role": "move"} к [баррикаде]{"entity": "subject", "role": "object"} [южнее]{"entity": "relation"} [надлома]{"entity": "subject", "role": "object"}
-    - [сдавайте]{"entity": "action", "role": "move"} до [горы]{"entity": "subject", "role": "object"}
-    - [гуляйте]{"entity": "action", "role": "move"} до [пропасти]{"entity": "subject", "role": "object"} [возле]{"entity": "relation"} [валуна]{"entity": "subject", "role": "object"}
-    - [перемещайтесь]{"entity": "action", "role": "move"} до [баррикады]{"entity": "subject", "role": "object"}
-    - [выступайте]{"entity": "action", "role": "move"} к [кругляшу]{"entity": "subject", "role": "object"} [с правой стороны от]{"entity": "relation"} [леса]{"entity": "subject", "role": "object"}
-    - [перемещайтесь]{"entity": "action", "role": "move"} до [перегородки]{"entity": "subject", "role": "object"}
-    - [приходите]{"entity": "action", "role": "move"} до [провала]{"entity": "subject", "role": "object"}
-    - [подходите]{"entity": "action", "role": "move"} до [загородки]{"entity": "subject", "role": "object"}
-    - [газуй]{"entity": "action", "role": "move"} до [преграждения]{"entity": "subject", "role": "object"}
-    - [выходите]{"entity": "action", "role": "move"} до [корыта]{"entity": "subject", "role": "object"}
-    - [езжайте]{"entity": "action", "role": "move"} до [столба]{"entity": "subject", "role": "object"}
-    - [переместитесь]{"entity": "action", "role": "move"} до [фонаря]{"entity": "subject", "role": "object"}
-    - [вышагивайте]{"entity": "action", "role": "move"} до [преграды]{"entity": "subject", "role": "object"} [южнее]{"entity": "relation"} [разрыва]{"entity": "subject", "role": "object"}
-    - [отправляйся]{"entity": "action", "role": "move"} к [преграде]{"entity": "subject", "role": "object"} [поперед]{"entity": "relation"} [фигуры]{"entity": "subject", "role": "object"}
-    - [выходи]{"entity": "action", "role": "move"} до [преграждения]{"entity": "subject", "role": "object"} [в южной стороне от]{"entity": "relation"} [трещины]{"entity": "subject", "role": "object"}
-    - [приезжай]{"entity": "action", "role": "move"} до [преграждения]{"entity": "subject", "role": "object"} [южнее]{"entity": "relation"} [щели]{"entity": "subject", "role": "object"}
-    - [перемещайся]{"entity": "action", "role": "move"} до [голыша]{"entity": "subject", "role": "object"}
-    - [шкандыбайте]{"entity": "action", "role": "move"} до [загородки]{"entity": "subject", "role": "object"}
-    - [шлёпай]{"entity": "action", "role": "move"} к [преграде]{"entity": "subject", "role": "object"} [на востоке от]{"entity": "relation"} [чащи]{"entity": "subject", "role": "object"}
-    - [плывите]{"entity": "action", "role": "move"} до [мужчины]{"entity": "subject", "role": "object"} [в южной стороне от]{"entity": "relation"} [баррикады]{"entity": "subject", "role": "object"}
-    - [съездите]{"entity": "action", "role": "move"} до [оврага]{"entity": "subject", "role": "object"}
-    - [катитесь]{"entity": "action", "role": "move"} к [тачке]{"entity": "subject", "role": "object"}
-    - [сходите]{"entity": "action", "role": "move"} до [холма]{"entity": "subject", "role": "object"}
-    - [газуй]{"entity": "action", "role": "move"} до [женщины]{"entity": "subject", "role": "object"}
-    - [газуйте]{"entity": "action", "role": "move"} до [ограждения]{"entity": "subject", "role": "object"} [до]{"entity": "relation"} [души]{"entity": "subject", "role": "object"}
-    - [приходите]{"entity": "action", "role": "move"} до [электросветильника]{"entity": "subject", "role": "object"} [за спиной]{"entity": "relation"} [воронки]{"entity": "subject", "role": "object"}
-    - [шагай]{"entity": "action", "role": "move"} к [бугру]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} [лампады]{"entity": "subject", "role": "object"}
-    - [приходите]{"entity": "action", "role": "move"} к [оврагу]{"entity": "subject", "role": "object"}
-    - [захаживай]{"entity": "action", "role": "move"} до [бугра]{"entity": "subject", "role": "object"}
-    - [сдавайте]{"entity": "action", "role": "move"} к [препятствию]{"entity": "subject", "role": "object"} [на востоке относительно]{"entity": "relation"} [чащи]{"entity": "subject", "role": "object"}
-    - [пойди]{"entity": "action", "role": "move"} до [света]{"entity": "subject", "role": "object"}
-    - [газуй]{"entity": "action", "role": "move"} к [воронке]{"entity": "subject", "role": "object"}
-    - [уезжайте]{"entity": "action", "role": "move"} к [яме]{"entity": "subject", "role": "object"} [бок о бок с]{"entity": "relation"} [булыжником]{"entity": "subject", "role": "object"}
-    - [вышагивай]{"entity": "action", "role": "move"} до [кругляша]{"entity": "subject", "role": "object"}
-    - [шествуйте]{"entity": "action", "role": "move"} до [кругляша]{"entity": "subject", "role": "object"} [по правую руку]{"entity": "relation"} [массива]{"entity": "subject", "role": "object"}
-    - [съезди]{"entity": "action", "role": "move"} до [холма]{"entity": "subject", "role": "object"} [у]{"entity": "relation"} [камня]{"entity": "subject", "role": "object"}
-    - [летите]{"entity": "action", "role": "move"} до [загородки]{"entity": "subject", "role": "object"} [до]{"entity": "relation"} [личности]{"entity": "subject", "role": "object"}
-    - [езжайте]{"entity": "action", "role": "move"} до [рытвины]{"entity": "subject", "role": "object"} [у]{"entity": "relation"} [голыша]{"entity": "subject", "role": "object"}
-    - [маршируйте]{"entity": "action", "role": "move"} до [булыги]{"entity": "subject", "role": "object"}
-    - [собирайся]{"entity": "action", "role": "move"} до [булыги]{"entity": "subject", "role": "object"} [с правой стороны от]{"entity": "relation"} [лесополосы]{"entity": "subject", "role": "object"}
-    - [захаживайте]{"entity": "action", "role": "move"} к [воронке]{"entity": "subject", "role": "object"}
-    - [выступай]{"entity": "action", "role": "move"} до [холма]{"entity": "subject", "role": "object"} [в районе]{"entity": "relation"} [отложения]{"entity": "subject", "role": "object"}
-    - [маршируйте]{"entity": "action", "role": "move"} до [ребёнка]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} [барьера]{"entity": "subject", "role": "object"}
-    - [переходи]{"entity": "action", "role": "move"} до [ограждения]{"entity": "subject", "role": "object"}
-    - [сдавайте]{"entity": "action", "role": "move"} до [болида]{"entity": "subject", "role": "object"}
-    - [езжайте]{"entity": "action", "role": "move"} к [скале]{"entity": "subject", "role": "object"}
-    - [гони]{"entity": "action", "role": "move"} до [препятствия]{"entity": "subject", "role": "object"}
-    - [идите]{"entity": "action", "role": "move"} к [бричке]{"entity": "subject", "role": "object"} [при]{"entity": "relation"} [электросветильнике]{"entity": "subject", "role": "object"}
-    - [шлёпайте]{"entity": "action", "role": "move"} к [мужчине]{"entity": "subject", "role": "object"} [на юге от]{"entity": "relation"} [перегородки]{"entity": "subject", "role": "object"}
-    - [несись]{"entity": "action", "role": "move"} к [перегородке]{"entity": "subject", "role": "object"}
-    - [маршируйте]{"entity": "action", "role": "move"} к [барьеру]{"entity": "subject", "role": "object"}
-    - [несись]{"entity": "action", "role": "move"} к [светильнику]{"entity": "subject", "role": "object"} [за спиной]{"entity": "relation"} [пропасти]{"entity": "subject", "role": "object"}
-    - [подходите]{"entity": "action", "role": "move"} до [заслона]{"entity": "subject", "role": "object"}
-    - [проезжайте]{"entity": "action", "role": "move"} к [пригорку]{"entity": "subject", "role": "object"}
-    - [приходите]{"entity": "action", "role": "move"} до [рытвины]{"entity": "subject", "role": "object"}
-    - [беги]{"entity": "action", "role": "move"} к [возвышенности]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} [электросветильника]{"entity": "subject", "role": "object"}
-    - [при]{"entity": "action", "role": "move"} до [препятствия]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} [расселины]{"entity": "subject", "role": "object"}
-    - [идите]{"entity": "action", "role": "move"} до [преграждения]{"entity": "subject", "role": "object"}
-    - [неситесь]{"entity": "action", "role": "move"} до [ограждения]{"entity": "subject", "role": "object"}
-    - [двигайтесь]{"entity": "action", "role": "move"} к [загородке]{"entity": "subject", "role": "object"}
-    - [идите]{"entity": "action", "role": "move"} до [болида]{"entity": "subject", "role": "object"}
-    - [сдвиньтесь]{"entity": "action", "role": "move"} к [торшеру]{"entity": "subject", "role": "object"} [на фоне]{"entity": "relation"} [рытвины]{"entity": "subject", "role": "object"}
-    - [дуй]{"entity": "action", "role": "move"} к [даме]{"entity": "subject", "role": "object"} [на юге от]{"entity": "relation"} [баррикады]{"entity": "subject", "role": "object"}
-    - [катитесь]{"entity": "action", "role": "move"} к [даме]{"entity": "subject", "role": "object"} [на юге от]{"entity": "relation"} [барьера]{"entity": "subject", "role": "object"}
-    - [шлёпайте]{"entity": "action", "role": "move"} до [парня]{"entity": "subject", "role": "object"}
-    - [маршируйте]{"entity": "action", "role": "move"} к [свету]{"entity": "subject", "role": "object"}
-    - [проезжайте]{"entity": "action", "role": "move"} к [препятствию]{"entity": "subject", "role": "object"} [поперед]{"entity": "relation"} [личности]{"entity": "subject", "role": "object"}
-    - [неситесь]{"entity": "action", "role": "move"} до [горы]{"entity": "subject", "role": "object"} [южнее]{"entity": "relation"} [светоча]{"entity": "subject", "role": "object"}
-    - [выходи]{"entity": "action", "role": "move"} к [даме]{"entity": "subject", "role": "object"}
-    - [переступай]{"entity": "action", "role": "move"} к [болиду]{"entity": "subject", "role": "object"}
-    - [пробирайся]{"entity": "action", "role": "move"} до [машины]{"entity": "subject", "role": "object"} [в районе]{"entity": "relation"} [торшера]{"entity": "subject", "role": "object"}
-    - [езжайте]{"entity": "action", "role": "move"} к [оврагу]{"entity": "subject", "role": "object"}
-    - [лети]{"entity": "action", "role": "move"} к [бугру]{"entity": "subject", "role": "object"} [рядом с]{"entity": "relation"} [валуном]{"entity": "subject", "role": "object"}
-    - [прохаживайте]{"entity": "action", "role": "move"} к [свету]{"entity": "subject", "role": "object"}
-    - [переходи]{"entity": "action", "role": "move"} к [хребту]{"entity": "subject", "role": "object"} [возле]{"entity": "relation"} [камушка]{"entity": "subject", "role": "object"}
-    - [собирайтесь]{"entity": "action", "role": "move"} к [преграждению]{"entity": "subject", "role": "object"} [южнее]{"entity": "relation"} [разлома]{"entity": "subject", "role": "object"}
-    - [сдавай]{"entity": "action", "role": "move"} к [перегородке]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} [отлупа]{"entity": "subject", "role": "object"}
-    - [сдавай]{"entity": "action", "role": "move"} до [преграждения]{"entity": "subject", "role": "object"}
-    - [уходите]{"entity": "action", "role": "move"} до [камешка]{"entity": "subject", "role": "object"} [по правую сторону]{"entity": "relation"} [чащобы]{"entity": "subject", "role": "object"}
-    - [переместись]{"entity": "action", "role": "move"} к [фонарю]{"entity": "subject", "role": "object"} [на фоне]{"entity": "relation"} [воронки]{"entity": "subject", "role": "object"}
-    - [дуй]{"entity": "action", "role": "move"} до [мужчины]{"entity": "subject", "role": "object"}
-    - [беги]{"entity": "action", "role": "move"} к [ограждению]{"entity": "subject", "role": "object"}
-    - [скачите]{"entity": "action", "role": "move"} к [булыге]{"entity": "subject", "role": "object"}
-    - [съезди]{"entity": "action", "role": "move"} к [баррикаде]{"entity": "subject", "role": "object"}
-    - [неситесь]{"entity": "action", "role": "move"} до [скалы]{"entity": "subject", "role": "object"} [в южной стороне от]{"entity": "relation"} [лампы]{"entity": "subject", "role": "object"}
-    - [шкандыбай]{"entity": "action", "role": "move"} до [загородки]{"entity": "subject", "role": "object"}
-    - [пробирайтесь]{"entity": "action", "role": "move"} к [торшеру]{"entity": "subject", "role": "object"} [за]{"entity": "relation"} [канавой]{"entity": "subject", "role": "object"}
-    - [мчитесь]{"entity": "action", "role": "move"} до [хребта]{"entity": "subject", "role": "object"}
-    - [прохаживай]{"entity": "action", "role": "move"} до [кругляша]{"entity": "subject", "role": "object"} [справа от]{"entity": "relation"} [рощи]{"entity": "subject", "role": "object"}
-    - [иди]{"entity": "action", "role": "move"} до [ежа]{"entity": "subject", "role": "object"}
-    - [при]{"entity": "action", "role": "move"} до [холмика]{"entity": "subject", "role": "object"}
-    - [прите]{"entity": "action", "role": "move"} до [светильника]{"entity": "subject", "role": "object"} [на фоне]{"entity": "relation"} [пропасти]{"entity": "subject", "role": "object"}
-    - [проезжай]{"entity": "action", "role": "move"} к [возвышенности]{"entity": "subject", "role": "object"}
-    - [прохаживайте]{"entity": "action", "role": "move"} к [провалу]{"entity": "subject", "role": "object"}
-    - [дерзай]{"entity": "action", "role": "move"} до [торшера]{"entity": "subject", "role": "object"} [на фоне]{"entity": "relation"} [ямы]{"entity": "subject", "role": "object"}
-    - [сходите]{"entity": "action", "role": "move"} к [преграждению]{"entity": "subject", "role": "object"} [на востоке относительно]{"entity": "relation"} [чащобы]{"entity": "subject", "role": "object"}
-    - [дуйте]{"entity": "action", "role": "move"} к [заслону]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} [разлома]{"entity": "subject", "role": "object"}
-    - [сдвигайтесь]{"entity": "action", "role": "move"} к [возвышенности]{"entity": "subject", "role": "object"}
-    - [съезди]{"entity": "action", "role": "move"} до [коня]{"entity": "subject", "role": "object"}
-    - [проходите]{"entity": "action", "role": "move"} к [валуну]{"entity": "subject", "role": "object"}
-    - [идите]{"entity": "action", "role": "move"} к [хребту]{"entity": "subject", "role": "object"}
-    - [газуйте]{"entity": "action", "role": "move"} к [заслону]{"entity": "subject", "role": "object"} [на востоке относительно]{"entity": "relation"} [массива]{"entity": "subject", "role": "object"}
-    - [идите]{"entity": "action", "role": "move"} до [кучи]{"entity": "subject", "role": "object"}
-    - [шествуй]{"entity": "action", "role": "move"} до [оврага]{"entity": "subject", "role": "object"} [в районе]{"entity": "relation"} [камешка]{"entity": "subject", "role": "object"}
-    - [проходите]{"entity": "action", "role": "move"} к [прожектору]{"entity": "subject", "role": "object"}
-    - [уходите]{"entity": "action", "role": "move"} до [автомобиля]{"entity": "subject", "role": "object"}
-    - [подходи]{"entity": "action", "role": "move"} до [баррикады]{"entity": "subject", "role": "object"}
-    - [выходи]{"entity": "action", "role": "move"} до [хребта]{"entity": "subject", "role": "object"}
-    - [идите]{"entity": "action", "role": "move"} до [перегородки]{"entity": "subject", "role": "object"} [впереди]{"entity": "relation"} [женщины]{"entity": "subject", "role": "object"}
-    - [собирайся]{"entity": "action", "role": "move"} до [кучи]{"entity": "subject", "role": "object"} [примерно у]{"entity": "relation"} [камня]{"entity": "subject", "role": "object"}
-    - [съездите]{"entity": "action", "role": "move"} до [загородки]{"entity": "subject", "role": "object"} [южнее]{"entity": "relation"} [расселины]{"entity": "subject", "role": "object"}
-    - [собирайся]{"entity": "action", "role": "move"} до [барьера]{"entity": "subject", "role": "object"} [перед]{"entity": "relation"} [женщиной]{"entity": "subject", "role": "object"}
-    - [сходите]{"entity": "action", "role": "move"} до [рытвины]{"entity": "subject", "role": "object"}
-    - [проходите]{"entity": "action", "role": "move"} до [заслона]{"entity": "subject", "role": "object"}
-    - [шкандыбай]{"entity": "action", "role": "move"} до [лампады]{"entity": "subject", "role": "object"} [позадь]{"entity": "relation"} [оврага]{"entity": "subject", "role": "object"}
-    - [летите]{"entity": "action", "role": "move"} к [преграждению]{"entity": "subject", "role": "object"} [на востоке относительно]{"entity": "relation"} [чащи]{"entity": "subject", "role": "object"}
-    - [пойдите]{"entity": "action", "role": "move"} до [товарища]{"entity": "subject", "role": "object"} [в южной стороне от]{"entity": "relation"} [загородки]{"entity": "subject", "role": "object"}
-    - [бегите]{"entity": "action", "role": "move"} к [куче]{"entity": "subject", "role": "object"} [на юге от]{"entity": "relation"} [электросветильника]{"entity": "subject", "role": "object"}
-    - [шкандыбайте]{"entity": "action", "role": "move"} до [дамы]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} [ограждения]{"entity": "subject", "role": "object"}
-    - [топайте]{"entity": "action", "role": "move"} до [препятствия]{"entity": "subject", "role": "object"}
-    - [газуй]{"entity": "action", "role": "move"} до [валуна]{"entity": "subject", "role": "object"} [по правую руку]{"entity": "relation"} [дубравы]{"entity": "subject", "role": "object"}
-    - [захаживай]{"entity": "action", "role": "move"} до [лампады]{"entity": "subject", "role": "object"}
-    - [приходи]{"entity": "action", "role": "move"} до [кругляша]{"entity": "subject", "role": "object"}
-    - [пойдите]{"entity": "action", "role": "move"} к [загородке]{"entity": "subject", "role": "object"}
-    - [перемещайся]{"entity": "action", "role": "move"} к [загородке]{"entity": "subject", "role": "object"}
-    - [уезжай]{"entity": "action", "role": "move"} до [заслона]{"entity": "subject", "role": "object"}
-    - [шествуйте]{"entity": "action", "role": "move"} к [холмику]{"entity": "subject", "role": "object"} [в южной стороне от]{"entity": "relation"} [светильника]{"entity": "subject", "role": "object"}
-    - [шлёпай]{"entity": "action", "role": "move"} до [пригорка]{"entity": "subject", "role": "object"} [южнее]{"entity": "relation"} [торшера]{"entity": "subject", "role": "object"}
-    - [выходите]{"entity": "action", "role": "move"} до [горы]{"entity": "subject", "role": "object"} [рядом с]{"entity": "relation"} [камнем]{"entity": "subject", "role": "object"}
-    - [скачи]{"entity": "action", "role": "move"} к [провалу]{"entity": "subject", "role": "object"} [в районе]{"entity": "relation"} [отложения]{"entity": "subject", "role": "object"}
-    - [уходите]{"entity": "action", "role": "move"} до [тачки]{"entity": "subject", "role": "object"}
-    - [переместитесь]{"entity": "action", "role": "move"} к [ласточке]{"entity": "subject", "role": "object"} [бок о бок с]{"entity": "relation"} [столбом]{"entity": "subject", "role": "object"}
-    - [шагайте]{"entity": "action", "role": "move"} до [женщины]{"entity": "subject", "role": "object"}
-    - [сдвигайся]{"entity": "action", "role": "move"} к [камушку]{"entity": "subject", "role": "object"} [с правой стороны от]{"entity": "relation"} [массива]{"entity": "subject", "role": "object"}
-    - [проезжай]{"entity": "action", "role": "move"} до [голыша]{"entity": "subject", "role": "object"} [справа от]{"entity": "relation"} [чащи]{"entity": "subject", "role": "object"}
-    - [двигайтесь]{"entity": "action", "role": "move"} к [баррикаде]{"entity": "subject", "role": "object"}
-    - [прохаживай]{"entity": "action", "role": "move"} до [лампады]{"entity": "subject", "role": "object"}
-    - [шлёпайте]{"entity": "action", "role": "move"} к [хребту]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} [прожектора]{"entity": "subject", "role": "object"}
-    - [катись]{"entity": "action", "role": "move"} до [провала]{"entity": "subject", "role": "object"} [поблизости к]{"entity": "relation"} [кругляшу]{"entity": "subject", "role": "object"}
+    - [маршируйте]{"entity": "action", "role": "move"} к [заслону]{"entity": "subject", "role": "object"}
+    - [летите]{"entity": "action", "role": "move"} до [углубления]{"entity": "subject", "role": "object"} [по правую руку]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [сдвиньтесь]{"entity": "action", "role": "move"} к [бугру]{"entity": "subject", "role": "object"}
+    - [переступайте]{"entity": "action", "role": "move"} к [канаве]{"entity": "subject", "role": "object"}
+    - [уезжайте]{"entity": "action", "role": "move"} до [столба]{"entity": "subject", "role": "object"}
+    - [дуйте]{"entity": "action", "role": "move"} до [ежа]{"entity": "subject", "role": "object"}
+    - [уходите]{"entity": "action", "role": "move"} к [воронке]{"entity": "subject", "role": "object"} [правее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [маршируй]{"entity": "action", "role": "move"} до [кучи]{"entity": "subject", "role": "object"} [пред]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [шагайте]{"entity": "action", "role": "move"} к [оврагу]{"entity": "subject", "role": "object"} [справа от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [идите]{"entity": "action", "role": "move"} до [лампады]{"entity": "subject", "role": "object"}
+    - [пойдите]{"entity": "action", "role": "move"} к [дубраве]{"entity": "subject", "role": "object"} [пред]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [выходите]{"entity": "action", "role": "move"} до [особняка]{"entity": "subject", "role": "object"}
+    - [отправляйтесь]{"entity": "action", "role": "move"} до [авто]{"entity": "subject", "role": "object"} [на западе от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [плыви]{"entity": "action", "role": "move"} к [ласточке]{"entity": "subject", "role": "object"} [западнее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [сдвигайтесь]{"entity": "action", "role": "move"} до [светоча]{"entity": "subject", "role": "object"}
+    - [шкандыбайте]{"entity": "action", "role": "move"} к [столбу]{"entity": "subject", "role": "object"} [слева от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [маршируйте]{"entity": "action", "role": "move"} до [ласточки]{"entity": "subject", "role": "object"}
+    - [выходи]{"entity": "action", "role": "move"} до [холмика]{"entity": "subject", "role": "object"}
+    - [шагай]{"entity": "action", "role": "move"} до [ежа]{"entity": "subject", "role": "object"}
+    - [гоните]{"entity": "action", "role": "move"} к [липе]{"entity": "subject", "role": "object"}
+    - [неситесь]{"entity": "action", "role": "move"} до [болида]{"entity": "subject", "role": "object"}
+    - [дуй]{"entity": "action", "role": "move"} к [горе]{"entity": "subject", "role": "object"} [пред]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [езжай]{"entity": "action", "role": "move"} до [чащобы]{"entity": "subject", "role": "object"} [пред]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [шагайте]{"entity": "action", "role": "move"} до [лесополосы]{"entity": "subject", "role": "object"} [пред]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [шествуй]{"entity": "action", "role": "move"} к [возвышенности]{"entity": "subject", "role": "object"}
+    - [захаживай]{"entity": "action", "role": "move"} к [холму]{"entity": "subject", "role": "object"} [впереди]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [пойди]{"entity": "action", "role": "move"} до [светильника]{"entity": "subject", "role": "object"} [по левую руку]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [приходи]{"entity": "action", "role": "move"} до [бугра]{"entity": "subject", "role": "object"}
+    - [вышагивай]{"entity": "action", "role": "move"} к [пригорку]{"entity": "subject", "role": "object"} [спереди от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [переступай]{"entity": "action", "role": "move"} к [впадине]{"entity": "subject", "role": "object"} [с правой стороны от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [сдвигайся]{"entity": "action", "role": "move"} к [растению]{"entity": "subject", "role": "object"} [правее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [скачите]{"entity": "action", "role": "move"} к [перелескам]{"entity": "subject", "role": "object"} [пред]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [отправляйся]{"entity": "action", "role": "move"} к [постройке]{"entity": "subject", "role": "object"} [сзади от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [переместитесь]{"entity": "action", "role": "move"} до [светоча]{"entity": "subject", "role": "object"}
+    - [переходи]{"entity": "action", "role": "move"} до [сосны]{"entity": "subject", "role": "object"}
+    - [сходите]{"entity": "action", "role": "move"} до [тополя]{"entity": "subject", "role": "object"}
+    - [мчись]{"entity": "action", "role": "move"} до [холма]{"entity": "subject", "role": "object"}
+    - [неситесь]{"entity": "action", "role": "move"} к [хребту]{"entity": "subject", "role": "object"} [пред]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [мчитесь]{"entity": "action", "role": "move"} до [чащобы]{"entity": "subject", "role": "object"} [спереди от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [гони]{"entity": "action", "role": "move"} до [ежа]{"entity": "subject", "role": "object"} [за спиной]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [подходи]{"entity": "action", "role": "move"} к [ласточке]{"entity": "subject", "role": "object"} [на востоке относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [маршируйте]{"entity": "action", "role": "move"} к [болиду]{"entity": "subject", "role": "object"} [на западе относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [приезжайте]{"entity": "action", "role": "move"} до [автомобиля]{"entity": "subject", "role": "object"} [на западе относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [направляйся]{"entity": "action", "role": "move"} к [холму]{"entity": "subject", "role": "object"} [до]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [мчитесь]{"entity": "action", "role": "move"} к [лампе]{"entity": "subject", "role": "object"} [южнее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [направляйтесь]{"entity": "action", "role": "move"} к [оврагу]{"entity": "subject", "role": "object"} [справа от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [шествуй]{"entity": "action", "role": "move"} до [пропасти]{"entity": "subject", "role": "object"} [по правую руку]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [сдвиньтесь]{"entity": "action", "role": "move"} к [сосне]{"entity": "subject", "role": "object"}
+    - [топай]{"entity": "action", "role": "move"} до [преграды]{"entity": "subject", "role": "object"}
+    - [скачите]{"entity": "action", "role": "move"} к [электросветильнику]{"entity": "subject", "role": "object"} [южнее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [уезжайте]{"entity": "action", "role": "move"} к [коню]{"entity": "subject", "role": "object"} [на востоке относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [мчитесь]{"entity": "action", "role": "move"} к [провалу]{"entity": "subject", "role": "object"}
+    - [пробирайся]{"entity": "action", "role": "move"} до [столба]{"entity": "subject", "role": "object"}
+    - [выступайте]{"entity": "action", "role": "move"} до [ямы]{"entity": "subject", "role": "object"} [с правой стороны от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [лети]{"entity": "action", "role": "move"} к [барьеру]{"entity": "subject", "role": "object"} [назади]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [пробирайся]{"entity": "action", "role": "move"} до [кедра]{"entity": "subject", "role": "object"}
+    - [подходите]{"entity": "action", "role": "move"} к [лампаде]{"entity": "subject", "role": "object"}
+    - [захаживай]{"entity": "action", "role": "move"} до [берёзы]{"entity": "subject", "role": "object"}
+    - [переходите]{"entity": "action", "role": "move"} до [загородки]{"entity": "subject", "role": "object"}
+    - [шагайте]{"entity": "action", "role": "move"} до [дворца]{"entity": "subject", "role": "object"}
+    - [сдвиньтесь]{"entity": "action", "role": "move"} к [электросветильнику]{"entity": "subject", "role": "object"} [слева от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [сходи]{"entity": "action", "role": "move"} к [дубраве]{"entity": "subject", "role": "object"}
+    - [собирайся]{"entity": "action", "role": "move"} до [дерева]{"entity": "subject", "role": "object"} [правее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [пробирайся]{"entity": "action", "role": "move"} до [домика]{"entity": "subject", "role": "object"}
+    - [шествуйте]{"entity": "action", "role": "move"} к [лампаде]{"entity": "subject", "role": "object"} [по левую руку]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [сходи]{"entity": "action", "role": "move"} до [брички]{"entity": "subject", "role": "object"}
+    - [газуй]{"entity": "action", "role": "move"} к [свету]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [лети]{"entity": "action", "role": "move"} к [прожектору]{"entity": "subject", "role": "object"} [в южной стороне от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [собирайся]{"entity": "action", "role": "move"} до [ореха]{"entity": "subject", "role": "object"}
+    - [скачите]{"entity": "action", "role": "move"} к [автомобилю]{"entity": "subject", "role": "object"} [на востоке от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [идите]{"entity": "action", "role": "move"} до [коня]{"entity": "subject", "role": "object"}
+    - [перемещайтесь]{"entity": "action", "role": "move"} до [светоча]{"entity": "subject", "role": "object"}
+    - [съездите]{"entity": "action", "role": "move"} до [тачки]{"entity": "subject", "role": "object"}
+    - [топай]{"entity": "action", "role": "move"} к [холмику]{"entity": "subject", "role": "object"} [поперед]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [захаживайте]{"entity": "action", "role": "move"} до [коня]{"entity": "subject", "role": "object"}
+    - [иди]{"entity": "action", "role": "move"} к [домику]{"entity": "subject", "role": "object"}
+    - [дерзайте]{"entity": "action", "role": "move"} до [машины]{"entity": "subject", "role": "object"}
+    - [переступайте]{"entity": "action", "role": "move"} до [машины]{"entity": "subject", "role": "object"} [на востоке от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [съезди]{"entity": "action", "role": "move"} к [дворцу]{"entity": "subject", "role": "object"} [сзади от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [проезжайте]{"entity": "action", "role": "move"} до [избы]{"entity": "subject", "role": "object"} [сзади от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [беги]{"entity": "action", "role": "move"} к [фонарю]{"entity": "subject", "role": "object"} [по левую сторону]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [дуй]{"entity": "action", "role": "move"} до [рытвины]{"entity": "subject", "role": "object"}
+    - [шкандыбай]{"entity": "action", "role": "move"} до [авто]{"entity": "subject", "role": "object"}
+    - [прите]{"entity": "action", "role": "move"} до [ореха]{"entity": "subject", "role": "object"} [с правой стороны от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [шкандыбайте]{"entity": "action", "role": "move"} к [лесу]{"entity": "subject", "role": "object"} [до]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [уходите]{"entity": "action", "role": "move"} к [торшеру]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [подходите]{"entity": "action", "role": "move"} к [светильнику]{"entity": "subject", "role": "object"} [на юге от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [выходите]{"entity": "action", "role": "move"} до [избы]{"entity": "subject", "role": "object"}
+    - [сходите]{"entity": "action", "role": "move"} к [углублению]{"entity": "subject", "role": "object"}
+    - [гуляйте]{"entity": "action", "role": "move"} к [светочу]{"entity": "subject", "role": "object"}
+    - [прите]{"entity": "action", "role": "move"} до [скалы]{"entity": "subject", "role": "object"}
+    - [перемещайтесь]{"entity": "action", "role": "move"} к [ограждению]{"entity": "subject", "role": "object"} [за]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [плывите]{"entity": "action", "role": "move"} к [болиду]{"entity": "subject", "role": "object"}
+    - [уходите]{"entity": "action", "role": "move"} до [света]{"entity": "subject", "role": "object"}
+    - [при]{"entity": "action", "role": "move"} до [коня]{"entity": "subject", "role": "object"}
+    - [сдавай]{"entity": "action", "role": "move"} до [заслона]{"entity": "subject", "role": "object"}
+    - [переместитесь]{"entity": "action", "role": "move"} до [загородки]{"entity": "subject", "role": "object"} [назади]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [иди]{"entity": "action", "role": "move"} к [точилу]{"entity": "subject", "role": "object"} [в западной стороне от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
+    - [шкандыбайте]{"entity": "action", "role": "move"} к [фонарю]{"entity": "subject", "role": "object"}
+    - [переместись]{"entity": "action", "role": "move"} до [брички]{"entity": "subject", "role": "object"}
