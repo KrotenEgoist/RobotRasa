@@ -41,6 +41,20 @@ class Generator:
 
         return dictionary
 
+    def get_keys(self, dictionary_name: str) -> list:
+        """
+        Создает список всех ключей для конкретного словаря
+
+        :param dictionary_name: Имя директории с файлами словаря внутри src/generator/dictionary
+        :return:
+            Список ключей, пример ['action:move', 'action:rotate', ... ]
+        """
+        pattern = f'**/{dictionary_name}/*'
+        key_path = list(self.dictionary_path.glob(pattern))
+        keys = list(map(lambda x: ':'.join(x.parts[-2:]), key_path))
+
+        return keys
+
     def inflect(self, words: str, grammes: set) -> str:
         """
         Преобразует слово в соответствии с граммемами (http://opencorpora.org/dict.php?act=gram)
@@ -83,7 +97,7 @@ class Generator:
 
         return ' '.join(morphed)
 
-    def ner(self, sample):
+    def ner(self, sample: str) -> (str, str):
         """
         Добавление разметки сущностей для шаблонов
 

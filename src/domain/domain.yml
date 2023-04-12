@@ -1,45 +1,42 @@
 version: "3.1"
 
 intents:
-  - command_move_subject
-  - command_objects
-  - wrong_command:
-      use_entities: []
+  - action
+  - directions
+  - objects
+  - action+directions
+  - action+objects
+  - wrong_command
 
 entities:
-  - action
+  - action:
+      roles:
+        - analyze
+        - around
+        - find
+        - follow
+        - monitor
+        - move
+        - patrol
+        - rotate
+        - stop
   - subject:
       roles:
-        - object
         - direction
-        - addition
+        - object
   - distance
-  - temperature
   - relation
 
 slots:
-  action:
-    type: text
-    mappings:
-      - type: from_entity
-        entity: action
-
   subject:
     type: text
     mappings:
       - type: from_entity
         entity: subject
-        role: object
-      - type: from_entity
-        entity: subject
         role: direction
-
-  addition:
-    type: list
-    mappings:
       - type: from_entity
         entity: subject
-        role: addition
+        role: object
 
   relation:
     type: list
@@ -52,8 +49,6 @@ slots:
     mappings:
       - type: from_entity
         entity: distance
-      - type: from_entity
-        entity: temperature
 
   feature:
     type: text
@@ -67,22 +62,32 @@ forms:
   subject_form:
     required_slots:
       - subject
+  relation_form:
+    required_slots:
+      - relation
+  distance_form:
+    required_slots:
+      - distance
   feature_form:
     required_slots:
       - feature
 
 responses:
   utter_send_command:
-    - text: "Команда отправлена: {action} {subject} {relation} {addition} {distance}"
+    - text: "Команда отправлена {subject} {relation} {distance}"
   utter_wrong_command:
     - text: "Исправляем команду"
   utter_rephrase:
     - text: "Перефразируйте"
 
-  utter_ask_subject:
-    - text: "Назовите объект или направление"
   utter_ask_feature:
     - text: "Уточните команду"
+  utter_ask_subject:
+    - text: "Назовите объект или местоимение"
+  utter_ask_distance:
+    - text: "Укажите количество метров"
+  utter_ask_relation:
+    - text: "Укажите местоположение объекта"
 
 actions:
   - action_reset_slots

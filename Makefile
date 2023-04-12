@@ -4,7 +4,7 @@ all: train test
 train: models/model_base.tar.gz
 
 # Базовая модель для проверки работоспособности
-models/model_base.tar.gz: src/data/rules.yml src/data/stories.yml src/configs/config_base.yml src/domain src/data/intent_command_move_subject.yml
+models/model_base.tar.gz: src/data/rules.yml src/data/stories.yml src/configs/config_base.yml src/domain
 	rasa train \
 		--data src/data \
 		--config src/configs/config_base.yml \

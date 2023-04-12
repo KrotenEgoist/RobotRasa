@@ -1,0 +1,196 @@
+version: "3.1"
+
+nlu:
+- intent: directions
+  examples: |
+    - [напрямик]{"entity": "subject", "role": "direction"}
+    - [по правую руку]{"entity": "subject", "role": "direction"} на 40 М
+    - [в сторону запада]{"entity": "subject", "role": "direction"} на 19 М
+    - [вперед]{"entity": "subject", "role": "direction"} на 40 М
+    - [взапядки]{"entity": "subject", "role": "direction"}
+    - [на попятную]{"entity": "subject", "role": "direction"} на 10 М
+    - [в сторону запада]{"entity": "subject", "role": "direction"} на 50 М
+    - [на южный край]{"entity": "subject", "role": "direction"} на 49 м
+    - [на западный край]{"entity": "subject", "role": "direction"} на 39 м
+    - [на север]{"entity": "subject", "role": "direction"} на 1 м
+    - [вправо]{"entity": "subject", "role": "direction"} на 28 м
+    - 6 м [вперед]{"entity": "subject", "role": "direction"}
+    - [в западную сторону]{"entity": "subject", "role": "direction"}
+    - [влево]{"entity": "subject", "role": "direction"}
+    - [на восток]{"entity": "subject", "role": "direction"} на 4 м
+    - [напрямик]{"entity": "subject", "role": "direction"} на 39 м
+    - [в западную сторону]{"entity": "subject", "role": "direction"} на 46 М
+    - 48 м [взад]{"entity": "subject", "role": "direction"}
+    - 5 М [прямо]{"entity": "subject", "role": "direction"}
+    - [на север]{"entity": "subject", "role": "direction"}
+    - 36 М [на юг]{"entity": "subject", "role": "direction"}
+    - [направо]{"entity": "subject", "role": "direction"}
+    - [на северный край]{"entity": "subject", "role": "direction"}
+    - [на восточный край]{"entity": "subject", "role": "direction"}
+    - [на север]{"entity": "subject", "role": "direction"} на 46 м
+    - 8 М [влево]{"entity": "subject", "role": "direction"}
+    - 42 М [в северную сторону]{"entity": "subject", "role": "direction"}
+    - [на юг]{"entity": "subject", "role": "direction"}
+    - [в сторону востока]{"entity": "subject", "role": "direction"}
+    - 38 М [по левую руку]{"entity": "subject", "role": "direction"}
+    - [в южную сторону]{"entity": "subject", "role": "direction"} на 31 М
+    - 43 М [назад]{"entity": "subject", "role": "direction"}
+    - 25 М [в обратном направлении]{"entity": "subject", "role": "direction"}
+    - 3 М [на восток]{"entity": "subject", "role": "direction"}
+    - 48 м [на северный край]{"entity": "subject", "role": "direction"}
+    - [взапядки]{"entity": "subject", "role": "direction"} на 40 М
+    - [налево]{"entity": "subject", "role": "direction"}
+    - [обертасом]{"entity": "subject", "role": "direction"} на 14 м
+    - [по правую руку]{"entity": "subject", "role": "direction"} на 10 М
+    - 25 м [в сторону юга]{"entity": "subject", "role": "direction"}
+    - 34 М [на запад]{"entity": "subject", "role": "direction"}
+    - [на западный край]{"entity": "subject", "role": "direction"} на 3 М
+    - 49 М [прямо]{"entity": "subject", "role": "direction"}
+    - [в сторону запада]{"entity": "subject", "role": "direction"}
+    - 17 М [на северный край]{"entity": "subject", "role": "direction"}
+    - 17 м [влево]{"entity": "subject", "role": "direction"}
+    - [по левую руку]{"entity": "subject", "role": "direction"} на 45 м
+    - 30 М [в сторону востока]{"entity": "subject", "role": "direction"}
+    - 16 М [вправо]{"entity": "subject", "role": "direction"}
+    - [на юг]{"entity": "subject", "role": "direction"} на 10 М
+    - 15 М [на юг]{"entity": "subject", "role": "direction"}
+    - 18 м [обратно]{"entity": "subject", "role": "direction"}
+    - [на восток]{"entity": "subject", "role": "direction"}
+    - 42 М [по левую руку]{"entity": "subject", "role": "direction"}
+    - [в сторону юга]{"entity": "subject", "role": "direction"} на 38 м
+    - 49 М [на северный край]{"entity": "subject", "role": "direction"}
+    - [возвратно]{"entity": "subject", "role": "direction"}
+    - 21 М [напрямик]{"entity": "subject", "role": "direction"}
+    - 32 м [в сторону севера]{"entity": "subject", "role": "direction"}
+    - [в обратном направлении]{"entity": "subject", "role": "direction"} на 24 м
+    - 18 м [в восточную сторону]{"entity": "subject", "role": "direction"}
+    - 12 М [в сторону запада]{"entity": "subject", "role": "direction"}
+    - [обратно]{"entity": "subject", "role": "direction"} на 9 М
+    - [по левую руку]{"entity": "subject", "role": "direction"} на 6 М
+    - [на запад]{"entity": "subject", "role": "direction"} на 3 М
+    - [вправо]{"entity": "subject", "role": "direction"}
+    - [в северную сторону]{"entity": "subject", "role": "direction"}
+    - [на запад]{"entity": "subject", "role": "direction"}
+    - [прямо по курсу]{"entity": "subject", "role": "direction"}
+    - [на восточный край]{"entity": "subject", "role": "direction"} на 37 М
+    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 38 М
+    - [в сторону севера]{"entity": "subject", "role": "direction"} на 45 М
+    - [в северную сторону]{"entity": "subject", "role": "direction"} на 25 М
+    - [возвратно]{"entity": "subject", "role": "direction"} на 41 м
+    - [обертасом]{"entity": "subject", "role": "direction"} на 10 м
+    - 21 М [в западную сторону]{"entity": "subject", "role": "direction"}
+    - 42 М [на север]{"entity": "subject", "role": "direction"}
+    - [в сторону севера]{"entity": "subject", "role": "direction"} на 9 м
+    - 15 м [на запад]{"entity": "subject", "role": "direction"}
+    - 22 м [обертасом]{"entity": "subject", "role": "direction"}
+    - 22 м [на юг]{"entity": "subject", "role": "direction"}
+    - [напролом]{"entity": "subject", "role": "direction"}
+    - 38 м [в сторону востока]{"entity": "subject", "role": "direction"}
+    - [налево]{"entity": "subject", "role": "direction"} на 29 м
+    - 33 М [напрямик]{"entity": "subject", "role": "direction"}
+    - [на южный край]{"entity": "subject", "role": "direction"} на 13 м
+    - [вперед]{"entity": "subject", "role": "direction"} на 6 М
+    - 32 м [в восточную сторону]{"entity": "subject", "role": "direction"}
+    - [обратно]{"entity": "subject", "role": "direction"}
+    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 1 М
+    - [в сторону востока]{"entity": "subject", "role": "direction"} на 40 м
+    - 41 м [в северную сторону]{"entity": "subject", "role": "direction"}
+    - [прямо]{"entity": "subject", "role": "direction"} на 37 м
+    - [взад]{"entity": "subject", "role": "direction"}
+    - [влево]{"entity": "subject", "role": "direction"} на 14 М
+    - 41 М [вправо]{"entity": "subject", "role": "direction"}
+    - [в западную сторону]{"entity": "subject", "role": "direction"} на 44 м
+    - [прямо]{"entity": "subject", "role": "direction"} на 42 М
+    - 5 м [в западную сторону]{"entity": "subject", "role": "direction"}
+    - [на южный край]{"entity": "subject", "role": "direction"}
+    - [на восток]{"entity": "subject", "role": "direction"} на 45 М
+    - [в южную сторону]{"entity": "subject", "role": "direction"} на 45 М
+    - 16 М [в сторону востока]{"entity": "subject", "role": "direction"}
+    - 34 м [на восток]{"entity": "subject", "role": "direction"}
+    - [прямо]{"entity": "subject", "role": "direction"}
+    - [на восток]{"entity": "subject", "role": "direction"} на 12 м
+    - 28 М [взапядки]{"entity": "subject", "role": "direction"}
+    - [в сторону севера]{"entity": "subject", "role": "direction"}
+    - [на западный край]{"entity": "subject", "role": "direction"} на 25 м
+    - [на восток]{"entity": "subject", "role": "direction"} на 29 М
+    - [в левую сторону]{"entity": "subject", "role": "direction"} на 40 м
+    - [вправо]{"entity": "subject", "role": "direction"} на 25 м
+    - [на восточный край]{"entity": "subject", "role": "direction"} на 4 М
+    - 48 м [в левую сторону]{"entity": "subject", "role": "direction"}
+    - 16 М [на попятную]{"entity": "subject", "role": "direction"}
+    - [взапядки]{"entity": "subject", "role": "direction"} на 16 м
+    - 23 М [прямо по курсу]{"entity": "subject", "role": "direction"}
+    - 11 М [в обратном направлении]{"entity": "subject", "role": "direction"}
+    - 35 м [по левую руку]{"entity": "subject", "role": "direction"}
+    - 28 м [в западную сторону]{"entity": "subject", "role": "direction"}
+    - 1 М [на запад]{"entity": "subject", "role": "direction"}
+    - [налево]{"entity": "subject", "role": "direction"} на 23 м
+    - 34 М [прямо]{"entity": "subject", "role": "direction"}
+    - 26 М [по левую руку]{"entity": "subject", "role": "direction"}
+    - [в сторону запада]{"entity": "subject", "role": "direction"} на 47 м
+    - [в правую сторону]{"entity": "subject", "role": "direction"}
+    - [взапядки]{"entity": "subject", "role": "direction"} на 24 М
+    - [в южную сторону]{"entity": "subject", "role": "direction"}
+    - [напрямик]{"entity": "subject", "role": "direction"} на 48 М
+    - 25 м [на север]{"entity": "subject", "role": "direction"}
+    - [направо]{"entity": "subject", "role": "direction"} на 7 м
+    - [направо]{"entity": "subject", "role": "direction"} на 48 М
+    - 22 м [на восточный край]{"entity": "subject", "role": "direction"}
+    - [влево]{"entity": "subject", "role": "direction"} на 25 м
+    - 44 м [в южную сторону]{"entity": "subject", "role": "direction"}
+    - [на южный край]{"entity": "subject", "role": "direction"} на 44 м
+    - [напролом]{"entity": "subject", "role": "direction"} на 35 м
+    - [влево]{"entity": "subject", "role": "direction"} на 45 м
+    - 33 М [на западный край]{"entity": "subject", "role": "direction"}
+    - [в левую сторону]{"entity": "subject", "role": "direction"}
+    - [напрямик]{"entity": "subject", "role": "direction"} на 13 М
+    - 8 м [в сторону юга]{"entity": "subject", "role": "direction"}
+    - [в сторону запада]{"entity": "subject", "role": "direction"} на 18 М
+    - 1 м [прямо по курсу]{"entity": "subject", "role": "direction"}
+    - 12 м [на север]{"entity": "subject", "role": "direction"}
+    - 5 м [в сторону запада]{"entity": "subject", "role": "direction"}
+    - 50 М [в сторону севера]{"entity": "subject", "role": "direction"}
+    - 35 м [в южную сторону]{"entity": "subject", "role": "direction"}
+    - 35 м [в левую сторону]{"entity": "subject", "role": "direction"}
+    - 20 М [вправо]{"entity": "subject", "role": "direction"}
+    - [в северную сторону]{"entity": "subject", "role": "direction"} на 25 м
+    - 50 М [на южный край]{"entity": "subject", "role": "direction"}
+    - 6 М [в правую сторону]{"entity": "subject", "role": "direction"}
+    - 49 м [возвратно]{"entity": "subject", "role": "direction"}
+    - [в северную сторону]{"entity": "subject", "role": "direction"} на 28 М
+    - [напролом]{"entity": "subject", "role": "direction"} на 49 М
+    - [по правую руку]{"entity": "subject", "role": "direction"} на 11 М
+    - 45 М [в южную сторону]{"entity": "subject", "role": "direction"}
+    - 42 м [по правую руку]{"entity": "subject", "role": "direction"}
+    - 11 М [прямо]{"entity": "subject", "role": "direction"}
+    - [в сторону востока]{"entity": "subject", "role": "direction"} на 13 М
+    - 7 м [направо]{"entity": "subject", "role": "direction"}
+    - [в правую сторону]{"entity": "subject", "role": "direction"} на 43 М
+    - [напрямик]{"entity": "subject", "role": "direction"} на 14 м
+    - [в северную сторону]{"entity": "subject", "role": "direction"} на 28 м
+    - [по правую руку]{"entity": "subject", "role": "direction"}
+    - [в восточную сторону]{"entity": "subject", "role": "direction"}
+    - 47 м [по левую руку]{"entity": "subject", "role": "direction"}
+    - 42 м [вправо]{"entity": "subject", "role": "direction"}
+    - 18 м [на восточный край]{"entity": "subject", "role": "direction"}
+    - 27 м [направо]{"entity": "subject", "role": "direction"}
+    - [в обратном направлении]{"entity": "subject", "role": "direction"}
+    - [взапядки]{"entity": "subject", "role": "direction"} на 40 м
+    - [на южный край]{"entity": "subject", "role": "direction"} на 19 М
+    - 11 М [на южный край]{"entity": "subject", "role": "direction"}
+    - 29 М [по правую руку]{"entity": "subject", "role": "direction"}
+    - [направо]{"entity": "subject", "role": "direction"} на 24 М
+    - [по левую руку]{"entity": "subject", "role": "direction"} на 31 м
+    - [на западный край]{"entity": "subject", "role": "direction"}
+    - [по левую руку]{"entity": "subject", "role": "direction"}
+    - 9 М [вспять]{"entity": "subject", "role": "direction"}
+    - 13 м [прямо]{"entity": "subject", "role": "direction"}
+    - 7 М [на восточный край]{"entity": "subject", "role": "direction"}
+    - [по левую руку]{"entity": "subject", "role": "direction"} на 16 М
+    - [на юг]{"entity": "subject", "role": "direction"} на 16 М
+    - [на попятную]{"entity": "subject", "role": "direction"}
+    - 42 м [в западную сторону]{"entity": "subject", "role": "direction"}
+    - 1 м [направо]{"entity": "subject", "role": "direction"}
+    - [на север]{"entity": "subject", "role": "direction"} на 4 м
+    - [в сторону юга]{"entity": "subject", "role": "direction"}
+    - [на север]{"entity": "subject", "role": "direction"} на 39 М
