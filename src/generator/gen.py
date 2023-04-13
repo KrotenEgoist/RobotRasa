@@ -70,20 +70,15 @@ class Generator:
         # Если слов несколько, то все слова склоняются в род существительного
         if len(words) > 1:
             idx = list(map(lambda x: self.morph.parse(x)[0].tag.POS, words)).index('NOUN')
-            noun = words[idx]
             noun_parsed = self.morph.parse(words[idx])[0]
             gender = noun_parsed.tag.gender
             animacy = noun_parsed.tag.animacy
-
-            words.remove(noun)
 
             # Иногда согласование зависит от одушевленности
             try:
                 words = list(map(lambda x: self.morph.parse(x)[0].inflect({gender, animacy}).word, words))
             except AttributeError:
                 words = list(map(lambda x: self.morph.parse(x)[0].inflect({gender}).word, words))
-
-            words.append(noun)
 
         for word in words:
             try:
