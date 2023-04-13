@@ -1,0 +1,77 @@
+version: "3.1"
+
+nlu:
+- intent: routes
+  examples: |
+    - по [касательной]{"entity": "route", "role": "circle"} радиуса 4 м
+    - по [схеме]{"entity": "route", "role": "path"} номер 1
+    - по 7 [линии]{"entity": "route", "role": "path"}
+    - по [плану]{"entity": "route", "role": "path"} номер 8
+    - по [линии]{"entity": "route", "role": "path"} номер 2
+    - по 6 [программе]{"entity": "route", "role": "path"}
+    - по [линии]{"entity": "route", "role": "path"} номер 9
+    - по [кругу]{"entity": "route", "role": "circle"} размером 2 м
+    - по 9 [способу]{"entity": "route", "role": "path"}
+    - по 3 [пути]{"entity": "route", "role": "path"}
+    - по 9 [дороге]{"entity": "route", "role": "path"}
+    - по [плану]{"entity": "route", "role": "path"} номер 7
+    - по [кругу]{"entity": "route", "role": "circle"} радиуса 9 м
+    - по [программе]{"entity": "route", "role": "path"} номер 10
+    - по 8 [маршруту]{"entity": "route", "role": "path"}
+    - по [дороге]{"entity": "route", "role": "path"} номер 9
+    - по [кольцу]{"entity": "route", "role": "circle"} 5 м
+    - по [окружности]{"entity": "route", "role": "circle"} 4 м
+    - по [касательной]{"entity": "route", "role": "circle"} размером 1 м
+    - по [орбите]{"entity": "route", "role": "circle"} размером 4 м
+    - по [касательной]{"entity": "route", "role": "circle"} радиуса 5 м
+    - по 3 [схеме]{"entity": "route", "role": "path"}
+    - по 6 [способу]{"entity": "route", "role": "path"}
+    - по [кольцу]{"entity": "route", "role": "circle"} размером 4 м
+    - по 9 [плану]{"entity": "route", "role": "path"}
+    - по [орбите]{"entity": "route", "role": "circle"} размером 4 М
+    - по 3 [плану]{"entity": "route", "role": "path"}
+    - по 7 [дороге]{"entity": "route", "role": "path"}
+    - по [кругу]{"entity": "route", "role": "circle"} 4 м
+    - по [кольцу]{"entity": "route", "role": "circle"} 3 м
+    - по 4 [способу]{"entity": "route", "role": "path"}
+    - по [касательной]{"entity": "route", "role": "circle"} 6 м
+    - по [окружности]{"entity": "route", "role": "circle"} размера 7 М
+    - по [дороге]{"entity": "route", "role": "path"} номер 1
+    - по 9 [маршруту]{"entity": "route", "role": "path"}
+    - по [способу]{"entity": "route", "role": "path"} номер 4
+    - по [касательной]{"entity": "route", "role": "circle"} радиуса 1 М
+    - по [кольцу]{"entity": "route", "role": "circle"} размера 6 М
+    - по [кругу]{"entity": "route", "role": "circle"} 5 м
+    - по 10 [линии]{"entity": "route", "role": "path"}
+    - по [кольцу]{"entity": "route", "role": "circle"} 1 м
+    - по [пути]{"entity": "route", "role": "path"} номер 9
+    - по [окружности]{"entity": "route", "role": "circle"} 5 м
+    - по [способу]{"entity": "route", "role": "path"} номер 10
+    - по [кольцу]{"entity": "route", "role": "circle"} 4 м
+    - по [орбите]{"entity": "route", "role": "circle"} 1 м
+    - по [касательной]{"entity": "route", "role": "circle"} 5 м
+    - по [кругу]{"entity": "route", "role": "circle"} 6 м
+    - по 6 [методу]{"entity": "route", "role": "path"}
+    - по [кругу]{"entity": "route", "role": "circle"} радиусом 3 м
+    - по [орбите]{"entity": "route", "role": "circle"} размером 7 м
+    - по [орбите]{"entity": "route", "role": "circle"} размером 10 М
+    - по [орбите]{"entity": "route", "role": "circle"} радиуса 8 м
+    - по 3 [методу]{"entity": "route", "role": "path"}
+    - по [окружности]{"entity": "route", "role": "circle"} 10 м
+    - по [окружности]{"entity": "route", "role": "circle"} радиусом 1 М
+    - по [дороге]{"entity": "route", "role": "path"} номер 7
+    - по [плану]{"entity": "route", "role": "path"} номер 6
+    - по 9 [методу]{"entity": "route", "role": "path"}
+    - по [касательной]{"entity": "route", "role": "circle"} 3 м
+    - по [касательной]{"entity": "route", "role": "circle"} размером 7 М
+    - по [методу]{"entity": "route", "role": "path"} номер 5
+    - по [касательной]{"entity": "route", "role": "circle"} 10 м
+    - по [орбите]{"entity": "route", "role": "circle"} радиуса 1 М
+    - по [окружности]{"entity": "route", "role": "circle"} размером 2 м
+    - по [кругу]{"entity": "route", "role": "circle"} размером 4 м
+    - по 5 [методу]{"entity": "route", "role": "path"}
+    - по [программе]{"entity": "route", "role": "path"} номер 1
+    - по [схеме]{"entity": "route", "role": "path"} номер 8
+    - по 2 [маршруту]{"entity": "route", "role": "path"}
+    - по [трассе]{"entity": "route", "role": "path"} номер 5
+    - по [программе]{"entity": "route", "role": "path"} номер 6

@@ -1,0 +1,85 @@
+version: "3.1"
+
+nlu:
+- intent: patrol+routes
+  examples: |
+    - [патрулируй]{"entity": "action", "role": "patrol"} по [кольцу]{"entity": "route", "role": "circle"} 9 м
+    - [патрулируйте]{"entity": "action", "role": "patrol"} по [касательной]{"entity": "route", "role": "circle"} 3 м
+    - [патрулируй]{"entity": "action", "role": "patrol"} по [касательной]{"entity": "route", "role": "circle"} размером 6 М
+    - [патрулируй]{"entity": "action", "role": "patrol"} по [способу]{"entity": "route", "role": "path"} номер 2
+    - [патрулируйте]{"entity": "action", "role": "patrol"} по [окружности]{"entity": "route", "role": "circle"} размером 2 м
+    - [патрулируй]{"entity": "action", "role": "patrol"} по [касательной]{"entity": "route", "role": "circle"} 7 м
+    - [патрулируй]{"entity": "action", "role": "patrol"} по 4 [трассе]{"entity": "route", "role": "path"}
+    - [охраняй]{"entity": "action", "role": "patrol"} по [кругу]{"entity": "route", "role": "circle"} 6 м
+    - [охраняй]{"entity": "action", "role": "patrol"} по [орбите]{"entity": "route", "role": "circle"} 5 м
+    - [барражируйте]{"entity": "action", "role": "patrol"} по 5 [трассе]{"entity": "route", "role": "path"}
+    - [вынюхивайте]{"entity": "action", "role": "patrol"} по 1 [программе]{"entity": "route", "role": "path"}
+    - [вынюхивайте]{"entity": "action", "role": "patrol"} по [кольцу]{"entity": "route", "role": "circle"} размера 3 М
+    - [обходи]{"entity": "action", "role": "patrol"} по [маршруту]{"entity": "route", "role": "path"} номер 1
+    - [вынюхивай]{"entity": "action", "role": "patrol"} по [трассе]{"entity": "route", "role": "path"} номер 8
+    - [охраняйте]{"entity": "action", "role": "patrol"} по [орбите]{"entity": "route", "role": "circle"} радиусом 8 м
+    - [барражируй]{"entity": "action", "role": "patrol"} по [кругу]{"entity": "route", "role": "circle"} 3 м
+    - [разведывай]{"entity": "action", "role": "patrol"} по [кольцу]{"entity": "route", "role": "circle"} 6 м
+    - [сторожите]{"entity": "action", "role": "patrol"} по [касательной]{"entity": "route", "role": "circle"} размера 9 М
+    - [шныряйте]{"entity": "action", "role": "patrol"} по [касательной]{"entity": "route", "role": "circle"} радиусом 3 м
+    - [разведывайте]{"entity": "action", "role": "patrol"} по [кольцу]{"entity": "route", "role": "circle"} радиусом 8 М
+    - [патрулируйте]{"entity": "action", "role": "patrol"} по [трассе]{"entity": "route", "role": "path"} номер 1
+    - [разведывай]{"entity": "action", "role": "patrol"} по [схеме]{"entity": "route", "role": "path"} номер 4
+    - [охраняй]{"entity": "action", "role": "patrol"} по 2 [трассе]{"entity": "route", "role": "path"}
+    - [вынюхивайте]{"entity": "action", "role": "patrol"} по [трассе]{"entity": "route", "role": "path"} номер 10
+    - [обходите]{"entity": "action", "role": "patrol"} по [окружности]{"entity": "route", "role": "circle"} радиусом 10 м
+    - [защищай]{"entity": "action", "role": "patrol"} по [кругу]{"entity": "route", "role": "circle"} 4 м
+    - [обходи]{"entity": "action", "role": "patrol"} по [плану]{"entity": "route", "role": "path"} номер 10
+    - [разведывайте]{"entity": "action", "role": "patrol"} по 1 [плану]{"entity": "route", "role": "path"}
+    - [патрулируй]{"entity": "action", "role": "patrol"} по [методу]{"entity": "route", "role": "path"} номер 1
+    - [барражируй]{"entity": "action", "role": "patrol"} по 3 [трассе]{"entity": "route", "role": "path"}
+    - [патрулируй]{"entity": "action", "role": "patrol"} по 2 [пути]{"entity": "route", "role": "path"}
+    - [сторожите]{"entity": "action", "role": "patrol"} по [методу]{"entity": "route", "role": "path"} номер 9
+    - [охраняйте]{"entity": "action", "role": "patrol"} по [кругу]{"entity": "route", "role": "circle"} 7 м
+    - [вынюхивайте]{"entity": "action", "role": "patrol"} по [касательной]{"entity": "route", "role": "circle"} 8 м
+    - [разведывай]{"entity": "action", "role": "patrol"} по 9 [пути]{"entity": "route", "role": "path"}
+    - [сторожите]{"entity": "action", "role": "patrol"} по [методу]{"entity": "route", "role": "path"} номер 4
+    - [шныряйте]{"entity": "action", "role": "patrol"} по [окружности]{"entity": "route", "role": "circle"} радиусом 9 м
+    - [барражируй]{"entity": "action", "role": "patrol"} по [окружности]{"entity": "route", "role": "circle"} 5 м
+    - [вынюхивайте]{"entity": "action", "role": "patrol"} по [методу]{"entity": "route", "role": "path"} номер 10
+    - [обходи]{"entity": "action", "role": "patrol"} по [кругу]{"entity": "route", "role": "circle"} 5 м
+    - [патрулируй]{"entity": "action", "role": "patrol"} по [орбите]{"entity": "route", "role": "circle"} 2 м
+    - [вынюхивайте]{"entity": "action", "role": "patrol"} по [касательной]{"entity": "route", "role": "circle"} радиусом 1 М
+    - [обходите]{"entity": "action", "role": "patrol"} по [трассе]{"entity": "route", "role": "path"} номер 9
+    - [защищай]{"entity": "action", "role": "patrol"} по [программе]{"entity": "route", "role": "path"} номер 2
+    - [патрулируй]{"entity": "action", "role": "patrol"} по 4 [пути]{"entity": "route", "role": "path"}
+    - [обходите]{"entity": "action", "role": "patrol"} по [кольцу]{"entity": "route", "role": "circle"} 10 м
+    - [вынюхивайте]{"entity": "action", "role": "patrol"} по [окружности]{"entity": "route", "role": "circle"} 8 м
+    - [дежурьте]{"entity": "action", "role": "patrol"} по 6 [схеме]{"entity": "route", "role": "path"}
+    - [шныряйте]{"entity": "action", "role": "patrol"} по [окружности]{"entity": "route", "role": "circle"} 10 м
+    - [сторожи]{"entity": "action", "role": "patrol"} по [окружности]{"entity": "route", "role": "circle"} размера 9 М
+    - [вынюхивай]{"entity": "action", "role": "patrol"} по [орбите]{"entity": "route", "role": "circle"} 9 м
+    - [обходи]{"entity": "action", "role": "patrol"} по [маршруту]{"entity": "route", "role": "path"} номер 3
+    - [обходи]{"entity": "action", "role": "patrol"} по [окружности]{"entity": "route", "role": "circle"} 4 м
+    - [патрулируй]{"entity": "action", "role": "patrol"} по 5 [маршруту]{"entity": "route", "role": "path"}
+    - [патрулируйте]{"entity": "action", "role": "patrol"} по 10 [способу]{"entity": "route", "role": "path"}
+    - [обходите]{"entity": "action", "role": "patrol"} по [дороге]{"entity": "route", "role": "path"} номер 8
+    - [дежурь]{"entity": "action", "role": "patrol"} по [окружности]{"entity": "route", "role": "circle"} 3 м
+    - [вынюхивайте]{"entity": "action", "role": "patrol"} по [плану]{"entity": "route", "role": "path"} номер 1
+    - [охраняй]{"entity": "action", "role": "patrol"} по [дороге]{"entity": "route", "role": "path"} номер 1
+    - [обходите]{"entity": "action", "role": "patrol"} по [кругу]{"entity": "route", "role": "circle"} размером 7 м
+    - [разведывайте]{"entity": "action", "role": "patrol"} по [методу]{"entity": "route", "role": "path"} номер 7
+    - [обходи]{"entity": "action", "role": "patrol"} по [кругу]{"entity": "route", "role": "circle"} радиусом 2 м
+    - [шныряй]{"entity": "action", "role": "patrol"} по [орбите]{"entity": "route", "role": "circle"} радиуса 7 М
+    - [разведывай]{"entity": "action", "role": "patrol"} по [окружности]{"entity": "route", "role": "circle"} размером 8 м
+    - [вынюхивайте]{"entity": "action", "role": "patrol"} по [касательной]{"entity": "route", "role": "circle"} радиусом 3 М
+    - [барражируйте]{"entity": "action", "role": "patrol"} по 5 [способу]{"entity": "route", "role": "path"}
+    - [дежурьте]{"entity": "action", "role": "patrol"} по 2 [программе]{"entity": "route", "role": "path"}
+    - [дежурь]{"entity": "action", "role": "patrol"} по 4 [методу]{"entity": "route", "role": "path"}
+    - [разведывайте]{"entity": "action", "role": "patrol"} по [схеме]{"entity": "route", "role": "path"} номер 7
+    - [патрулируй]{"entity": "action", "role": "patrol"} по 4 [программе]{"entity": "route", "role": "path"}
+    - [охраняйте]{"entity": "action", "role": "patrol"} по 8 [дороге]{"entity": "route", "role": "path"}
+    - [дежурьте]{"entity": "action", "role": "patrol"} по [кольцу]{"entity": "route", "role": "circle"} размером 5 м
+    - [патрулируй]{"entity": "action", "role": "patrol"} по [кольцу]{"entity": "route", "role": "circle"} 1 м
+    - [охраняй]{"entity": "action", "role": "patrol"} по 6 [трассе]{"entity": "route", "role": "path"}
+    - [защищай]{"entity": "action", "role": "patrol"} по 4 [трассе]{"entity": "route", "role": "path"}
+    - [барражируйте]{"entity": "action", "role": "patrol"} по [кругу]{"entity": "route", "role": "circle"} радиусом 6 М
+    - [дежурь]{"entity": "action", "role": "patrol"} по [окружности]{"entity": "route", "role": "circle"} радиуса 3 М
+    - [сторожи]{"entity": "action", "role": "patrol"} по [трассе]{"entity": "route", "role": "path"} номер 8
+    - [разведывай]{"entity": "action", "role": "patrol"} по [касательной]{"entity": "route", "role": "circle"} радиуса 5 М
+    - [обходи]{"entity": "action", "role": "patrol"} по 3 [трассе]{"entity": "route", "role": "path"}

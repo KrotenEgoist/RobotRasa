@@ -1,0 +1,17 @@
+version: "3.1"
+
+nlu:
+- intent: patrol
+  examples: |
+    - [разведывай]{"entity": "action", "role": "patrol"}
+    - [разведывайте]{"entity": "action", "role": "patrol"}
+    - [сторожите]{"entity": "action", "role": "patrol"}
+    - [вынюхивайте]{"entity": "action", "role": "patrol"}
+    - [обходи]{"entity": "action", "role": "patrol"}
+    - [обходите]{"entity": "action", "role": "patrol"}
+    - [патрулируй]{"entity": "action", "role": "patrol"}
+    - [вынюхивай]{"entity": "action", "role": "patrol"}
+    - [охраняй]{"entity": "action", "role": "patrol"}
+    - [дежурь]{"entity": "action", "role": "patrol"}
+    - [защищай]{"entity": "action", "role": "patrol"}
+    - [защищайте]{"entity": "action", "role": "patrol"}
