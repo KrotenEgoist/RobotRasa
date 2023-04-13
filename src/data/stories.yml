@@ -23,6 +23,17 @@ stories:
       - action: utter_send_command
       - action: action_reset_slots
 
+  - story: патрулирование
+    steps:
+      - intent: patrol
+      - action: route_form
+      - active_loop: route_form
+      - slot_was_set:
+          - requested_slot: route
+      - active_loop: null
+      - action: utter_send_command
+      - action: action_reset_slots
+
   - story: действие
     steps:
       - intent: action
@@ -36,5 +47,11 @@ stories:
       - slot_was_set:
           - requested_slot: feature
       - active_loop: null
+      - action: utter_send_command
+      - action: action_reset_slots
+
+  - story: простое действие
+    steps:
+      - intent: simple_action
       - action: utter_send_command
       - action: action_reset_slots

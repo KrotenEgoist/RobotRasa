@@ -6,6 +6,10 @@ intents:
   - objects
   - action+directions
   - action+objects
+  - patrol
+  - routes
+  - patrol+routes
+  - simple_action
   - wrong_command
 
 entities:
@@ -17,8 +21,8 @@ entities:
         - follow
         - monitor
         - move
-        - patrol
         - rotate
+        - patrol
         - stop
   - subject:
       roles:
@@ -27,6 +31,12 @@ entities:
         - addition
   - distance
   - relation
+  - numeral
+  - ordinal
+  - route:
+      roles:
+        - circle
+        - path
 
 slots:
   subject:
@@ -66,6 +76,24 @@ slots:
           - active_loop: feature_form
             requested_slot: feature
 
+  route:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: route
+        role: circle
+      - type: from_entity
+        entity: route
+        role: path
+
+  num:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: numeral
+      - type: from_entity
+        entity: ordinal
+
 forms:
   subject_form:
     required_slots:
@@ -79,25 +107,28 @@ forms:
   feature_form:
     required_slots:
       - feature
+  route_form:
+    required_slots:
+      - route
 
 responses:
   utter_send_command:
-    - text: "Команда отправлена {subject} {distance} {relation} {addition}"
+    - text: "Команда отправлена {subject} {distance} {relation} {addition} {route} {num}"
   utter_wrong_command:
     - text: "Исправляем команду"
   utter_rephrase:
     - text: "Перефразируйте"
 
-  utter_ask_feature:
-    - text: "Уточните команду"
-  utter_ask_subject:
-    - text: "Назовите объект или местоимение"
   utter_ask_distance:
-    - text: "Укажите количество метров"
+    - text: "Укажите расстояние"
   utter_ask_relation:
     - text: "Укажите местоположение объекта"
+  utter_ask_route:
+    - text: "Укажите путь патрулирования"
 
 actions:
+  - action_ask_feature
+  - action_ask_subject
   - action_reset_slots
 
 

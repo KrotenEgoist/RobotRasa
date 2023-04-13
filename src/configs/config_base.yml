@@ -15,11 +15,13 @@ pipeline:
   dimensions:
   - distance
   - duration
+  - ordinal
 - name: DucklingEntityExtractor
   url: http://localhost:8000
   locale: en_EN
   dimensions:
   - temperature
+  - numeral
 - name: DIETClassifier
   use_masked_language_model: true
   constrain_similarities: true
