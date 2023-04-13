@@ -3,199 +3,93 @@ version: "3.1"
 nlu:
 - intent: objects
   examples: |
-    - к [холмику]{"entity": "subject", "role": "object"} [на западе от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [углублению]{"entity": "subject", "role": "object"} [южнее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [разрыву]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - [бок о бок с]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [канаве]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [человеку]{"entity": "subject", "role": "object"}
-    - [пред]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - [на севере от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [столба]{"entity": "subject", "role": "object"} [на фоне]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [разлому]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [особняка]{"entity": "subject", "role": "object"} [севернее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [чащи]{"entity": "subject", "role": "object"} [на западе от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [скалы]{"entity": "subject", "role": "object"} [западнее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [рытвины]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [душе]{"entity": "subject", "role": "object"} [впереди]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - [примерно у]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [рытвине]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [дома]{"entity": "subject", "role": "object"} [на севере от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [горки]{"entity": "subject", "role": "object"} [на западе относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - [позадь]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [лесополосе]{"entity": "subject", "role": "object"}
-    - к [разрыву]{"entity": "subject", "role": "object"}
-    - до [хребта]{"entity": "subject", "role": "object"}
-    - до [горки]{"entity": "subject", "role": "object"}
-    - к [столбу]{"entity": "subject", "role": "object"}
-    - до [избы]{"entity": "subject", "role": "object"}
-    - до [света]{"entity": "subject", "role": "object"}
-    - до [бугра]{"entity": "subject", "role": "object"}
-    - до [фигуры]{"entity": "subject", "role": "object"}
-    - до [перегородки]{"entity": "subject", "role": "object"}
-    - к [особняку]{"entity": "subject", "role": "object"}
-    - до [оврага]{"entity": "subject", "role": "object"}
-    - до [бугра]{"entity": "subject", "role": "object"} [в западной стороне от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [жилья]{"entity": "subject", "role": "object"}
-    - к [заслону]{"entity": "subject", "role": "object"} [возле]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - [до]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - [на юге от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [светильнику]{"entity": "subject", "role": "object"} [назади]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [роще]{"entity": "subject", "role": "object"}
-    - к [чащобе]{"entity": "subject", "role": "object"} [в западной стороне от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [лесополосы]{"entity": "subject", "role": "object"} [с правой стороны от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [дубраве]{"entity": "subject", "role": "object"} [по правую сторону]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [яме]{"entity": "subject", "role": "object"} [на юге от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [мужчины]{"entity": "subject", "role": "object"} [впереди]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [женщины]{"entity": "subject", "role": "object"} [впереди]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [провала]{"entity": "subject", "role": "object"} [южнее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [чащобы]{"entity": "subject", "role": "object"} [на западе относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [перегородки]{"entity": "subject", "role": "object"} [около]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [света]{"entity": "subject", "role": "object"} [за]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [углубления]{"entity": "subject", "role": "object"} [в южной стороне от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [пропасти]{"entity": "subject", "role": "object"} [южнее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - [севернее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [расщелины]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [коттеджа]{"entity": "subject", "role": "object"} [на севере относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - [по правую сторону]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [провала]{"entity": "subject", "role": "object"}
-    - до [заслона]{"entity": "subject", "role": "object"}
-    - до [заслона]{"entity": "subject", "role": "object"} [бок о бок с]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [скале]{"entity": "subject", "role": "object"} [на западе относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [дамы]{"entity": "subject", "role": "object"} [пред]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [тайги]{"entity": "subject", "role": "object"}
-    - к [чаще]{"entity": "subject", "role": "object"} [на западе относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [душе]{"entity": "subject", "role": "object"}
-    - [возле]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [души]{"entity": "subject", "role": "object"}
-    - до [воронки]{"entity": "subject", "role": "object"}
-    - к [парню]{"entity": "subject", "role": "object"}
-    - [в западной стороне от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [провалу]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [дому]{"entity": "subject", "role": "object"} [на севере от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [баррикаде]{"entity": "subject", "role": "object"} [при]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [здания]{"entity": "subject", "role": "object"}
-    - до [пробоины]{"entity": "subject", "role": "object"} [южнее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [хребту]{"entity": "subject", "role": "object"}
-    - до [кучи]{"entity": "subject", "role": "object"} [на западе относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [избе]{"entity": "subject", "role": "object"} [севернее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [рытвине]{"entity": "subject", "role": "object"}
-    - до [столба]{"entity": "subject", "role": "object"} [назади]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [прожектору]{"entity": "subject", "role": "object"} [позадь]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [дубраве]{"entity": "subject", "role": "object"} [по правую руку]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [человека]{"entity": "subject", "role": "object"} [спереди от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [пробоине]{"entity": "subject", "role": "object"} [южнее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [дамы]{"entity": "subject", "role": "object"} [перед]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [массива]{"entity": "subject", "role": "object"} [по правую руку]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [особняку]{"entity": "subject", "role": "object"} [в северной стороне от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [разрыва]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [перелескам]{"entity": "subject", "role": "object"}
-    - до [горы]{"entity": "subject", "role": "object"}
-    - [правее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [загородке]{"entity": "subject", "role": "object"}
-    - до [пропасти]{"entity": "subject", "role": "object"} [на юге от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [товарища]{"entity": "subject", "role": "object"}
-    - до [преграды]{"entity": "subject", "role": "object"} [в районе]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [лесополосы]{"entity": "subject", "role": "object"} [по правую руку]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [холмика]{"entity": "subject", "role": "object"}
-    - до [ребёнка]{"entity": "subject", "role": "object"} [до]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [перегородке]{"entity": "subject", "role": "object"}
-    - к [трещине]{"entity": "subject", "role": "object"}
-    - до [преграды]{"entity": "subject", "role": "object"}
-    - до [разлома]{"entity": "subject", "role": "object"}
-    - до [расселины]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [лесополосы]{"entity": "subject", "role": "object"} [в западной стороне от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [углубления]{"entity": "subject", "role": "object"}
-    - до [фигуры]{"entity": "subject", "role": "object"} [до]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [лампады]{"entity": "subject", "role": "object"}
-    - к [воронке]{"entity": "subject", "role": "object"} [на юге от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - [впереди]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [канаве]{"entity": "subject", "role": "object"} [южнее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [воронке]{"entity": "subject", "role": "object"}
-    - к [коттеджу]{"entity": "subject", "role": "object"}
-    - до [горки]{"entity": "subject", "role": "object"} [в западной стороне от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - [справа от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [горке]{"entity": "subject", "role": "object"} [западнее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [впадины]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [постройки]{"entity": "subject", "role": "object"} [на севере от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [постройке]{"entity": "subject", "role": "object"}
-    - к [скале]{"entity": "subject", "role": "object"}
-    - до [щели]{"entity": "subject", "role": "object"}
-    - к [ежу]{"entity": "subject", "role": "object"} [примерно у]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [роще]{"entity": "subject", "role": "object"} [на западе от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [перелескам]{"entity": "subject", "role": "object"} [по правую руку]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [скалы]{"entity": "subject", "role": "object"} [в западной стороне от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - [у]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [ограждению]{"entity": "subject", "role": "object"} [в районе]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [свету]{"entity": "subject", "role": "object"}
-    - [на юге относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [домика]{"entity": "subject", "role": "object"}
-    - до [перелесок]{"entity": "subject", "role": "object"}
-    - [около]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [чаще]{"entity": "subject", "role": "object"} [на западе от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [дубраве]{"entity": "subject", "role": "object"}
-    - [в южной стороне от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [впадине]{"entity": "subject", "role": "object"}
-    - к [лесу]{"entity": "subject", "role": "object"} [справа от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [расщелине]{"entity": "subject", "role": "object"}
-    - [за]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [фонаря]{"entity": "subject", "role": "object"}
-    - до [ямы]{"entity": "subject", "role": "object"} [в южной стороне от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - [перед]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [фонаря]{"entity": "subject", "role": "object"} [назади]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [провалу]{"entity": "subject", "role": "object"}
-    - к [лесополосе]{"entity": "subject", "role": "object"} [правее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [оврагу]{"entity": "subject", "role": "object"} [южнее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [душе]{"entity": "subject", "role": "object"} [пред]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [надлома]{"entity": "subject", "role": "object"}
-    - к [баррикаде]{"entity": "subject", "role": "object"}
-    - [поперед]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [ограждения]{"entity": "subject", "role": "object"}
-    - [на севере относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [массиву]{"entity": "subject", "role": "object"}
-    - до [лесополосы]{"entity": "subject", "role": "object"} [на западе относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [тайге]{"entity": "subject", "role": "object"} [с правой стороны от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [домика]{"entity": "subject", "role": "object"} [севернее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [массива]{"entity": "subject", "role": "object"}
-    - [с правой стороны от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - [по правую руку]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [возвышенности]{"entity": "subject", "role": "object"} [западнее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [пробоины]{"entity": "subject", "role": "object"}
-    - [на западе от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [перелескам]{"entity": "subject", "role": "object"} [в западной стороне от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [ежа]{"entity": "subject", "role": "object"} [в районе]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [лампе]{"entity": "subject", "role": "object"} [назади]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [впадине]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [ограждения]{"entity": "subject", "role": "object"} [возле]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [жилью]{"entity": "subject", "role": "object"} [севернее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - [позади]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [леса]{"entity": "subject", "role": "object"}
-    - до [мужчины]{"entity": "subject", "role": "object"}
-    - до [рытвины]{"entity": "subject", "role": "object"}
-    - к [загородке]{"entity": "subject", "role": "object"} [бок о бок с]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [роще]{"entity": "subject", "role": "object"} [по правую сторону]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [трещины]{"entity": "subject", "role": "object"} [южнее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [оврага]{"entity": "subject", "role": "object"} [в южной стороне от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - [на западе относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - [южнее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [впадине]{"entity": "subject", "role": "object"} [южнее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [лесу]{"entity": "subject", "role": "object"}
-    - [рядом с]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - [западнее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [столба]{"entity": "subject", "role": "object"}
+    - к [оной]{"entity": "relation"} [впадине]{"entity": "subject", "role": "object"}
+    - [восточнее]{"entity": "relation"} [корыта]{"entity": "subject", "role": "addition"}
+    - [впадина]{"entity": "subject", "role": "object"}
+    - к [провалу]{"entity": "subject", "role": "object"} [наблюдаемому]{"entity": "relation"}
+    - до [сей]{"entity": "relation"} [пропасти]{"entity": "subject", "role": "object"}
+    - [канава]{"entity": "subject", "role": "object"} [в восточной стороне от]{"entity": "relation"} [тачки]{"entity": "subject", "role": "addition"}
+    - до [ямы]{"entity": "subject", "role": "object"} [в восточной стороне от]{"entity": "relation"} [машины]{"entity": "subject", "role": "addition"}
+    - [рытвина]{"entity": "subject", "role": "object"} [в восточной стороне от]{"entity": "relation"} [брички]{"entity": "subject", "role": "addition"}
+    - [куда смотрю]{"entity": "subject", "role": "object"}
+    - [яма]{"entity": "subject", "role": "object"}
+    - к [оврагу]{"entity": "subject", "role": "object"} [тому]{"entity": "relation"}
+    - [рытвина]{"entity": "subject", "role": "object"} [на востоке от]{"entity": "relation"} [ласточки]{"entity": "subject", "role": "addition"}
+    - [сюда]{"entity": "subject", "role": "object"}
+    - к [оврагу]{"entity": "subject", "role": "object"}
+    - до [ямы]{"entity": "subject", "role": "object"} [сей]{"entity": "relation"}
+    - [воронка]{"entity": "subject", "role": "object"}
+    - [в восточной стороне от]{"entity": "relation"} [болида]{"entity": "subject", "role": "addition"}
+    - до [пропасти]{"entity": "subject", "role": "object"} [в восточной стороне от]{"entity": "relation"} [ласточки]{"entity": "subject", "role": "addition"}
+    - [рытвина]{"entity": "subject", "role": "object"} [на востоке от]{"entity": "relation"} [коня]{"entity": "subject", "role": "addition"}
+    - до [близкой]{"entity": "relation"} [ямы]{"entity": "subject", "role": "object"}
+    - к [впадине]{"entity": "subject", "role": "object"} [недалёкой]{"entity": "relation"}
+    - до [воронки]{"entity": "subject", "role": "object"} [в восточной стороне от]{"entity": "relation"} [авто]{"entity": "subject", "role": "addition"}
+    - к [воронке]{"entity": "subject", "role": "object"} [в восточной стороне от]{"entity": "relation"} [ласточки]{"entity": "subject", "role": "addition"}
+    - к [углублению]{"entity": "subject", "role": "object"} [в восточной стороне от]{"entity": "relation"} [коня]{"entity": "subject", "role": "addition"}
+    - к [углублению]{"entity": "subject", "role": "object"} [соседственному]{"entity": "relation"}
+    - [в это место]{"entity": "subject", "role": "object"}
+    - [углубление]{"entity": "subject", "role": "object"}
+    - к [наблюдаемой]{"entity": "relation"} [впадине]{"entity": "subject", "role": "object"}
     - до [ямы]{"entity": "subject", "role": "object"}
-    - до [дубравы]{"entity": "subject", "role": "object"}
-    - к [человеку]{"entity": "subject", "role": "object"} [перед]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [прожектору]{"entity": "subject", "role": "object"} [на фоне]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [заслону]{"entity": "subject", "role": "object"}
-    - к [расселине]{"entity": "subject", "role": "object"} [на юге относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [бугру]{"entity": "subject", "role": "object"}
-    - [за спиной]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [трещины]{"entity": "subject", "role": "object"}
-    - к [надлому]{"entity": "subject", "role": "object"} [южнее]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [канавы]{"entity": "subject", "role": "object"} [в южной стороне от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [светильника]{"entity": "subject", "role": "object"} [позади]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [препятствию]{"entity": "subject", "role": "object"}
-    - к [углублению]{"entity": "subject", "role": "object"} [в южной стороне от]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - к [роще]{"entity": "subject", "role": "object"} [на западе относительно]{"entity": "relation"} []{"entity": "subject", "role": "addition"}
-    - до [чащи]{"entity": "subject", "role": "object"}
+    - к [пропасти]{"entity": "subject", "role": "object"} [соседней]{"entity": "relation"}
+    - до [впадины]{"entity": "subject", "role": "object"} [в восточной стороне от]{"entity": "relation"} [точила]{"entity": "subject", "role": "addition"}
+    - [пропасть]{"entity": "subject", "role": "object"}
+    - к [близкой]{"entity": "relation"} [пропасти]{"entity": "subject", "role": "object"}
+    - до [соседственного]{"entity": "relation"} [оврага]{"entity": "subject", "role": "object"}
+    - к [воронке]{"entity": "subject", "role": "object"}
+    - до [сего]{"entity": "relation"} [провала]{"entity": "subject", "role": "object"}
+    - до [этой]{"entity": "relation"} [канавы]{"entity": "subject", "role": "object"}
+    - до [канавы]{"entity": "subject", "role": "object"} [данной]{"entity": "relation"}
+    - [на востоке от]{"entity": "relation"} [точила]{"entity": "subject", "role": "addition"}
+    - [провал]{"entity": "subject", "role": "object"}
+    - [воронка]{"entity": "subject", "role": "object"} [на востоке от]{"entity": "relation"} [болида]{"entity": "subject", "role": "addition"}
+    - до [оврага]{"entity": "subject", "role": "object"} [в восточной стороне от]{"entity": "relation"} [авто]{"entity": "subject", "role": "addition"}
+    - к [яме]{"entity": "subject", "role": "object"}
+    - [в ту сторону]{"entity": "subject", "role": "object"}
+    - до [оной]{"entity": "relation"} [пропасти]{"entity": "subject", "role": "object"}
+    - до [оного]{"entity": "relation"} [углубления]{"entity": "subject", "role": "object"}
+    - [впадина]{"entity": "subject", "role": "object"} [на востоке от]{"entity": "relation"} [автомобиля]{"entity": "subject", "role": "addition"}
+    - [рытвина]{"entity": "subject", "role": "object"}
+    - к [яме]{"entity": "subject", "role": "object"} [в восточной стороне от]{"entity": "relation"} [корыта]{"entity": "subject", "role": "addition"}
+    - до [рытвины]{"entity": "subject", "role": "object"} [той]{"entity": "relation"}
+    - к [воронке]{"entity": "subject", "role": "object"} [соседней]{"entity": "relation"}
+    - к [канаве]{"entity": "subject", "role": "object"} [на востоке от]{"entity": "relation"} [ласточки]{"entity": "subject", "role": "addition"}
+    - [овраг]{"entity": "subject", "role": "object"} [на востоке от]{"entity": "relation"} [ласточки]{"entity": "subject", "role": "addition"}
+    - [углубление]{"entity": "subject", "role": "object"} [на востоке от]{"entity": "relation"} [авто]{"entity": "subject", "role": "addition"}
+    - [впадина]{"entity": "subject", "role": "object"} [на востоке относительно]{"entity": "relation"} [ласточки]{"entity": "subject", "role": "addition"}
+    - к [это]{"entity": "relation"} [углублению]{"entity": "subject", "role": "object"}
+    - до [ямы]{"entity": "subject", "role": "object"} [в восточной стороне от]{"entity": "relation"} [автомобиля]{"entity": "subject", "role": "addition"}
+    - до [близрасположенной]{"entity": "relation"} [рытвины]{"entity": "subject", "role": "object"}
+    - к [соседственному]{"entity": "relation"} [провалу]{"entity": "subject", "role": "object"}
+    - до [неотдалённой]{"entity": "relation"} [впадины]{"entity": "subject", "role": "object"}
+    - до [соседней]{"entity": "relation"} [воронки]{"entity": "subject", "role": "object"}
+    - до [рытвины]{"entity": "subject", "role": "object"} [этой]{"entity": "relation"}
+    - до [недалёкой]{"entity": "relation"} [рытвины]{"entity": "subject", "role": "object"}
+    - к [оврагу]{"entity": "subject", "role": "object"} [сему]{"entity": "relation"}
+    - до [углубления]{"entity": "subject", "role": "object"}
+    - к [наблюдаемой]{"entity": "relation"} [яме]{"entity": "subject", "role": "object"}
+    - [на востоке относительно]{"entity": "relation"} [болида]{"entity": "subject", "role": "addition"}
+    - до [близкой]{"entity": "relation"} [пропасти]{"entity": "subject", "role": "object"}
+    - к [оврагу]{"entity": "subject", "role": "object"} [соседственному]{"entity": "relation"}
+    - [в том направлении]{"entity": "subject", "role": "object"}
+    - [канава]{"entity": "subject", "role": "object"}
+    - [туда]{"entity": "subject", "role": "object"}
+    - [углубление]{"entity": "subject", "role": "object"} [восточнее]{"entity": "relation"} [тачки]{"entity": "subject", "role": "addition"}
+    - к [пропасти]{"entity": "subject", "role": "object"}
+    - до [канавы]{"entity": "subject", "role": "object"}
+    - до [впадины]{"entity": "subject", "role": "object"} [близлежащей]{"entity": "relation"}
+    - [восточнее]{"entity": "relation"} [ласточки]{"entity": "subject", "role": "addition"}
+    - к [провалу]{"entity": "subject", "role": "object"} [данному]{"entity": "relation"}
+    - [на востоке от]{"entity": "relation"} [брички]{"entity": "subject", "role": "addition"}
+    - к [углублению]{"entity": "subject", "role": "object"} [соседнему]{"entity": "relation"}
+    - до [провала]{"entity": "subject", "role": "object"}
+    - к [яме]{"entity": "subject", "role": "object"} [близлежащей]{"entity": "relation"}
+    - к [провалу]{"entity": "subject", "role": "object"} [близлежащему]{"entity": "relation"}
+    - до [провала]{"entity": "subject", "role": "object"} [того]{"entity": "relation"}
+    - до [данной]{"entity": "relation"} [канавы]{"entity": "subject", "role": "object"}
+    - до [рытвины]{"entity": "subject", "role": "object"}
+    - к [близрасположенной]{"entity": "relation"} [воронке]{"entity": "subject", "role": "object"}
+    - [на востоке от]{"entity": "relation"} [болида]{"entity": "subject", "role": "addition"}
+    - до [оврага]{"entity": "subject", "role": "object"} [недалёкого]{"entity": "relation"}
+    - до [провала]{"entity": "subject", "role": "object"} [сего]{"entity": "relation"}
