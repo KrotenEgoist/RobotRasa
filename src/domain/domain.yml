@@ -31,7 +31,7 @@ entities:
         - addition
   - distance
   - relation
-  - numeral
+  - number
   - ordinal
   - route:
       roles:
@@ -39,6 +39,37 @@ entities:
         - path
 
 slots:
+  action:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: action
+        role: analyze
+      - type: from_entity
+        entity: action
+        role: around
+      - type: from_entity
+        entity: action
+        role: find
+      - type: from_entity
+        entity: action
+        role: follow
+      - type: from_entity
+        entity: action
+        role: monitor
+      - type: from_entity
+        entity: action
+        role: move
+      - type: from_entity
+        entity: action
+        role: rotate
+      - type: from_entity
+        entity: action
+        role: patrol
+      - type: from_entity
+        entity: action
+        role: stop
+
   subject:
     type: text
     mappings:
@@ -90,7 +121,7 @@ slots:
     type: text
     mappings:
       - type: from_entity
-        entity: numeral
+        entity: number
       - type: from_entity
         entity: ordinal
 
@@ -112,8 +143,6 @@ forms:
       - route
 
 responses:
-  utter_send_command:
-    - text: "Команда отправлена {subject} {distance} {relation} {addition} {route} {num}"
   utter_wrong_command:
     - text: "Исправляем команду"
   utter_rephrase:
@@ -127,6 +156,7 @@ responses:
     - text: "Укажите путь патрулирования"
 
 actions:
+  - action_send_command
   - action_ask_feature
   - action_ask_subject
   - action_reset_slots

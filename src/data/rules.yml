@@ -6,8 +6,10 @@ rules:
     steps:
       - intent: nlu_fallback
       - action: utter_rephrase
+      - action: action_reset_slots
 
   - rule: wrong command
     steps:
       - intent: wrong_command
       - action: utter_wrong_command
+      - action: action_reset_slots

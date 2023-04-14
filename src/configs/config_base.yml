@@ -21,7 +21,7 @@ pipeline:
   locale: en_EN
   dimensions:
   - temperature
-  - numeral
+  - number
 - name: DIETClassifier
   use_masked_language_model: true
   constrain_similarities: true

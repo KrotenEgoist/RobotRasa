@@ -1,6 +1,15 @@
-from rasa_sdk import Action, Tracker, FormValidationAction
+from pathlib import Path
+
+from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import AllSlotsReset, SlotSet, Form, ActiveLoop
+from rasa_sdk.events import AllSlotsReset, SlotSet, ActiveLoop
+
+from src.db.control_db import ControlDB
+
+
+project_path = Path(__file__).parents[2]
+db_path = project_path.joinpath("database/rasa.db")
+database = ControlDB(db_path)
 
 
 class AskSubjectAction(Action):
@@ -49,9 +58,9 @@ class AskFeatureAction(Action):
 
         match role:
             case "object":
-                dispatcher.utter_message(template="utter_ask_relation")
+                dispatcher.utter_message(response="utter_ask_relation")
             case "direction":
-                dispatcher.utter_message(template="utter_ask_distance")
+                dispatcher.utter_message(response="utter_ask_distance")
 
         return []
 
@@ -71,3 +80,26 @@ class ActionResetSlots(Action):
         return [
             AllSlotsReset()
         ]
+
+
+class ActionSendCommand(Action):
+
+    def name(self):
+        return "action_send_command"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain,
+    ):
+        parsed_slots = {}
+        for key, value in tracker.slots.items():
+            if value:
+                parsed_slots[key] = value
+
+        print(parsed_slots.items())
+
+        dispatcher.utter_message(text="Команда отправлена")
+
+        return []
