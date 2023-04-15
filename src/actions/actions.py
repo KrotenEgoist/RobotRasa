@@ -83,6 +83,9 @@ class ValidateCommandForm(FormValidationAction):
         if x['extractor'] == 'DucklingEntityExtractor' else x['entity'] for x in
                                    tracker.latest_message['entities']]
         self.cur_text = [x['value'] for x in tracker.latest_message['entities']]
+        if not self.cur_interpretation:
+            dispatcher.utter_message(text='Я не понял, префразируйте')
+            return {'param': None}
         try:
             for word, text in zip(self.cur_interpretation, self.cur_text):
                 try:
