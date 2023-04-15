@@ -9,5 +9,6 @@ __pycache__/
 # rasa models, cache and tests
 .rasa/
 models/
+nlu_models/
 results/
 src/train_test_split/

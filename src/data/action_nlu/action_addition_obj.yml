@@ -1,0 +1,319 @@
+version: "3.1"
+
+nlu:
+- intent: action+addition_obj
+  examples: |
+    - пытайся [обследовать]{"entity": "action", "role": "obj"} [камень]{"entity": "object", "role": "rock"}, что располагается [справа от](relation) [ограждения]{"entity": "object", "role": "barrier"}
+    - начни [идти]{"entity": "action", "role": "obj_dir"} до [человека]{"entity": "object", "role": "human"}
+    - [теки]{"entity": "action", "role": "obj_dir"} до [этой](gaze) [лампы]{"entity": "object", "role": "lamp_post"}
+    - попробуй [осматривать]{"entity": "action", "role": "obj"} [наблюдаемый](gaze) [лес]{"entity": "object", "role": "forest"}
+    - [обставь]{"entity": "action", "role": "obj"} [тачку]{"entity": "object", "role": "car"}, что [в южной стороне от](relation) [товарища]{"entity": "object", "role": "human"}, который находится [около](relation) [возвышенности]{"entity": "object", "role": "hill"}
+    - [семени]{"entity": "action", "role": "obj_dir"} к [камушку]{"entity": "object", "role": "rock"} [севернее](relation) [останца]{"entity": "object", "role": "butte"}, что располагается [перед](relation) [столбом]{"entity": "object", "role": "lamp_post"}
+    - [скатывайся]{"entity": "action", "role": "obj_dir"} до [фонаря]{"entity": "object", "role": "lamp_post"} [на востоке от](relation) [железного коня]{"entity": "object", "role": "car"}
+    - начинай [рассматривать]{"entity": "action", "role": "obj"} [булыгу]{"entity": "object", "role": "rock"}
+    - попробуй [шлёпать]{"entity": "action", "role": "obj_dir"} за [авто]{"entity": "object", "role": "car"}
+    - [шкандыбай]{"entity": "action", "role": "obj_dir"} к [особняку]{"entity": "object", "role": "house"} [на востоке](relation) [тебя]{"entity": "object", "role": "self"}
+    - [несись]{"entity": "action", "role": "obj_dir"} [в том направлении](gaze), к [преграде]{"entity": "object", "role": "barrier"}
+    - попробуй [сдвигаться]{"entity": "action", "role": "obj_dir"} [сюда](gaze), к [дереву]{"entity": "object", "role": "tree"}
+    - [отыщи]{"entity": "action", "role": "obj"} [ближайший](nearest) [камушек]{"entity": "object", "role": "rock"}
+    - пытайся [заворчивать]{"entity": "action", "role": "obj_dir"} до [наблюдаемого](gaze) [железного коня]{"entity": "object", "role": "car"}
+    - начни [выдвигаться]{"entity": "action", "role": "obj_dir"} до [останца]{"entity": "object", "role": "butte"}, который [южнее](relation) [упавшего человека]{"entity": "object", "role": "man_lay"}, располагающегося [в южной стороне от](relation) [столба]{"entity": "object", "role": "lamp_post"}
+    - [сделай поворот]{"entity": "action", "role": "obj_dir"} [в это место](gaze), к [провалу]{"entity": "object", "role": "pit"}
+    - [пойди]{"entity": "action", "role": "obj_dir"} за [тачкой]{"entity": "object", "role": "car"}
+    - [захаживай]{"entity": "action", "role": "obj_dir"} за [машиной]{"entity": "object", "role": "car"}
+    - [прилети]{"entity": "action", "role": "obj_dir"} к [спиленному дереву]{"entity": "object", "role": "broken_tree"}, располагающемуся [за](relation) [бугром]{"entity": "object", "role": "hill"}, что располагается [южнее](relation) [столба]{"entity": "object", "role": "lamp_post"}
+    - [поворачивай]{"entity": "action", "role": "obj_dir"} к [недалёкому](nearest) [особняку]{"entity": "object", "role": "house"}
+    - [разыщи]{"entity": "action", "role": "obj"} [особняк]{"entity": "object", "role": "house"}, который располагается [правее](relation) [мужчины]{"entity": "object", "role": "human"}
+    - [осматривай]{"entity": "action", "role": "obj"} [пьяного человека]{"entity": "object", "role": "man_lay"}, который [западнее](relation) [камня]{"entity": "object", "role": "rock"}, который [левее](relation) [останца]{"entity": "object", "role": "butte"}
+    - [продвигайся]{"entity": "action", "role": "obj_dir"} до [близкого](nearest) [останца]{"entity": "object", "role": "butte"}
+    - попробуй [анализировать]{"entity": "action", "role": "obj"} [останец]{"entity": "object", "role": "butte"}, который [западнее](relation) [человека]{"entity": "object", "role": "human"}
+    - [разыщи]{"entity": "action", "role": "obj"} [рытвину]{"entity": "object", "role": "pit"}
+    - [найди]{"entity": "action", "role": "obj"} [товарища]{"entity": "object", "role": "human"}
+    - [найди]{"entity": "action", "role": "obj"} [загородку]{"entity": "object", "role": "barrier"}, что находится [левее](relation) [светильника]{"entity": "object", "role": "lamp_post"}
+    - начинай [трусить]{"entity": "action", "role": "obj_dir"} к [дубу]{"entity": "object", "role": "tree"}, что располагается [рядом с](relation) [лесополосой]{"entity": "object", "role": "forest"}
+    - [разыщи]{"entity": "action", "role": "obj"} [чащу]{"entity": "object", "role": "forest"}, которая [за](relation) [столбом]{"entity": "object", "role": "lamp_post"}
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} до [валуна]{"entity": "object", "role": "butte"}, что [позади](relation) [канавы]{"entity": "object", "role": "pit"}
+    - [найди]{"entity": "action", "role": "obj"} [рытвину]{"entity": "object", "role": "pit"} [перед](relation) [собой]{"entity": "object", "role": "self"}
+    - [найди]{"entity": "action", "role": "obj"} [холм]{"entity": "object", "role": "hill"}
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} до [фонаря]{"entity": "object", "role": "lamp_post"}
+    - [заворчивай]{"entity": "action", "role": "obj_dir"} до [расщелины]{"entity": "object", "role": "fissure"}, которая располагается [на востоке от](relation) [женщины]{"entity": "object", "role": "human"} [около](relation) [здания]{"entity": "object", "role": "house"}
+    - [отыщи]{"entity": "action", "role": "obj"} [трещину]{"entity": "object", "role": "fissure"}, которая [в западной стороне от](relation) [ямы]{"entity": "object", "role": "pit"}, которая [перед](relation) [пьяным человеком]{"entity": "object", "role": "man_lay"}
+    - [отыщи]{"entity": "action", "role": "obj"} [близкую](nearest) [ольху]{"entity": "object", "role": "tree"}
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} к [ближайшему](nearest) [спиленному дереву]{"entity": "object", "role": "broken_tree"}
+    - пытайся [разглядывать]{"entity": "action", "role": "obj"} [авто]{"entity": "object", "role": "car"}
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} до [лежащего человека]{"entity": "object", "role": "man_lay"}, который [рядом с](relation) [домом]{"entity": "object", "role": "house"}, что находится [сзади от](relation) [спиленного дерева]{"entity": "object", "role": "broken_tree"}
+    - [вези]{"entity": "action", "role": "obj_dir"} до [пригорка]{"entity": "object", "role": "hill"}
+    - [заворчивай]{"entity": "action", "role": "obj_dir"} до [останца]{"entity": "object", "role": "butte"}
+    - [дуй]{"entity": "action", "role": "obj_dir"} за [авто]{"entity": "object", "role": "car"}
+    - попробуй [заворчивать]{"entity": "action", "role": "obj_dir"} до [товарища]{"entity": "object", "role": "human"}, который [позади](relation) [ямы]{"entity": "object", "role": "pit"}
+    - начинай [анализировать]{"entity": "action", "role": "obj"} [в этом направлении](gaze), до [леса]{"entity": "object", "role": "forest"}
+    - [хлюпай]{"entity": "action", "role": "obj_dir"} за [машиной]{"entity": "object", "role": "car"}
+    - [переходи]{"entity": "action", "role": "obj_dir"} до [постройки]{"entity": "object", "role": "house"}
+    - [сделай поворот]{"entity": "action", "role": "obj_dir"} к [близкому](nearest) [лежащему человеку]{"entity": "object", "role": "man_lay"}
+    - [разыщи]{"entity": "action", "role": "obj"} [загородку]{"entity": "object", "role": "barrier"} [на западе относительно](relation) [авто]{"entity": "object", "role": "car"}
+    - [трогай]{"entity": "action", "role": "obj_dir"} до [валуна]{"entity": "object", "role": "butte"}, который находится [перед](relation) [горкой]{"entity": "object", "role": "hill"}, которая находится [в северной стороне от](relation) [женщины]{"entity": "object", "role": "human"}
+    - [обскочи]{"entity": "action", "role": "obj"} [наблюдаемый](gaze) [останец]{"entity": "object", "role": "butte"}
+    - пытайся [заворчивать]{"entity": "action", "role": "obj_dir"} к [расщелине]{"entity": "object", "role": "fissure"}
+    - начни [продвигаться]{"entity": "action", "role": "obj_dir"} к [тачке]{"entity": "object", "role": "car"} [севернее](relation) 
+    - [катись]{"entity": "action", "role": "obj_dir"} за [железным конём]{"entity": "object", "role": "car"}
+    - начинай [отбегать]{"entity": "action", "role": "obj_dir"} к [дереву]{"entity": "object", "role": "tree"}
+    - [заворчивай]{"entity": "action", "role": "obj_dir"} к [останцу]{"entity": "object", "role": "butte"} [левее](relation) 
+    - попробуй [бродить]{"entity": "action", "role": "obj_dir"} до [ближней](nearest) [лампы]{"entity": "object", "role": "lamp_post"}
+    - [обставь]{"entity": "action", "role": "obj"} [останец]{"entity": "object", "role": "butte"}, который находится [на севере от](relation) [булыги]{"entity": "object", "role": "rock"}
+    - [анализируй]{"entity": "action", "role": "obj"} [канаву]{"entity": "object", "role": "pit"}, что [справа от](relation) [растения]{"entity": "object", "role": "tree"}
+    - [обследуй]{"entity": "action", "role": "obj"} [даму]{"entity": "object", "role": "human"}, что располагается [севернее](relation) [поваленного дерева]{"entity": "object", "role": "broken_tree"}, что находится [правее](relation) [свалившегося человека]{"entity": "object", "role": "man_lay"}
+    - попробуй [шлёпать]{"entity": "action", "role": "obj_dir"} до [пьяного человека]{"entity": "object", "role": "man_lay"} [на юге](relation) 
+    - начинай [исследовать]{"entity": "action", "role": "obj"} [срубленное дерево]{"entity": "object", "role": "broken_tree"} [слева от](relation) [железного коня]{"entity": "object", "role": "car"}, который находится [южнее](relation) [рощи]{"entity": "object", "role": "forest"}
+    - [поворачивай]{"entity": "action", "role": "obj_dir"} до [здания]{"entity": "object", "role": "house"}, которое находится [за](relation) [ольхой]{"entity": "object", "role": "tree"}
+    - начинай [шмыгать]{"entity": "action", "role": "obj_dir"} за [тачкой]{"entity": "object", "role": "car"}
+    - начинай [заворчивать]{"entity": "action", "role": "obj_dir"} к [свалившемуся человеку]{"entity": "object", "role": "man_lay"} [южнее](relation) [тебя]{"entity": "object", "role": "self"}
+    - начинай [двигать]{"entity": "action", "role": "obj_dir"} [туда](gaze), до [тачки]{"entity": "object", "role": "car"}
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} к [недалёкой](nearest) [трещине]{"entity": "object", "role": "fissure"}
+    - начинай [поворачивать]{"entity": "action", "role": "obj_dir"} к [валуну]{"entity": "object", "role": "butte"} [на востоке относительно](relation) [срубленного дерева]{"entity": "object", "role": "broken_tree"}
+    - начни [плестись]{"entity": "action", "role": "obj_dir"} к [дубраве]{"entity": "object", "role": "forest"} [восточнее](relation) 
+    - [подвергни анализу]{"entity": "action", "role": "obj"} [близлежащее](nearest) [сваленное дерево]{"entity": "object", "role": "broken_tree"}
+    - [устройся]{"entity": "action", "role": "obj_dir"} за [автомобилем]{"entity": "object", "role": "car"}
+    - [найди]{"entity": "action", "role": "obj"} [холм]{"entity": "object", "role": "hill"}, что располагается [на юге относительно](relation) [светильника]{"entity": "object", "role": "lamp_post"}, располагающийся [западнее](relation) [останца]{"entity": "object", "role": "butte"}
+    - [вылети]{"entity": "action", "role": "obj_dir"} к [разрыву]{"entity": "object", "role": "fissure"}, что располагается [на севере от](relation) [мужчины]{"entity": "object", "role": "human"}
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} до [столба]{"entity": "object", "role": "lamp_post"}, который располагается [на севере от](relation) [лежащего человека]{"entity": "object", "role": "man_lay"}, располагающегося [восточнее](relation) [холма]{"entity": "object", "role": "hill"}
+    - начни [передвигаться]{"entity": "action", "role": "obj_dir"} к [лесополосе]{"entity": "object", "role": "forest"}, что находится [на юге относительно](relation) [лампы]{"entity": "object", "role": "lamp_post"}
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} до [домика]{"entity": "object", "role": "house"} [в восточной стороне](relation) 
+    - [рассматривай]{"entity": "action", "role": "obj"} [наблюдаемого](gaze) [мужчину]{"entity": "object", "role": "human"}
+    - пытайся [хромать]{"entity": "action", "role": "obj_dir"} до [товарища]{"entity": "object", "role": "human"} [справа от](relation) [тебя]{"entity": "object", "role": "self"}
+    - [отыщи]{"entity": "action", "role": "obj"} [ближайший](nearest) [валун]{"entity": "object", "role": "butte"}
+    - [обставь]{"entity": "action", "role": "obj"} [близкого](nearest) [железного коня]{"entity": "object", "role": "car"}
+    - попробуй [опережать]{"entity": "action", "role": "obj"} [чащу]{"entity": "object", "role": "forest"}
+    - попробуй [поворачивать]{"entity": "action", "role": "obj_dir"} до [здания]{"entity": "object", "role": "house"}
+    - начни [собираться]{"entity": "action", "role": "obj_dir"} за [авто]{"entity": "object", "role": "car"}
+    - [подвергни анализу]{"entity": "action", "role": "obj"} [разлом]{"entity": "object", "role": "fissure"} [на западе](relation) 
+    - [осматривай]{"entity": "action", "role": "obj"} [сюда](gaze), к [лесу]{"entity": "object", "role": "forest"}
+    - [заворчивай]{"entity": "action", "role": "obj_dir"} к [наблюдаемому](gaze) [фонарю]{"entity": "object", "role": "lamp_post"}
+    - [найди]{"entity": "action", "role": "obj"} [барьер]{"entity": "object", "role": "barrier"}, что располагается [на востоке относительно](relation) [пьяного человека]{"entity": "object", "role": "man_lay"}, что [на севере от](relation) [сосны]{"entity": "object", "role": "tree"}
+    - [передвигайся]{"entity": "action", "role": "obj_dir"} за [железным конём]{"entity": "object", "role": "car"}
+    - начинай [преследовать]{"entity": "action", "role": "obj"} за [машиной]{"entity": "object", "role": "car"}
+    - [осмотри]{"entity": "action", "role": "obj"} [близкий](nearest) [светильник]{"entity": "object", "role": "lamp_post"}
+    - [опережай]{"entity": "action", "role": "obj"} [даму]{"entity": "object", "role": "human"} [левее](relation) 
+    - [дефилируй]{"entity": "action", "role": "obj_dir"} до [близлежащего](nearest) [строения]{"entity": "object", "role": "house"}
+    - [устремись]{"entity": "action", "role": "obj_dir"} до [авто]{"entity": "object", "role": "car"}, которое располагается [перед](relation) [спиленным деревом]{"entity": "object", "role": "broken_tree"}, располагающегося [около](relation) [дубравы]{"entity": "object", "role": "forest"}
+    - пытайся [исследовать]{"entity": "action", "role": "obj"} [эту](gaze) [ольху]{"entity": "object", "role": "tree"}
+    - [направляйся]{"entity": "action", "role": "obj_dir"} за [автомобилем]{"entity": "object", "role": "car"}
+    - [поворачивай]{"entity": "action", "role": "obj_dir"} к [ближайшей](nearest) [сосне]{"entity": "object", "role": "tree"}
+    - [подвергни анализу]{"entity": "action", "role": "obj"} [берёзу]{"entity": "object", "role": "tree"}
+    - [поворачивай]{"entity": "action", "role": "obj_dir"} [в этом направлении](gaze), до [разлома]{"entity": "object", "role": "fissure"}
+    - [оставь позади]{"entity": "action", "role": "obj"} [товарища]{"entity": "object", "role": "human"}
+    - [обнаружь]{"entity": "action", "role": "obj"} [близлежащую](nearest) [расщелину]{"entity": "object", "role": "fissure"}
+    - начни [обследовать]{"entity": "action", "role": "obj"} [канаву]{"entity": "object", "role": "pit"}, которая находится [на юге относительно](relation) [света]{"entity": "object", "role": "lamp_post"}
+    - [броссься]{"entity": "action", "role": "obj_dir"} к [загородке]{"entity": "object", "role": "barrier"} [левее](relation) [себя]{"entity": "object", "role": "self"}
+    - [сдвинься]{"entity": "action", "role": "obj_dir"} за [железным конём]{"entity": "object", "role": "car"}
+    - начинай [поворачивать]{"entity": "action", "role": "obj_dir"} до [булыжника]{"entity": "object", "role": "rock"}, что находится [рядом с](relation) [железным конём]{"entity": "object", "role": "car"}, что находится [на юге относительно](relation) [горки]{"entity": "object", "role": "hill"}
+    - [опереди]{"entity": "action", "role": "obj"} [недалекий](nearest) [светильник]{"entity": "object", "role": "lamp_post"}
+    - [заворчивай]{"entity": "action", "role": "obj_dir"} до [пьяного человека]{"entity": "object", "role": "man_lay"}, находящегося [на севере от](relation) [растения]{"entity": "object", "role": "tree"}, что находится [на востоке относительно](relation) [преграды]{"entity": "object", "role": "barrier"}
+    - [рассматривай]{"entity": "action", "role": "obj"} [в ту сторону](gaze), до [светильника]{"entity": "object", "role": "lamp_post"}
+    - [обходи]{"entity": "action", "role": "obj"} [столб]{"entity": "object", "role": "lamp_post"}
+    - [обнаружь]{"entity": "action", "role": "obj"} [пьяного человека]{"entity": "object", "role": "man_lay"} [на востоке](relation) [себя]{"entity": "object", "role": "self"}
+    - [подвергни анализу]{"entity": "action", "role": "obj"} [ближнюю](nearest) [машину]{"entity": "object", "role": "car"}
+    - [повернись]{"entity": "action", "role": "obj_dir"} к [трещине]{"entity": "object", "role": "fissure"}
+    - [подвергни анализу]{"entity": "action", "role": "obj"} [свалившегося человека]{"entity": "object", "role": "man_lay"}, располагающегося [рядом с](relation) [избой]{"entity": "object", "role": "house"}, находящуюся [около](relation) [ольхи]{"entity": "object", "role": "tree"}
+    - начни [захаживать]{"entity": "action", "role": "obj_dir"} за [тачкой]{"entity": "object", "role": "car"}
+    - [обскочи]{"entity": "action", "role": "obj"} [свет]{"entity": "object", "role": "lamp_post"}, что располагается [позади](relation) [ограждения]{"entity": "object", "role": "barrier"}, находящееся [спереди от](relation) [булыжника]{"entity": "object", "role": "rock"}
+    - [откатись]{"entity": "action", "role": "obj_dir"} до [авто]{"entity": "object", "role": "car"}
+    - начни [анализировать]{"entity": "action", "role": "obj"} [близлежащую](nearest) [сосну]{"entity": "object", "role": "tree"}
+    - пытайся [скакать]{"entity": "action", "role": "obj_dir"} к [этому](gaze) [разлому]{"entity": "object", "role": "fissure"}
+    - [пройди]{"entity": "action", "role": "obj_dir"} до [холмика]{"entity": "object", "role": "hill"}
+    - [дуй]{"entity": "action", "role": "obj_dir"} до [близкого](nearest) [разрыва]{"entity": "object", "role": "fissure"}
+    - [найди]{"entity": "action", "role": "obj"} [машину]{"entity": "object", "role": "car"} [на севере от](relation) [трещины]{"entity": "object", "role": "fissure"}, что находится [перед](relation) [горой]{"entity": "object", "role": "hill"}
+    - [сделай поворот]{"entity": "action", "role": "obj_dir"} к [булыжнику]{"entity": "object", "role": "rock"} [за](relation) [собой]{"entity": "object", "role": "self"}
+    - пытайся [рассматривать]{"entity": "action", "role": "obj"} [близкую](nearest) [впадину]{"entity": "object", "role": "pit"}
+    - [выйди]{"entity": "action", "role": "obj_dir"} за [тачкой]{"entity": "object", "role": "car"}
+    - [оставь позади]{"entity": "action", "role": "obj"} [канаву]{"entity": "object", "role": "pit"}, которая находится [за](relation) [преградой]{"entity": "object", "role": "barrier"}, что находится [спереди от](relation) [поваленного дерева]{"entity": "object", "role": "broken_tree"}
+    - [денься]{"entity": "action", "role": "obj_dir"} [туда](gaze)
+    - [продвигайся]{"entity": "action", "role": "obj_dir"} за [автомобилем]{"entity": "object", "role": "car"}
+    - [оставь позади]{"entity": "action", "role": "obj"} [ближайшую](nearest) [канаву]{"entity": "object", "role": "pit"}
+    - пытайся [поворачивать]{"entity": "action", "role": "obj_dir"} к [лампе]{"entity": "object", "role": "lamp_post"}, что находится [на севере относительно](relation) [автомобиля]{"entity": "object", "role": "car"}
+    - [обнаружь]{"entity": "action", "role": "obj"} [близкое](nearest) [сваленное дерево]{"entity": "object", "role": "broken_tree"}
+    - попробуй [опережать]{"entity": "action", "role": "obj"} [человека]{"entity": "object", "role": "human"}, располагающегося [в южной стороне от](relation) [спиленного дерева]{"entity": "object", "role": "broken_tree"}
+    - [чаль]{"entity": "action", "role": "obj_dir"} за [авто]{"entity": "object", "role": "car"}
+    - [опереди]{"entity": "action", "role": "obj"} [сюда](gaze), к [загородке]{"entity": "object", "role": "barrier"}
+    - пытайся [дерзать]{"entity": "action", "role": "obj_dir"} за [машиной]{"entity": "object", "role": "car"}
+    - [разыщи]{"entity": "action", "role": "obj"} [валун]{"entity": "object", "role": "butte"}, находящийся [неподалеку от](relation) [разрыва]{"entity": "object", "role": "fissure"}, что находится [за](relation) [человеком]{"entity": "object", "role": "human"}
+    - [пустись]{"entity": "action", "role": "obj_dir"} за [тачкой]{"entity": "object", "role": "car"}
+    - [сделай поворот]{"entity": "action", "role": "obj_dir"} к [железному коню]{"entity": "object", "role": "car"}
+    - [сделай поворот]{"entity": "action", "role": "obj_dir"} до [лежащего человека]{"entity": "object", "role": "man_lay"} [на востоке](relation) [тебя]{"entity": "object", "role": "self"}
+    - [обоснуйся]{"entity": "action", "role": "obj_dir"} до [недалёкого](nearest) [сломанного дерева]{"entity": "object", "role": "broken_tree"}
+    - [обходи]{"entity": "action", "role": "obj"} [горку]{"entity": "object", "role": "hill"} [в восточной стороне](relation) [себя]{"entity": "object", "role": "self"}
+    - [заворчивай]{"entity": "action", "role": "obj_dir"} к [ближней](nearest) [расщелине]{"entity": "object", "role": "fissure"}
+    - пытайся [газовать]{"entity": "action", "role": "obj_dir"} за [автомобилем]{"entity": "object", "role": "car"}
+    - [заворчивай]{"entity": "action", "role": "obj_dir"} к [данному](gaze) [валуну]{"entity": "object", "role": "butte"}
+    - [шлёпай]{"entity": "action", "role": "obj_dir"} за [автомобилем]{"entity": "object", "role": "car"}
+    - [выйди]{"entity": "action", "role": "obj_dir"} к [этому](gaze) [лесу]{"entity": "object", "role": "forest"}
+    - [обнаружь]{"entity": "action", "role": "obj"} [машину]{"entity": "object", "role": "car"}, которая находится [около](relation) [дуба]{"entity": "object", "role": "tree"}, который располагается [слева от](relation) [чащи]{"entity": "object", "role": "forest"}
+    - начни [заворчивать]{"entity": "action", "role": "obj_dir"} к [ближнему](nearest) [булыжнику]{"entity": "object", "role": "rock"}
+    - [обходи]{"entity": "action", "role": "obj"} [домик]{"entity": "object", "role": "house"}, располагающийся [южнее](relation) [упавшего человека]{"entity": "object", "role": "man_lay"}, что находится [слева от](relation) [булыги]{"entity": "object", "role": "rock"}
+    - [поторопись]{"entity": "action", "role": "obj_dir"} за [автомобилем]{"entity": "object", "role": "car"}
+    - [обозревай]{"entity": "action", "role": "obj"} [недалёкое](nearest) [ограждение]{"entity": "object", "role": "barrier"}
+    - пытайся [поворачивать]{"entity": "action", "role": "obj_dir"} к [железному коню]{"entity": "object", "role": "car"}, который [рядом с](relation) [коттеджем]{"entity": "object", "role": "house"}, который располагается [южнее](relation) [сваленного дерева]{"entity": "object", "role": "broken_tree"}
+    - начни [исследовать]{"entity": "action", "role": "obj"} [поваленное дерево]{"entity": "object", "role": "broken_tree"}
+    - [броди]{"entity": "action", "role": "obj_dir"} за [железным конём]{"entity": "object", "role": "car"}
+    - [обнаружь]{"entity": "action", "role": "obj"} [останец]{"entity": "object", "role": "butte"}
+    - [опережай]{"entity": "action", "role": "obj"} [кучу]{"entity": "object", "role": "hill"}, которая находится [позади](relation) [трещины]{"entity": "object", "role": "fissure"}, что [западнее](relation) [провала]{"entity": "object", "role": "pit"}
+    - начни [осматривать]{"entity": "action", "role": "obj"} [останец]{"entity": "object", "role": "butte"}, что располагается [слева от](relation) [булыги]{"entity": "object", "role": "rock"}
+    - [осмотри]{"entity": "action", "role": "obj"} [холм]{"entity": "object", "role": "hill"}
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} до [расщелины]{"entity": "object", "role": "fissure"}, располагающейся [перед](relation) [камушком]{"entity": "object", "role": "rock"}, что находится [спереди от](relation) [женщины]{"entity": "object", "role": "human"}
+    - [сходи]{"entity": "action", "role": "obj_dir"} за [машиной]{"entity": "object", "role": "car"}
+    - попробуй [разглядывать]{"entity": "action", "role": "obj"} [сломанное дерево]{"entity": "object", "role": "broken_tree"} [спереди](relation) 
+    - [выбегай]{"entity": "action", "role": "obj_dir"} [в том направлении](gaze)
+    - [отыщи]{"entity": "action", "role": "obj"} [ближнюю](nearest) [загородку]{"entity": "object", "role": "barrier"}
+    - [исследуй]{"entity": "action", "role": "obj"} [домик]{"entity": "object", "role": "house"} [сзади](relation) 
+    - [обскочи]{"entity": "action", "role": "obj"} [постройку]{"entity": "object", "role": "house"} [в южной стороне](relation) [себя]{"entity": "object", "role": "self"}
+    - пытайся [проезжать]{"entity": "action", "role": "obj_dir"} за [железным конём]{"entity": "object", "role": "car"}
+    - [опереди]{"entity": "action", "role": "obj"} [провал]{"entity": "object", "role": "pit"}, который располагается [на западе от](relation) [ограждения]{"entity": "object", "role": "barrier"}
+    - [заворчивай]{"entity": "action", "role": "obj_dir"} до [дерева]{"entity": "object", "role": "tree"} [на севере относительно](relation) [холма]{"entity": "object", "role": "hill"}, что [за](relation) [валуном]{"entity": "object", "role": "butte"}
+    - попробуй [обскакивать]{"entity": "action", "role": "obj"} [останец]{"entity": "object", "role": "butte"}
+    - [оставь позади]{"entity": "action", "role": "obj"} [тот](gaze) [булыжник]{"entity": "object", "role": "rock"}
+    - [найди]{"entity": "action", "role": "obj"} [недалёкого](nearest) [железного коня]{"entity": "object", "role": "car"}
+    - [рассмотри]{"entity": "action", "role": "obj"} [ближайший](nearest) [камень]{"entity": "object", "role": "rock"}
+    - [обходи]{"entity": "action", "role": "obj"} [ближайшее](nearest) [дерево]{"entity": "object", "role": "tree"}
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} к [близлежащему](nearest) [столбу]{"entity": "object", "role": "lamp_post"}
+    - начни [поторапливаться]{"entity": "action", "role": "obj_dir"} к [даме]{"entity": "object", "role": "human"}, что находится [сзади от](relation) [берёзы]{"entity": "object", "role": "tree"}, располагающейся [левее](relation) [столба]{"entity": "object", "role": "lamp_post"}
+    - [оставь позади]{"entity": "action", "role": "obj"} [близлежащую](nearest) [тачку]{"entity": "object", "role": "car"}
+    - [ковыляй]{"entity": "action", "role": "obj_dir"} за [железным конём]{"entity": "object", "role": "car"}
+    - [найди]{"entity": "action", "role": "obj"} [здание]{"entity": "object", "role": "house"} [на западе](relation) [тебя]{"entity": "object", "role": "self"}
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} до [фонаря]{"entity": "object", "role": "lamp_post"}, который находится [южнее](relation) [упавшего человека]{"entity": "object", "role": "man_lay"}
+    - пытайся [подходить]{"entity": "action", "role": "obj_dir"} к [ближнему](nearest) [домику]{"entity": "object", "role": "house"}
+    - [смойся]{"entity": "action", "role": "obj_dir"} [сюда](gaze)
+    - начни [исследовать]{"entity": "action", "role": "obj"} [преграду]{"entity": "object", "role": "barrier"} [справа](relation) 
+    - начни [исследовать]{"entity": "action", "role": "obj"} [в этом направлении](gaze), до [впадины]{"entity": "object", "role": "pit"}
+    - [броссься]{"entity": "action", "role": "obj_dir"} за [машиной]{"entity": "object", "role": "car"}
+    - [сделай поворот]{"entity": "action", "role": "obj_dir"} до [близлежащего](nearest) [упавшего человека]{"entity": "object", "role": "man_lay"}
+    - [проходи]{"entity": "action", "role": "obj_dir"} к [роще]{"entity": "object", "role": "forest"} [справа от](relation) [тебя]{"entity": "object", "role": "self"}
+    - [обнаружь]{"entity": "action", "role": "obj"} [пьяного человека]{"entity": "object", "role": "man_lay"}
+    - начинай [обследовать]{"entity": "action", "role": "obj"} [камень]{"entity": "object", "role": "rock"} [на севере от](relation) [ребёнка]{"entity": "object", "role": "human"}, который располагается [около](relation) [растения]{"entity": "object", "role": "tree"}
+    - [рассмотри]{"entity": "action", "role": "obj"} [тачку]{"entity": "object", "role": "car"}, что находится [рядом с](relation) [останцем]{"entity": "object", "role": "butte"}, который [рядом с](relation) [кучей]{"entity": "object", "role": "hill"}
+    - [осмотри]{"entity": "action", "role": "obj"} [ограждение]{"entity": "object", "role": "barrier"}, что [перед](relation) [дубом]{"entity": "object", "role": "tree"}, который располагается [на юге относительно](relation) [холма]{"entity": "object", "role": "hill"}
+    - [подвергни анализу]{"entity": "action", "role": "obj"} [в ту сторону](gaze), к [булыге]{"entity": "object", "role": "rock"}
+    - [анализируй]{"entity": "action", "role": "obj"} [упавшее дерево]{"entity": "object", "role": "broken_tree"} [южнее](relation) [себя]{"entity": "object", "role": "self"}
+    - [обнаружь]{"entity": "action", "role": "obj"} [булыжник]{"entity": "object", "role": "rock"} [севернее](relation) 
+    - пытайся [обследовать]{"entity": "action", "role": "obj"} [лежащего человека]{"entity": "object", "role": "man_lay"}
+    - начни [обследовать]{"entity": "action", "role": "obj"} [ближайший](nearest) [останец]{"entity": "object", "role": "butte"}
+    - [пробирайся]{"entity": "action", "role": "obj_dir"} за [автомобилем]{"entity": "object", "role": "car"}
+    - [подвергни анализу]{"entity": "action", "role": "obj"} [свет]{"entity": "object", "role": "lamp_post"} [южнее](relation) [себя]{"entity": "object", "role": "self"}
+    - [высаживайся]{"entity": "action", "role": "obj_dir"} до [лесополосы]{"entity": "object", "role": "forest"}, что находится [рядом с](relation) [загородкой]{"entity": "object", "role": "barrier"}
+    - [заворчивай]{"entity": "action", "role": "obj_dir"} до [преграды]{"entity": "object", "role": "barrier"} [справа](relation) 
+    - [опережай]{"entity": "action", "role": "obj"} [спиленное дерево]{"entity": "object", "role": "broken_tree"}, располагающееся [за](relation) [впадиной]{"entity": "object", "role": "pit"}
+    - начни [гнать]{"entity": "action", "role": "obj_dir"} за [тачкой]{"entity": "object", "role": "car"}
+    - начинай [обскакивать]{"entity": "action", "role": "obj"} [тот](gaze) [камушек]{"entity": "object", "role": "rock"}
+    - [уносись]{"entity": "action", "role": "obj_dir"} к [расщелине]{"entity": "object", "role": "fissure"}, что находится [на западе относительно](relation) [рытвины]{"entity": "object", "role": "pit"}
+    - попробуй [исследовать]{"entity": "action", "role": "obj"} [недалекий](nearest) [дом]{"entity": "object", "role": "house"}
+    - [исследуй]{"entity": "action", "role": "obj"} [загородку]{"entity": "object", "role": "barrier"}, которая [на севере от](relation) [разрыва]{"entity": "object", "role": "fissure"}, который находится [на севере от](relation) [провала]{"entity": "object", "role": "pit"}
+    - [повернись]{"entity": "action", "role": "obj_dir"} до [лежащего человека]{"entity": "object", "role": "man_lay"} [в южной стороне](relation) 
+    - [обставь]{"entity": "action", "role": "obj"} [лежащего человека]{"entity": "object", "role": "man_lay"}, находящегося [в восточной стороне от](relation) [кучи]{"entity": "object", "role": "hill"}, что находится [рядом с](relation) [дубом]{"entity": "object", "role": "tree"}
+    - [убирайся]{"entity": "action", "role": "obj_dir"} за [авто]{"entity": "object", "role": "car"}
+    - [ковыляй]{"entity": "action", "role": "obj_dir"} за [машиной]{"entity": "object", "role": "car"}
+    - [волочись]{"entity": "action", "role": "obj_dir"} до [ближайшего](nearest) [домика]{"entity": "object", "role": "house"}
+    - [поезжай]{"entity": "action", "role": "obj_dir"} за [тачкой]{"entity": "object", "role": "car"}
+    - [разыщи]{"entity": "action", "role": "obj"} [свалившегося человека]{"entity": "object", "role": "man_lay"} [западнее](relation) 
+    - начинай [спешить]{"entity": "action", "role": "obj_dir"} до [провала]{"entity": "object", "role": "pit"}, что находится [за](relation) [строением]{"entity": "object", "role": "house"}, располагающегося [позади](relation) [барьера]{"entity": "object", "role": "barrier"}
+    - начни [шлёпать]{"entity": "action", "role": "obj_dir"} до [горы]{"entity": "object", "role": "hill"} [перед](relation) [собой]{"entity": "object", "role": "self"}
+    - попробуй [поворачивать]{"entity": "action", "role": "obj_dir"} к [этой](gaze) [дубраве]{"entity": "object", "role": "forest"}
+    - [выполни передислокацию]{"entity": "action", "role": "obj_dir"} [в это место](gaze)
+    - попробуй [исследовать]{"entity": "action", "role": "obj"} [недалёкую](nearest) [гору]{"entity": "object", "role": "hill"}
+    - попробуй [осматривать]{"entity": "action", "role": "obj"} [лампу]{"entity": "object", "role": "lamp_post"} [на севере от](relation) [сломанного дерева]{"entity": "object", "role": "broken_tree"}
+    - [гуляй]{"entity": "action", "role": "obj_dir"} до [ямы]{"entity": "object", "role": "pit"}, располагающейся [рядом с](relation) [светильником]{"entity": "object", "role": "lamp_post"}, располагающегося [рядом с](relation) [камнем]{"entity": "object", "role": "rock"}
+    - [исследуй]{"entity": "action", "role": "obj"} [разлом]{"entity": "object", "role": "fissure"}
+    - начни [продвигаться]{"entity": "action", "role": "obj_dir"} до [препятствия]{"entity": "object", "role": "barrier"}, которое располагается [правее](relation) [оврага]{"entity": "object", "role": "pit"} [перед](relation) [останцем]{"entity": "object", "role": "butte"}
+    - [осмотри]{"entity": "action", "role": "obj"} [ближнюю](nearest) [булыгу]{"entity": "object", "role": "rock"}
+    - попробуй [рассматривать]{"entity": "action", "role": "obj"} [ребёнка]{"entity": "object", "role": "human"}, который находится [неподалеку от](relation) [пропасти]{"entity": "object", "role": "pit"}, которая располагается [на юге от](relation) [фонаря]{"entity": "object", "role": "lamp_post"}
+    - [подвергни анализу]{"entity": "action", "role": "obj"} [автомобиль]{"entity": "object", "role": "car"}, что [рядом с](relation) [светом]{"entity": "object", "role": "lamp_post"}
+    - [осмотри]{"entity": "action", "role": "obj"} [дуб]{"entity": "object", "role": "tree"}
+    - [осмотри]{"entity": "action", "role": "obj"} [срубленное дерево]{"entity": "object", "role": "broken_tree"}
+    - [отыщи]{"entity": "action", "role": "obj"} [разрыв]{"entity": "object", "role": "fissure"}
+    - начинай [разглядывать]{"entity": "action", "role": "obj"} [ту](gaze) [дубраву]{"entity": "object", "role": "forest"}
+    - [сдвинься]{"entity": "action", "role": "obj_dir"} до [автомобиля]{"entity": "object", "role": "car"}, который находится [перед](relation) [рощей]{"entity": "object", "role": "forest"}
+    - [опереди]{"entity": "action", "role": "obj"} [сюда](gaze), к [женщине]{"entity": "object", "role": "human"}
+    - [опережай]{"entity": "action", "role": "obj"} [останец]{"entity": "object", "role": "butte"} [левее](relation) 
+    - [отыщи]{"entity": "action", "role": "obj"} [горку]{"entity": "object", "role": "hill"} [около](relation) [сваленного дерева]{"entity": "object", "role": "broken_tree"}, что находится [южнее](relation) [ограждения]{"entity": "object", "role": "barrier"}
+    - [исследуй]{"entity": "action", "role": "obj"} [кучу]{"entity": "object", "role": "hill"} [южнее](relation) [тебя]{"entity": "object", "role": "self"}
+    - [заворчивай]{"entity": "action", "role": "obj_dir"} к [строению]{"entity": "object", "role": "house"}
+    - начинай [разглядывать]{"entity": "action", "role": "obj"} [этот](gaze) [бугор]{"entity": "object", "role": "hill"}
+    - [поворачивай]{"entity": "action", "role": "obj_dir"} к [рытвине]{"entity": "object", "role": "pit"}
+    - начинай [поворачивать]{"entity": "action", "role": "obj_dir"} к [данному](gaze) [срубленному дереву]{"entity": "object", "role": "broken_tree"}
+    - [опереди]{"entity": "action", "role": "obj"} [близкую](nearest) [впадину]{"entity": "object", "role": "pit"}
+    - начинай [тянуть]{"entity": "action", "role": "obj_dir"} за [автомобилем]{"entity": "object", "role": "car"}
+    - [тронься]{"entity": "action", "role": "obj_dir"} до [того](gaze) [препятствия]{"entity": "object", "role": "barrier"}
+    - [повернись]{"entity": "action", "role": "obj_dir"} к [куче]{"entity": "object", "role": "hill"}, находящейся [сзади от](relation) [ямы]{"entity": "object", "role": "pit"}
+    - [осмотри]{"entity": "action", "role": "obj"} [лес]{"entity": "object", "role": "forest"} [впереди](relation) [тебя]{"entity": "object", "role": "self"}
+    - [сделай поворот]{"entity": "action", "role": "obj_dir"} до [впадины]{"entity": "object", "role": "pit"} [на западе](relation) [себя]{"entity": "object", "role": "self"}
+    - [рассмотри]{"entity": "action", "role": "obj"} [свет]{"entity": "object", "role": "lamp_post"}, располагающийся [в восточной стороне от](relation) [человека]{"entity": "object", "role": "human"} [на востоке от](relation) [свалившегося человека]{"entity": "object", "role": "man_lay"}
+    - попробуй [разглядывать]{"entity": "action", "role": "obj"} [здание]{"entity": "object", "role": "house"} [справа от](relation) [себя]{"entity": "object", "role": "self"}
+    - пытайся [обскакивать]{"entity": "action", "role": "obj"} [этот](gaze) [останец]{"entity": "object", "role": "butte"}
+    - [езжай]{"entity": "action", "role": "obj_dir"} за [автомобилем]{"entity": "object", "role": "car"}
+    - [обозревай]{"entity": "action", "role": "obj"} [булыгу]{"entity": "object", "role": "rock"}, которая располагается [на западе относительно](relation) [коттеджа]{"entity": "object", "role": "house"}
+    - [обнаружь]{"entity": "action", "role": "obj"} [авто]{"entity": "object", "role": "car"}
+    - пытайся [продвигаться]{"entity": "action", "role": "obj_dir"} к [яме]{"entity": "object", "role": "pit"} [справа от](relation) [ольхи]{"entity": "object", "role": "tree"}
+    - [мчись]{"entity": "action", "role": "obj_dir"} за [машиной]{"entity": "object", "role": "car"}
+    - [разглядывай]{"entity": "action", "role": "obj"} [в это место](gaze), до [сваленного дерева]{"entity": "object", "role": "broken_tree"}
+    - [найди]{"entity": "action", "role": "obj"} [свет]{"entity": "object", "role": "lamp_post"}
+    - [газуй]{"entity": "action", "role": "obj_dir"} за [тачкой]{"entity": "object", "role": "car"}
+    - [делай маневр]{"entity": "action", "role": "obj_dir"} до [булыжника]{"entity": "object", "role": "rock"}
+    - [подвергни анализу]{"entity": "action", "role": "obj"} [данный](gaze) [булыжник]{"entity": "object", "role": "rock"}
+    - [подвергни анализу]{"entity": "action", "role": "obj"} [машину]{"entity": "object", "role": "car"}
+    - [сдвинься]{"entity": "action", "role": "obj_dir"} за [тачкой]{"entity": "object", "role": "car"}
+    - [обследуй]{"entity": "action", "role": "obj"} [в это место](gaze), к [холмику]{"entity": "object", "role": "hill"}
+    - [осмотри]{"entity": "action", "role": "obj"} [машину]{"entity": "object", "role": "car"} [севернее](relation) 
+    - [осмотри]{"entity": "action", "role": "obj"} [недалекий](nearest) [автомобиль]{"entity": "object", "role": "car"}
+    - начинай [заворчивать]{"entity": "action", "role": "obj_dir"} к [свалившемуся человеку]{"entity": "object", "role": "man_lay"}, который располагается [левее](relation) [ямы]{"entity": "object", "role": "pit"}
+    - начни [осматривать]{"entity": "action", "role": "obj"} [канаву]{"entity": "object", "role": "pit"} [в восточной стороне от](relation) [дерева]{"entity": "object", "role": "tree"}
+    - [обнаружь]{"entity": "action", "role": "obj"} [рощу]{"entity": "object", "role": "forest"}, которая [около](relation) [ограждения]{"entity": "object", "role": "barrier"}
+    - [подвергни анализу]{"entity": "action", "role": "obj"} [поваленное дерево]{"entity": "object", "role": "broken_tree"}, что [рядом с](relation) [лесом]{"entity": "object", "role": "forest"}, располагающийся [справа от](relation) [разлома]{"entity": "object", "role": "fissure"}
+    - [найди]{"entity": "action", "role": "obj"} [тачку]{"entity": "object", "role": "car"}, что [на востоке от](relation) [фонаря]{"entity": "object", "role": "lamp_post"}
+    - [отыщи]{"entity": "action", "role": "obj"} [ближайший](nearest) [разрыв]{"entity": "object", "role": "fissure"}
+    - [исследуй]{"entity": "action", "role": "obj"} [данный](gaze) [фонарь]{"entity": "object", "role": "lamp_post"}
+    - [ступай]{"entity": "action", "role": "obj_dir"} за [автомобилем]{"entity": "object", "role": "car"}
+    - попробуй [катиться]{"entity": "action", "role": "obj_dir"} до [близкого](nearest) [разлома]{"entity": "object", "role": "fissure"}
+    - [обозревай]{"entity": "action", "role": "obj"} [светильник]{"entity": "object", "role": "lamp_post"} [правее](relation) 
+    - [повернись]{"entity": "action", "role": "obj_dir"} до [упавшего дерева]{"entity": "object", "role": "broken_tree"} [на юге](relation) [себя]{"entity": "object", "role": "self"}
+    - [пустись]{"entity": "action", "role": "obj_dir"} к [пропасти]{"entity": "object", "role": "pit"}, что располагается [на западе относительно](relation) [валуна]{"entity": "object", "role": "butte"}
+    - [выйди]{"entity": "action", "role": "obj_dir"} к [коттеджу]{"entity": "object", "role": "house"}, располагающемуся [на юге от](relation) [берёзы]{"entity": "object", "role": "tree"}, которая находится [около](relation) [лампы]{"entity": "object", "role": "lamp_post"}
+    - [оставь позади]{"entity": "action", "role": "obj"} [лампу]{"entity": "object", "role": "lamp_post"}, которая [перед](relation) [преградой]{"entity": "object", "role": "barrier"}
+    - [опереди]{"entity": "action", "role": "obj"} [машину]{"entity": "object", "role": "car"}, что располагается [в южной стороне от](relation) [товарища]{"entity": "object", "role": "human"}
+    - [заворчивай]{"entity": "action", "role": "obj_dir"} до [растения]{"entity": "object", "role": "tree"}
+    - [сделай поворот]{"entity": "action", "role": "obj_dir"} к [недалёкому](nearest) [человеку]{"entity": "object", "role": "human"}
+    - [рассматривай]{"entity": "action", "role": "obj"} [в ту сторону](gaze), до [фонаря]{"entity": "object", "role": "lamp_post"}
+    - [отыщи]{"entity": "action", "role": "obj"} [гору]{"entity": "object", "role": "hill"}, что находится [слева от](relation) [машины]{"entity": "object", "role": "car"}
+    - [разглядывай]{"entity": "action", "role": "obj"} [камень]{"entity": "object", "role": "rock"}, что находится [спереди от](relation) [возвышенности]{"entity": "object", "role": "hill"}, располагающуюся [неподалеку от](relation) [срубленного дерева]{"entity": "object", "role": "broken_tree"}
+    - [разглядывай]{"entity": "action", "role": "obj"} [срубленное дерево]{"entity": "object", "role": "broken_tree"}, располагающееся [сзади от](relation) [человека]{"entity": "object", "role": "human"}
+    - [проходи]{"entity": "action", "role": "obj_dir"} [в эту сторону](gaze), к [рытвине]{"entity": "object", "role": "pit"}
+    - [отыщи]{"entity": "action", "role": "obj"} [расщелину]{"entity": "object", "role": "fissure"} [южнее](relation) 
+    - [подвергни анализу]{"entity": "action", "role": "obj"} [данный](gaze) [камушек]{"entity": "object", "role": "rock"}
+    - начни [рассматривать]{"entity": "action", "role": "obj"} [берёзу]{"entity": "object", "role": "tree"} [на востоке](relation) [тебя]{"entity": "object", "role": "self"}
+    - начни [шкандыбарить]{"entity": "action", "role": "obj_dir"} к [рытвине]{"entity": "object", "role": "pit"} [в западной стороне](relation) 
+    - [повернись]{"entity": "action", "role": "obj_dir"} до [машины]{"entity": "object", "role": "car"}
+    - [обскочи]{"entity": "action", "role": "obj"} [сюда](gaze), до [тачки]{"entity": "object", "role": "car"}
+    - [отыщи]{"entity": "action", "role": "obj"} [овраг]{"entity": "object", "role": "pit"}, находящийся [правее](relation) [лежащего человека]{"entity": "object", "role": "man_lay"}, что [спереди от](relation) [поваленного дерева]{"entity": "object", "role": "broken_tree"}
+    - попробуй [анализировать]{"entity": "action", "role": "obj"} [бугор]{"entity": "object", "role": "hill"}
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} до [дерева]{"entity": "object", "role": "tree"}, находящегося [в западной стороне от](relation) [строения]{"entity": "object", "role": "house"}
+    - [обставь]{"entity": "action", "role": "obj"} [в том направлении](gaze), к [холмику]{"entity": "object", "role": "hill"}
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} до [дуба]{"entity": "object", "role": "tree"}, который располагается [левее](relation) [пригорка]{"entity": "object", "role": "hill"}, что располагается [южнее](relation) [дубравы]{"entity": "object", "role": "forest"}
+    - [заворчивай]{"entity": "action", "role": "obj_dir"} к [куче]{"entity": "object", "role": "hill"}, располагающейся [сзади от](relation) [постройки]{"entity": "object", "role": "house"}
+    - [обставь]{"entity": "action", "role": "obj"} [загородку]{"entity": "object", "role": "barrier"}
+    - [гони]{"entity": "action", "role": "obj_dir"} за [железным конём]{"entity": "object", "role": "car"}
+    - [повернись]{"entity": "action", "role": "obj_dir"} до [горки]{"entity": "object", "role": "hill"} [левее](relation) 
+    - [исследуй]{"entity": "action", "role": "obj"} [тачку]{"entity": "object", "role": "car"}, располагающуюся [левее](relation) [барьера]{"entity": "object", "role": "barrier"}
+    - [обскочи]{"entity": "action", "role": "obj"} [лесополосу]{"entity": "object", "role": "forest"} [правее](relation) 
+    - [сделай поворот]{"entity": "action", "role": "obj_dir"} до [камня]{"entity": "object", "role": "rock"}, который располагается [южнее](relation) [преграды]{"entity": "object", "role": "barrier"} [перед](relation) [сосной]{"entity": "object", "role": "tree"}
+    - [осмотри]{"entity": "action", "role": "obj"} [здание]{"entity": "object", "role": "house"}
+    - [обнаружь]{"entity": "action", "role": "obj"} [сломанное дерево]{"entity": "object", "role": "broken_tree"} [на севере](relation) [тебя]{"entity": "object", "role": "self"}
+    - [сделай поворот]{"entity": "action", "role": "obj_dir"} [в ту сторону](gaze), до [загородки]{"entity": "object", "role": "barrier"}
+    - [отыщи]{"entity": "action", "role": "obj"} [сваленное дерево]{"entity": "object", "role": "broken_tree"} [впереди](relation) 
+    - [обоснуйся]{"entity": "action", "role": "obj_dir"} до [ближней](nearest) [горки]{"entity": "object", "role": "hill"}
+    - [разглядывай]{"entity": "action", "role": "obj"} [особняк]{"entity": "object", "role": "house"} [справа от](relation) [загородки]{"entity": "object", "role": "barrier"}
+    - [обнаружь]{"entity": "action", "role": "obj"} [рощу]{"entity": "object", "role": "forest"}, что располагается [на севере относительно](relation) [препятствия]{"entity": "object", "role": "barrier"}
+    - [повернись]{"entity": "action", "role": "obj_dir"} [куда смотрю](gaze), к [тачке]{"entity": "object", "role": "car"}
+    - [при]{"entity": "action", "role": "obj_dir"} к [тачке]{"entity": "object", "role": "car"}
+    - пытайся [захаживать]{"entity": "action", "role": "obj_dir"} до [машины]{"entity": "object", "role": "car"}
+    - [оставь позади]{"entity": "action", "role": "obj"} [дубраву]{"entity": "object", "role": "forest"}
+    - [кинься]{"entity": "action", "role": "obj_dir"} за [автомобилем]{"entity": "object", "role": "car"}
+    - начинай [заворчивать]{"entity": "action", "role": "obj_dir"} [куда смотрю](gaze), к [загородке]{"entity": "object", "role": "barrier"}
+    - [пошел]{"entity": "action", "role": "obj_dir"} до [женщины]{"entity": "object", "role": "human"}
+    - начинай [двигаться]{"entity": "action", "role": "obj_dir"} к [ближнему](nearest) [пьяному человеку]{"entity": "object", "role": "man_lay"}
+    - [пойди]{"entity": "action", "role": "obj_dir"} до [кучи]{"entity": "object", "role": "hill"}, что располагается [за](relation) [валуном]{"entity": "object", "role": "butte"}

@@ -1,0 +1,48 @@
+version: "3.1"
+stories:
+
+#- story: action_dir
+#  steps:
+#    - intent: action
+#      entities:
+#        - action: иди
+#          role: obj_dir
+#    - action: utter_action_dir
+#
+#- story: action_obj
+#  steps:
+#    - intent: action
+#      entities:
+#        - action: анализируй
+#          role: obj
+#    - action: utter_action_obj
+#
+#- story: action_addition_obj
+#  steps:
+#    - intent: action+addition_obj
+#    - action: utter_action_addition_obj
+#
+#- story: action_addition_dir
+#  steps:
+#    - intent: action+addition_dir
+#    - action: utter_action_addition_dir
+- story: fill command
+  steps:
+    - or:
+      - intent: action
+      - intent: action+addition_obj
+      - intent: action+addition_dir
+    - action: validate_command_form
+    - action: command_form
+    - active_loop: command_form
+    - active_loop: null
+    - action: send_command
+    - action: action_slot_reset
+
+#- story: bad 1
+#  steps:
+#    - intent: action+addition_dir
+#      entities:
+#        - action: анализируй
+#          role: obj
+#    - action: utter_please_rephrase

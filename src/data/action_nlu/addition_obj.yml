@@ -1,0 +1,282 @@
+version: "3.1"
+
+nlu:
+- intent: addition_obj
+  examples: |
+    -  до [трещины]{"entity": "object", "role": "fissure"}, которая [неподалеку от](relation) [препятствия]{"entity": "object", "role": "barrier"}, которое [восточнее](relation) [железного коня]{"entity": "object", "role": "car"}
+    -  за [железным конём]{"entity": "object", "role": "car"}
+    -  [свет]{"entity": "object", "role": "lamp_post"}
+    -  к [провалу]{"entity": "object", "role": "pit"} [западнее](relation) 
+    -  до [свалившегося человека]{"entity": "object", "role": "man_lay"}, который [на востоке от](relation) [спиленного дерева]{"entity": "object", "role": "broken_tree"}, располагающегося [слева от](relation) [преграды]{"entity": "object", "role": "barrier"}
+    -  [эту](gaze) [лесополосу]{"entity": "object", "role": "forest"}
+    -  к [камню]{"entity": "object", "role": "rock"}, что находится [слева от](relation) [валуна]{"entity": "object", "role": "butte"}, что находится [рядом с](relation) [светильником]{"entity": "object", "role": "lamp_post"}
+    -  до [разрыва]{"entity": "object", "role": "fissure"}, что находится [около](relation) [товарища]{"entity": "object", "role": "human"}, что находится [на юге от](relation) [тачки]{"entity": "object", "role": "car"}
+    -  [домик]{"entity": "object", "role": "house"}, что располагается [слева от](relation) [светильника]{"entity": "object", "role": "lamp_post"}, что [на юге от](relation) [холма]{"entity": "object", "role": "hill"}
+    -  до [коттеджа]{"entity": "object", "role": "house"} [справа от](relation) [тебя]{"entity": "object", "role": "self"}
+    -  до [лесополосы]{"entity": "object", "role": "forest"} [на юге](relation) [тебя]{"entity": "object", "role": "self"}
+    -  за [автомобилем]{"entity": "object", "role": "car"}
+    -  до [холма]{"entity": "object", "role": "hill"}, который располагается [на севере относительно](relation) [фонаря]{"entity": "object", "role": "lamp_post"}, который [рядом с](relation) [рытвиной]{"entity": "object", "role": "pit"}
+    -  [постройку]{"entity": "object", "role": "house"}, что [правее](relation) [свалившегося человека]{"entity": "object", "role": "man_lay"}, располагающегося [на севере от](relation) [возвышенности]{"entity": "object", "role": "hill"}
+    -  [пьяного человека]{"entity": "object", "role": "man_lay"}, находящегося [восточнее](relation) [чащи]{"entity": "object", "role": "forest"}, которая [в восточной стороне от](relation) [машины]{"entity": "object", "role": "car"}
+    -  до [валуна]{"entity": "object", "role": "butte"}, что находится [справа от](relation) [расщелины]{"entity": "object", "role": "fissure"}, которая располагается [на юге от](relation) [ольхи]{"entity": "object", "role": "tree"}
+    -  за [машиной]{"entity": "object", "role": "car"}
+    -  [то](gaze) [поваленное дерево]{"entity": "object", "role": "broken_tree"}
+    -  [ближнее](nearest) [поваленное дерево]{"entity": "object", "role": "broken_tree"}
+    -  [тот](gaze) [разлом]{"entity": "object", "role": "fissure"}
+    -  за [авто]{"entity": "object", "role": "car"}
+    -  [особняк]{"entity": "object", "role": "house"} [южнее](relation) [тебя]{"entity": "object", "role": "self"}
+    -  до [чащи]{"entity": "object", "role": "forest"}, что находится [в западной стороне от](relation) [провала]{"entity": "object", "role": "pit"}
+    -  [канаву]{"entity": "object", "role": "pit"} [в южной стороне](relation) 
+    -  [то](gaze) [препятствие]{"entity": "object", "role": "barrier"}
+    -  [булыжник]{"entity": "object", "role": "rock"}, находящийся [на севере от](relation) [строения]{"entity": "object", "role": "house"}
+    -  к [ближайшему](nearest) [мужчине]{"entity": "object", "role": "human"}
+    -  [автомобиль]{"entity": "object", "role": "car"} [на юге от](relation) [домика]{"entity": "object", "role": "house"}
+    -  [в том направлении](gaze)
+    -  до [разрыва]{"entity": "object", "role": "fissure"}
+    -  к [столбу]{"entity": "object", "role": "lamp_post"}
+    -  до [сломанного дерева]{"entity": "object", "role": "broken_tree"}
+    -  [овраг]{"entity": "object", "role": "pit"}
+    -  [в это место](gaze), до [горки]{"entity": "object", "role": "hill"}
+    -  [в том направлении](gaze), к [преграде]{"entity": "object", "role": "barrier"}
+    -  [особняк]{"entity": "object", "role": "house"} [спереди от](relation) [пьяного человека]{"entity": "object", "role": "man_lay"}, который располагается [слева от](relation) [останца]{"entity": "object", "role": "butte"}
+    -  к [даме]{"entity": "object", "role": "human"}
+    -  к [разлому]{"entity": "object", "role": "fissure"} [спереди от](relation) [булыги]{"entity": "object", "role": "rock"}
+    -  к [сломанному дереву]{"entity": "object", "role": "broken_tree"}
+    -  [камень]{"entity": "object", "role": "rock"}
+    -  до [спиленного дерева]{"entity": "object", "role": "broken_tree"}
+    -  до [булыги]{"entity": "object", "role": "rock"}, что располагается [за](relation) [рытвиной]{"entity": "object", "role": "pit"}, что находится [левее](relation) [человека]{"entity": "object", "role": "human"}
+    -  [в эту сторону](gaze), до [светильника]{"entity": "object", "role": "lamp_post"}
+    -  [в это место](gaze), к [дубраве]{"entity": "object", "role": "forest"}
+    -  [в это место](gaze), до [провала]{"entity": "object", "role": "pit"}
+    -  до [ближайшего](nearest) [валуна]{"entity": "object", "role": "butte"}
+    -  к [упавшему дереву]{"entity": "object", "role": "broken_tree"} [восточнее](relation) 
+    -  [камень]{"entity": "object", "role": "rock"}, который находится [слева от](relation) [пьяного человека]{"entity": "object", "role": "man_lay"}, что располагается [на юге от](relation) [здания]{"entity": "object", "role": "house"}
+    -  [в это место](gaze), к [преграде]{"entity": "object", "role": "barrier"}
+    -  [туда](gaze), до [провала]{"entity": "object", "role": "pit"}
+    -  [товарища]{"entity": "object", "role": "human"}
+    -  к [дубраве]{"entity": "object", "role": "forest"}, которая находится [правее](relation) [трещины]{"entity": "object", "role": "fissure"}, находящейся [левее](relation) [упавшего человека]{"entity": "object", "role": "man_lay"}
+    -  [ту](gaze) [расщелину]{"entity": "object", "role": "fissure"}
+    -  к [особняку]{"entity": "object", "role": "house"} [правее](relation) [тебя]{"entity": "object", "role": "self"}
+    -  до [барьера]{"entity": "object", "role": "barrier"}, располагающегося [перед](relation) [горой]{"entity": "object", "role": "hill"}, находящейся [севернее](relation) [светильника]{"entity": "object", "role": "lamp_post"}
+    -  до [ближнего](nearest) [упавшего человека]{"entity": "object", "role": "man_lay"}
+    -  [ближний](nearest) [провал]{"entity": "object", "role": "pit"}
+    -  к [мужчине]{"entity": "object", "role": "human"}, который находится [рядом с](relation) [рытвиной]{"entity": "object", "role": "pit"}
+    -  [близлежащее](nearest) [ограждение]{"entity": "object", "role": "barrier"}
+    -  [барьер]{"entity": "object", "role": "barrier"}
+    -  [упавшее дерево]{"entity": "object", "role": "broken_tree"}, что располагается [восточнее](relation) [рытвины]{"entity": "object", "role": "pit"}, которая находится [правее](relation) [домика]{"entity": "object", "role": "house"}
+    -  до [провала]{"entity": "object", "role": "pit"}, который находится [на юге от](relation) [препятствия]{"entity": "object", "role": "barrier"}
+    -  [женщину]{"entity": "object", "role": "human"} [за](relation) [тобой]{"entity": "object", "role": "self"}
+    -  до [ближнего](nearest) [человека]{"entity": "object", "role": "human"}
+    -  [тот](gaze) [валун]{"entity": "object", "role": "butte"}
+    -  [останец]{"entity": "object", "role": "butte"} [в северной стороне](relation) [тебя]{"entity": "object", "role": "self"}
+    -  [упавшее дерево]{"entity": "object", "role": "broken_tree"}, находящееся [справа от](relation) [строения]{"entity": "object", "role": "house"}
+    -  до [избы]{"entity": "object", "role": "house"} [восточнее](relation) 
+    -  [барьер]{"entity": "object", "role": "barrier"} [восточнее](relation) 
+    -  до [горы]{"entity": "object", "role": "hill"} [спереди от](relation) [автомобиля]{"entity": "object", "role": "car"}
+    -  [камушек]{"entity": "object", "role": "rock"}, располагающийся [в западной стороне от](relation) [холма]{"entity": "object", "role": "hill"}, что [около](relation) [срубленного дерева]{"entity": "object", "role": "broken_tree"}
+    -  [останец]{"entity": "object", "role": "butte"}, который располагается [справа от](relation) [пьяного человека]{"entity": "object", "role": "man_lay"}, который располагается [на западе от](relation) [рытвины]{"entity": "object", "role": "pit"}
+    -  [ребёнка]{"entity": "object", "role": "human"} [за](relation) [сосной]{"entity": "object", "role": "tree"}
+    -  до [пьяного человека]{"entity": "object", "role": "man_lay"}
+    -  [сюда](gaze), до [барьера]{"entity": "object", "role": "barrier"}
+    -  до [разлома]{"entity": "object", "role": "fissure"}, что располагается [восточнее](relation) [пропасти]{"entity": "object", "role": "pit"}
+    -  [ближайшего](nearest) [железного коня]{"entity": "object", "role": "car"}
+    -  [расщелину]{"entity": "object", "role": "fissure"} [западнее](relation) [бугра]{"entity": "object", "role": "hill"}
+    -  [рытвину]{"entity": "object", "role": "pit"} [на севере](relation) 
+    -  [булыгу]{"entity": "object", "role": "rock"}, находящуюся [за](relation) [зданием]{"entity": "object", "role": "house"}, которое располагается [рядом с](relation) [оврагом]{"entity": "object", "role": "pit"}
+    -  к [свалившемуся человеку]{"entity": "object", "role": "man_lay"}
+    -  [возвышенность]{"entity": "object", "role": "hill"}, которая располагается [около](relation) [валуна]{"entity": "object", "role": "butte"}
+    -  к [близлежащему](nearest) [упавшему человеку]{"entity": "object", "role": "man_lay"}
+    -  [железного коня]{"entity": "object", "role": "car"}, который располагается [неподалеку от](relation) [пьяного человека]{"entity": "object", "role": "man_lay"}, который находится [за](relation) [дубом]{"entity": "object", "role": "tree"}
+    -  до [близкой](nearest) [постройки]{"entity": "object", "role": "house"}
+    -  [пьяного человека]{"entity": "object", "role": "man_lay"}, что располагается [неподалеку от](relation) [фонаря]{"entity": "object", "role": "lamp_post"}, что [сзади от](relation) [автомобиля]{"entity": "object", "role": "car"}
+    -  [булыгу]{"entity": "object", "role": "rock"}, находящуюся [правее](relation) [рытвины]{"entity": "object", "role": "pit"} [сзади от](relation) [разрыва]{"entity": "object", "role": "fissure"}
+    -  за [тачкой]{"entity": "object", "role": "car"}
+    -  к [сваленному дереву]{"entity": "object", "role": "broken_tree"}
+    -  до [свалившегося человека]{"entity": "object", "role": "man_lay"}, который находится [позади](relation) [столба]{"entity": "object", "role": "lamp_post"}, располагающегося [западнее](relation) [авто]{"entity": "object", "role": "car"}
+    -  [человека]{"entity": "object", "role": "human"}
+    -  к [барьеру]{"entity": "object", "role": "barrier"} [в западной стороне](relation) [тебя]{"entity": "object", "role": "self"}
+    -  [сломанное дерево]{"entity": "object", "role": "broken_tree"}, которое находится [на юге от](relation) [разрыва]{"entity": "object", "role": "fissure"}, который располагается [позади](relation) [лампы]{"entity": "object", "role": "lamp_post"}
+    -  [тот](gaze) [камень]{"entity": "object", "role": "rock"}
+    -  [лесополосу]{"entity": "object", "role": "forest"} [впереди](relation) [себя]{"entity": "object", "role": "self"}
+    -  [тачку]{"entity": "object", "role": "car"}, располагающуюся [сзади от](relation) [упавшего дерева]{"entity": "object", "role": "broken_tree"}, которое [позади](relation) [останца]{"entity": "object", "role": "butte"}
+    -  к [наблюдаемому](gaze) [оврагу]{"entity": "object", "role": "pit"}
+    -  до [дамы]{"entity": "object", "role": "human"} [правее](relation) [себя]{"entity": "object", "role": "self"}
+    -  [в том направлении](gaze), до [лежащего человека]{"entity": "object", "role": "man_lay"}
+    -  к [останцу]{"entity": "object", "role": "butte"}
+    -  до [горки]{"entity": "object", "role": "hill"}
+    -  [человека]{"entity": "object", "role": "human"} [в южной стороне](relation) [себя]{"entity": "object", "role": "self"}
+    -  [в этом направлении](gaze)
+    -  к [этому](gaze) [ребёнку]{"entity": "object", "role": "human"}
+    -  [пропасть]{"entity": "object", "role": "pit"}, что располагается [на западе от](relation) [особняка]{"entity": "object", "role": "house"}
+    -  [камушек]{"entity": "object", "role": "rock"}
+    -  [кучу]{"entity": "object", "role": "hill"}, которая располагается [рядом с](relation) [сломанным деревом]{"entity": "object", "role": "broken_tree"}, что располагается [сзади от](relation) [камушка]{"entity": "object", "role": "rock"}
+    -  [даму]{"entity": "object", "role": "human"}
+    -  [наблюдаемую](gaze) [возвышенность]{"entity": "object", "role": "hill"}
+    -  [ближний](nearest) [разрыв]{"entity": "object", "role": "fissure"}
+    -  до [ближнего](nearest) [авто]{"entity": "object", "role": "car"}
+    -  до [наблюдаемой](gaze) [женщины]{"entity": "object", "role": "human"}
+    -  [недалекий](nearest) [останец]{"entity": "object", "role": "butte"}
+    -  до [оврага]{"entity": "object", "role": "pit"} [справа](relation) 
+    -  к [валуну]{"entity": "object", "role": "butte"}
+    -  к [близкому](nearest) [лесу]{"entity": "object", "role": "forest"}
+    -  [дубраву]{"entity": "object", "role": "forest"}
+    -  к [тачке]{"entity": "object", "role": "car"}, располагающейся [слева от](relation) [разлома]{"entity": "object", "role": "fissure"}
+    -  [рытвину]{"entity": "object", "role": "pit"} [левее](relation) [тебя]{"entity": "object", "role": "self"}
+    -  [ребёнка]{"entity": "object", "role": "human"} [севернее](relation) [тебя]{"entity": "object", "role": "self"}
+    -  до [срубленного дерева]{"entity": "object", "role": "broken_tree"}, что [на севере относительно](relation) [ребёнка]{"entity": "object", "role": "human"}
+    -  [недалекий](nearest) [столб]{"entity": "object", "role": "lamp_post"}
+    -  [в том направлении](gaze), до [разлома]{"entity": "object", "role": "fissure"}
+    -  до [берёзы]{"entity": "object", "role": "tree"} [слева от](relation) [упавшего дерева]{"entity": "object", "role": "broken_tree"}
+    -  [сюда](gaze), к [избе]{"entity": "object", "role": "house"}
+    -  [ребёнка]{"entity": "object", "role": "human"} [левее](relation) [себя]{"entity": "object", "role": "self"}
+    -  [человека]{"entity": "object", "role": "human"}, располагающегося [на востоке относительно](relation) [препятствия]{"entity": "object", "role": "barrier"}, располагающееся [в южной стороне от](relation) [рощи]{"entity": "object", "role": "forest"}
+    -  [близкую](nearest) [рытвину]{"entity": "object", "role": "pit"}
+    -  к [близлежащей](nearest) [впадине]{"entity": "object", "role": "pit"}
+    -  [останец]{"entity": "object", "role": "butte"}
+    -  до [товарища]{"entity": "object", "role": "human"}, который находится [рядом с](relation) [булыжником]{"entity": "object", "role": "rock"} [справа от](relation) [кучи]{"entity": "object", "role": "hill"}
+    -  [недалёкую](nearest) [даму]{"entity": "object", "role": "human"}
+    -  до [этого](gaze) [человека]{"entity": "object", "role": "human"}
+    -  [этот](gaze) [останец]{"entity": "object", "role": "butte"}
+    -  к [пьяному человеку]{"entity": "object", "role": "man_lay"}
+    -  до [ямы]{"entity": "object", "role": "pit"}, которая [слева от](relation) [особняка]{"entity": "object", "role": "house"}
+    -  [лампу]{"entity": "object", "role": "lamp_post"}, что располагается [позади](relation) [валуна]{"entity": "object", "role": "butte"}
+    -  [сваленное дерево]{"entity": "object", "role": "broken_tree"}, которое находится [на западе от](relation) [сосны]{"entity": "object", "role": "tree"}
+    -  к [сломанному дереву]{"entity": "object", "role": "broken_tree"} [на западе](relation) [тебя]{"entity": "object", "role": "self"}
+    -  до [фонаря]{"entity": "object", "role": "lamp_post"}, что располагается [рядом с](relation) [ограждением]{"entity": "object", "role": "barrier"}
+    -  [постройку]{"entity": "object", "role": "house"}
+    -  до [ближнего](nearest) [валуна]{"entity": "object", "role": "butte"}
+    -  [сломанное дерево]{"entity": "object", "role": "broken_tree"}, располагающееся [на севере от](relation) [расщелины]{"entity": "object", "role": "fissure"}
+    -  [барьер]{"entity": "object", "role": "barrier"} [перед](relation) [собой]{"entity": "object", "role": "self"}
+    -  [сваленное дерево]{"entity": "object", "role": "broken_tree"}, которое [в южной стороне от](relation) [коттеджа]{"entity": "object", "role": "house"}
+    -  [недалёкое](nearest) [срубленное дерево]{"entity": "object", "role": "broken_tree"}
+    -  до [холмика]{"entity": "object", "role": "hill"} [восточнее](relation) [тебя]{"entity": "object", "role": "self"}
+    -  [поваленное дерево]{"entity": "object", "role": "broken_tree"}, которое [рядом с](relation) [дамой]{"entity": "object", "role": "human"}
+    -  к [наблюдаемой](gaze) [возвышенности]{"entity": "object", "role": "hill"}
+    -  [возвышенность]{"entity": "object", "role": "hill"}, что располагается [севернее](relation) [столба]{"entity": "object", "role": "lamp_post"}, что [на востоке от](relation) [загородки]{"entity": "object", "role": "barrier"}
+    -  к [расщелине]{"entity": "object", "role": "fissure"} [на севере](relation) [себя]{"entity": "object", "role": "self"}
+    -  [в это место](gaze), до [останца]{"entity": "object", "role": "butte"}
+    -  до [валуна]{"entity": "object", "role": "butte"}, располагающегося [на западе от](relation) [препятствия]{"entity": "object", "role": "barrier"}, которое находится [правее](relation) [лежащего человека]{"entity": "object", "role": "man_lay"}
+    -  до [того](gaze) [лежащего человека]{"entity": "object", "role": "man_lay"}
+    -  к [дому]{"entity": "object", "role": "house"}, что располагается [около](relation) [расщелины]{"entity": "object", "role": "fissure"}, которая находится [на западе относительно](relation) [свалившегося человека]{"entity": "object", "role": "man_lay"}
+    -  к [канаве]{"entity": "object", "role": "pit"}
+    -  до [ольхи]{"entity": "object", "role": "tree"}
+    -  [недалекий](nearest) [коттедж]{"entity": "object", "role": "house"}
+    -  [пьяного человека]{"entity": "object", "role": "man_lay"}, который находится [за](relation) [останцем]{"entity": "object", "role": "butte"}
+    -  [ближнего](nearest) [свалившегося человека]{"entity": "object", "role": "man_lay"}
+    -  до [женщины]{"entity": "object", "role": "human"} [восточнее](relation) 
+    -  [сосну]{"entity": "object", "role": "tree"}, которая [в западной стороне от](relation) [лежащего человека]{"entity": "object", "role": "man_lay"}, располагающегося [позади](relation) [дома]{"entity": "object", "role": "house"}
+    -  [в ту сторону](gaze)
+    -  к [упавшему человеку]{"entity": "object", "role": "man_lay"} [на юге](relation) [тебя]{"entity": "object", "role": "self"}
+    -  [в этом направлении](gaze), до [берёзы]{"entity": "object", "role": "tree"}
+    -  [кучу]{"entity": "object", "role": "hill"}
+    -  до [недалёкого](nearest) [валуна]{"entity": "object", "role": "butte"}
+    -  [гору]{"entity": "object", "role": "hill"}, которая находится [за](relation) [железным конём]{"entity": "object", "role": "car"}, который располагается [справа от](relation) [камушка]{"entity": "object", "role": "rock"}
+    -  к [останцу]{"entity": "object", "role": "butte"} [слева от](relation) [себя]{"entity": "object", "role": "self"}
+    -  до [света]{"entity": "object", "role": "lamp_post"}, который располагается [на востоке от](relation) [оврага]{"entity": "object", "role": "pit"}
+    -  [пьяного человека]{"entity": "object", "role": "man_lay"}, который [сзади от](relation) [рытвины]{"entity": "object", "role": "pit"}, располагающуюся [восточнее](relation) [столба]{"entity": "object", "role": "lamp_post"}
+    -  [в эту сторону](gaze), до [канавы]{"entity": "object", "role": "pit"}
+    -  [холмик]{"entity": "object", "role": "hill"}, что располагается [рядом с](relation) [человеком]{"entity": "object", "role": "human"}
+    -  к [ближнему](nearest) [провалу]{"entity": "object", "role": "pit"}
+    -  до [сломанного дерева]{"entity": "object", "role": "broken_tree"}, что располагается [спереди от](relation) [лесополосы]{"entity": "object", "role": "forest"}, которая [правее](relation) [булыги]{"entity": "object", "role": "rock"}
+    -  до [ближнего](nearest) [дерева]{"entity": "object", "role": "tree"}
+    -  [упавшее дерево]{"entity": "object", "role": "broken_tree"}, располагающееся [на западе от](relation) [берёзы]{"entity": "object", "role": "tree"} [правее](relation) [валуна]{"entity": "object", "role": "butte"}
+    -  до [рощи]{"entity": "object", "role": "forest"}, располагающейся [перед](relation) [железным конём]{"entity": "object", "role": "car"} [спереди от](relation) [спиленного дерева]{"entity": "object", "role": "broken_tree"}
+    -  [сосну]{"entity": "object", "role": "tree"}, что находится [на востоке от](relation) [камушка]{"entity": "object", "role": "rock"}, что [на севере от](relation) [пригорка]{"entity": "object", "role": "hill"}
+    -  [сломанное дерево]{"entity": "object", "role": "broken_tree"}
+    -  к [упавшему дереву]{"entity": "object", "role": "broken_tree"} [спереди от](relation) [особняка]{"entity": "object", "role": "house"} [восточнее](relation) [загородки]{"entity": "object", "role": "barrier"}
+    -  к [близлежащему](nearest) [камушку]{"entity": "object", "role": "rock"}
+    -  [в это место](gaze), до [железного коня]{"entity": "object", "role": "car"}
+    -  [сваленное дерево]{"entity": "object", "role": "broken_tree"}, что располагается [на западе от](relation) [светильника]{"entity": "object", "role": "lamp_post"}
+    -  [холм]{"entity": "object", "role": "hill"} [на юге](relation) [себя]{"entity": "object", "role": "self"}
+    -  [авто]{"entity": "object", "role": "car"}
+    -  [ближний](nearest) [холм]{"entity": "object", "role": "hill"}
+    -  [в ту сторону](gaze), к [трещине]{"entity": "object", "role": "fissure"}
+    -  к [срубленному дереву]{"entity": "object", "role": "broken_tree"}, располагающемуся [западнее](relation) [канавы]{"entity": "object", "role": "pit"}
+    -  к [ближайшему](nearest) [валуну]{"entity": "object", "role": "butte"}
+    -  [останец]{"entity": "object", "role": "butte"} [за](relation) [тобой]{"entity": "object", "role": "self"}
+    -  [близкий](nearest) [пригорок]{"entity": "object", "role": "hill"}
+    -  [чащу]{"entity": "object", "role": "forest"}, которая [около](relation) [свалившегося человека]{"entity": "object", "role": "man_lay"}
+    -  [недалёкого](nearest) [товарища]{"entity": "object", "role": "human"}
+    -  [в эту сторону](gaze), до [булыги]{"entity": "object", "role": "rock"}
+    -  [спиленное дерево]{"entity": "object", "role": "broken_tree"}, которое [западнее](relation) [пьяного человека]{"entity": "object", "role": "man_lay"}
+    -  к [машине]{"entity": "object", "role": "car"}, которая располагается [западнее](relation) [преграды]{"entity": "object", "role": "barrier"}, располагающейся [на севере относительно](relation) [лежащего человека]{"entity": "object", "role": "man_lay"}
+    -  [упавшее дерево]{"entity": "object", "role": "broken_tree"}, что находится [в западной стороне от](relation) [тачки]{"entity": "object", "role": "car"}
+    -  [булыжник]{"entity": "object", "role": "rock"}
+    -  [упавшее дерево]{"entity": "object", "role": "broken_tree"}, располагающееся [около](relation) [расщелины]{"entity": "object", "role": "fissure"}
+    -  [женщину]{"entity": "object", "role": "human"}, что [справа от](relation) [ямы]{"entity": "object", "role": "pit"}
+    -  [машину]{"entity": "object", "role": "car"}, которая находится [за](relation) [бугром]{"entity": "object", "role": "hill"}, находящийся [в восточной стороне от](relation) [валуна]{"entity": "object", "role": "butte"}
+    -  [валун]{"entity": "object", "role": "butte"} [на востоке](relation) [тебя]{"entity": "object", "role": "self"}
+    -  [лежащего человека]{"entity": "object", "role": "man_lay"} [за](relation) [собой]{"entity": "object", "role": "self"}
+    -  [камушек]{"entity": "object", "role": "rock"}, который находится [сзади от](relation) [разрыва]{"entity": "object", "role": "fissure"}, располагающийся [слева от](relation) [срубленного дерева]{"entity": "object", "role": "broken_tree"}
+    -  [пригорок]{"entity": "object", "role": "hill"}
+    -  [наблюдаемого](gaze) [свалившегося человека]{"entity": "object", "role": "man_lay"}
+    -  к [домику]{"entity": "object", "role": "house"} [спереди](relation) [тебя]{"entity": "object", "role": "self"}
+    -  [валун]{"entity": "object", "role": "butte"}, располагающийся [неподалеку от](relation) [столба]{"entity": "object", "role": "lamp_post"} [рядом с](relation) [рытвиной]{"entity": "object", "role": "pit"}
+    -  [препятствие]{"entity": "object", "role": "barrier"}
+    -  [ближнее](nearest) [упавшее дерево]{"entity": "object", "role": "broken_tree"}
+    -  к [той](gaze) [тачке]{"entity": "object", "role": "car"}
+    -  к [коттеджу]{"entity": "object", "role": "house"}, находящемуся [восточнее](relation) [впадины]{"entity": "object", "role": "pit"}
+    -  до [бугра]{"entity": "object", "role": "hill"}, который находится [левее](relation) [человека]{"entity": "object", "role": "human"}
+    -  [наблюдаемую](gaze) [берёзу]{"entity": "object", "role": "tree"}
+    -  до [свалившегося человека]{"entity": "object", "role": "man_lay"}
+    -  до [растения]{"entity": "object", "role": "tree"}, которое находится [южнее](relation) [ямы]{"entity": "object", "role": "pit"}, которая [на востоке от](relation) [леса]{"entity": "object", "role": "forest"}
+    -  до [ограждения]{"entity": "object", "role": "barrier"} [левее](relation) 
+    -  [даму]{"entity": "object", "role": "human"}, что располагается [неподалеку от](relation) [валуна]{"entity": "object", "role": "butte"}
+    -  к [человеку]{"entity": "object", "role": "human"}
+    -  к [этому](gaze) [срубленному дереву]{"entity": "object", "role": "broken_tree"}
+    -  [пьяного человека]{"entity": "object", "role": "man_lay"}
+    -  [куда смотрю](gaze), до [трещины]{"entity": "object", "role": "fissure"}
+    -  к [лежащему человеку]{"entity": "object", "role": "man_lay"}
+    -  к [ребёнку]{"entity": "object", "role": "human"} [на юге](relation) 
+    -  [наблюдаемый](gaze) [дом]{"entity": "object", "role": "house"}
+    -  к [ближайшему](nearest) [пьяному человеку]{"entity": "object", "role": "man_lay"}
+    -  к [булыжнику]{"entity": "object", "role": "rock"}, располагающемуся [правее](relation) [леса]{"entity": "object", "role": "forest"}
+    -  [преграду]{"entity": "object", "role": "barrier"} [левее](relation) [себя]{"entity": "object", "role": "self"}
+    -  до [лесополосы]{"entity": "object", "role": "forest"}, которая [на юге от](relation) [останца]{"entity": "object", "role": "butte"}
+    -  [светильник]{"entity": "object", "role": "lamp_post"}
+    -  [пригорок]{"entity": "object", "role": "hill"} [сзади](relation) [себя]{"entity": "object", "role": "self"}
+    -  [впадину]{"entity": "object", "role": "pit"}, находящуюся [в восточной стороне от](relation) [расщелины]{"entity": "object", "role": "fissure"}
+    -  [валун]{"entity": "object", "role": "butte"}, который [на юге относительно](relation) [мужчины]{"entity": "object", "role": "human"}
+    -  [пьяного человека]{"entity": "object", "role": "man_lay"} [на юге](relation) [тебя]{"entity": "object", "role": "self"}
+    -  [ближний](nearest) [булыжник]{"entity": "object", "role": "rock"}
+    -  [ближайший](nearest) [останец]{"entity": "object", "role": "butte"}
+    -  [дубраву]{"entity": "object", "role": "forest"}, что [на юге от](relation) [барьера]{"entity": "object", "role": "barrier"}, который находится [на западе относительно](relation) [упавшего дерева]{"entity": "object", "role": "broken_tree"}
+    -  [близкий](nearest) [барьер]{"entity": "object", "role": "barrier"}
+    -  [лампу]{"entity": "object", "role": "lamp_post"}
+    -  к [холму]{"entity": "object", "role": "hill"}, что находится [спереди от](relation) [авто]{"entity": "object", "role": "car"}, что располагается [рядом с](relation) [растением]{"entity": "object", "role": "tree"}
+    -  [трещину]{"entity": "object", "role": "fissure"} [на востоке](relation) [тебя]{"entity": "object", "role": "self"}
+    -  к [свету]{"entity": "object", "role": "lamp_post"} [в восточной стороне](relation) [тебя]{"entity": "object", "role": "self"}
+    -  [ближний](nearest) [холмик]{"entity": "object", "role": "hill"}
+    -  [сюда](gaze), к [упавшему дереву]{"entity": "object", "role": "broken_tree"}
+    -  [близлежащий](nearest) [столб]{"entity": "object", "role": "lamp_post"}
+    -  [овраг]{"entity": "object", "role": "pit"} [левее](relation) [тебя]{"entity": "object", "role": "self"}
+    -  до [упавшего человека]{"entity": "object", "role": "man_lay"}, который [в западной стороне от](relation) [барьера]{"entity": "object", "role": "barrier"}
+    -  до [ближайшего](nearest) [холма]{"entity": "object", "role": "hill"}
+    -  [недалекий](nearest) [барьер]{"entity": "object", "role": "barrier"}
+    -  до [пригорка]{"entity": "object", "role": "hill"}
+    -  до [того](gaze) [упавшего дерева]{"entity": "object", "role": "broken_tree"}
+    -  к [ближайшему](nearest) [холму]{"entity": "object", "role": "hill"}
+    -  до [булыжника]{"entity": "object", "role": "rock"}, что [правее](relation) [поваленного дерева]{"entity": "object", "role": "broken_tree"}
+    -  [особняк]{"entity": "object", "role": "house"}, что располагается [рядом с](relation) [чащей]{"entity": "object", "role": "forest"}
+    -  [рытвину]{"entity": "object", "role": "pit"} [слева от](relation) [себя]{"entity": "object", "role": "self"}
+    -  к [мужчине]{"entity": "object", "role": "human"}, располагающемуся [перед](relation) [булыгой]{"entity": "object", "role": "rock"}, располагающейся [западнее](relation) [дома]{"entity": "object", "role": "house"}
+    -  [останец]{"entity": "object", "role": "butte"}, что [восточнее](relation) [авто]{"entity": "object", "role": "car"}
+    -  [недалекий](nearest) [камень]{"entity": "object", "role": "rock"}
+    -  [близлежащий](nearest) [разрыв]{"entity": "object", "role": "fissure"}
+    -  [лежащего человека]{"entity": "object", "role": "man_lay"} [севернее](relation) 
+    -  [в этом направлении](gaze), к [трещине]{"entity": "object", "role": "fissure"}
+    -  к [недалёкому](nearest) [свету]{"entity": "object", "role": "lamp_post"}
+    -  [канаву]{"entity": "object", "role": "pit"}, которая располагается [перед](relation) [ребёнком]{"entity": "object", "role": "human"}
+    -  к [ближнему](nearest) [пьяному человеку]{"entity": "object", "role": "man_lay"}
+    -  [ближний](nearest) [лес]{"entity": "object", "role": "forest"}
+    -  [расщелину]{"entity": "object", "role": "fissure"}
+    -  к [лесополосе]{"entity": "object", "role": "forest"}, находящейся [южнее](relation) [загородки]{"entity": "object", "role": "barrier"}
+    -  [избу]{"entity": "object", "role": "house"}
+    -  [горку]{"entity": "object", "role": "hill"}
+    -  [загородку]{"entity": "object", "role": "barrier"} [в западной стороне](relation) [себя]{"entity": "object", "role": "self"}
+    -  [дом]{"entity": "object", "role": "house"}
+    -  [тебя]{"entity": "object", "role": "self"}
+    -  [справа](relation) [тебя]{"entity": "object", "role": "self"}
+    -  [за](relation) [тобой]{"entity": "object", "role": "self"}
+    -  [за](relation)
+    -  [впереди](relation)

@@ -1,0 +1,84 @@
+version: "3.1"
+
+intents:
+  - addition_obj
+  - addition_dir
+  - action
+  - action+addition_obj
+  - action+addition_dir
+entities:
+  - object:
+      roles:
+        - house
+        - tree
+        - broken_tree
+        - forest
+        - pit
+        - human
+        - hill
+        - fissure
+        - man_lay
+        - rock
+        - butte
+        - barrier
+        - lamp_post
+        - car
+        - self
+  - direction
+  - distance
+  - duration
+  - time
+  - temperature
+  - relation
+  - gaze
+  - action:
+      roles:
+        - obj
+        - obj_dir
+actions:
+  - send_command
+  - validate_command_form
+  - action_slot_reset
+
+slots:
+  param:
+    type: text
+    initial_value: 'param'
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: command_form
+            requested_slot: param
+
+forms:
+  command_form:
+    required_slots:
+      - param
+
+responses:
+
+  utter_please_rephrase:
+  - text: "Я не понял, повторите"
+
+  utter_addition_obj:
+  - text: "utter_addition_obj"
+
+  utter_addition_dir:
+    - text: "utter_addition_dir"
+
+  utter_action_dir:
+  - text: "utter_action_dir"
+
+  utter_action_obj:
+  - text: "utter_action_obj"
+
+  utter_action_addition_obj:
+  - text: "utter_action_addition_obj"
+
+  utter_action_addition_dir:
+    - text: "utter_action_addition_dir"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

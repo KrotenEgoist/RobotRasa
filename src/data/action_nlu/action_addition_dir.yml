@@ -1,0 +1,120 @@
+version: "3.1"
+
+nlu:
+- intent: action+addition_dir
+  examples: |
+    - [соверши телепортацию]{"entity": "action", "role": "obj_dir"} 5м
+    - попробуй [идти]{"entity": "action", "role": "obj_dir"} на 9м [направо](direction)
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} на 231° [на восточный край](direction)
+    - [поворачивай]{"entity": "action", "role": "obj_dir"} на 10:30 [в восточную сторону](direction)
+    - [поворачивай]{"entity": "action", "role": "obj_dir"} [в левую сторону](direction) на 10:30
+    - начинай [разворачиваться]{"entity": "action", "role": "obj"} 
+    - попробуй [подходить]{"entity": "action", "role": "obj_dir"} [назад](direction) на 15 метров
+    - [повернись]{"entity": "action", "role": "obj_dir"} [в сторону юга](direction) 111°
+    - пытайся [давать]{"entity": "action", "role": "obj_dir"} на 26м
+    - [прилети]{"entity": "action", "role": "obj_dir"} на 60м
+    - попробуй [выметаться]{"entity": "action", "role": "obj_dir"} [в правую сторону](direction) на 18 метров
+    - [пройди]{"entity": "action", "role": "obj_dir"} 4м [в западную сторону](direction)
+    - [сдвинься]{"entity": "action", "role": "obj_dir"} на 1м [на западный край](direction)
+    - [сделай поворот]{"entity": "action", "role": "obj_dir"} 7:30 [на юг](direction)
+    - [разворот]{"entity": "action", "role": "obj"} 
+    - [заворчивай]{"entity": "action", "role": "obj_dir"} [на северный край](direction) на 4 часа 0 минут
+    - [тронься]{"entity": "action", "role": "obj_dir"} на 13м [по правую руку](direction)
+    - пытайся [заворчивать]{"entity": "action", "role": "obj_dir"} на 11:30
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} 6:00 [в левую сторону](direction)
+    - [сделай поворот]{"entity": "action", "role": "obj_dir"} 319 градусов
+    - начинай [тянуть]{"entity": "action", "role": "obj_dir"} на 13 м
+    - [повернись]{"entity": "action", "role": "obj_dir"} на 1 0 0
+    - [греби]{"entity": "action", "role": "obj_dir"} [взад](direction) на 49м
+    - [сделай поворот]{"entity": "action", "role": "obj_dir"} на 280 ° [на северный край](direction)
+    - [разворот]{"entity": "action", "role": "obj"} назад
+    - [поворачивай]{"entity": "action", "role": "obj_dir"} 9:30
+    - [прохаживай]{"entity": "action", "role": "obj_dir"} [в восточную сторону](direction) 2m
+    - [развернись]{"entity": "action", "role": "obj"} назад
+    - [уносись]{"entity": "action", "role": "obj_dir"} 25m
+    - [тронься]{"entity": "action", "role": "obj_dir"} [на восток](direction) 2m
+    - [повернись]{"entity": "action", "role": "obj_dir"} [в левую сторону](direction) на 8:30
+    - начинай [разворачиваться]{"entity": "action", "role": "obj"} в обратную сторону
+    - [переместись]{"entity": "action", "role": "obj_dir"} 2 метра [в сторону запада](direction)
+    - [отбегай]{"entity": "action", "role": "obj_dir"} на 15м [в восточную сторону](direction)
+    - [колобродь]{"entity": "action", "role": "obj_dir"} [взад](direction) 5m
+    - попробуй [переходить]{"entity": "action", "role": "obj_dir"} 16 м
+    - [сматывайся]{"entity": "action", "role": "obj_dir"} 21 метр [в восточную сторону](direction)
+    - [броссься]{"entity": "action", "role": "obj_dir"} на 6м [влево](direction)
+    - [повернись]{"entity": "action", "role": "obj_dir"} на 24°
+    - [выбрасывайся]{"entity": "action", "role": "obj_dir"} [на восточный край](direction) на 6m
+    - начни [разворачиваться]{"entity": "action", "role": "obj"} в обратную сторону
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} [на север](direction) 26°
+    - [сделай поворот]{"entity": "action", "role": "obj_dir"} [в левую сторону](direction) 9:00
+    - попробуй [тянуть]{"entity": "action", "role": "obj_dir"} [вперед](direction) на 3m
+    - [езжай]{"entity": "action", "role": "obj_dir"} 4m
+    - [канай]{"entity": "action", "role": "obj_dir"} [в правую сторону](direction) 13м
+    - [разверни]{"entity": "action", "role": "obj"} назад
+    - [разверни]{"entity": "action", "role": "obj"} обратно
+    - [развернись]{"entity": "action", "role": "obj"} 
+    - [сделай поворот]{"entity": "action", "role": "obj_dir"} [направо](direction) 199°
+    - [поворачивай]{"entity": "action", "role": "obj_dir"} на 7,5 часов
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} 184 градуса [направо](direction)
+    - [прилети]{"entity": "action", "role": "obj_dir"} на 18м
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} на 10:00 [на восточный край](direction)
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} на 208° [в сторону востока](direction)
+    - [сделай поворот]{"entity": "action", "role": "obj_dir"} 310 ° [направо](direction)
+    - [припусти]{"entity": "action", "role": "obj_dir"} [взад](direction) 8 м
+    - [сматывайся]{"entity": "action", "role": "obj_dir"} [в сторону юга](direction) на 1м
+    - [захаживай]{"entity": "action", "role": "obj_dir"} 7m
+    - [разворот]{"entity": "action", "role": "obj"} обратно
+    - [выбирайся]{"entity": "action", "role": "obj_dir"} [влево](direction) на 1м
+    - [беги]{"entity": "action", "role": "obj_dir"} 29 м [в сторону востока](direction)
+    - [поворачивай]{"entity": "action", "role": "obj_dir"} [на юг](direction) на 327 градусов
+    - [разверни]{"entity": "action", "role": "obj"} вспять
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} 9:0
+    - попробуй [маршировать]{"entity": "action", "role": "obj_dir"} 23m
+    - попробуй [поворачивать]{"entity": "action", "role": "obj_dir"} на 2:30
+    - [поднимайся]{"entity": "action", "role": "obj_dir"} [на северный край](direction) 40м
+    - [разворачивайся]{"entity": "action", "role": "obj"} обратно
+    - пытайся [шлёпать]{"entity": "action", "role": "obj_dir"} [в сторону севера](direction) 36m
+    - пытайся [трусить]{"entity": "action", "role": "obj_dir"} 7 м
+    - [удались]{"entity": "action", "role": "obj_dir"} на 4м
+    - [повернись]{"entity": "action", "role": "obj_dir"} на 173 градуса [налево](direction)
+    - [разверни]{"entity": "action", "role": "obj"} 
+    - [разверни]{"entity": "action", "role": "obj"} в обратную сторону
+    - [отправляйся]{"entity": "action", "role": "obj_dir"} на 20 метров
+    - попробуй [заворчивать]{"entity": "action", "role": "obj_dir"} [в сторону востока](direction) на 237 °
+    - [повернись]{"entity": "action", "role": "obj_dir"} [в сторону востока](direction) 36 °
+    - [сдай]{"entity": "action", "role": "obj_dir"} 5 метров [вперед](direction)
+    - [заворчивай]{"entity": "action", "role": "obj_dir"} на 3 30
+    - попробуй [сходить]{"entity": "action", "role": "obj_dir"} 4m
+    - [заворчивай]{"entity": "action", "role": "obj_dir"} [на южный край](direction) на 1,5 час
+    - [причаль]{"entity": "action", "role": "obj_dir"} на 3m [вспять](direction)
+    - [выбирайся]{"entity": "action", "role": "obj_dir"} 21m
+    - попробуй [пробираться]{"entity": "action", "role": "obj_dir"} 5m
+    - [сдвигайся]{"entity": "action", "role": "obj_dir"} 88m
+    - [трюшчи]{"entity": "action", "role": "obj_dir"} на 5м [в сторону запада](direction)
+    - [сделай поворот]{"entity": "action", "role": "obj_dir"} 152 градуса [влево](direction)
+    - [подвигайся]{"entity": "action", "role": "obj_dir"} на 27м [взад](direction)
+    - [повернись]{"entity": "action", "role": "obj_dir"} [в южную сторону](direction) на 161 °
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} на 8:30
+    - начинай [направляться]{"entity": "action", "role": "obj_dir"} 98м
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} [по левую руку](direction) 288 градусов
+    - [повернись]{"entity": "action", "role": "obj_dir"} на 26 ° [в сторону запада](direction)
+    - [уходи]{"entity": "action", "role": "obj_dir"} [налево](direction) на 21м
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} на 1:30 [на северный край](direction)
+    - [броди]{"entity": "action", "role": "obj_dir"} [по правую руку](direction) 3м
+    - [приближайся]{"entity": "action", "role": "obj_dir"} 1m [на юг](direction)
+    - пытайся [езжать]{"entity": "action", "role": "obj_dir"} 15 м
+    - [высаживайся]{"entity": "action", "role": "obj_dir"} 96м [на восточный край](direction)
+    - [разворачивайся]{"entity": "action", "role": "obj"} вспять
+    - [смойся]{"entity": "action", "role": "obj_dir"} на 19 метров
+    - [плыви]{"entity": "action", "role": "obj_dir"} на 6м [налево](direction)
+    - попробуй [передвигаться]{"entity": "action", "role": "obj_dir"} [в сторону юга](direction) 73 метра
+    - [гуляй]{"entity": "action", "role": "obj_dir"} на 5 метров [на восточный край](direction)
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"} пол 12 [по правую руку](direction)
+    - попробуй [сматываться]{"entity": "action", "role": "obj_dir"} на 9 м [назад](direction)
+    - начинай [шарить]{"entity": "action", "role": "obj_dir"} 3 м [в сторону юга](direction)
+    - [сделай поворот]{"entity": "action", "role": "obj_dir"} на 145 °
+    - [канай]{"entity": "action", "role": "obj_dir"} 20m [в южную сторону](direction)
+    - [повернись]{"entity": "action", "role": "obj_dir"} 181 градус
+    - начни [командироваться]{"entity": "action", "role": "obj_dir"} на 4 метра
+    - начинай [валить]{"entity": "action", "role": "obj_dir"} 5 м
+    - [канай]{"entity": "action", "role": "obj_dir"} [задом](direction) 73 м
+    - [повернись]{"entity": "action", "role": "obj_dir"} 9,5 часов [в сторону юга](direction)

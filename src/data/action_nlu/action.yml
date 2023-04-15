@@ -1,0 +1,305 @@
+version: "3.1"
+
+nlu:
+- intent: action
+  examples: |
+    - [обскакивай]{"entity": "action", "role": "obj"}
+    - [вышагивай]{"entity": "action", "role": "obj_dir"}
+    - [пройди]{"entity": "action", "role": "obj_dir"}
+    - [сматывайся]{"entity": "action", "role": "obj_dir"}
+    - [езжай]{"entity": "action", "role": "obj_dir"}
+    - [доставь себя]{"entity": "action", "role": "obj_dir"}
+    - [объезжай]{"entity": "action", "role": "obj"}
+    - попробуй [тянуть]{"entity": "action", "role": "obj_dir"}
+    - [шлепай]{"entity": "action", "role": "obj_dir"}
+    - попробуй [основываться]{"entity": "action", "role": "obj_dir"}
+    - попробуй [захаживать]{"entity": "action", "role": "obj_dir"}
+    - начинай [шкандыбарить]{"entity": "action", "role": "obj_dir"}
+    - [шествуй]{"entity": "action", "role": "obj_dir"}
+    - начни [убираться]{"entity": "action", "role": "obj_dir"}
+    - пытайся [исследовать]{"entity": "action", "role": "obj"}
+    - [лети]{"entity": "action", "role": "obj_dir"}
+    - начинай [обозревать]{"entity": "action", "role": "obj"}
+    - [отвали]{"entity": "action", "role": "obj_dir"}
+    - [загребай]{"entity": "action", "role": "obj_dir"}
+    - попробуй [лететь]{"entity": "action", "role": "obj_dir"}
+    - [плыви]{"entity": "action", "role": "obj_dir"}
+    - [отбегай]{"entity": "action", "role": "obj_dir"}
+    - [сделай бросок]{"entity": "action", "role": "obj_dir"}
+    - пытайся [обозревать]{"entity": "action", "role": "obj"}
+    - начни [мчать]{"entity": "action", "role": "obj_dir"}
+    - [трюшчи]{"entity": "action", "role": "obj_dir"}
+    - пытайся [опережать]{"entity": "action", "role": "obj"}
+    - [наступай]{"entity": "action", "role": "obj_dir"}
+    - [осуществи перемещение]{"entity": "action", "role": "obj_dir"}
+    - [следуй по пути]{"entity": "action", "role": "obj_dir"}
+    - [перебрасывайся]{"entity": "action", "role": "obj_dir"}
+    - пытайся [танцевать]{"entity": "action", "role": "obj_dir"}
+    - [греби]{"entity": "action", "role": "obj_dir"}
+    - начинай [везти]{"entity": "action", "role": "obj_dir"}
+    - [уносись]{"entity": "action", "role": "obj_dir"}
+    - [сходи]{"entity": "action", "role": "obj_dir"}
+    - пытайся [пробираться]{"entity": "action", "role": "obj_dir"}
+    - пытайся [прохаживать]{"entity": "action", "role": "obj_dir"}
+    - [подходи]{"entity": "action", "role": "obj_dir"}
+    - [выдвигайся]{"entity": "action", "role": "obj_dir"}
+    - [выметайся]{"entity": "action", "role": "obj_dir"}
+    - начни [опережать]{"entity": "action", "role": "obj"}
+    - начни [заворчивать]{"entity": "action", "role": "obj_dir"}
+    - [давай]{"entity": "action", "role": "obj_dir"}
+    - [отгреби]{"entity": "action", "role": "obj_dir"}
+    - [выбрасывайся]{"entity": "action", "role": "obj_dir"}
+    - начни [осматривать]{"entity": "action", "role": "obj"}
+    - [выйди]{"entity": "action", "role": "obj_dir"}
+    - пытайся [рассматривать]{"entity": "action", "role": "obj"}
+    - начни [пролетать]{"entity": "action", "role": "obj_dir"}
+    - [ковыляй]{"entity": "action", "role": "obj_dir"}
+    - начни [трогать]{"entity": "action", "role": "obj_dir"}
+    - пытайся [высаживаться]{"entity": "action", "role": "obj_dir"}
+    - [оставь позади]{"entity": "action", "role": "obj"}
+    - [переходи]{"entity": "action", "role": "obj_dir"}
+    - попробуй [шарить]{"entity": "action", "role": "obj_dir"}
+    - попробуй [торопиться]{"entity": "action", "role": "obj_dir"}
+    - начни [обследовать]{"entity": "action", "role": "obj"}
+    - [семени]{"entity": "action", "role": "obj_dir"}
+    - пытайся [катиться]{"entity": "action", "role": "obj_dir"}
+    - пытайся [переть]{"entity": "action", "role": "obj_dir"}
+    - [передвигайся]{"entity": "action", "role": "obj_dir"}
+    - попробуй [уноситься]{"entity": "action", "role": "obj_dir"}
+    - [двигаться]{"entity": "action", "role": "obj_dir"}
+    - пытайся [проходить]{"entity": "action", "role": "obj_dir"}
+    - начни [подвигаться]{"entity": "action", "role": "obj_dir"}
+    - [шкандыбай]{"entity": "action", "role": "obj_dir"}
+    - [становись]{"entity": "action", "role": "obj_dir"}
+    - [подвергни анализу]{"entity": "action", "role": "obj"}
+    - [шаркай]{"entity": "action", "role": "obj_dir"}
+    - [подымайся]{"entity": "action", "role": "obj_dir"}
+    - [вези]{"entity": "action", "role": "obj_dir"}
+    - [поторапливайся]{"entity": "action", "role": "obj_dir"}
+    - [убирайся]{"entity": "action", "role": "obj_dir"}
+    - начни [вышагивать]{"entity": "action", "role": "obj_dir"}
+    - попробуй [проезжать]{"entity": "action", "role": "obj_dir"}
+    - попробуй [разглядывать]{"entity": "action", "role": "obj"}
+    - попробуй [собираться]{"entity": "action", "role": "obj_dir"}
+    - [шмыгай]{"entity": "action", "role": "obj_dir"}
+    - [шарь]{"entity": "action", "role": "obj_dir"}
+    - [обставь]{"entity": "action", "role": "obj"}
+    - [сдвигайся]{"entity": "action", "role": "obj_dir"}
+    - [денься]{"entity": "action", "role": "obj_dir"}
+    - [колобродь]{"entity": "action", "role": "obj_dir"}
+    - [сдай]{"entity": "action", "role": "obj_dir"}
+    - [чаль]{"entity": "action", "role": "obj_dir"}
+    - [беги]{"entity": "action", "role": "obj_dir"}
+    - начни [семенить]{"entity": "action", "role": "obj_dir"}
+    - попробуй [осматривать]{"entity": "action", "role": "obj"}
+    - [ступай]{"entity": "action", "role": "obj_dir"}
+    - [перебегать]{"entity": "action", "role": "obj_dir"}
+    - начинай [течь]{"entity": "action", "role": "obj_dir"}
+    - пытайся [идти]{"entity": "action", "role": "obj_dir"}
+    - [обозревай]{"entity": "action", "role": "obj"}
+    - [броссься]{"entity": "action", "role": "obj_dir"}
+    - попробуй [спускаться]{"entity": "action", "role": "obj_dir"}
+    - [рассмотри]{"entity": "action", "role": "obj"}
+    - [выбредай]{"entity": "action", "role": "obj_dir"}
+    - [отбеги]{"entity": "action", "role": "obj_dir"}
+    - [шкандыбарь]{"entity": "action", "role": "obj_dir"}
+    - начинай [обскакивать]{"entity": "action", "role": "obj"}
+    - [тащись]{"entity": "action", "role": "obj_dir"}
+    - [соверши телепортацию]{"entity": "action", "role": "obj_dir"}
+    - [трусь]{"entity": "action", "role": "obj_dir"}
+    - начни [исследовать]{"entity": "action", "role": "obj"}
+    - [канай]{"entity": "action", "role": "obj_dir"}
+    - пытайся [подыматься]{"entity": "action", "role": "obj_dir"}
+    - [следуй]{"entity": "action", "role": "obj_dir"}
+    - попробуй [наступать]{"entity": "action", "role": "obj_dir"}
+    - [пойди]{"entity": "action", "role": "obj_dir"}
+    - [прогуляйся]{"entity": "action", "role": "obj_dir"}
+    - [броди]{"entity": "action", "role": "obj_dir"}
+    - [тяни]{"entity": "action", "role": "obj_dir"}
+    - [поворачивай]{"entity": "action", "role": "obj_dir"}
+    - [смойся]{"entity": "action", "role": "obj_dir"}
+    - [исколеси]{"entity": "action", "role": "obj_dir"}
+    - [подвигайся]{"entity": "action", "role": "obj_dir"}
+    - пытайся [осматривать]{"entity": "action", "role": "obj"}
+    - [осмотри]{"entity": "action", "role": "obj"}
+    - пытайся [газовать]{"entity": "action", "role": "obj_dir"}
+    - [причаль]{"entity": "action", "role": "obj_dir"}
+    - начинай [осматривать]{"entity": "action", "role": "obj"}
+    - [откатись]{"entity": "action", "role": "obj_dir"}
+    - попробуй [обследовать]{"entity": "action", "role": "obj"}
+    - [торопись]{"entity": "action", "role": "obj_dir"}
+    - [переместись]{"entity": "action", "role": "obj_dir"}
+    - начни [переступать]{"entity": "action", "role": "obj_dir"}
+    - [поднимайся]{"entity": "action", "role": "obj_dir"}
+    - [приедь]{"entity": "action", "role": "obj_dir"}
+    - [прорывайся]{"entity": "action", "role": "obj_dir"}
+    - [обходи]{"entity": "action", "role": "obj"}
+    - попробуй [прорываться]{"entity": "action", "role": "obj_dir"}
+    - [собирайся]{"entity": "action", "role": "obj_dir"}
+    - начни [дуть]{"entity": "action", "role": "obj_dir"}
+    - попробуй [опережать]{"entity": "action", "role": "obj"}
+    - попробуй [объезжать]{"entity": "action", "role": "obj"}
+    - [опереди]{"entity": "action", "role": "obj"}
+    - [обнаружь]{"entity": "action", "role": "obj"}
+    - [найди]{"entity": "action", "role": "obj"}
+    - пытайся [анализировать]{"entity": "action", "role": "obj"}
+    - попробуй [анализировать]{"entity": "action", "role": "obj"}
+    - [двигай]{"entity": "action", "role": "obj_dir"}
+    - пытайся [влачиться]{"entity": "action", "role": "obj_dir"}
+    - начинай [выдвигаться]{"entity": "action", "role": "obj_dir"}
+    - [направляйся]{"entity": "action", "role": "obj_dir"}
+    - [убегай]{"entity": "action", "role": "obj_dir"}
+    - [обоснуйся]{"entity": "action", "role": "obj_dir"}
+    - [толкайся]{"entity": "action", "role": "obj_dir"}
+    - [выполни передислокацию]{"entity": "action", "role": "obj_dir"}
+    - [командируйся]{"entity": "action", "role": "obj_dir"}
+    - начни [топать]{"entity": "action", "role": "obj_dir"}
+    - начни [шмыгать]{"entity": "action", "role": "obj_dir"}
+    - [волочись]{"entity": "action", "role": "obj_dir"}
+    - начинай [ковылять]{"entity": "action", "role": "obj_dir"}
+    - начинай [приспевать]{"entity": "action", "role": "obj_dir"}
+    - начинай [исследовать]{"entity": "action", "role": "obj"}
+    - [пробирайся]{"entity": "action", "role": "obj_dir"}
+    - [обскочи]{"entity": "action", "role": "obj"}
+    - начинай [бежать]{"entity": "action", "role": "obj_dir"}
+    - [перекинься]{"entity": "action", "role": "obj_dir"}
+    - [вылети]{"entity": "action", "role": "obj_dir"}
+    - [убеги]{"entity": "action", "role": "obj_dir"}
+    - начни [выбираться]{"entity": "action", "role": "obj_dir"}
+    - пытайся [шлёпать]{"entity": "action", "role": "obj_dir"}
+    - [съезди]{"entity": "action", "role": "obj_dir"}
+    - [танцуй]{"entity": "action", "role": "obj_dir"}
+    - [дуй]{"entity": "action", "role": "obj_dir"}
+    - пытайся [командироваться]{"entity": "action", "role": "obj_dir"}
+    - [вали]{"entity": "action", "role": "obj_dir"}
+    - начни [объезжать]{"entity": "action", "role": "obj"}
+    - начни [анализировать]{"entity": "action", "role": "obj"}
+    - [топай]{"entity": "action", "role": "obj_dir"}
+    - [тянись]{"entity": "action", "role": "obj_dir"}
+    - пытайся [валить]{"entity": "action", "role": "obj_dir"}
+    - попробуй [езжать]{"entity": "action", "role": "obj_dir"}
+    - начни [рассматривать]{"entity": "action", "role": "obj"}
+    - [заворчивай]{"entity": "action", "role": "obj_dir"}
+    - [спускайся]{"entity": "action", "role": "obj_dir"}
+    - [выбегай]{"entity": "action", "role": "obj_dir"}
+    - [катись]{"entity": "action", "role": "obj_dir"}
+    - [уезжай]{"entity": "action", "role": "obj_dir"}
+    - [сделай поворот]{"entity": "action", "role": "obj_dir"}
+    - начинай [колобродить]{"entity": "action", "role": "obj_dir"}
+    - [потеряйся]{"entity": "action", "role": "obj_dir"}
+    - попробуй [делать маневр]{"entity": "action", "role": "obj_dir"}
+    - [поторопись]{"entity": "action", "role": "obj_dir"}
+    - попробуй [обозревать]{"entity": "action", "role": "obj"}
+    - начинай [разглядывать]{"entity": "action", "role": "obj"}
+    - начинай [анализировать]{"entity": "action", "role": "obj"}
+    - [высаживайся]{"entity": "action", "role": "obj_dir"}
+    - [бреди]{"entity": "action", "role": "obj_dir"}
+    - [продвигайся]{"entity": "action", "role": "obj_dir"}
+    - [иди]{"entity": "action", "role": "obj_dir"}
+    - [трогай]{"entity": "action", "role": "obj_dir"}
+    - попробуй [обскакивать]{"entity": "action", "role": "obj"}
+    - начни [направляться]{"entity": "action", "role": "obj_dir"}
+    - пытайся [передвигаться]{"entity": "action", "role": "obj_dir"}
+    - попробуй [спешить]{"entity": "action", "role": "obj_dir"}
+    - попробуй [волочься]{"entity": "action", "role": "obj_dir"}
+    - [разглядывай]{"entity": "action", "role": "obj"}
+    - [несись]{"entity": "action", "role": "obj_dir"}
+    - [удались]{"entity": "action", "role": "obj_dir"}
+    - начни [обскакивать]{"entity": "action", "role": "obj"}
+    - [поезжай]{"entity": "action", "role": "obj_dir"}
+    - [забреди]{"entity": "action", "role": "obj_dir"}
+    - [дерзай]{"entity": "action", "role": "obj_dir"}
+    - [поддай]{"entity": "action", "role": "obj_dir"}
+    - пытайся [двигать]{"entity": "action", "role": "obj_dir"}
+    - [гони]{"entity": "action", "role": "obj_dir"}
+    - [зайди]{"entity": "action", "role": "obj_dir"}
+    - [соверши поворот]{"entity": "action", "role": "obj_dir"}
+    - [припусти]{"entity": "action", "role": "obj_dir"}
+    - попробуй [хромать]{"entity": "action", "role": "obj_dir"}
+    - [выступай]{"entity": "action", "role": "obj_dir"}
+    - начинай [объезжать]{"entity": "action", "role": "obj"}
+    - [хромай]{"entity": "action", "role": "obj_dir"}
+    - [приходи]{"entity": "action", "role": "obj_dir"}
+    - [сдвинься]{"entity": "action", "role": "obj_dir"}
+    - [устройся]{"entity": "action", "role": "obj_dir"}
+    - [при]{"entity": "action", "role": "obj_dir"}
+    - [делай маневр]{"entity": "action", "role": "obj_dir"}
+    - [исследуй]{"entity": "action", "role": "obj"}
+    - [переступай]{"entity": "action", "role": "obj_dir"}
+    - [разыщи]{"entity": "action", "role": "obj"}
+    - [поднемись]{"entity": "action", "role": "obj_dir"}
+    - [повернись]{"entity": "action", "role": "obj_dir"}
+    - начинай [опережать]{"entity": "action", "role": "obj"}
+    - начинай [обследовать]{"entity": "action", "role": "obj"}
+    - [мчись]{"entity": "action", "role": "obj_dir"}
+    - [отходи]{"entity": "action", "role": "obj_dir"}
+    - [влачись]{"entity": "action", "role": "obj_dir"}
+    - попробуй [шлёпать]{"entity": "action", "role": "obj_dir"}
+    - [скатывайся]{"entity": "action", "role": "obj_dir"}
+    - начни [разглядывать]{"entity": "action", "role": "obj"}
+    - [отступи]{"entity": "action", "role": "obj_dir"}
+    - [хлюпай]{"entity": "action", "role": "obj_dir"}
+    - начни [давать]{"entity": "action", "role": "obj_dir"}
+    - попробуй [исследовать]{"entity": "action", "role": "obj"}
+    - [углубись]{"entity": "action", "role": "obj_dir"}
+    - [гуляй]{"entity": "action", "role": "obj_dir"}
+    - попробуй [стягиваться]{"entity": "action", "role": "obj_dir"}
+    - [скачи]{"entity": "action", "role": "obj_dir"}
+    - [выбирайся]{"entity": "action", "role": "obj_dir"}
+    - [пролетай]{"entity": "action", "role": "obj_dir"}
+    - [газуй]{"entity": "action", "role": "obj_dir"}
+    - [устремись]{"entity": "action", "role": "obj_dir"}
+    - [маршируй]{"entity": "action", "role": "obj_dir"}
+    - [выходи]{"entity": "action", "role": "obj_dir"}
+    - [плетись]{"entity": "action", "role": "obj_dir"}
+    - [отыщи]{"entity": "action", "role": "obj"}
+    - [захаживай]{"entity": "action", "role": "obj_dir"}
+    - пытайся [обскакивать]{"entity": "action", "role": "obj"}
+    - [перемещайся]{"entity": "action", "role": "obj_dir"}
+    - [приспевай]{"entity": "action", "role": "obj_dir"}
+    - [прохаживай]{"entity": "action", "role": "obj_dir"}
+    - [рассматривай]{"entity": "action", "role": "obj"}
+    - начни [обозревать]{"entity": "action", "role": "obj"}
+    - начни [следовать]{"entity": "action", "role": "obj_dir"}
+    - [стремись]{"entity": "action", "role": "obj_dir"}
+    - попробуй [рассматривать]{"entity": "action", "role": "obj"}
+    - пытайся [разглядывать]{"entity": "action", "role": "obj"}
+    - [пустись]{"entity": "action", "role": "obj_dir"}
+    - [шлёпай]{"entity": "action", "role": "obj_dir"}
+    - [основывайся]{"entity": "action", "role": "obj_dir"}
+    - начни [ступать]{"entity": "action", "role": "obj_dir"}
+    - пытайся [трусить]{"entity": "action", "role": "obj_dir"}
+    - [спеши]{"entity": "action", "role": "obj_dir"}
+    - [тронься]{"entity": "action", "role": "obj_dir"}
+    - [опережай]{"entity": "action", "role": "obj"}
+    - [пошел]{"entity": "action", "role": "obj_dir"}
+    - начинай [рассматривать]{"entity": "action", "role": "obj"}
+    - [направляй шаги]{"entity": "action", "role": "obj_dir"}
+    - [мчи]{"entity": "action", "role": "obj_dir"}
+    - пытайся [объезжать]{"entity": "action", "role": "obj"}
+    - начни [подниматься]{"entity": "action", "role": "obj_dir"}
+    - [пробеги]{"entity": "action", "role": "obj_dir"}
+    - пытайся [обследовать]{"entity": "action", "role": "obj"}
+    - [проезжай]{"entity": "action", "role": "obj_dir"}
+    - [осматривай]{"entity": "action", "role": "obj"}
+    - [уходи]{"entity": "action", "role": "obj_dir"}
+    - начинай [тащиться]{"entity": "action", "role": "obj_dir"}
+    - [отправляйся]{"entity": "action", "role": "obj_dir"}
+    - [анализируй]{"entity": "action", "role": "obj"}
+    - [теки]{"entity": "action", "role": "obj_dir"}
+    - [ползи]{"entity": "action", "role": "obj_dir"}
+    - [выскочи]{"entity": "action", "role": "obj_dir"}
+    - пытайся [нестись]{"entity": "action", "role": "obj_dir"}
+    - [вкатывайся]{"entity": "action", "role": "obj_dir"}
+    - [кинься]{"entity": "action", "role": "obj_dir"}
+    - начни [приходить]{"entity": "action", "role": "obj_dir"}
+    - начни [мчаться]{"entity": "action", "role": "obj_dir"}
+    - [обследуй]{"entity": "action", "role": "obj"}
+    - [приближайся]{"entity": "action", "role": "obj_dir"}
+    - пытайся [тянуться]{"entity": "action", "role": "obj_dir"}
+    - [шагай]{"entity": "action", "role": "obj_dir"}
+    - [двигайся]{"entity": "action", "role": "obj_dir"}
+    - [проходи]{"entity": "action", "role": "obj_dir"}
+    - [стягивайся]{"entity": "action", "role": "obj_dir"}
+    - [прилети]{"entity": "action", "role": "obj_dir"}
+    - [дефилируй]{"entity": "action", "role": "obj_dir"}

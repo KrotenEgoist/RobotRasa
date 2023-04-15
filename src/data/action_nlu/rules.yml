@@ -1,0 +1,32 @@
+version: "3.1"
+
+rules:
+- rule: Чат не понял intent
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+
+#- rule: addition_obj
+#  steps:
+#    - intent: addition_obj
+#    - action: utter_addition_obj
+#
+#- rule: addition_dir
+#  steps:
+#    - intent: addition_dir
+#    - action: utter_addition_dir
+#
+#- rule: action
+#  steps:
+#    - intent: action
+#    - action: utter_action
+#
+#- rule: action+addition_obj
+#  steps:
+#    - intent: action+addition_obj
+#    - action: utter_action_addition_obj
+#
+#- rule: action+addition_dir
+#  steps:
+#    - intent: action+addition_dir
+#    - action: utter_action_addition_dir
