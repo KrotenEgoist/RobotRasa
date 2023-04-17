@@ -29,14 +29,15 @@ entities:
         - direction
         - object
         - addition
-  - distance
-  - relation
-  - number
-  - ordinal
   - route:
       roles:
         - circle
         - path
+  - distance
+  - relation
+  - number
+  - ordinal
+
 
 slots:
   action:
@@ -141,6 +142,9 @@ forms:
   route_form:
     required_slots:
       - route
+  num_form:
+    required_slots:
+      - num
 
 responses:
   utter_wrong_command:
@@ -156,9 +160,11 @@ responses:
     - text: "Укажите путь патрулирования"
 
 actions:
+  - action_fix_command
   - action_send_command
   - action_ask_feature
   - action_ask_subject
+  - action_ask_num
   - action_reset_slots
 
 

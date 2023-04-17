@@ -21,5 +21,26 @@ class ControlDB:
 
         self.connection.commit()
 
+    def select_last_n_commands(self, n: int):
+
+        query = """
+        SELECT command
+        FROM commands
+        ORDER BY id DESC
+        LIMIT (?);
+        """
+        insert_data = (n, )
+
+        try:
+            data = self.cursor.execute(query, insert_data).fetchall()
+        except sqlite3.OperationalError as e:
+            data = None
+            print(e)
+
+        self.connection.commit()
+
+        return data
+
     def __del__(self):
         self.cursor.close()
+        self.connection.close()
