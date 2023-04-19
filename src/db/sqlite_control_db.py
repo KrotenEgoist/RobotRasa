@@ -41,6 +41,23 @@ class ControlDB:
 
         return data
 
+    def count_commands(self):
+
+        query = """
+        SELECT COUNT(id)
+        FROM commands;
+        """
+
+        try:
+            data = self.cursor.execute(query).fetchall()
+        except sqlite3.OperationalError as e:
+            data = None
+            print(e)
+
+        self.connection.commit()
+
+        return data
+
     def __del__(self):
         self.cursor.close()
         self.connection.close()

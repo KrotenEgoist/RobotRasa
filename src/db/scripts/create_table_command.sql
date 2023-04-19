@@ -1,4 +1,4 @@
 CREATE TABLE commands (
-    id INTEGER PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     command TEXT NOT NULL
-)
+);

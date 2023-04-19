@@ -40,4 +40,4 @@ def create_table(script_path):
 if __name__ == '__main__':
     create_db()
 
-    create_table("sqlite_create_table_command.sql")
+    create_table("create_table_command.sql")

@@ -27,11 +27,12 @@ action_endpoint:
 
 tracker_store:
     type: SQL
-    dialect: "sqlite"
-    db: "database/rasa.db"
-    url:
-    username:
-    password:
+    dialect: "postgresql"
+    db: "rasa"
+    url: localhost
+    port: 5432
+    username: "root"
+    password: "root"
 
 # Event broker which all conversation events should be streamed to.
 # https://rasa.com/docs/rasa/event-brokers

@@ -4,12 +4,14 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import AllSlotsReset, SlotSet, ActiveLoop
 
-from src.db.control_db import ControlDB
+# from src.db.sqlite_control_db import ControlDB
+from src.db.psql_control_db import PostgresqlControl
 
+# project_path = Path(__file__).parents[2]
+# db_path = project_path.joinpath("database/rasa.db")
+# database = ControlDB(db_path)
 
-project_path = Path(__file__).parents[2]
-db_path = project_path.joinpath("database/rasa.db")
-database = ControlDB(db_path)
+db = PostgresqlControl(user='root', password='root')
 
 
 class AskSubjectAction(Action):
@@ -122,7 +124,7 @@ class ActionSendCommand(Action):
             cmd_list = list(parsed_slots.values())
 
         cmd_string = ' '.join(map(lambda x: str(x), cmd_list))
-        database.insert_into_table_commands(cmd_string)
+        db.insert_into_table_commands(cmd_string)
 
         dispatcher.utter_message(text=f"Команда отправлена: {cmd_string}")
 
@@ -141,7 +143,7 @@ class ActionAskNum(Action):
         domain,
     ):
 
-        commands = database.select_last_n_commands(3)
+        commands = db.select_last_n_commands(3)
         cmd_list = []
         for i, cmd in enumerate(commands, 1):
             cmd_list.append(f"{i}. {cmd[0]}")

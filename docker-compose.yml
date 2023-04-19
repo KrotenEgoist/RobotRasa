@@ -1,0 +1,16 @@
+version: "3"
+services:
+
+  postgres:
+    image: postgres:latest
+    container_name: "rasa-db"
+    environment:
+      POSTGRES_DB: "rasa"
+      POSTGRES_USER: "root"
+      POSTGRES_PASSWORD: "root"
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    volumes:
+      - ./src/db/scripts:/docker-entrypoint-initdb.d
+      - ./database:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
