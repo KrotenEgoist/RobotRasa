@@ -3,838 +3,680 @@ version: "3.1"
 nlu:
 - intent: directions
   examples: |
-    - 62 М [на северный край]{"entity": "subject", "role": "direction"}
-    - 151 ° [на восточный край]{"entity": "subject", "role": "direction"}
-    - [на восток]{"entity": "subject", "role": "direction"} на 67 °
-    - 102 м [на западный край]{"entity": "subject", "role": "direction"}
-    - [взад]{"entity": "subject", "role": "direction"} на 342 М
-    - [на северный край]{"entity": "subject", "role": "direction"} на 357 м
-    - [в сторону запада]{"entity": "subject", "role": "direction"} на 214 °
-    - 303 ° [вправо]{"entity": "subject", "role": "direction"}
-    - 104 м [в правую сторону]{"entity": "subject", "role": "direction"}
-    - 90 ° [влево]{"entity": "subject", "role": "direction"}
-    - 42 ° [на восток]{"entity": "subject", "role": "direction"}
-    - 88 м [на восточный край]{"entity": "subject", "role": "direction"}
-    - 227 ° [направо]{"entity": "subject", "role": "direction"}
-    - 356 ° [вперед]{"entity": "subject", "role": "direction"}
-    - 63 ° [на юг]{"entity": "subject", "role": "direction"}
-    - 352 ° [в западную сторону]{"entity": "subject", "role": "direction"}
-    - [вправо]{"entity": "subject", "role": "direction"} на 347 М
-    - [в левую сторону]{"entity": "subject", "role": "direction"} на 49 М
-    - 163 ° [на юг]{"entity": "subject", "role": "direction"}
-    - 3 ° [по правую руку]{"entity": "subject", "role": "direction"}
-    - [налево]{"entity": "subject", "role": "direction"} на 327 °
-    - [направо]{"entity": "subject", "role": "direction"} на 289 М
-    - [в сторону севера]{"entity": "subject", "role": "direction"} на 197 °
-    - [в сторону севера]{"entity": "subject", "role": "direction"} на 100 °
-    - 43 ° [в левую сторону]{"entity": "subject", "role": "direction"}
-    - 158 ° [взад]{"entity": "subject", "role": "direction"}
-    - 10 М [на южный край]{"entity": "subject", "role": "direction"}
-    - [на восточный край]{"entity": "subject", "role": "direction"} на 231 м
-    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 335 м
-    - 351 ° [на юг]{"entity": "subject", "role": "direction"}
-    - 249 ° [на восточный край]{"entity": "subject", "role": "direction"}
-    - [в сторону севера]{"entity": "subject", "role": "direction"} на 338 °
-    - [в южную сторону]{"entity": "subject", "role": "direction"}
-    - [на юг]{"entity": "subject", "role": "direction"} на 114 °
-    - [направо]{"entity": "subject", "role": "direction"} на 91 М
-    - [по правую руку]{"entity": "subject", "role": "direction"} на 111 °
-    - [на восточный край]{"entity": "subject", "role": "direction"} на 161 м
-    - 13 м [по правую руку]{"entity": "subject", "role": "direction"}
-    - 30 ° [на восток]{"entity": "subject", "role": "direction"}
-    - 199 ° [взапядки]{"entity": "subject", "role": "direction"}
-    - [в сторону востока]{"entity": "subject", "role": "direction"} на 81 °
-    - [на восточный край]{"entity": "subject", "role": "direction"} на 199 °
-    - 341 ° [налево]{"entity": "subject", "role": "direction"}
-    - [взад]{"entity": "subject", "role": "direction"} на 84 М
-    - [в сторону юга]{"entity": "subject", "role": "direction"} на 252 °
-    - [задом]{"entity": "subject", "role": "direction"} на 105 °
-    - 201 ° [назад]{"entity": "subject", "role": "direction"}
-    - 228 м [на север]{"entity": "subject", "role": "direction"}
-    - [в сторону севера]{"entity": "subject", "role": "direction"} на 56 °
-    - [на восток]{"entity": "subject", "role": "direction"} на 2 М
-    - 133 м [в западную сторону]{"entity": "subject", "role": "direction"}
-    - [задом]{"entity": "subject", "role": "direction"}
-    - 113 ° [прямо]{"entity": "subject", "role": "direction"}
-    - 81 м [на юг]{"entity": "subject", "role": "direction"}
-    - 146 М [на юг]{"entity": "subject", "role": "direction"}
-    - 283 М [в западную сторону]{"entity": "subject", "role": "direction"}
-    - [на юг]{"entity": "subject", "role": "direction"} на 237 °
-    - 237 м [назад]{"entity": "subject", "role": "direction"}
-    - [на восток]{"entity": "subject", "role": "direction"}
-    - 88 ° [прямо по курсу]{"entity": "subject", "role": "direction"}
-    - [на южный край]{"entity": "subject", "role": "direction"} на 154 М
-    - 47 ° [на юг]{"entity": "subject", "role": "direction"}
-    - 199 ° [налево]{"entity": "subject", "role": "direction"}
-    - [обратно]{"entity": "subject", "role": "direction"}
-    - 170 ° [прямо]{"entity": "subject", "role": "direction"}
-    - 192 ° [на западный край]{"entity": "subject", "role": "direction"}
-    - 146 М [вперед]{"entity": "subject", "role": "direction"}
-    - 60 м [назад]{"entity": "subject", "role": "direction"}
-    - [налево]{"entity": "subject", "role": "direction"} на 48 м
-    - [по левую руку]{"entity": "subject", "role": "direction"} на 350 М
-    - 26 ° [в западную сторону]{"entity": "subject", "role": "direction"}
-    - [в западную сторону]{"entity": "subject", "role": "direction"} на 332 м
-    - [по левую руку]{"entity": "subject", "role": "direction"} на 259 м
-    - 183 ° [в сторону юга]{"entity": "subject", "role": "direction"}
-    - [в южную сторону]{"entity": "subject", "role": "direction"} на 331 °
-    - [в южную сторону]{"entity": "subject", "role": "direction"} на 82 °
-    - [в сторону севера]{"entity": "subject", "role": "direction"} на 68 °
-    - [в левую сторону]{"entity": "subject", "role": "direction"}
-    - [на юг]{"entity": "subject", "role": "direction"}
-    - [на восточный край]{"entity": "subject", "role": "direction"} на 153 М
-    - 123 М [вперед]{"entity": "subject", "role": "direction"}
-    - [вправо]{"entity": "subject", "role": "direction"} на 209 °
-    - 315 М [на юг]{"entity": "subject", "role": "direction"}
-    - [на запад]{"entity": "subject", "role": "direction"}
-    - 294 ° [прямо по курсу]{"entity": "subject", "role": "direction"}
-    - 170 М [в сторону запада]{"entity": "subject", "role": "direction"}
-    - 219 м [влево]{"entity": "subject", "role": "direction"}
-    - [направо]{"entity": "subject", "role": "direction"}
-    - 229 м [в южную сторону]{"entity": "subject", "role": "direction"}
-    - [напролом]{"entity": "subject", "role": "direction"} на 2 °
-    - 134 М [в южную сторону]{"entity": "subject", "role": "direction"}
-    - [на север]{"entity": "subject", "role": "direction"} на 128 М
-    - [на запад]{"entity": "subject", "role": "direction"} на 60 °
-    - 281 ° [возвратно]{"entity": "subject", "role": "direction"}
-    - 29 ° [в южную сторону]{"entity": "subject", "role": "direction"}
-    - 313 М [на южный край]{"entity": "subject", "role": "direction"}
-    - [прямо]{"entity": "subject", "role": "direction"} на 57 М
-    - 258 ° [направо]{"entity": "subject", "role": "direction"}
-    - [в западную сторону]{"entity": "subject", "role": "direction"} на 22 °
-    - [вправо]{"entity": "subject", "role": "direction"} на 149 °
-    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 264 °
-    - 115 М [напрямик]{"entity": "subject", "role": "direction"}
-    - [напролом]{"entity": "subject", "role": "direction"} на 133 °
-    - [вправо]{"entity": "subject", "role": "direction"} на 76 °
-    - [в сторону запада]{"entity": "subject", "role": "direction"} на 215 М
-    - [в сторону юга]{"entity": "subject", "role": "direction"} на 305 °
-    - 194 м [по правую руку]{"entity": "subject", "role": "direction"}
-    - 91 м [в восточную сторону]{"entity": "subject", "role": "direction"}
-    - 216 М [направо]{"entity": "subject", "role": "direction"}
-    - [в сторону запада]{"entity": "subject", "role": "direction"}
-    - [напролом]{"entity": "subject", "role": "direction"} на 13 °
-    - 22 ° [обертасом]{"entity": "subject", "role": "direction"}
-    - [в восточную сторону]{"entity": "subject", "role": "direction"}
-    - 228 ° [в западную сторону]{"entity": "subject", "role": "direction"}
+    - 50 ° [в сторону запада]{"entity": "subject", "role": "direction"}
+    - [вперед]{"entity": "subject", "role": "direction"} на 318 °
+    - [в правую сторону]{"entity": "subject", "role": "direction"} на 24 °
+    - [на запад]{"entity": "subject", "role": "direction"} на 34 °
+    - [в правую сторону]{"entity": "subject", "role": "direction"} на 132 М
+    - [на северный край]{"entity": "subject", "role": "direction"} на 244 М
+    - [в правую сторону]{"entity": "subject", "role": "direction"} на 148 °
+    - [в сторону востока]{"entity": "subject", "role": "direction"} на 43 м
+    - [взад]{"entity": "subject", "role": "direction"} на 215 м
+    - 300 М [в сторону востока]{"entity": "subject", "role": "direction"}
+    - 179 м [направо]{"entity": "subject", "role": "direction"}
+    - 257 м [на север]{"entity": "subject", "role": "direction"}
+    - [в сторону запада]{"entity": "subject", "role": "direction"} на 297 м
+    - 6 м [взапядки]{"entity": "subject", "role": "direction"}
+    - [на юг]{"entity": "subject", "role": "direction"} на 153 м
+    - [напрямик]{"entity": "subject", "role": "direction"} на 232 М
+    - [напролом]{"entity": "subject", "role": "direction"} на 124 °
+    - 270 М [на запад]{"entity": "subject", "role": "direction"}
+    - [по правую руку]{"entity": "subject", "role": "direction"} на 233 М
+    - 198 м [взад]{"entity": "subject", "role": "direction"}
+    - [обертасом]{"entity": "subject", "role": "direction"} на 201 м
+    - [вперед]{"entity": "subject", "role": "direction"} на 16 м
+    - 226 ° [назад]{"entity": "subject", "role": "direction"}
+    - 169 м [направо]{"entity": "subject", "role": "direction"}
+    - 22 м [на восток]{"entity": "subject", "role": "direction"}
+    - 322 ° [в левую сторону]{"entity": "subject", "role": "direction"}
+    - [в южную сторону]{"entity": "subject", "role": "direction"} на 299 м
+    - 52 ° [в восточную сторону]{"entity": "subject", "role": "direction"}
+    - 110 м [на запад]{"entity": "subject", "role": "direction"}
+    - [на юг]{"entity": "subject", "role": "direction"} на 141 °
+    - [по левую руку]{"entity": "subject", "role": "direction"} на 122 м
     - [в северную сторону]{"entity": "subject", "role": "direction"}
-    - [в левую сторону]{"entity": "subject", "role": "direction"} на 264 М
-    - [в западную сторону]{"entity": "subject", "role": "direction"} на 250 °
-    - 234 ° [в северную сторону]{"entity": "subject", "role": "direction"}
-    - [по левую руку]{"entity": "subject", "role": "direction"} на 196 °
-    - [напролом]{"entity": "subject", "role": "direction"} на 359 °
-    - 319 М [на попятную]{"entity": "subject", "role": "direction"}
-    - [в обратном направлении]{"entity": "subject", "role": "direction"} на 200 М
-    - 42 ° [прямо по курсу]{"entity": "subject", "role": "direction"}
-    - 194 ° [вправо]{"entity": "subject", "role": "direction"}
-    - 284 ° [в правую сторону]{"entity": "subject", "role": "direction"}
-    - 239 М [на восточный край]{"entity": "subject", "role": "direction"}
-    - [на южный край]{"entity": "subject", "role": "direction"} на 140 М
-    - 295 М [в западную сторону]{"entity": "subject", "role": "direction"}
-    - 359 м [напролом]{"entity": "subject", "role": "direction"}
-    - [прямо]{"entity": "subject", "role": "direction"} на 30 М
-    - [в сторону запада]{"entity": "subject", "role": "direction"} на 30 °
-    - [на восток]{"entity": "subject", "role": "direction"} на 104 °
-    - 216 ° [в обратном направлении]{"entity": "subject", "role": "direction"}
-    - [обратно]{"entity": "subject", "role": "direction"} на 294 М
-    - 174 ° [в сторону запада]{"entity": "subject", "role": "direction"}
-    - [налево]{"entity": "subject", "role": "direction"} на 173 М
-    - 179 ° [на запад]{"entity": "subject", "role": "direction"}
-    - [напрямик]{"entity": "subject", "role": "direction"} на 131 °
-    - [на северный край]{"entity": "subject", "role": "direction"} на 271 °
-    - [вперед]{"entity": "subject", "role": "direction"} на 112 м
-    - [взад]{"entity": "subject", "role": "direction"} на 343 °
-    - 243 ° [обратно]{"entity": "subject", "role": "direction"}
-    - 177 М [вправо]{"entity": "subject", "role": "direction"}
-    - [по левую руку]{"entity": "subject", "role": "direction"} на 197 м
-    - [прямо по курсу]{"entity": "subject", "role": "direction"} на 85 °
-    - 14 м [на юг]{"entity": "subject", "role": "direction"}
-    - [на восточный край]{"entity": "subject", "role": "direction"} на 147 °
-    - 173 м [на северный край]{"entity": "subject", "role": "direction"}
-    - 17 М [в сторону севера]{"entity": "subject", "role": "direction"}
-    - 358 М [вправо]{"entity": "subject", "role": "direction"}
-    - [на западный край]{"entity": "subject", "role": "direction"} на 290 °
-    - 57 ° [напролом]{"entity": "subject", "role": "direction"}
-    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 346 °
-    - [в левую сторону]{"entity": "subject", "role": "direction"} на 321 М
-    - 157 м [на западный край]{"entity": "subject", "role": "direction"}
-    - 49 М [в восточную сторону]{"entity": "subject", "role": "direction"}
-    - [на север]{"entity": "subject", "role": "direction"} на 120 °
-    - 226 м [в южную сторону]{"entity": "subject", "role": "direction"}
-    - 248 ° [направо]{"entity": "subject", "role": "direction"}
-    - 234 ° [в сторону севера]{"entity": "subject", "role": "direction"}
-    - 159 м [по левую руку]{"entity": "subject", "role": "direction"}
-    - [вспять]{"entity": "subject", "role": "direction"} на 322 °
-    - 60 М [в правую сторону]{"entity": "subject", "role": "direction"}
-    - [на западный край]{"entity": "subject", "role": "direction"} на 182 М
-    - 15 ° [направо]{"entity": "subject", "role": "direction"}
-    - [направо]{"entity": "subject", "role": "direction"} на 246 °
-    - 206 ° [по левую руку]{"entity": "subject", "role": "direction"}
-    - 15 М [в восточную сторону]{"entity": "subject", "role": "direction"}
-    - [в западную сторону]{"entity": "subject", "role": "direction"} на 17 М
-    - [прямо]{"entity": "subject", "role": "direction"} на 231 М
-    - 349 ° [на южный край]{"entity": "subject", "role": "direction"}
-    - [направо]{"entity": "subject", "role": "direction"} на 29 °
-    - 95 ° [в левую сторону]{"entity": "subject", "role": "direction"}
-    - 185 м [на западный край]{"entity": "subject", "role": "direction"}
-    - 229 ° [по правую руку]{"entity": "subject", "role": "direction"}
-    - 143 ° [влево]{"entity": "subject", "role": "direction"}
-    - 266 ° [в западную сторону]{"entity": "subject", "role": "direction"}
-    - [в правую сторону]{"entity": "subject", "role": "direction"} на 299 М
-    - 126 м [в северную сторону]{"entity": "subject", "role": "direction"}
-    - 36 М [на восток]{"entity": "subject", "role": "direction"}
-    - 16 м [налево]{"entity": "subject", "role": "direction"}
-    - [на север]{"entity": "subject", "role": "direction"} на 321 °
-    - [влево]{"entity": "subject", "role": "direction"} на 277 °
-    - 204 ° [вправо]{"entity": "subject", "role": "direction"}
-    - 293 М [в сторону востока]{"entity": "subject", "role": "direction"}
-    - [напрямик]{"entity": "subject", "role": "direction"} на 354 М
-    - 302 ° [на северный край]{"entity": "subject", "role": "direction"}
-    - 343 ° [по левую руку]{"entity": "subject", "role": "direction"}
-    - [в сторону севера]{"entity": "subject", "role": "direction"} на 98 °
-    - [взапядки]{"entity": "subject", "role": "direction"}
-    - [на север]{"entity": "subject", "role": "direction"}
-    - [влево]{"entity": "subject", "role": "direction"} на 256 м
-    - 353 м [прямо]{"entity": "subject", "role": "direction"}
-    - [на южный край]{"entity": "subject", "role": "direction"} на 171 °
-    - [на южный край]{"entity": "subject", "role": "direction"} на 100 М
-    - [в сторону запада]{"entity": "subject", "role": "direction"} на 282 °
-    - [в сторону юга]{"entity": "subject", "role": "direction"} на 167 м
-    - [на западный край]{"entity": "subject", "role": "direction"}
-    - [в правую сторону]{"entity": "subject", "role": "direction"} на 196 °
-    - 269 м [на западный край]{"entity": "subject", "role": "direction"}
-    - 19 ° [в южную сторону]{"entity": "subject", "role": "direction"}
-    - [вперед]{"entity": "subject", "role": "direction"} на 104 °
-    - [по правую руку]{"entity": "subject", "role": "direction"} на 35 °
-    - 200 м [на северный край]{"entity": "subject", "role": "direction"}
-    - [вправо]{"entity": "subject", "role": "direction"} на 112 °
-    - [на север]{"entity": "subject", "role": "direction"} на 172 м
-    - 63 м [по левую руку]{"entity": "subject", "role": "direction"}
-    - 140 ° [вправо]{"entity": "subject", "role": "direction"}
-    - 171 М [в сторону запада]{"entity": "subject", "role": "direction"}
-    - 82 м [напрямик]{"entity": "subject", "role": "direction"}
-    - [вперед]{"entity": "subject", "role": "direction"} на 305 м
-    - [по правую руку]{"entity": "subject", "role": "direction"} на 271 °
-    - 61 м [обертасом]{"entity": "subject", "role": "direction"}
-    - [на южный край]{"entity": "subject", "role": "direction"} на 123 м
-    - [на восток]{"entity": "subject", "role": "direction"} на 145 м
-    - 99 ° [вперед]{"entity": "subject", "role": "direction"}
-    - [направо]{"entity": "subject", "role": "direction"} на 169 м
-    - [в сторону востока]{"entity": "subject", "role": "direction"} на 287 °
-    - [в сторону востока]{"entity": "subject", "role": "direction"} на 78 М
-    - 65 м [на восточный край]{"entity": "subject", "role": "direction"}
-    - [на восток]{"entity": "subject", "role": "direction"} на 293 м
-    - [напрямик]{"entity": "subject", "role": "direction"} на 91 М
-    - [взапядки]{"entity": "subject", "role": "direction"} на 119 м
-    - [на северный край]{"entity": "subject", "role": "direction"} на 193 °
-    - 75 ° [вправо]{"entity": "subject", "role": "direction"}
-    - 176 м [на север]{"entity": "subject", "role": "direction"}
-    - [напрямик]{"entity": "subject", "role": "direction"} на 270 М
-    - 56 м [направо]{"entity": "subject", "role": "direction"}
-    - 85 ° [по левую руку]{"entity": "subject", "role": "direction"}
-    - [вперед]{"entity": "subject", "role": "direction"} на 324 °
-    - [направо]{"entity": "subject", "role": "direction"} на 179 °
-    - 95 ° [на западный край]{"entity": "subject", "role": "direction"}
-    - 254 ° [на восточный край]{"entity": "subject", "role": "direction"}
-    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 174 °
-    - 262 м [в сторону востока]{"entity": "subject", "role": "direction"}
-    - 275 ° [обертасом]{"entity": "subject", "role": "direction"}
-    - 309 ° [на южный край]{"entity": "subject", "role": "direction"}
-    - [в северную сторону]{"entity": "subject", "role": "direction"} на 270 м
-    - 323 ° [на западный край]{"entity": "subject", "role": "direction"}
-    - [на север]{"entity": "subject", "role": "direction"} на 65 °
-    - 213 М [направо]{"entity": "subject", "role": "direction"}
-    - 11 ° [на южный край]{"entity": "subject", "role": "direction"}
-    - [влево]{"entity": "subject", "role": "direction"}
-    - 43 м [в правую сторону]{"entity": "subject", "role": "direction"}
-    - 22 м [на запад]{"entity": "subject", "role": "direction"}
-    - [на северный край]{"entity": "subject", "role": "direction"} на 203 М
-    - [в левую сторону]{"entity": "subject", "role": "direction"} на 216 °
-    - [на попятную]{"entity": "subject", "role": "direction"} на 126 м
-    - [в левую сторону]{"entity": "subject", "role": "direction"} на 337 М
-    - [в северную сторону]{"entity": "subject", "role": "direction"} на 109 м
-    - [в южную сторону]{"entity": "subject", "role": "direction"} на 121 м
-    - [на восточный край]{"entity": "subject", "role": "direction"} на 218 °
+    - 245 ° [напролом]{"entity": "subject", "role": "direction"}
+    - [прямо по курсу]{"entity": "subject", "role": "direction"} на 240 °
+    - 158 ° [на восток]{"entity": "subject", "role": "direction"}
+    - [вперед]{"entity": "subject", "role": "direction"} на 47 м
+    - 33 ° [возвратно]{"entity": "subject", "role": "direction"}
+    - 12 ° [взапядки]{"entity": "subject", "role": "direction"}
+    - [на восточный край]{"entity": "subject", "role": "direction"} на 53 М
+    - 13 ° [влево]{"entity": "subject", "role": "direction"}
+    - [на западный край]{"entity": "subject", "role": "direction"} на 209 °
+    - [в северную сторону]{"entity": "subject", "role": "direction"} на 64 °
+    - 137 м [в сторону юга]{"entity": "subject", "role": "direction"}
+    - 90 М [на восток]{"entity": "subject", "role": "direction"}
     - [прямо по курсу]{"entity": "subject", "role": "direction"}
-    - [напрямик]{"entity": "subject", "role": "direction"} на 53 М
-    - [в сторону юга]{"entity": "subject", "role": "direction"} на 183 М
-    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 352 °
-    - [в правую сторону]{"entity": "subject", "role": "direction"} на 68 м
-    - [на западный край]{"entity": "subject", "role": "direction"} на 253 °
-    - [взад]{"entity": "subject", "role": "direction"} на 83 м
-    - [на север]{"entity": "subject", "role": "direction"} на 54 °
-    - [на западный край]{"entity": "subject", "role": "direction"} на 13 м
-    - [на восточный край]{"entity": "subject", "role": "direction"} на 276 м
-    - [в сторону юга]{"entity": "subject", "role": "direction"} на 340 М
-    - [в западную сторону]{"entity": "subject", "role": "direction"}
-    - 100 м [в обратном направлении]{"entity": "subject", "role": "direction"}
-    - [прямо]{"entity": "subject", "role": "direction"} на 78 °
-    - 56 М [на южный край]{"entity": "subject", "role": "direction"}
-    - [обертасом]{"entity": "subject", "role": "direction"}
-    - 219 М [на северный край]{"entity": "subject", "role": "direction"}
-    - 105 ° [назад]{"entity": "subject", "role": "direction"}
-    - 93 м [на запад]{"entity": "subject", "role": "direction"}
-    - 351 ° [в северную сторону]{"entity": "subject", "role": "direction"}
-    - 163 ° [вправо]{"entity": "subject", "role": "direction"}
-    - [налево]{"entity": "subject", "role": "direction"} на 267 М
-    - [на попятную]{"entity": "subject", "role": "direction"} на 199 °
-    - 205 М [на западный край]{"entity": "subject", "role": "direction"}
-    - 124 М [в сторону запада]{"entity": "subject", "role": "direction"}
-    - 232 ° [в западную сторону]{"entity": "subject", "role": "direction"}
-    - 301 м [на восточный край]{"entity": "subject", "role": "direction"}
-    - [вспять]{"entity": "subject", "role": "direction"} на 301 °
-    - 253 М [налево]{"entity": "subject", "role": "direction"}
-    - [в сторону юга]{"entity": "subject", "role": "direction"} на 323 м
-    - [вперед]{"entity": "subject", "role": "direction"} на 188 °
-    - [в южную сторону]{"entity": "subject", "role": "direction"} на 242 °
-    - [задом]{"entity": "subject", "role": "direction"} на 327 °
-    - [в правую сторону]{"entity": "subject", "role": "direction"} на 96 М
-    - [вправо]{"entity": "subject", "role": "direction"}
-    - 15 м [по левую руку]{"entity": "subject", "role": "direction"}
-    - 154 м [на северный край]{"entity": "subject", "role": "direction"}
-    - 97 ° [налево]{"entity": "subject", "role": "direction"}
-    - [влево]{"entity": "subject", "role": "direction"} на 28 м
-    - 303 м [в сторону юга]{"entity": "subject", "role": "direction"}
-    - 39 ° [в левую сторону]{"entity": "subject", "role": "direction"}
-    - [взад]{"entity": "subject", "role": "direction"} на 228 М
-    - 14 ° [прямо]{"entity": "subject", "role": "direction"}
-    - [вправо]{"entity": "subject", "role": "direction"} на 317 °
-    - 354 м [в правую сторону]{"entity": "subject", "role": "direction"}
-    - [в правую сторону]{"entity": "subject", "role": "direction"} на 9 м
-    - [на запад]{"entity": "subject", "role": "direction"} на 289 М
-    - [на запад]{"entity": "subject", "role": "direction"} на 331 М
-    - 159 м [напролом]{"entity": "subject", "role": "direction"}
-    - [прямо по курсу]{"entity": "subject", "role": "direction"} на 333 М
-    - [по левую руку]{"entity": "subject", "role": "direction"} на 314 м
-    - [вперед]{"entity": "subject", "role": "direction"}
-    - 20 ° [на юг]{"entity": "subject", "role": "direction"}
-    - 189 ° [направо]{"entity": "subject", "role": "direction"}
-    - 58 М [обертасом]{"entity": "subject", "role": "direction"}
-    - 330 ° [на север]{"entity": "subject", "role": "direction"}
-    - [обертасом]{"entity": "subject", "role": "direction"} на 136 °
-    - [взад]{"entity": "subject", "role": "direction"} на 156 °
-    - 349 М [в сторону севера]{"entity": "subject", "role": "direction"}
-    - 68 ° [в сторону севера]{"entity": "subject", "role": "direction"}
-    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 305 М
-    - 298 ° [в южную сторону]{"entity": "subject", "role": "direction"}
-    - [на попятную]{"entity": "subject", "role": "direction"} на 325 М
-    - 225 м [влево]{"entity": "subject", "role": "direction"}
-    - [в сторону юга]{"entity": "subject", "role": "direction"} на 166 М
-    - 270 ° [в левую сторону]{"entity": "subject", "role": "direction"}
-    - [в сторону юга]{"entity": "subject", "role": "direction"} на 277 М
-    - [на попятную]{"entity": "subject", "role": "direction"}
-    - 90 м [в сторону севера]{"entity": "subject", "role": "direction"}
-    - [по правую руку]{"entity": "subject", "role": "direction"} на 335 м
-    - [на попятную]{"entity": "subject", "role": "direction"} на 321 °
-    - [на юг]{"entity": "subject", "role": "direction"} на 315 °
-    - [в южную сторону]{"entity": "subject", "role": "direction"} на 296 М
-    - [на юг]{"entity": "subject", "role": "direction"} на 63 °
-    - [в сторону севера]{"entity": "subject", "role": "direction"} на 207 °
-    - [в сторону юга]{"entity": "subject", "role": "direction"} на 243 °
-    - [в левую сторону]{"entity": "subject", "role": "direction"} на 66 °
-    - 145 ° [в сторону востока]{"entity": "subject", "role": "direction"}
-    - [направо]{"entity": "subject", "role": "direction"} на 227 М
-    - [на юг]{"entity": "subject", "role": "direction"} на 263 м
-    - 303 м [назад]{"entity": "subject", "role": "direction"}
-    - 173 ° [налево]{"entity": "subject", "role": "direction"}
-    - [взапядки]{"entity": "subject", "role": "direction"} на 108 °
-    - 44 М [на юг]{"entity": "subject", "role": "direction"}
-    - 266 М [на север]{"entity": "subject", "role": "direction"}
-    - 247 ° [на северный край]{"entity": "subject", "role": "direction"}
-    - 265 М [в сторону севера]{"entity": "subject", "role": "direction"}
-    - [в правую сторону]{"entity": "subject", "role": "direction"} на 212 °
-    - 182 ° [в правую сторону]{"entity": "subject", "role": "direction"}
-    - 165 ° [взад]{"entity": "subject", "role": "direction"}
-    - [на восток]{"entity": "subject", "role": "direction"} на 314 °
-    - [на южный край]{"entity": "subject", "role": "direction"} на 346 М
-    - [в левую сторону]{"entity": "subject", "role": "direction"} на 164 °
-    - [направо]{"entity": "subject", "role": "direction"} на 157 °
-    - 244 ° [вправо]{"entity": "subject", "role": "direction"}
-    - [в сторону юга]{"entity": "subject", "role": "direction"}
-    - 88 ° [на северный край]{"entity": "subject", "role": "direction"}
-    - 233 ° [вправо]{"entity": "subject", "role": "direction"}
-    - 217 М [на северный край]{"entity": "subject", "role": "direction"}
-    - [обратно]{"entity": "subject", "role": "direction"} на 153 м
-    - 170 м [в сторону юга]{"entity": "subject", "role": "direction"}
-    - 247 ° [вспять]{"entity": "subject", "role": "direction"}
-    - 72 ° [в южную сторону]{"entity": "subject", "role": "direction"}
-    - [напролом]{"entity": "subject", "role": "direction"} на 240 М
-    - [на север]{"entity": "subject", "role": "direction"} на 297 м
-    - [на западный край]{"entity": "subject", "role": "direction"} на 18 М
-    - 301 м [назад]{"entity": "subject", "role": "direction"}
-    - [по левую руку]{"entity": "subject", "role": "direction"}
-    - [в западную сторону]{"entity": "subject", "role": "direction"} на 44 °
-    - [задом]{"entity": "subject", "role": "direction"} на 310 °
-    - 250 ° [на восточный край]{"entity": "subject", "role": "direction"}
-    - 174 ° [в восточную сторону]{"entity": "subject", "role": "direction"}
-    - [вперед]{"entity": "subject", "role": "direction"} на 291 М
-    - 271 м [в сторону севера]{"entity": "subject", "role": "direction"}
-    - [по правую руку]{"entity": "subject", "role": "direction"} на 272 м
-    - [по левую руку]{"entity": "subject", "role": "direction"} на 192 °
-    - 293 ° [на северный край]{"entity": "subject", "role": "direction"}
-    - 36 ° [на южный край]{"entity": "subject", "role": "direction"}
-    - 127 ° [на восточный край]{"entity": "subject", "role": "direction"}
-    - 220 ° [напрямик]{"entity": "subject", "role": "direction"}
-    - [в сторону востока]{"entity": "subject", "role": "direction"} на 21 М
-    - 10 ° [назад]{"entity": "subject", "role": "direction"}
-    - [в правую сторону]{"entity": "subject", "role": "direction"} на 182 °
-    - 157 ° [на восточный край]{"entity": "subject", "role": "direction"}
-    - [направо]{"entity": "subject", "role": "direction"} на 153 М
-    - 119 ° [в северную сторону]{"entity": "subject", "role": "direction"}
-    - 71 м [на юг]{"entity": "subject", "role": "direction"}
-    - [прямо]{"entity": "subject", "role": "direction"} на 15 М
-    - 357 М [обертасом]{"entity": "subject", "role": "direction"}
-    - 208 м [направо]{"entity": "subject", "role": "direction"}
-    - 218 м [влево]{"entity": "subject", "role": "direction"}
-    - [в сторону юга]{"entity": "subject", "role": "direction"} на 137 М
-    - [на запад]{"entity": "subject", "role": "direction"} на 328 М
-    - [на южный край]{"entity": "subject", "role": "direction"} на 243 м
-    - [в южную сторону]{"entity": "subject", "role": "direction"} на 157 °
-    - [на восточный край]{"entity": "subject", "role": "direction"} на 336 °
-    - [на западный край]{"entity": "subject", "role": "direction"} на 170 М
-    - 185 м [в северную сторону]{"entity": "subject", "role": "direction"}
-    - [на восточный край]{"entity": "subject", "role": "direction"} на 344 М
-    - 77 ° [на западный край]{"entity": "subject", "role": "direction"}
-    - [в правую сторону]{"entity": "subject", "role": "direction"} на 330 °
-    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 295 °
-    - [напрямик]{"entity": "subject", "role": "direction"} на 116 м
-    - [на западный край]{"entity": "subject", "role": "direction"} на 285 М
-    - 171 М [на восточный край]{"entity": "subject", "role": "direction"}
-    - [в западную сторону]{"entity": "subject", "role": "direction"} на 249 °
-    - 65 м [на запад]{"entity": "subject", "role": "direction"}
-    - [налево]{"entity": "subject", "role": "direction"} на 264 М
-    - [прямо]{"entity": "subject", "role": "direction"}
-    - 143 М [вперед]{"entity": "subject", "role": "direction"}
-    - [на север]{"entity": "subject", "role": "direction"} на 132 °
-    - [в обратном направлении]{"entity": "subject", "role": "direction"} на 66 °
-    - 30 ° [на попятную]{"entity": "subject", "role": "direction"}
-    - [на восточный край]{"entity": "subject", "role": "direction"} на 286 м
-    - 81 м [взапядки]{"entity": "subject", "role": "direction"}
-    - [по правую руку]{"entity": "subject", "role": "direction"} на 172 М
-    - [в правую сторону]{"entity": "subject", "role": "direction"} на 128 м
-    - [налево]{"entity": "subject", "role": "direction"}
-    - [в сторону юга]{"entity": "subject", "role": "direction"} на 139 м
-    - [в западную сторону]{"entity": "subject", "role": "direction"} на 143 М
-    - [в западную сторону]{"entity": "subject", "role": "direction"} на 186 °
-    - [напролом]{"entity": "subject", "role": "direction"} на 94 °
-    - [на восточный край]{"entity": "subject", "role": "direction"} на 76 °
-    - 166 ° [в южную сторону]{"entity": "subject", "role": "direction"}
-    - 33 ° [по правую руку]{"entity": "subject", "role": "direction"}
-    - [на восточный край]{"entity": "subject", "role": "direction"} на 44 °
-    - [вправо]{"entity": "subject", "role": "direction"} на 239 °
-    - 234 м [в сторону юга]{"entity": "subject", "role": "direction"}
-    - 253 ° [на юг]{"entity": "subject", "role": "direction"}
-    - [назад]{"entity": "subject", "role": "direction"}
-    - 265 ° [на север]{"entity": "subject", "role": "direction"}
-    - [на запад]{"entity": "subject", "role": "direction"} на 225 м
-    - [налево]{"entity": "subject", "role": "direction"} на 27 °
-    - [на запад]{"entity": "subject", "role": "direction"} на 75 °
-    - [на попятную]{"entity": "subject", "role": "direction"} на 168 м
-    - 137 ° [в восточную сторону]{"entity": "subject", "role": "direction"}
-    - [на юг]{"entity": "subject", "role": "direction"} на 272 м
-    - 12 м [на северный край]{"entity": "subject", "role": "direction"}
-    - [в северную сторону]{"entity": "subject", "role": "direction"} на 330 М
-    - 108 М [вперед]{"entity": "subject", "role": "direction"}
-    - 3 ° [в восточную сторону]{"entity": "subject", "role": "direction"}
-    - 355 ° [назад]{"entity": "subject", "role": "direction"}
-    - 241 М [прямо по курсу]{"entity": "subject", "role": "direction"}
-    - 79 М [взад]{"entity": "subject", "role": "direction"}
-    - [на южный край]{"entity": "subject", "role": "direction"} на 353 °
-    - [направо]{"entity": "subject", "role": "direction"} на 274 м
-    - 214 ° [на восточный край]{"entity": "subject", "role": "direction"}
-    - 349 М [по правую руку]{"entity": "subject", "role": "direction"}
-    - 314 М [обертасом]{"entity": "subject", "role": "direction"}
-    - 39 М [в сторону юга]{"entity": "subject", "role": "direction"}
-    - 84 м [влево]{"entity": "subject", "role": "direction"}
-    - 101 м [напрямик]{"entity": "subject", "role": "direction"}
-    - 149 м [прямо]{"entity": "subject", "role": "direction"}
-    - 109 м [вспять]{"entity": "subject", "role": "direction"}
-    - 116 м [в правую сторону]{"entity": "subject", "role": "direction"}
-    - 119 м [напролом]{"entity": "subject", "role": "direction"}
-    - 83 м [на восточный край]{"entity": "subject", "role": "direction"}
-    - 55 М [в сторону юга]{"entity": "subject", "role": "direction"}
-    - 144 м [в правую сторону]{"entity": "subject", "role": "direction"}
-    - [на западный край]{"entity": "subject", "role": "direction"} на 330 М
-    - 303 М [на восток]{"entity": "subject", "role": "direction"}
-    - 171 М [в левую сторону]{"entity": "subject", "role": "direction"}
-    - 6 м [в левую сторону]{"entity": "subject", "role": "direction"}
-    - [на северный край]{"entity": "subject", "role": "direction"} на 174 м
-    - [в сторону востока]{"entity": "subject", "role": "direction"} на 311 М
-    - [на восток]{"entity": "subject", "role": "direction"} на 128 М
-    - [на восток]{"entity": "subject", "role": "direction"} на 39 М
-    - 304 ° [прямо по курсу]{"entity": "subject", "role": "direction"}
-    - 67 м [на южный край]{"entity": "subject", "role": "direction"}
-    - [на западный край]{"entity": "subject", "role": "direction"} на 88 м
-    - [в сторону запада]{"entity": "subject", "role": "direction"} на 249 °
-    - [на северный край]{"entity": "subject", "role": "direction"}
-    - [вперед]{"entity": "subject", "role": "direction"} на 187 °
-    - [на запад]{"entity": "subject", "role": "direction"} на 32 °
-    - [на восточный край]{"entity": "subject", "role": "direction"} на 143 °
-    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 228 м
-    - [на западный край]{"entity": "subject", "role": "direction"} на 179 м
-    - 27 ° [напролом]{"entity": "subject", "role": "direction"}
-    - 93 М [задом]{"entity": "subject", "role": "direction"}
-    - 307 ° [взапядки]{"entity": "subject", "role": "direction"}
-    - 307 ° [на восток]{"entity": "subject", "role": "direction"}
-    - [на север]{"entity": "subject", "role": "direction"} на 173 М
-    - [прямо]{"entity": "subject", "role": "direction"} на 222 °
-    - [в левую сторону]{"entity": "subject", "role": "direction"} на 116 М
-    - [по правую руку]{"entity": "subject", "role": "direction"} на 153 м
-    - [прямо по курсу]{"entity": "subject", "role": "direction"} на 141 °
-    - [на восток]{"entity": "subject", "role": "direction"} на 55 °
-    - 326 ° [на восточный край]{"entity": "subject", "role": "direction"}
-    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 237 °
-    - 176 ° [на восточный край]{"entity": "subject", "role": "direction"}
-    - [в правую сторону]{"entity": "subject", "role": "direction"} на 271 м
-    - [налево]{"entity": "subject", "role": "direction"} на 173 °
-    - [в сторону востока]{"entity": "subject", "role": "direction"} на 169 М
-    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 57 М
-    - [по левую руку]{"entity": "subject", "role": "direction"} на 58 М
-    - 283 м [напролом]{"entity": "subject", "role": "direction"}
-    - 87 м [влево]{"entity": "subject", "role": "direction"}
-    - 197 ° [на восток]{"entity": "subject", "role": "direction"}
-    - 11 ° [налево]{"entity": "subject", "role": "direction"}
-    - [в сторону запада]{"entity": "subject", "role": "direction"} на 164 °
+    - [вперед]{"entity": "subject", "role": "direction"} на 78 °
+    - [на юг]{"entity": "subject", "role": "direction"} на 22 м
+    - 305 ° [на южный край]{"entity": "subject", "role": "direction"}
+    - 325 ° [в северную сторону]{"entity": "subject", "role": "direction"}
+    - [на западный край]{"entity": "subject", "role": "direction"} на 121 °
+    - 299 ° [в восточную сторону]{"entity": "subject", "role": "direction"}
+    - 64 м [напрямик]{"entity": "subject", "role": "direction"}
+    - 60 ° [в сторону запада]{"entity": "subject", "role": "direction"}
+    - 244 м [на северный край]{"entity": "subject", "role": "direction"}
+    - [вперед]{"entity": "subject", "role": "direction"} на 179 °
+    - [на север]{"entity": "subject", "role": "direction"} на 125 м
+    - [на запад]{"entity": "subject", "role": "direction"} на 276 °
+    - [влево]{"entity": "subject", "role": "direction"} на 349 м
+    - [на запад]{"entity": "subject", "role": "direction"} на 171 °
+    - [на север]{"entity": "subject", "role": "direction"} на 220 °
+    - [на западный край]{"entity": "subject", "role": "direction"} на 34 м
+    - 120 ° [в сторону юга]{"entity": "subject", "role": "direction"}
+    - [в сторону запада]{"entity": "subject", "role": "direction"} на 81 °
+    - [обертасом]{"entity": "subject", "role": "direction"} на 58 °
+    - [в левую сторону]{"entity": "subject", "role": "direction"} на 35 м
+    - 64 ° [вспять]{"entity": "subject", "role": "direction"}
+    - [обертасом]{"entity": "subject", "role": "direction"} на 288 м
+    - 165 м [в восточную сторону]{"entity": "subject", "role": "direction"}
+    - 138 м [направо]{"entity": "subject", "role": "direction"}
+    - 340 ° [в западную сторону]{"entity": "subject", "role": "direction"}
+    - 262 ° [на запад]{"entity": "subject", "role": "direction"}
+    - [на юг]{"entity": "subject", "role": "direction"} на 95 М
+    - 289 ° [вправо]{"entity": "subject", "role": "direction"}
     - [на восточный край]{"entity": "subject", "role": "direction"}
-    - 74 м [направо]{"entity": "subject", "role": "direction"}
-    - [вправо]{"entity": "subject", "role": "direction"} на 258 °
-    - 256 М [вперед]{"entity": "subject", "role": "direction"}
-    - [взапядки]{"entity": "subject", "role": "direction"} на 2 °
-    - 193 М [на север]{"entity": "subject", "role": "direction"}
-    - 355 м [налево]{"entity": "subject", "role": "direction"}
-    - 40 М [влево]{"entity": "subject", "role": "direction"}
-    - [на восток]{"entity": "subject", "role": "direction"} на 157 м
-    - [в правую сторону]{"entity": "subject", "role": "direction"} на 27 °
-    - 205 ° [в сторону севера]{"entity": "subject", "role": "direction"}
-    - 356 М [возвратно]{"entity": "subject", "role": "direction"}
-    - 28 ° [на юг]{"entity": "subject", "role": "direction"}
-    - [в левую сторону]{"entity": "subject", "role": "direction"} на 28 М
-    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 127 °
-    - 143 М [в правую сторону]{"entity": "subject", "role": "direction"}
-    - [назад]{"entity": "subject", "role": "direction"} на 146 М
-    - [обратно]{"entity": "subject", "role": "direction"} на 28 °
-    - [направо]{"entity": "subject", "role": "direction"} на 167 °
-    - [напрямик]{"entity": "subject", "role": "direction"} на 121 М
-    - 353 ° [напролом]{"entity": "subject", "role": "direction"}
-    - [на юг]{"entity": "subject", "role": "direction"} на 300 °
-    - 263 ° [в северную сторону]{"entity": "subject", "role": "direction"}
-    - 65 М [на восточный край]{"entity": "subject", "role": "direction"}
-    - [на запад]{"entity": "subject", "role": "direction"} на 86 °
-    - 293 ° [в сторону запада]{"entity": "subject", "role": "direction"}
-    - 57 М [назад]{"entity": "subject", "role": "direction"}
-    - 177 ° [в сторону севера]{"entity": "subject", "role": "direction"}
-    - 27 ° [вправо]{"entity": "subject", "role": "direction"}
-    - [напролом]{"entity": "subject", "role": "direction"} на 305 °
-    - [влево]{"entity": "subject", "role": "direction"} на 14 °
-    - [назад]{"entity": "subject", "role": "direction"} на 37 °
-    - 204 ° [по левую руку]{"entity": "subject", "role": "direction"}
-    - [на западный край]{"entity": "subject", "role": "direction"} на 54 м
-    - [прямо по курсу]{"entity": "subject", "role": "direction"} на 181 °
-    - 345 м [на запад]{"entity": "subject", "role": "direction"}
-    - 308 ° [в сторону запада]{"entity": "subject", "role": "direction"}
-    - [взапядки]{"entity": "subject", "role": "direction"} на 128 °
-    - 40 ° [в западную сторону]{"entity": "subject", "role": "direction"}
-    - [по левую руку]{"entity": "subject", "role": "direction"} на 99 м
-    - 189 ° [обратно]{"entity": "subject", "role": "direction"}
-    - 176 м [напрямик]{"entity": "subject", "role": "direction"}
-    - 84 м [обертасом]{"entity": "subject", "role": "direction"}
-    - 239 ° [напролом]{"entity": "subject", "role": "direction"}
-    - 88 М [по правую руку]{"entity": "subject", "role": "direction"}
-    - 71 ° [на западный край]{"entity": "subject", "role": "direction"}
-    - [на запад]{"entity": "subject", "role": "direction"} на 61 М
-    - 98 ° [по левую руку]{"entity": "subject", "role": "direction"}
-    - 332 ° [в левую сторону]{"entity": "subject", "role": "direction"}
-    - 360 ° [на попятную]{"entity": "subject", "role": "direction"}
-    - [в сторону запада]{"entity": "subject", "role": "direction"} на 259 °
-    - 257 м [напролом]{"entity": "subject", "role": "direction"}
-    - [в южную сторону]{"entity": "subject", "role": "direction"} на 303 °
-    - 100 ° [прямо]{"entity": "subject", "role": "direction"}
-    - 55 М [в левую сторону]{"entity": "subject", "role": "direction"}
-    - [в сторону севера]{"entity": "subject", "role": "direction"} на 109 м
-    - 103 М [по правую руку]{"entity": "subject", "role": "direction"}
-    - 189 м [прямо по курсу]{"entity": "subject", "role": "direction"}
-    - 34 ° [налево]{"entity": "subject", "role": "direction"}
-    - 338 ° [напрямик]{"entity": "subject", "role": "direction"}
-    - [на восточный край]{"entity": "subject", "role": "direction"} на 54 °
-    - [на север]{"entity": "subject", "role": "direction"} на 226 м
-    - [в правую сторону]{"entity": "subject", "role": "direction"} на 252 °
-    - 35 М [в южную сторону]{"entity": "subject", "role": "direction"}
-    - 312 ° [на юг]{"entity": "subject", "role": "direction"}
-    - 3 ° [влево]{"entity": "subject", "role": "direction"}
-    - [напролом]{"entity": "subject", "role": "direction"} на 350 М
-    - 342 ° [в сторону запада]{"entity": "subject", "role": "direction"}
-    - 302 м [обертасом]{"entity": "subject", "role": "direction"}
-    - [вперед]{"entity": "subject", "role": "direction"} на 40 м
-    - 235 М [на попятную]{"entity": "subject", "role": "direction"}
-    - [напролом]{"entity": "subject", "role": "direction"}
-    - [по правую руку]{"entity": "subject", "role": "direction"}
-    - [возвратно]{"entity": "subject", "role": "direction"} на 189 °
-    - 338 ° [в южную сторону]{"entity": "subject", "role": "direction"}
-    - 26 м [в южную сторону]{"entity": "subject", "role": "direction"}
-    - [в южную сторону]{"entity": "subject", "role": "direction"} на 13 °
-    - 306 м [по правую руку]{"entity": "subject", "role": "direction"}
-    - 329 ° [направо]{"entity": "subject", "role": "direction"}
-    - 21 ° [на север]{"entity": "subject", "role": "direction"}
-    - 14 ° [в западную сторону]{"entity": "subject", "role": "direction"}
-    - [в обратном направлении]{"entity": "subject", "role": "direction"} на 142 М
-    - [налево]{"entity": "subject", "role": "direction"} на 42 м
-    - [налево]{"entity": "subject", "role": "direction"} на 291 °
-    - [на северный край]{"entity": "subject", "role": "direction"} на 291 °
-    - [влево]{"entity": "subject", "role": "direction"} на 263 °
-    - [на северный край]{"entity": "subject", "role": "direction"} на 233 М
-    - [на северный край]{"entity": "subject", "role": "direction"} на 216 М
-    - [напролом]{"entity": "subject", "role": "direction"} на 119 м
-    - 255 м [в правую сторону]{"entity": "subject", "role": "direction"}
-    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 87 М
-    - 21 ° [на восточный край]{"entity": "subject", "role": "direction"}
-    - 71 ° [на запад]{"entity": "subject", "role": "direction"}
-    - [в южную сторону]{"entity": "subject", "role": "direction"} на 81 м
-    - [в обратном направлении]{"entity": "subject", "role": "direction"} на 328 °
-    - [на западный край]{"entity": "subject", "role": "direction"} на 13 °
-    - 8 ° [на западный край]{"entity": "subject", "role": "direction"}
-    - 109 М [в сторону востока]{"entity": "subject", "role": "direction"}
-    - 101 ° [в сторону запада]{"entity": "subject", "role": "direction"}
-    - [в сторону севера]{"entity": "subject", "role": "direction"} на 213 М
-    - [обратно]{"entity": "subject", "role": "direction"} на 86 М
-    - [в северную сторону]{"entity": "subject", "role": "direction"} на 260 м
-    - 26 м [прямо по курсу]{"entity": "subject", "role": "direction"}
-    - [на западный край]{"entity": "subject", "role": "direction"} на 17 м
-    - [направо]{"entity": "subject", "role": "direction"} на 126 м
-    - [в южную сторону]{"entity": "subject", "role": "direction"} на 114 м
-    - 51 ° [напролом]{"entity": "subject", "role": "direction"}
-    - 159 М [в сторону юга]{"entity": "subject", "role": "direction"}
-    - [влево]{"entity": "subject", "role": "direction"} на 130 М
-    - [прямо]{"entity": "subject", "role": "direction"} на 248 °
-    - [в сторону севера]{"entity": "subject", "role": "direction"} на 316 М
-    - [обертасом]{"entity": "subject", "role": "direction"} на 38 °
-    - [на юг]{"entity": "subject", "role": "direction"} на 201 м
-    - [в сторону востока]{"entity": "subject", "role": "direction"} на 162 М
-    - 127 М [на север]{"entity": "subject", "role": "direction"}
-    - 240 ° [в восточную сторону]{"entity": "subject", "role": "direction"}
-    - 83 М [прямо по курсу]{"entity": "subject", "role": "direction"}
-    - 170 м [в сторону востока]{"entity": "subject", "role": "direction"}
-    - [направо]{"entity": "subject", "role": "direction"} на 357 м
-    - 154 ° [на восточный край]{"entity": "subject", "role": "direction"}
-    - [взапядки]{"entity": "subject", "role": "direction"} на 98 м
-    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 109 °
-    - 91 ° [на южный край]{"entity": "subject", "role": "direction"}
-    - 240 ° [напролом]{"entity": "subject", "role": "direction"}
-    - [по левую руку]{"entity": "subject", "role": "direction"} на 353 °
-    - 133 М [в восточную сторону]{"entity": "subject", "role": "direction"}
-    - 232 м [на запад]{"entity": "subject", "role": "direction"}
-    - 300 ° [на восток]{"entity": "subject", "role": "direction"}
-    - [на северный край]{"entity": "subject", "role": "direction"} на 3 М
-    - 245 М [прямо по курсу]{"entity": "subject", "role": "direction"}
-    - 46 ° [на западный край]{"entity": "subject", "role": "direction"}
-    - [вправо]{"entity": "subject", "role": "direction"} на 223 °
-    - 237 м [на запад]{"entity": "subject", "role": "direction"}
-    - [задом]{"entity": "subject", "role": "direction"} на 281 М
-    - [на северный край]{"entity": "subject", "role": "direction"} на 238 °
-    - [взад]{"entity": "subject", "role": "direction"}
-    - [прямо]{"entity": "subject", "role": "direction"} на 281 м
-    - [в западную сторону]{"entity": "subject", "role": "direction"} на 16 °
-    - [в правую сторону]{"entity": "subject", "role": "direction"} на 73 М
-    - [налево]{"entity": "subject", "role": "direction"} на 128 м
-    - [влево]{"entity": "subject", "role": "direction"} на 53 °
-    - [на западный край]{"entity": "subject", "role": "direction"} на 106 М
-    - 121 м [направо]{"entity": "subject", "role": "direction"}
-    - [в южную сторону]{"entity": "subject", "role": "direction"} на 264 °
-    - 306 ° [задом]{"entity": "subject", "role": "direction"}
-    - 26 м [в западную сторону]{"entity": "subject", "role": "direction"}
-    - [по левую руку]{"entity": "subject", "role": "direction"} на 103 м
-    - 159 ° [в восточную сторону]{"entity": "subject", "role": "direction"}
-    - [влево]{"entity": "subject", "role": "direction"} на 320 м
-    - [в обратном направлении]{"entity": "subject", "role": "direction"}
-    - [прямо по курсу]{"entity": "subject", "role": "direction"} на 11 °
-    - [в сторону севера]{"entity": "subject", "role": "direction"}
-    - 325 м [в сторону юга]{"entity": "subject", "role": "direction"}
-    - 345 ° [в западную сторону]{"entity": "subject", "role": "direction"}
-    - 35 м [на южный край]{"entity": "subject", "role": "direction"}
-    - [вправо]{"entity": "subject", "role": "direction"} на 225 °
-    - 11 ° [на север]{"entity": "subject", "role": "direction"}
-    - 327 ° [назад]{"entity": "subject", "role": "direction"}
-    - 111 ° [задом]{"entity": "subject", "role": "direction"}
-    - [по правую руку]{"entity": "subject", "role": "direction"} на 17 м
-    - 98 М [на западный край]{"entity": "subject", "role": "direction"}
-    - [на южный край]{"entity": "subject", "role": "direction"} на 158 °
-    - [в западную сторону]{"entity": "subject", "role": "direction"} на 38 °
-    - 62 ° [в северную сторону]{"entity": "subject", "role": "direction"}
-    - [напрямик]{"entity": "subject", "role": "direction"} на 277 °
-    - [в сторону запада]{"entity": "subject", "role": "direction"} на 12 М
-    - [на северный край]{"entity": "subject", "role": "direction"} на 27 °
-    - 321 м [на попятную]{"entity": "subject", "role": "direction"}
-    - 120 ° [вперед]{"entity": "subject", "role": "direction"}
-    - [напролом]{"entity": "subject", "role": "direction"} на 220 М
-    - [на северный край]{"entity": "subject", "role": "direction"} на 187 °
-    - [по левую руку]{"entity": "subject", "role": "direction"} на 242 °
-    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 13 °
-    - [обертасом]{"entity": "subject", "role": "direction"} на 260 М
-    - [в левую сторону]{"entity": "subject", "role": "direction"} на 115 °
+    - [в левую сторону]{"entity": "subject", "role": "direction"} на 99 °
+    - 338 ° [на юг]{"entity": "subject", "role": "direction"}
+    - 200 ° [на юг]{"entity": "subject", "role": "direction"}
+    - 84 ° [в сторону запада]{"entity": "subject", "role": "direction"}
+    - [задом]{"entity": "subject", "role": "direction"} на 350 °
+    - [обертасом]{"entity": "subject", "role": "direction"} на 91 °
+    - [в сторону севера]{"entity": "subject", "role": "direction"} на 265 М
+    - 115 ° [на юг]{"entity": "subject", "role": "direction"}
+    - 282 ° [на северный край]{"entity": "subject", "role": "direction"}
+    - 103 ° [в правую сторону]{"entity": "subject", "role": "direction"}
+    - [в сторону севера]{"entity": "subject", "role": "direction"} на 269 °
+    - [в сторону востока]{"entity": "subject", "role": "direction"} на 250 °
+    - 304 м [в сторону юга]{"entity": "subject", "role": "direction"}
+    - 142 ° [на юг]{"entity": "subject", "role": "direction"}
+    - [влево]{"entity": "subject", "role": "direction"} на 177 М
+    - [на северный край]{"entity": "subject", "role": "direction"} на 71 м
+    - [назад]{"entity": "subject", "role": "direction"} на 249 м
+    - 25 ° [напролом]{"entity": "subject", "role": "direction"}
+    - [на восток]{"entity": "subject", "role": "direction"} на 202 °
+    - [в сторону востока]{"entity": "subject", "role": "direction"} на 74 м
+    - [на восточный край]{"entity": "subject", "role": "direction"} на 354 М
+    - 133 М [на восточный край]{"entity": "subject", "role": "direction"}
+    - [прямо по курсу]{"entity": "subject", "role": "direction"} на 221 м
+    - 44 ° [налево]{"entity": "subject", "role": "direction"}
+    - 113 М [вперед]{"entity": "subject", "role": "direction"}
+    - [по левую руку]{"entity": "subject", "role": "direction"} на 61 °
+    - [в западную сторону]{"entity": "subject", "role": "direction"} на 11 °
+    - [на северный край]{"entity": "subject", "role": "direction"} на 147 °
+    - 107 м [вспять]{"entity": "subject", "role": "direction"}
+    - [напрямик]{"entity": "subject", "role": "direction"} на 72 М
+    - 164 ° [на юг]{"entity": "subject", "role": "direction"}
+    - [в западную сторону]{"entity": "subject", "role": "direction"} на 90 М
+    - [в сторону юга]{"entity": "subject", "role": "direction"} на 153 м
+    - 220 ° [на северный край]{"entity": "subject", "role": "direction"}
+    - 99 ° [в западную сторону]{"entity": "subject", "role": "direction"}
+    - 185 ° [влево]{"entity": "subject", "role": "direction"}
+    - 25 м [влево]{"entity": "subject", "role": "direction"}
+    - 26 ° [на северный край]{"entity": "subject", "role": "direction"}
+    - [на восточный край]{"entity": "subject", "role": "direction"} на 135 °
+    - 5 ° [в сторону запада]{"entity": "subject", "role": "direction"}
+    - 241 ° [влево]{"entity": "subject", "role": "direction"}
+    - [на южный край]{"entity": "subject", "role": "direction"} на 303 м
+    - [по правую руку]{"entity": "subject", "role": "direction"} на 264 м
+    - 229 ° [на восточный край]{"entity": "subject", "role": "direction"}
+    - 56 М [на западный край]{"entity": "subject", "role": "direction"}
+    - 161 М [взад]{"entity": "subject", "role": "direction"}
+    - [на восточный край]{"entity": "subject", "role": "direction"} на 251 °
+    - [вправо]{"entity": "subject", "role": "direction"} на 28 м
+    - 154 М [по правую руку]{"entity": "subject", "role": "direction"}
+    - 222 м [по левую руку]{"entity": "subject", "role": "direction"}
+    - [напролом]{"entity": "subject", "role": "direction"} на 129 °
+    - 141 м [в правую сторону]{"entity": "subject", "role": "direction"}
+    - 299 ° [направо]{"entity": "subject", "role": "direction"}
+    - 105 ° [обратно]{"entity": "subject", "role": "direction"}
+    - [назад]{"entity": "subject", "role": "direction"} на 96 °
+    - [в южную сторону]{"entity": "subject", "role": "direction"} на 143 М
+    - 29 ° [вперед]{"entity": "subject", "role": "direction"}
+    - [на западный край]{"entity": "subject", "role": "direction"} на 171 °
+    - [взад]{"entity": "subject", "role": "direction"} на 260 °
+    - [вправо]{"entity": "subject", "role": "direction"} на 190 М
+    - [налево]{"entity": "subject", "role": "direction"} на 80 °
+    - 112 м [вперед]{"entity": "subject", "role": "direction"}
+    - [направо]{"entity": "subject", "role": "direction"} на 175 °
+    - 145 ° [в южную сторону]{"entity": "subject", "role": "direction"}
+    - [на север]{"entity": "subject", "role": "direction"} на 173 М
+    - 102 м [в южную сторону]{"entity": "subject", "role": "direction"}
+    - 48 М [в сторону севера]{"entity": "subject", "role": "direction"}
+    - [в восточную сторону]{"entity": "subject", "role": "direction"}
+    - [в левую сторону]{"entity": "subject", "role": "direction"} на 272 м
+    - [на юг]{"entity": "subject", "role": "direction"} на 111 °
+    - 312 м [в правую сторону]{"entity": "subject", "role": "direction"}
+    - [в южную сторону]{"entity": "subject", "role": "direction"} на 301 м
+    - 242 ° [на северный край]{"entity": "subject", "role": "direction"}
+    - 24 ° [влево]{"entity": "subject", "role": "direction"}
     - [напрямик]{"entity": "subject", "role": "direction"}
-    - [на юг]{"entity": "subject", "role": "direction"} на 212 М
-    - [в левую сторону]{"entity": "subject", "role": "direction"} на 202 М
-    - 247 ° [на восточный край]{"entity": "subject", "role": "direction"}
-    - [в правую сторону]{"entity": "subject", "role": "direction"} на 129 °
-    - 325 М [прямо по курсу]{"entity": "subject", "role": "direction"}
-    - 163 ° [прямо]{"entity": "subject", "role": "direction"}
-    - [на запад]{"entity": "subject", "role": "direction"} на 322 °
-    - 181 м [на восток]{"entity": "subject", "role": "direction"}
-    - 290 ° [прямо по курсу]{"entity": "subject", "role": "direction"}
-    - [на восток]{"entity": "subject", "role": "direction"} на 156 °
-    - [на восточный край]{"entity": "subject", "role": "direction"} на 203 °
-    - [прямо по курсу]{"entity": "subject", "role": "direction"} на 300 °
-    - [в правую сторону]{"entity": "subject", "role": "direction"} на 105 м
-    - [на юг]{"entity": "subject", "role": "direction"} на 1 °
-    - [влево]{"entity": "subject", "role": "direction"} на 235 М
-    - 326 ° [в северную сторону]{"entity": "subject", "role": "direction"}
-    - [напрямик]{"entity": "subject", "role": "direction"} на 138 м
-    - [обратно]{"entity": "subject", "role": "direction"} на 152 °
-    - 348 м [напрямик]{"entity": "subject", "role": "direction"}
-    - 148 ° [прямо по курсу]{"entity": "subject", "role": "direction"}
-    - [прямо]{"entity": "subject", "role": "direction"} на 282 м
-    - 27 М [вправо]{"entity": "subject", "role": "direction"}
-    - 191 ° [в левую сторону]{"entity": "subject", "role": "direction"}
-    - [в сторону юга]{"entity": "subject", "role": "direction"} на 346 °
-    - [в правую сторону]{"entity": "subject", "role": "direction"} на 323 м
-    - 166 м [в сторону севера]{"entity": "subject", "role": "direction"}
-    - [в правую сторону]{"entity": "subject", "role": "direction"} на 68 °
-    - 301 М [на восточный край]{"entity": "subject", "role": "direction"}
-    - [взад]{"entity": "subject", "role": "direction"} на 133 м
-    - [в сторону севера]{"entity": "subject", "role": "direction"} на 167 М
-    - 88 м [на восток]{"entity": "subject", "role": "direction"}
-    - 118 М [на восток]{"entity": "subject", "role": "direction"}
-    - 205 ° [напролом]{"entity": "subject", "role": "direction"}
-    - [в северную сторону]{"entity": "subject", "role": "direction"} на 238 м
-    - [в левую сторону]{"entity": "subject", "role": "direction"} на 85 °
-    - [напрямик]{"entity": "subject", "role": "direction"} на 344 °
-    - [в левую сторону]{"entity": "subject", "role": "direction"} на 81 °
-    - [в сторону севера]{"entity": "subject", "role": "direction"} на 336 °
-    - 123 м [на южный край]{"entity": "subject", "role": "direction"}
-    - 137 ° [в сторону востока]{"entity": "subject", "role": "direction"}
-    - [обратно]{"entity": "subject", "role": "direction"} на 303 °
-    - 65 м [на север]{"entity": "subject", "role": "direction"}
-    - [в левую сторону]{"entity": "subject", "role": "direction"} на 94 °
-    - 178 ° [обертасом]{"entity": "subject", "role": "direction"}
-    - [в сторону юга]{"entity": "subject", "role": "direction"} на 148 М
-    - 129 ° [в сторону запада]{"entity": "subject", "role": "direction"}
-    - 263 М [налево]{"entity": "subject", "role": "direction"}
-    - [на южный край]{"entity": "subject", "role": "direction"} на 112 °
-    - [в северную сторону]{"entity": "subject", "role": "direction"} на 100 °
-    - [взад]{"entity": "subject", "role": "direction"} на 171 °
-    - 235 ° [на юг]{"entity": "subject", "role": "direction"}
-    - 248 М [взапядки]{"entity": "subject", "role": "direction"}
-    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 137 м
-    - 184 ° [взапядки]{"entity": "subject", "role": "direction"}
-    - [напрямик]{"entity": "subject", "role": "direction"} на 359 °
-    - 115 ° [по правую руку]{"entity": "subject", "role": "direction"}
-    - 98 М [на южный край]{"entity": "subject", "role": "direction"}
-    - 236 М [налево]{"entity": "subject", "role": "direction"}
-    - 327 ° [в левую сторону]{"entity": "subject", "role": "direction"}
-    - [прямо по курсу]{"entity": "subject", "role": "direction"} на 91 М
-    - 79 м [на восток]{"entity": "subject", "role": "direction"}
-    - 227 ° [в южную сторону]{"entity": "subject", "role": "direction"}
-    - [в левую сторону]{"entity": "subject", "role": "direction"} на 202 °
-    - [вправо]{"entity": "subject", "role": "direction"} на 159 М
-    - [на север]{"entity": "subject", "role": "direction"} на 254 М
-    - [напрямик]{"entity": "subject", "role": "direction"} на 223 °
-    - 81 ° [взад]{"entity": "subject", "role": "direction"}
-    - 37 м [в сторону запада]{"entity": "subject", "role": "direction"}
-    - 45 ° [вправо]{"entity": "subject", "role": "direction"}
-    - [на запад]{"entity": "subject", "role": "direction"} на 78 °
-    - [назад]{"entity": "subject", "role": "direction"} на 154 °
-    - [в сторону юга]{"entity": "subject", "role": "direction"} на 43 °
-    - [на запад]{"entity": "subject", "role": "direction"} на 211 °
-    - 90 м [в северную сторону]{"entity": "subject", "role": "direction"}
-    - 18 м [обратно]{"entity": "subject", "role": "direction"}
-    - 238 м [на запад]{"entity": "subject", "role": "direction"}
-    - [в сторону юга]{"entity": "subject", "role": "direction"} на 86 °
-    - 199 ° [в правую сторону]{"entity": "subject", "role": "direction"}
-    - 138 М [в сторону запада]{"entity": "subject", "role": "direction"}
-    - 190 ° [на север]{"entity": "subject", "role": "direction"}
-    - [в западную сторону]{"entity": "subject", "role": "direction"} на 121 м
-    - [на юг]{"entity": "subject", "role": "direction"} на 214 м
-    - [возвратно]{"entity": "subject", "role": "direction"}
-    - [назад]{"entity": "subject", "role": "direction"} на 166 м
-    - 237 ° [по левую руку]{"entity": "subject", "role": "direction"}
-    - 181 м [в правую сторону]{"entity": "subject", "role": "direction"}
-    - [на запад]{"entity": "subject", "role": "direction"} на 27 °
-    - 127 М [в левую сторону]{"entity": "subject", "role": "direction"}
-    - 86 м [влево]{"entity": "subject", "role": "direction"}
-    - 317 ° [в северную сторону]{"entity": "subject", "role": "direction"}
-    - [на север]{"entity": "subject", "role": "direction"} на 353 м
-    - [прямо по курсу]{"entity": "subject", "role": "direction"} на 200 °
-    - [на запад]{"entity": "subject", "role": "direction"} на 37 М
-    - 166 ° [на западный край]{"entity": "subject", "role": "direction"}
-    - 110 М [в сторону севера]{"entity": "subject", "role": "direction"}
-    - [в сторону севера]{"entity": "subject", "role": "direction"} на 210 °
-    - 48 ° [налево]{"entity": "subject", "role": "direction"}
-    - 300 м [на западный край]{"entity": "subject", "role": "direction"}
-    - 10 ° [в северную сторону]{"entity": "subject", "role": "direction"}
-    - 23 ° [по левую руку]{"entity": "subject", "role": "direction"}
-    - 271 М [назад]{"entity": "subject", "role": "direction"}
-    - [напрямик]{"entity": "subject", "role": "direction"} на 34 М
-    - 37 М [в левую сторону]{"entity": "subject", "role": "direction"}
-    - 339 ° [вправо]{"entity": "subject", "role": "direction"}
-    - 177 ° [вперед]{"entity": "subject", "role": "direction"}
-    - [налево]{"entity": "subject", "role": "direction"} на 130 °
-    - [задом]{"entity": "subject", "role": "direction"} на 244 М
-    - 330 М [налево]{"entity": "subject", "role": "direction"}
-    - [по левую руку]{"entity": "subject", "role": "direction"} на 293 °
-    - 313 ° [на север]{"entity": "subject", "role": "direction"}
-    - 34 ° [на юг]{"entity": "subject", "role": "direction"}
-    - 29 М [на попятную]{"entity": "subject", "role": "direction"}
-    - [в северную сторону]{"entity": "subject", "role": "direction"} на 329 °
-    - 318 м [влево]{"entity": "subject", "role": "direction"}
-    - [на восток]{"entity": "subject", "role": "direction"} на 51 м
-    - [в западную сторону]{"entity": "subject", "role": "direction"} на 26 м
-    - [по левую руку]{"entity": "subject", "role": "direction"} на 321 °
-    - 352 м [напролом]{"entity": "subject", "role": "direction"}
-    - [вспять]{"entity": "subject", "role": "direction"}
-    - [на южный край]{"entity": "subject", "role": "direction"} на 88 °
-    - 322 ° [возвратно]{"entity": "subject", "role": "direction"}
-    - [по правую руку]{"entity": "subject", "role": "direction"} на 37 М
-    - 106 ° [в сторону севера]{"entity": "subject", "role": "direction"}
-    - [вспять]{"entity": "subject", "role": "direction"} на 134 М
-    - [на попятную]{"entity": "subject", "role": "direction"} на 114 М
-    - 50 ° [на юг]{"entity": "subject", "role": "direction"}
-    - [в сторону севера]{"entity": "subject", "role": "direction"} на 73 М
-    - 149 ° [напролом]{"entity": "subject", "role": "direction"}
-    - [задом]{"entity": "subject", "role": "direction"} на 345 м
-    - 175 м [на восточный край]{"entity": "subject", "role": "direction"}
-    - 218 М [в сторону востока]{"entity": "subject", "role": "direction"}
-    - 229 М [в сторону запада]{"entity": "subject", "role": "direction"}
-    - [на западный край]{"entity": "subject", "role": "direction"} на 17 °
-    - [в сторону юга]{"entity": "subject", "role": "direction"} на 196 М
-    - 232 М [на западный край]{"entity": "subject", "role": "direction"}
-    - 250 М [вперед]{"entity": "subject", "role": "direction"}
-    - [вперед]{"entity": "subject", "role": "direction"} на 21 °
-    - [на запад]{"entity": "subject", "role": "direction"} на 220 м
-    - 76 М [по левую руку]{"entity": "subject", "role": "direction"}
-    - 73 м [обертасом]{"entity": "subject", "role": "direction"}
-    - 103 ° [на северный край]{"entity": "subject", "role": "direction"}
-    - [на южный край]{"entity": "subject", "role": "direction"}
-    - 76 м [на восточный край]{"entity": "subject", "role": "direction"}
-    - [обертасом]{"entity": "subject", "role": "direction"} на 103 °
-    - [прямо]{"entity": "subject", "role": "direction"} на 171 М
-    - [в левую сторону]{"entity": "subject", "role": "direction"} на 64 °
-    - 126 ° [направо]{"entity": "subject", "role": "direction"}
-    - [на север]{"entity": "subject", "role": "direction"} на 169 °
-    - 261 М [влево]{"entity": "subject", "role": "direction"}
-    - 213 ° [вспять]{"entity": "subject", "role": "direction"}
-    - 111 ° [на западный край]{"entity": "subject", "role": "direction"}
-    - 174 ° [на южный край]{"entity": "subject", "role": "direction"}
-    - [в южную сторону]{"entity": "subject", "role": "direction"} на 349 °
-    - [возвратно]{"entity": "subject", "role": "direction"} на 359 М
-    - [в сторону севера]{"entity": "subject", "role": "direction"} на 70 °
-    - 102 М [по левую руку]{"entity": "subject", "role": "direction"}
-    - [возвратно]{"entity": "subject", "role": "direction"} на 125 М
-    - 175 ° [в сторону севера]{"entity": "subject", "role": "direction"}
-    - [в сторону востока]{"entity": "subject", "role": "direction"}
-    - [возвратно]{"entity": "subject", "role": "direction"} на 230 °
-    - [в правую сторону]{"entity": "subject", "role": "direction"}
-    - 183 ° [в сторону востока]{"entity": "subject", "role": "direction"}
-    - 87 М [вправо]{"entity": "subject", "role": "direction"}
-    - 116 М [в северную сторону]{"entity": "subject", "role": "direction"}
+    - 3 м [в сторону севера]{"entity": "subject", "role": "direction"}
+    - 153 М [прямо]{"entity": "subject", "role": "direction"}
+    - [на западный край]{"entity": "subject", "role": "direction"} на 187 °
+    - 147 ° [обратно]{"entity": "subject", "role": "direction"}
+    - [обратно]{"entity": "subject", "role": "direction"} на 331 М
+    - 26 ° [по левую руку]{"entity": "subject", "role": "direction"}
+    - [на север]{"entity": "subject", "role": "direction"}
+    - [на западный край]{"entity": "subject", "role": "direction"} на 103 М
+    - 97 м [задом]{"entity": "subject", "role": "direction"}
+    - [в северную сторону]{"entity": "subject", "role": "direction"} на 27 °
+    - 82 м [прямо]{"entity": "subject", "role": "direction"}
+    - 50 м [в западную сторону]{"entity": "subject", "role": "direction"}
+    - [взапядки]{"entity": "subject", "role": "direction"}
+    - 221 ° [в левую сторону]{"entity": "subject", "role": "direction"}
+    - 178 м [в северную сторону]{"entity": "subject", "role": "direction"}
+    - [направо]{"entity": "subject", "role": "direction"} на 77 °
+    - [в южную сторону]{"entity": "subject", "role": "direction"} на 96 М
+    - [напролом]{"entity": "subject", "role": "direction"} на 44 °
+    - [вспять]{"entity": "subject", "role": "direction"} на 350 °
+    - 161 ° [в сторону запада]{"entity": "subject", "role": "direction"}
+    - [прямо по курсу]{"entity": "subject", "role": "direction"} на 29 М
+    - [прямо]{"entity": "subject", "role": "direction"} на 186 м
+    - [в левую сторону]{"entity": "subject", "role": "direction"} на 314 °
+    - [влево]{"entity": "subject", "role": "direction"} на 70 М
+    - [влево]{"entity": "subject", "role": "direction"} на 143 М
+    - 3 ° [вперед]{"entity": "subject", "role": "direction"}
+    - [налево]{"entity": "subject", "role": "direction"} на 46 °
+    - 137 м [в правую сторону]{"entity": "subject", "role": "direction"}
+    - 209 ° [влево]{"entity": "subject", "role": "direction"}
+    - [напрямик]{"entity": "subject", "role": "direction"} на 180 М
     - [в восточную сторону]{"entity": "subject", "role": "direction"} на 168 М
-    - [на север]{"entity": "subject", "role": "direction"} на 322 М
-    - [на северный край]{"entity": "subject", "role": "direction"} на 119 °
+    - [направо]{"entity": "subject", "role": "direction"} на 15 °
+    - [налево]{"entity": "subject", "role": "direction"} на 181 °
+    - 142 ° [в южную сторону]{"entity": "subject", "role": "direction"}
+    - [на северный край]{"entity": "subject", "role": "direction"} на 215 м
+    - [вправо]{"entity": "subject", "role": "direction"} на 125 М
+    - [на север]{"entity": "subject", "role": "direction"} на 252 М
+    - 87 ° [в левую сторону]{"entity": "subject", "role": "direction"}
+    - [в сторону востока]{"entity": "subject", "role": "direction"} на 298 м
+    - [направо]{"entity": "subject", "role": "direction"} на 330 М
+    - 309 ° [в сторону востока]{"entity": "subject", "role": "direction"}
+    - [прямо]{"entity": "subject", "role": "direction"} на 352 М
+    - 205 ° [в сторону востока]{"entity": "subject", "role": "direction"}
+    - [налево]{"entity": "subject", "role": "direction"} на 349 °
+    - [по левую руку]{"entity": "subject", "role": "direction"} на 131 °
+    - 138 ° [вправо]{"entity": "subject", "role": "direction"}
+    - [в сторону юга]{"entity": "subject", "role": "direction"} на 264 °
+    - 157 М [в восточную сторону]{"entity": "subject", "role": "direction"}
+    - [на запад]{"entity": "subject", "role": "direction"} на 264 °
+    - [в сторону запада]{"entity": "subject", "role": "direction"} на 221 °
+    - 190 М [обертасом]{"entity": "subject", "role": "direction"}
+    - [в обратном направлении]{"entity": "subject", "role": "direction"} на 267 °
+    - 165 ° [в сторону севера]{"entity": "subject", "role": "direction"}
+    - [в западную сторону]{"entity": "subject", "role": "direction"} на 22 м
+    - 204 ° [в сторону севера]{"entity": "subject", "role": "direction"}
+    - 312 ° [напрямик]{"entity": "subject", "role": "direction"}
+    - [на северный край]{"entity": "subject", "role": "direction"} на 201 °
+    - [на восток]{"entity": "subject", "role": "direction"} на 302 °
+    - [на север]{"entity": "subject", "role": "direction"} на 199 м
+    - 293 ° [возвратно]{"entity": "subject", "role": "direction"}
+    - [влево]{"entity": "subject", "role": "direction"} на 163 м
+    - [на запад]{"entity": "subject", "role": "direction"} на 62 М
+    - [в северную сторону]{"entity": "subject", "role": "direction"} на 351 °
+    - [в правую сторону]{"entity": "subject", "role": "direction"} на 10 °
+    - 83 ° [прямо]{"entity": "subject", "role": "direction"}
+    - [на восток]{"entity": "subject", "role": "direction"} на 211 М
+    - 296 ° [взапядки]{"entity": "subject", "role": "direction"}
+    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 152 °
+    - [в сторону юга]{"entity": "subject", "role": "direction"}
+    - 206 М [в восточную сторону]{"entity": "subject", "role": "direction"}
+    - [направо]{"entity": "subject", "role": "direction"}
+    - [на южный край]{"entity": "subject", "role": "direction"} на 356 м
+    - [вправо]{"entity": "subject", "role": "direction"} на 317 м
+    - 165 ° [в южную сторону]{"entity": "subject", "role": "direction"}
+    - 84 ° [в южную сторону]{"entity": "subject", "role": "direction"}
+    - 106 ° [на западный край]{"entity": "subject", "role": "direction"}
+    - [влево]{"entity": "subject", "role": "direction"} на 351 °
+    - [вправо]{"entity": "subject", "role": "direction"} на 236 М
+    - 279 м [налево]{"entity": "subject", "role": "direction"}
+    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 248 °
+    - [в правую сторону]{"entity": "subject", "role": "direction"} на 235 °
+    - [в сторону севера]{"entity": "subject", "role": "direction"} на 91 М
+    - [в северную сторону]{"entity": "subject", "role": "direction"} на 2 °
+    - 240 ° [возвратно]{"entity": "subject", "role": "direction"}
+    - [вспять]{"entity": "subject", "role": "direction"} на 29 М
+    - 45 М [в левую сторону]{"entity": "subject", "role": "direction"}
+    - [задом]{"entity": "subject", "role": "direction"} на 210 °
+    - [в южную сторону]{"entity": "subject", "role": "direction"} на 60 °
+    - [в южную сторону]{"entity": "subject", "role": "direction"} на 55 °
+    - 37 М [вперед]{"entity": "subject", "role": "direction"}
+    - [обертасом]{"entity": "subject", "role": "direction"}
+    - [взад]{"entity": "subject", "role": "direction"} на 14 М
+    - [в обратном направлении]{"entity": "subject", "role": "direction"} на 99 °
+    - 312 ° [прямо по курсу]{"entity": "subject", "role": "direction"}
+    - 207 ° [на север]{"entity": "subject", "role": "direction"}
+    - [в западную сторону]{"entity": "subject", "role": "direction"} на 82 М
+    - [по правую руку]{"entity": "subject", "role": "direction"} на 253 М
+    - 342 ° [на западный край]{"entity": "subject", "role": "direction"}
+    - 358 М [на восточный край]{"entity": "subject", "role": "direction"}
+    - 196 ° [по левую руку]{"entity": "subject", "role": "direction"}
+    - 198 М [в сторону запада]{"entity": "subject", "role": "direction"}
+    - [на южный край]{"entity": "subject", "role": "direction"} на 297 М
+    - 339 ° [по левую руку]{"entity": "subject", "role": "direction"}
+    - [на восточный край]{"entity": "subject", "role": "direction"} на 317 °
+    - [напролом]{"entity": "subject", "role": "direction"} на 81 М
+    - [взад]{"entity": "subject", "role": "direction"}
+    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 59 м
+    - 234 м [на запад]{"entity": "subject", "role": "direction"}
+    - 325 М [на север]{"entity": "subject", "role": "direction"}
+    - 39 ° [прямо]{"entity": "subject", "role": "direction"}
+    - 114 м [на запад]{"entity": "subject", "role": "direction"}
+    - 200 М [прямо]{"entity": "subject", "role": "direction"}
+    - 311 м [на северный край]{"entity": "subject", "role": "direction"}
+    - 62 М [в западную сторону]{"entity": "subject", "role": "direction"}
+    - [задом]{"entity": "subject", "role": "direction"}
+    - [вправо]{"entity": "subject", "role": "direction"} на 261 °
+    - 34 ° [вперед]{"entity": "subject", "role": "direction"}
+    - [по левую руку]{"entity": "subject", "role": "direction"} на 29 °
+    - [возвратно]{"entity": "subject", "role": "direction"} на 63 °
+    - [на южный край]{"entity": "subject", "role": "direction"} на 314 °
+    - [влево]{"entity": "subject", "role": "direction"} на 99 м
+    - 18 М [на восток]{"entity": "subject", "role": "direction"}
+    - [на северный край]{"entity": "subject", "role": "direction"} на 173 °
+    - 281 М [вперед]{"entity": "subject", "role": "direction"}
+    - 26 М [налево]{"entity": "subject", "role": "direction"}
+    - 234 ° [на запад]{"entity": "subject", "role": "direction"}
+    - [прямо]{"entity": "subject", "role": "direction"} на 111 м
+    - [вправо]{"entity": "subject", "role": "direction"} на 148 °
+    - [на западный край]{"entity": "subject", "role": "direction"} на 46 °
+    - [обертасом]{"entity": "subject", "role": "direction"} на 36 °
+    - 272 ° [на северный край]{"entity": "subject", "role": "direction"}
+    - 79 М [прямо по курсу]{"entity": "subject", "role": "direction"}
+    - 280 ° [вправо]{"entity": "subject", "role": "direction"}
+    - 301 М [налево]{"entity": "subject", "role": "direction"}
+    - 104 ° [в сторону запада]{"entity": "subject", "role": "direction"}
+    - [по правую руку]{"entity": "subject", "role": "direction"}
+    - 5 ° [в сторону севера]{"entity": "subject", "role": "direction"}
+    - [направо]{"entity": "subject", "role": "direction"} на 260 °
+    - 95 М [на восток]{"entity": "subject", "role": "direction"}
+    - 47 ° [возвратно]{"entity": "subject", "role": "direction"}
+    - [по левую руку]{"entity": "subject", "role": "direction"} на 42 М
+    - [на юг]{"entity": "subject", "role": "direction"} на 201 М
+    - [прямо]{"entity": "subject", "role": "direction"} на 132 °
+    - 280 ° [в сторону севера]{"entity": "subject", "role": "direction"}
+    - 308 м [налево]{"entity": "subject", "role": "direction"}
+    - 271 ° [обертасом]{"entity": "subject", "role": "direction"}
+    - [в сторону востока]{"entity": "subject", "role": "direction"} на 78 °
+    - 106 м [в западную сторону]{"entity": "subject", "role": "direction"}
+    - 72 М [напрямик]{"entity": "subject", "role": "direction"}
+    - 112 ° [на восток]{"entity": "subject", "role": "direction"}
+    - 241 М [прямо]{"entity": "subject", "role": "direction"}
+    - 52 ° [в сторону севера]{"entity": "subject", "role": "direction"}
+    - [прямо по курсу]{"entity": "subject", "role": "direction"} на 222 °
+    - 126 м [на северный край]{"entity": "subject", "role": "direction"}
+    - 17 М [в обратном направлении]{"entity": "subject", "role": "direction"}
+    - [обратно]{"entity": "subject", "role": "direction"}
+    - [напролом]{"entity": "subject", "role": "direction"} на 66 °
+    - 263 ° [обратно]{"entity": "subject", "role": "direction"}
+    - [вперед]{"entity": "subject", "role": "direction"} на 196 °
+    - 47 ° [в левую сторону]{"entity": "subject", "role": "direction"}
+    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 254 М
+    - 333 ° [налево]{"entity": "subject", "role": "direction"}
+    - 200 ° [направо]{"entity": "subject", "role": "direction"}
+    - 259 ° [на север]{"entity": "subject", "role": "direction"}
+    - 297 м [на северный край]{"entity": "subject", "role": "direction"}
+    - 28 ° [обертасом]{"entity": "subject", "role": "direction"}
+    - [по правую руку]{"entity": "subject", "role": "direction"} на 182 °
+    - 311 м [налево]{"entity": "subject", "role": "direction"}
+    - 283 ° [обертасом]{"entity": "subject", "role": "direction"}
+    - 343 м [по левую руку]{"entity": "subject", "role": "direction"}
+    - [прямо по курсу]{"entity": "subject", "role": "direction"} на 93 °
+    - [в южную сторону]{"entity": "subject", "role": "direction"} на 213 °
+    - 239 ° [по левую руку]{"entity": "subject", "role": "direction"}
+    - [на север]{"entity": "subject", "role": "direction"} на 71 °
+    - 266 ° [по правую руку]{"entity": "subject", "role": "direction"}
+    - 75 М [направо]{"entity": "subject", "role": "direction"}
+    - 216 м [на север]{"entity": "subject", "role": "direction"}
+    - 44 М [в сторону севера]{"entity": "subject", "role": "direction"}
+    - 292 ° [на юг]{"entity": "subject", "role": "direction"}
+    - 279 М [на восточный край]{"entity": "subject", "role": "direction"}
+    - [по левую руку]{"entity": "subject", "role": "direction"} на 32 °
+    - [в левую сторону]{"entity": "subject", "role": "direction"} на 250 °
+    - [в северную сторону]{"entity": "subject", "role": "direction"} на 275 М
+    - [напролом]{"entity": "subject", "role": "direction"} на 224 М
+    - 217 М [в южную сторону]{"entity": "subject", "role": "direction"}
+    - 136 м [на запад]{"entity": "subject", "role": "direction"}
+    - [направо]{"entity": "subject", "role": "direction"} на 33 М
+    - 41 ° [вправо]{"entity": "subject", "role": "direction"}
+    - 193 м [по правую руку]{"entity": "subject", "role": "direction"}
+    - 136 м [взапядки]{"entity": "subject", "role": "direction"}
+    - [в западную сторону]{"entity": "subject", "role": "direction"} на 301 м
+    - 247 ° [прямо]{"entity": "subject", "role": "direction"}
+    - [обратно]{"entity": "subject", "role": "direction"} на 49 °
+    - [на север]{"entity": "subject", "role": "direction"} на 244 °
+    - [на юг]{"entity": "subject", "role": "direction"}
+    - [на восток]{"entity": "subject", "role": "direction"} на 228 М
+    - 21 М [на север]{"entity": "subject", "role": "direction"}
+    - [обертасом]{"entity": "subject", "role": "direction"} на 8 М
+    - [влево]{"entity": "subject", "role": "direction"} на 61 м
+    - [в сторону востока]{"entity": "subject", "role": "direction"}
+    - 322 ° [на север]{"entity": "subject", "role": "direction"}
+    - [взад]{"entity": "subject", "role": "direction"} на 352 °
+    - 51 м [вправо]{"entity": "subject", "role": "direction"}
+    - 231 м [по левую руку]{"entity": "subject", "role": "direction"}
+    - [направо]{"entity": "subject", "role": "direction"} на 302 °
+    - [в обратном направлении]{"entity": "subject", "role": "direction"} на 19 °
+    - 276 М [на западный край]{"entity": "subject", "role": "direction"}
+    - [в южную сторону]{"entity": "subject", "role": "direction"} на 268 °
+    - [в северную сторону]{"entity": "subject", "role": "direction"} на 26 м
+    - 279 ° [в сторону юга]{"entity": "subject", "role": "direction"}
+    - 71 М [на восточный край]{"entity": "subject", "role": "direction"}
+    - [в сторону юга]{"entity": "subject", "role": "direction"} на 288 °
+    - [на южный край]{"entity": "subject", "role": "direction"} на 358 °
+    - [на юг]{"entity": "subject", "role": "direction"} на 41 м
+    - 359 М [в сторону севера]{"entity": "subject", "role": "direction"}
+    - [в северную сторону]{"entity": "subject", "role": "direction"} на 242 м
+    - [на юг]{"entity": "subject", "role": "direction"} на 224 °
+    - 50 ° [в восточную сторону]{"entity": "subject", "role": "direction"}
+    - [в правую сторону]{"entity": "subject", "role": "direction"} на 351 м
+    - 86 м [напролом]{"entity": "subject", "role": "direction"}
+    - [в южную сторону]{"entity": "subject", "role": "direction"} на 195 М
+    - 17 ° [на западный край]{"entity": "subject", "role": "direction"}
+    - [в сторону востока]{"entity": "subject", "role": "direction"} на 298 °
+    - [напрямик]{"entity": "subject", "role": "direction"} на 85 М
+    - 124 М [назад]{"entity": "subject", "role": "direction"}
+    - 199 м [обертасом]{"entity": "subject", "role": "direction"}
+    - 211 м [обертасом]{"entity": "subject", "role": "direction"}
+    - [в правую сторону]{"entity": "subject", "role": "direction"} на 303 °
+    - [в сторону севера]{"entity": "subject", "role": "direction"} на 80 °
+    - [в сторону севера]{"entity": "subject", "role": "direction"} на 7 м
+    - [в сторону юга]{"entity": "subject", "role": "direction"} на 179 °
+    - [в западную сторону]{"entity": "subject", "role": "direction"} на 289 °
+    - [взапядки]{"entity": "subject", "role": "direction"} на 299 °
+    - [налево]{"entity": "subject", "role": "direction"} на 351 М
+    - [в правую сторону]{"entity": "subject", "role": "direction"} на 39 °
+    - [на восточный край]{"entity": "subject", "role": "direction"} на 98 °
+    - 330 м [направо]{"entity": "subject", "role": "direction"}
+    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 105 °
+    - [на попятную]{"entity": "subject", "role": "direction"} на 352 М
+    - [налево]{"entity": "subject", "role": "direction"}
+    - 83 ° [напролом]{"entity": "subject", "role": "direction"}
+    - [влево]{"entity": "subject", "role": "direction"}
+    - 114 ° [взапядки]{"entity": "subject", "role": "direction"}
+    - [по правую руку]{"entity": "subject", "role": "direction"} на 99 М
+    - 56 ° [в сторону востока]{"entity": "subject", "role": "direction"}
+    - [на западный край]{"entity": "subject", "role": "direction"} на 231 м
+    - [в западную сторону]{"entity": "subject", "role": "direction"} на 354 м
+    - [в сторону севера]{"entity": "subject", "role": "direction"}
+    - [напрямик]{"entity": "subject", "role": "direction"} на 271 °
+    - 205 м [в сторону юга]{"entity": "subject", "role": "direction"}
+    - 40 ° [по правую руку]{"entity": "subject", "role": "direction"}
+    - 103 ° [на восточный край]{"entity": "subject", "role": "direction"}
+    - 249 м [на запад]{"entity": "subject", "role": "direction"}
+    - [обратно]{"entity": "subject", "role": "direction"} на 130 М
+    - 233 м [по левую руку]{"entity": "subject", "role": "direction"}
+    - [напролом]{"entity": "subject", "role": "direction"}
+    - 130 м [в северную сторону]{"entity": "subject", "role": "direction"}
+    - [вправо]{"entity": "subject", "role": "direction"}
+    - [направо]{"entity": "subject", "role": "direction"} на 91 °
+    - 84 ° [на запад]{"entity": "subject", "role": "direction"}
+    - 83 М [в сторону юга]{"entity": "subject", "role": "direction"}
+    - [в сторону юга]{"entity": "subject", "role": "direction"} на 353 м
+    - [по правую руку]{"entity": "subject", "role": "direction"} на 273 °
+    - 58 ° [прямо]{"entity": "subject", "role": "direction"}
+    - [по левую руку]{"entity": "subject", "role": "direction"} на 175 м
+    - 9 М [в южную сторону]{"entity": "subject", "role": "direction"}
+    - 297 ° [напрямик]{"entity": "subject", "role": "direction"}
+    - 312 ° [направо]{"entity": "subject", "role": "direction"}
+    - 17 ° [вперед]{"entity": "subject", "role": "direction"}
+    - 228 м [возвратно]{"entity": "subject", "role": "direction"}
+    - [на западный край]{"entity": "subject", "role": "direction"} на 226 М
+    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 338 м
+    - [по левую руку]{"entity": "subject", "role": "direction"} на 224 °
+    - 29 М [в правую сторону]{"entity": "subject", "role": "direction"}
+    - [напрямик]{"entity": "subject", "role": "direction"} на 352 °
+    - [на северный край]{"entity": "subject", "role": "direction"}
+    - [напрямик]{"entity": "subject", "role": "direction"} на 131 м
+    - 294 ° [на восточный край]{"entity": "subject", "role": "direction"}
+    - [по правую руку]{"entity": "subject", "role": "direction"} на 348 °
+    - 276 м [на западный край]{"entity": "subject", "role": "direction"}
+    - [в сторону запада]{"entity": "subject", "role": "direction"}
+    - [на северный край]{"entity": "subject", "role": "direction"} на 169 °
+    - 344 ° [направо]{"entity": "subject", "role": "direction"}
+    - 136 ° [на северный край]{"entity": "subject", "role": "direction"}
+    - [в сторону востока]{"entity": "subject", "role": "direction"} на 35 М
+    - 149 М [в сторону юга]{"entity": "subject", "role": "direction"}
+    - 270 ° [вправо]{"entity": "subject", "role": "direction"}
+    - 73 м [в восточную сторону]{"entity": "subject", "role": "direction"}
+    - 353 ° [вперед]{"entity": "subject", "role": "direction"}
+    - [в сторону юга]{"entity": "subject", "role": "direction"} на 349 °
+    - [в сторону юга]{"entity": "subject", "role": "direction"} на 9 °
+    - 339 М [назад]{"entity": "subject", "role": "direction"}
+    - 52 ° [в сторону запада]{"entity": "subject", "role": "direction"}
+    - [на восточный край]{"entity": "subject", "role": "direction"} на 149 °
+    - 131 ° [на восточный край]{"entity": "subject", "role": "direction"}
+    - 46 ° [прямо по курсу]{"entity": "subject", "role": "direction"}
+    - 134 М [по правую руку]{"entity": "subject", "role": "direction"}
+    - 250 м [возвратно]{"entity": "subject", "role": "direction"}
+    - [в западную сторону]{"entity": "subject", "role": "direction"} на 244 М
+    - 299 м [на западный край]{"entity": "subject", "role": "direction"}
+    - [на восточный край]{"entity": "subject", "role": "direction"} на 34 м
+    - [на западный край]{"entity": "subject", "role": "direction"}
+    - [в левую сторону]{"entity": "subject", "role": "direction"} на 78 м
+    - [на запад]{"entity": "subject", "role": "direction"} на 127 М
+    - 147 М [на западный край]{"entity": "subject", "role": "direction"}
+    - [на западный край]{"entity": "subject", "role": "direction"} на 93 °
+    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 72 °
+    - 179 м [в восточную сторону]{"entity": "subject", "role": "direction"}
+    - 221 ° [влево]{"entity": "subject", "role": "direction"}
+    - [в обратном направлении]{"entity": "subject", "role": "direction"} на 172 М
+    - 131 М [в сторону запада]{"entity": "subject", "role": "direction"}
+    - 14 м [на юг]{"entity": "subject", "role": "direction"}
+    - 151 М [в сторону востока]{"entity": "subject", "role": "direction"}
+    - 176 м [в сторону юга]{"entity": "subject", "role": "direction"}
+    - [в левую сторону]{"entity": "subject", "role": "direction"} на 124 М
+    - 14 ° [прямо по курсу]{"entity": "subject", "role": "direction"}
+    - [взапядки]{"entity": "subject", "role": "direction"} на 296 М
+    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 24 м
+    - 217 м [в западную сторону]{"entity": "subject", "role": "direction"}
+    - [взад]{"entity": "subject", "role": "direction"} на 293 °
+    - 81 М [направо]{"entity": "subject", "role": "direction"}
+    - [прямо по курсу]{"entity": "subject", "role": "direction"} на 330 °
+    - [на северный край]{"entity": "subject", "role": "direction"} на 251 м
+    - 283 м [на восточный край]{"entity": "subject", "role": "direction"}
+    - 217 ° [в сторону запада]{"entity": "subject", "role": "direction"}
+    - [влево]{"entity": "subject", "role": "direction"} на 158 М
+    - 245 ° [на южный край]{"entity": "subject", "role": "direction"}
+    - [прямо]{"entity": "subject", "role": "direction"}
+    - [на западный край]{"entity": "subject", "role": "direction"} на 224 м
+    - 168 м [прямо по курсу]{"entity": "subject", "role": "direction"}
+    - [на попятную]{"entity": "subject", "role": "direction"} на 115 М
+    - 280 М [в западную сторону]{"entity": "subject", "role": "direction"}
+    - [в сторону запада]{"entity": "subject", "role": "direction"} на 150 м
+    - [по правую руку]{"entity": "subject", "role": "direction"} на 271 М
+    - [на юг]{"entity": "subject", "role": "direction"} на 84 м
+    - 127 ° [вправо]{"entity": "subject", "role": "direction"}
+    - [на восток]{"entity": "subject", "role": "direction"} на 122 °
+    - [вспять]{"entity": "subject", "role": "direction"} на 57 м
+    - [в сторону юга]{"entity": "subject", "role": "direction"} на 188 °
+    - [налево]{"entity": "subject", "role": "direction"} на 184 °
+    - [на западный край]{"entity": "subject", "role": "direction"} на 77 м
+    - 312 м [по правую руку]{"entity": "subject", "role": "direction"}
+    - 103 м [на юг]{"entity": "subject", "role": "direction"}
+    - 45 ° [прямо по курсу]{"entity": "subject", "role": "direction"}
+    - [на юг]{"entity": "subject", "role": "direction"} на 356 °
+    - 264 м [налево]{"entity": "subject", "role": "direction"}
+    - 292 м [на восток]{"entity": "subject", "role": "direction"}
+    - [по левую руку]{"entity": "subject", "role": "direction"} на 216 М
+    - [прямо]{"entity": "subject", "role": "direction"} на 92 м
+    - [в сторону юга]{"entity": "subject", "role": "direction"} на 323 М
+    - [направо]{"entity": "subject", "role": "direction"} на 207 °
+    - 236 ° [по левую руку]{"entity": "subject", "role": "direction"}
+    - 70 М [в южную сторону]{"entity": "subject", "role": "direction"}
+    - 280 м [на восток]{"entity": "subject", "role": "direction"}
+    - [вспять]{"entity": "subject", "role": "direction"}
+    - 118 м [назад]{"entity": "subject", "role": "direction"}
+    - 34 ° [взад]{"entity": "subject", "role": "direction"}
+    - [в южную сторону]{"entity": "subject", "role": "direction"} на 350 °
+    - 233 М [взапядки]{"entity": "subject", "role": "direction"}
+    - [в обратном направлении]{"entity": "subject", "role": "direction"}
+    - [на попятную]{"entity": "subject", "role": "direction"}
+    - [на север]{"entity": "subject", "role": "direction"} на 182 м
+    - 256 ° [на восток]{"entity": "subject", "role": "direction"}
+    - [на южный край]{"entity": "subject", "role": "direction"}
+    - 311 ° [в сторону юга]{"entity": "subject", "role": "direction"}
+    - 335 ° [на север]{"entity": "subject", "role": "direction"}
+    - [по левую руку]{"entity": "subject", "role": "direction"} на 104 м
+    - [на восток]{"entity": "subject", "role": "direction"} на 140 м
+    - 304 ° [в сторону запада]{"entity": "subject", "role": "direction"}
+    - 28 М [в южную сторону]{"entity": "subject", "role": "direction"}
+    - [в сторону запада]{"entity": "subject", "role": "direction"} на 87 °
+    - 143 м [прямо по курсу]{"entity": "subject", "role": "direction"}
+    - 147 ° [прямо]{"entity": "subject", "role": "direction"}
+    - 318 м [на южный край]{"entity": "subject", "role": "direction"}
+    - 130 ° [в западную сторону]{"entity": "subject", "role": "direction"}
+    - [в сторону востока]{"entity": "subject", "role": "direction"} на 302 м
+    - [налево]{"entity": "subject", "role": "direction"} на 65 °
+    - [в обратном направлении]{"entity": "subject", "role": "direction"} на 259 °
+    - 321 М [на южный край]{"entity": "subject", "role": "direction"}
+    - 236 М [на восток]{"entity": "subject", "role": "direction"}
+    - [вправо]{"entity": "subject", "role": "direction"} на 187 °
+    - [напролом]{"entity": "subject", "role": "direction"} на 280 °
+    - [в северную сторону]{"entity": "subject", "role": "direction"} на 11 °
+    - [в сторону севера]{"entity": "subject", "role": "direction"} на 310 М
+    - 302 м [по левую руку]{"entity": "subject", "role": "direction"}
+    - [на юг]{"entity": "subject", "role": "direction"} на 193 °
+    - [на север]{"entity": "subject", "role": "direction"} на 172 М
+    - 86 М [в северную сторону]{"entity": "subject", "role": "direction"}
+    - 323 ° [на восток]{"entity": "subject", "role": "direction"}
+    - [на восточный край]{"entity": "subject", "role": "direction"} на 295 °
+    - 295 ° [в сторону севера]{"entity": "subject", "role": "direction"}
+    - [в сторону востока]{"entity": "subject", "role": "direction"} на 309 °
+    - [в западную сторону]{"entity": "subject", "role": "direction"} на 286 °
+    - 281 ° [вправо]{"entity": "subject", "role": "direction"}
+    - [в обратном направлении]{"entity": "subject", "role": "direction"} на 18 М
+    - 159 М [в южную сторону]{"entity": "subject", "role": "direction"}
+    - [взад]{"entity": "subject", "role": "direction"} на 59 м
+    - 315 м [налево]{"entity": "subject", "role": "direction"}
+    - 282 ° [на восточный край]{"entity": "subject", "role": "direction"}
+    - 70 М [влево]{"entity": "subject", "role": "direction"}
+    - 146 ° [задом]{"entity": "subject", "role": "direction"}
+    - 142 м [напролом]{"entity": "subject", "role": "direction"}
+    - 29 м [по правую руку]{"entity": "subject", "role": "direction"}
+    - [на запад]{"entity": "subject", "role": "direction"} на 285 °
+    - 247 ° [по левую руку]{"entity": "subject", "role": "direction"}
+    - [в сторону севера]{"entity": "subject", "role": "direction"} на 222 М
+    - 68 ° [в сторону юга]{"entity": "subject", "role": "direction"}
+    - 57 м [влево]{"entity": "subject", "role": "direction"}
+    - [назад]{"entity": "subject", "role": "direction"} на 282 М
+    - [в западную сторону]{"entity": "subject", "role": "direction"} на 88 М
+    - [на запад]{"entity": "subject", "role": "direction"} на 56 м
+    - 54 М [на юг]{"entity": "subject", "role": "direction"}
+    - [прямо]{"entity": "subject", "role": "direction"} на 260 М
+    - [вперед]{"entity": "subject", "role": "direction"} на 23 °
+    - 185 ° [напролом]{"entity": "subject", "role": "direction"}
+    - 139 М [вправо]{"entity": "subject", "role": "direction"}
+    - 7 М [прямо]{"entity": "subject", "role": "direction"}
+    - [в западную сторону]{"entity": "subject", "role": "direction"}
+    - 306 М [в правую сторону]{"entity": "subject", "role": "direction"}
+    - 297 ° [в восточную сторону]{"entity": "subject", "role": "direction"}
+    - [по правую руку]{"entity": "subject", "role": "direction"} на 99 м
+    - [обертасом]{"entity": "subject", "role": "direction"} на 334 М
+    - 83 ° [задом]{"entity": "subject", "role": "direction"}
+    - [на восток]{"entity": "subject", "role": "direction"} на 193 м
+    - 115 м [в южную сторону]{"entity": "subject", "role": "direction"}
+    - 259 м [прямо]{"entity": "subject", "role": "direction"}
+    - 295 ° [направо]{"entity": "subject", "role": "direction"}
+    - 359 м [прямо по курсу]{"entity": "subject", "role": "direction"}
+    - [в северную сторону]{"entity": "subject", "role": "direction"} на 127 °
+    - 155 М [на северный край]{"entity": "subject", "role": "direction"}
+    - [прямо по курсу]{"entity": "subject", "role": "direction"} на 22 М
+    - 64 ° [в северную сторону]{"entity": "subject", "role": "direction"}
+    - 99 м [в левую сторону]{"entity": "subject", "role": "direction"}
+    - [в северную сторону]{"entity": "subject", "role": "direction"} на 185 °
+    - 152 М [в правую сторону]{"entity": "subject", "role": "direction"}
+    - [напрямик]{"entity": "subject", "role": "direction"} на 145 °
+    - [взапядки]{"entity": "subject", "role": "direction"} на 104 °
+    - [вправо]{"entity": "subject", "role": "direction"} на 12 °
+    - 358 М [на восток]{"entity": "subject", "role": "direction"}
+    - 69 М [прямо]{"entity": "subject", "role": "direction"}
+    - [на восточный край]{"entity": "subject", "role": "direction"} на 307 м
+    - 152 ° [в южную сторону]{"entity": "subject", "role": "direction"}
+    - 34 ° [по правую руку]{"entity": "subject", "role": "direction"}
+    - 20 м [влево]{"entity": "subject", "role": "direction"}
+    - 48 м [на север]{"entity": "subject", "role": "direction"}
+    - [влево]{"entity": "subject", "role": "direction"} на 57 °
+    - [в сторону юга]{"entity": "subject", "role": "direction"} на 220 м
+    - 156 ° [на восток]{"entity": "subject", "role": "direction"}
+    - [на южный край]{"entity": "subject", "role": "direction"} на 298 М
+    - 269 ° [в правую сторону]{"entity": "subject", "role": "direction"}
+    - 110 ° [в южную сторону]{"entity": "subject", "role": "direction"}
+    - [на восток]{"entity": "subject", "role": "direction"}
+    - [на северный край]{"entity": "subject", "role": "direction"} на 314 °
+    - [на северный край]{"entity": "subject", "role": "direction"} на 228 °
+    - 179 М [влево]{"entity": "subject", "role": "direction"}
+    - 256 м [влево]{"entity": "subject", "role": "direction"}
+    - [обертасом]{"entity": "subject", "role": "direction"} на 161 м
+    - 140 М [на южный край]{"entity": "subject", "role": "direction"}
+    - 348 ° [на западный край]{"entity": "subject", "role": "direction"}
+    - 228 ° [в южную сторону]{"entity": "subject", "role": "direction"}
+    - 249 ° [по правую руку]{"entity": "subject", "role": "direction"}
+    - 165 М [обратно]{"entity": "subject", "role": "direction"}
+    - [прямо]{"entity": "subject", "role": "direction"} на 80 °
+    - [вперед]{"entity": "subject", "role": "direction"} на 152 М
+    - 251 М [на юг]{"entity": "subject", "role": "direction"}
+    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 340 °
+    - [в правую сторону]{"entity": "subject", "role": "direction"} на 230 М
+    - 159 ° [в северную сторону]{"entity": "subject", "role": "direction"}
+    - [влево]{"entity": "subject", "role": "direction"} на 135 м
+    - 258 М [в северную сторону]{"entity": "subject", "role": "direction"}
+    - 233 М [напрямик]{"entity": "subject", "role": "direction"}
+    - [возвратно]{"entity": "subject", "role": "direction"}
+    - [в западную сторону]{"entity": "subject", "role": "direction"} на 33 °
+    - [на восточный край]{"entity": "subject", "role": "direction"} на 358 °
+    - [на запад]{"entity": "subject", "role": "direction"}
+    - 191 ° [обратно]{"entity": "subject", "role": "direction"}
+    - 50 М [взапядки]{"entity": "subject", "role": "direction"}
+    - 86 ° [на восток]{"entity": "subject", "role": "direction"}
+    - [на западный край]{"entity": "subject", "role": "direction"} на 19 м
+    - [на юг]{"entity": "subject", "role": "direction"} на 337 °
+    - [на восток]{"entity": "subject", "role": "direction"} на 188 °
+    - 185 ° [на юг]{"entity": "subject", "role": "direction"}
+    - 227 М [на северный край]{"entity": "subject", "role": "direction"}
+    - [в сторону юга]{"entity": "subject", "role": "direction"} на 3 м
+    - [вспять]{"entity": "subject", "role": "direction"} на 225 °
+    - [налево]{"entity": "subject", "role": "direction"} на 323 °
+    - [по левую руку]{"entity": "subject", "role": "direction"} на 48 °
+    - 60 ° [в правую сторону]{"entity": "subject", "role": "direction"}
+    - [в левую сторону]{"entity": "subject", "role": "direction"}
+    - [в сторону востока]{"entity": "subject", "role": "direction"} на 18 М
+    - [в северную сторону]{"entity": "subject", "role": "direction"} на 169 м
+    - [в правую сторону]{"entity": "subject", "role": "direction"} на 352 м
+    - [по левую руку]{"entity": "subject", "role": "direction"}
+    - [налево]{"entity": "subject", "role": "direction"} на 202 °
+    - [вправо]{"entity": "subject", "role": "direction"} на 349 м
+    - 40 м [по правую руку]{"entity": "subject", "role": "direction"}
+    - 134 М [на запад]{"entity": "subject", "role": "direction"}
+    - [по правую руку]{"entity": "subject", "role": "direction"} на 287 м
+    - 78 ° [влево]{"entity": "subject", "role": "direction"}
+    - [направо]{"entity": "subject", "role": "direction"} на 96 м
+    - [на северный край]{"entity": "subject", "role": "direction"} на 166 М
+    - 180 ° [направо]{"entity": "subject", "role": "direction"}
+    - [в правую сторону]{"entity": "subject", "role": "direction"}
+    - [на север]{"entity": "subject", "role": "direction"} на 23 °
+    - 160 ° [на восточный край]{"entity": "subject", "role": "direction"}
+    - 136 ° [взапядки]{"entity": "subject", "role": "direction"}
+    - [влево]{"entity": "subject", "role": "direction"} на 128 °
+    - [обратно]{"entity": "subject", "role": "direction"} на 210 °
+    - 40 м [задом]{"entity": "subject", "role": "direction"}
+    - [в западную сторону]{"entity": "subject", "role": "direction"} на 218 М
+    - [вспять]{"entity": "subject", "role": "direction"} на 162 М
+    - 64 М [на западный край]{"entity": "subject", "role": "direction"}
+    - 231 м [назад]{"entity": "subject", "role": "direction"}
+    - [вперед]{"entity": "subject", "role": "direction"}
+    - 286 ° [на запад]{"entity": "subject", "role": "direction"}
+    - [в северную сторону]{"entity": "subject", "role": "direction"} на 75 °
+    - 222 ° [налево]{"entity": "subject", "role": "direction"}
+    - [на западный край]{"entity": "subject", "role": "direction"} на 117 °
+    - [вперед]{"entity": "subject", "role": "direction"} на 51 м
+    - [в восточную сторону]{"entity": "subject", "role": "direction"} на 148 М
+    - 313 ° [в северную сторону]{"entity": "subject", "role": "direction"}
+    - [в западную сторону]{"entity": "subject", "role": "direction"} на 106 °
+    - 218 М [в сторону севера]{"entity": "subject", "role": "direction"}
+    - [назад]{"entity": "subject", "role": "direction"}
+    - [влево]{"entity": "subject", "role": "direction"} на 94 м
+    - [прямо]{"entity": "subject", "role": "direction"} на 257 °
+    - [напрямик]{"entity": "subject", "role": "direction"} на 212 М
+    - [в южную сторону]{"entity": "subject", "role": "direction"}

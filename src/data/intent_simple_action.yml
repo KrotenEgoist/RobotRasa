@@ -3,21 +3,20 @@ version: "3.1"
 nlu:
 - intent: simple_action
   examples: |
-    - [остановка]{"entity": "action", "role": "stop"}
     - [стой]{"entity": "action", "role": "stop"}
-    - [останови]{"entity": "action", "role": "stop"}
-    - [замрите]{"entity": "action", "role": "stop"}
-    - [прекратите]{"entity": "action", "role": "stop"}
-    - [стойте]{"entity": "action", "role": "stop"}
     - [довольно]{"entity": "action", "role": "stop"}
-    - [замри]{"entity": "action", "role": "stop"}
-    - [тормози]{"entity": "action", "role": "stop"}
+    - [стойте]{"entity": "action", "role": "stop"}
+    - [прекратите]{"entity": "action", "role": "stop"}
     - [остановите]{"entity": "action", "role": "stop"}
-    - [прекрати]{"entity": "action", "role": "stop"}
-    - [припаркуйтесь]{"entity": "action", "role": "stop"}
-    - [прервите]{"entity": "action", "role": "stop"}
     - [хватит]{"entity": "action", "role": "stop"}
+    - [останови]{"entity": "action", "role": "stop"}
     - [прерви]{"entity": "action", "role": "stop"}
-    - [припаркуйся]{"entity": "action", "role": "stop"}
-    - [тормозите]{"entity": "action", "role": "stop"}
+    - [остановка]{"entity": "action", "role": "stop"}
+    - [прекрати]{"entity": "action", "role": "stop"}
+    - [прервите]{"entity": "action", "role": "stop"}
+    - [замри]{"entity": "action", "role": "stop"}
+    - [припаркуйтесь]{"entity": "action", "role": "stop"}
+    - [тормози]{"entity": "action", "role": "stop"}
+    - [замрите]{"entity": "action", "role": "stop"}
     - [стоп]{"entity": "action", "role": "stop"}
+    - [тормозите]{"entity": "action", "role": "stop"}

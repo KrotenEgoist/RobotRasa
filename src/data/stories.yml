@@ -56,7 +56,7 @@ stories:
       - action: action_send_command
       - action: action_reset_slots
 
-  - story: wrong command
+  - story: исправление ошибок
     steps:
       - intent: wrong_command
       - action: num_form
@@ -67,7 +67,7 @@ stories:
       - action: action_fix_command
       - action: action_reset_slots
 
-  - story: repeat command
+  - story: повторение команды
     steps:
       - intent: repeat_command
       - action: num_form

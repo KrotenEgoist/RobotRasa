@@ -207,3 +207,20 @@ class ActionRepeatCommand(Action):
         cmd_list = []
 
         return []
+
+
+class ActionSetLocation(Action):
+
+    def name(self):
+        return "action_set_location"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain,
+    ):
+
+        dispatcher.utter_message("Вокруг меня ...")
+
+        return []

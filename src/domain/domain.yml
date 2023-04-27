@@ -12,6 +12,7 @@ intents:
   - simple_action
   - wrong_command
   - repeat_command
+  - get_location
 
 entities:
   - action:
@@ -163,6 +164,7 @@ responses:
 actions:
   - action_fix_command
   - action_repeat_command
+  - action_set_location
   - action_send_command
   - action_ask_feature
   - action_ask_subject
