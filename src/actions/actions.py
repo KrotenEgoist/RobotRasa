@@ -12,6 +12,7 @@ from src.db.psql_control_db import PostgresqlControl
 # database = ControlDB(db_path)
 
 db = PostgresqlControl(user='root', password='root')
+cmd_list = []
 
 
 class AskSubjectAction(Action):
@@ -142,13 +143,21 @@ class ActionAskNum(Action):
         tracker: Tracker,
         domain,
     ):
+        global cmd_list
+
+        intent = tracker.latest_message['intent']['name']
 
         commands = db.select_last_n_commands(3)
-        cmd_list = []
+        cmd_print = []
         for i, cmd in enumerate(commands, 1):
-            cmd_list.append(f"{i}. {cmd[0]}")
+            cmd_list.append(cmd[0])
+            cmd_print.append(f"{i}. {cmd[0]}")
 
-        text_to_user = "Какую команду исправить?\n" + "\n".join(cmd_list)
+        if intent == "wrong_command":
+            text_to_user = "Какую команду исправить?\n" + "\n".join(cmd_print)
+        elif intent == "repeat_command":
+            text_to_user = "Какую команду повторить?\n" + "\n".join(cmd_print)
+
         dispatcher.utter_message(text=text_to_user)
 
         return []
@@ -165,6 +174,36 @@ class ActionFixCommand(Action):
         tracker: Tracker,
         domain,
     ):
+        global cmd_list
 
+        cmd_idx = tracker.slots['num'] - 1
+        cmd_string = cmd_list[cmd_idx]
+        dispatcher.utter_message(f'Исправляю команду: {cmd_list[cmd_string]}')
+        db.insert_into_table_commands(cmd_string)
+
+        cmd_list = []
+
+        return []
+
+
+class ActionRepeatCommand(Action):
+
+    def name(self):
+        return "action_repeat_command"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain,
+    ):
+        global cmd_list
+
+        cmd_idx = tracker.slots['num'] - 1
+        cmd_string = cmd_list[cmd_idx]
+        dispatcher.utter_message(f'Повторяю команду: {cmd_string}')
+        db.insert_into_table_commands(cmd_string)
+
+        cmd_list = []
 
         return []

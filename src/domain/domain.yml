@@ -11,6 +11,7 @@ intents:
   - patrol+routes
   - simple_action
   - wrong_command
+  - repeat_command
 
 entities:
   - action:
@@ -161,6 +162,7 @@ responses:
 
 actions:
   - action_fix_command
+  - action_repeat_command
   - action_send_command
   - action_ask_feature
   - action_ask_subject

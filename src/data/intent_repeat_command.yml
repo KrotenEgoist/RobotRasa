@@ -1,0 +1,8 @@
+version: "3.1"
+
+nlu:
+- intent: repeat_command
+  examples: |
+    - повтори команду
+    - давай еще раз
+    - сделай снова

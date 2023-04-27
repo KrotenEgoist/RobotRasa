@@ -55,3 +55,25 @@ stories:
       - intent: simple_action
       - action: action_send_command
       - action: action_reset_slots
+
+  - story: wrong command
+    steps:
+      - intent: wrong_command
+      - action: num_form
+      - active_loop: num_form
+      - slot_was_set:
+          - requested_slot: num
+      - active_loop: null
+      - action: action_fix_command
+      - action: action_reset_slots
+
+  - story: repeat command
+    steps:
+      - intent: repeat_command
+      - action: num_form
+      - active_loop: num_form
+      - slot_was_set:
+          - requested_slot: num
+      - active_loop: null
+      - action: action_repeat_command
+      - action: action_reset_slots
