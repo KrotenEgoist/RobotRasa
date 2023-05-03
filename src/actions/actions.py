@@ -2,17 +2,35 @@ from pathlib import Path
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import AllSlotsReset, SlotSet, ActiveLoop
+from rasa_sdk.events import AllSlotsReset, SlotSet, ActiveLoop, SessionStarted, ActionExecuted
+
+from src.db.psql_control_db import PostgresqlControl
+
+
+db = PostgresqlControl(user='root', password='root')
+cmd_list = []
 
 # from src.db.sqlite_control_db import ControlDB
-from src.db.psql_control_db import PostgresqlControl
+
 
 # project_path = Path(__file__).parents[2]
 # db_path = project_path.joinpath("database/rasa.db")
 # database = ControlDB(db_path)
 
-db = PostgresqlControl(user='root', password='root')
-cmd_list = []
+
+class ActionSessionStart(Action):
+    """
+    Действие выполняется при запуске новой сессии,
+    либо при отправке сообщения /session_start
+    """
+    def name(self):
+        return "action_session_start"
+
+    async def run(
+      self, dispatcher, tracker: Tracker, domain
+    ):
+
+        return [SessionStarted(), ActionExecuted("action_listen")]
 
 
 class AskSubjectAction(Action):

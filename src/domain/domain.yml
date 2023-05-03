@@ -170,6 +170,7 @@ actions:
   - action_ask_subject
   - action_ask_num
   - action_reset_slots
+  - action_session_start
 
 
 session_config:
