@@ -30,6 +30,8 @@ class ActionSessionStart(Action):
       self, dispatcher, tracker: Tracker, domain
     ):
 
+        dispatcher.utter_message(text="Назовите команду для отправки роботу")
+
         return [SessionStarted(), ActionExecuted("action_listen")]
 
 
@@ -196,8 +198,8 @@ class ActionFixCommand(Action):
 
         cmd_idx = tracker.slots['num'] - 1
         cmd_string = cmd_list[cmd_idx]
-        dispatcher.utter_message(f'Исправляю команду: {cmd_list[cmd_string]}')
-        db.insert_into_table_commands(cmd_string)
+        dispatcher.utter_message(f'Исправляю команду: {cmd_string}')
+        # db.insert_into_table_commands(cmd_string)
 
         cmd_list = []
 
