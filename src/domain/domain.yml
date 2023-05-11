@@ -36,6 +36,7 @@ entities:
         - circle
         - path
   - distance
+  - temperature
   - relation
   - number
   - ordinal
@@ -101,6 +102,8 @@ slots:
     mappings:
       - type: from_entity
         entity: distance
+      - type: from_entity
+        entity: temperature
 
   feature:
     type: text

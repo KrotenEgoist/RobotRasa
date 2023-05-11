@@ -14,3 +14,9 @@ services:
       - ./database:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+
+  duckling:
+    image: rasa/duckling:latest
+    container_name: "duck-ext"
+    ports:
+      - "8000:8000"

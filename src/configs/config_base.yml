@@ -29,6 +29,7 @@ pipeline:
   epochs: 100
 - name: FallbackClassifier
   threshold: 0.5
+
 policies:
 - name: TEDPolicy
   constrain_similarities: true
